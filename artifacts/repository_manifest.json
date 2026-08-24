@@ -5,8 +5,8 @@
       "sha256": "57bce187177e1e5735c92cf15f849abf646a649a31678a4b321dc920675b9f74"
     },
     ".gitignore": {
-      "bytes": 266,
-      "sha256": "65f92f5e2b51563cea98893545f870bb2a4c83ca6e4ba3c128b9f18b55042c57"
+      "bytes": 292,
+      "sha256": "499e25a26735bfebd18760e01bc947b1dfbb5f4b661399cd26c8998081367a32"
     },
     "CITATION.cff": {
       "bytes": 534,
@@ -253,10 +253,6 @@
       "sha256": "a4dda1fe1bbe248663ca1fe444ec273d8f22b20b45363f84294952d8910e052e"
     },
     "data/manifests/production_input_manifest.json": {
-      "bytes": 1204,
-      "sha256": "8240d8bf65c746de5d6aabcf0788414626a020f896827af28852051c09193a19"
-    },
-    "data/processed/production/input_manifest.json": {
       "bytes": 1204,
       "sha256": "8240d8bf65c746de5d6aabcf0788414626a020f896827af28852051c09193a19"
     },
@@ -849,16 +845,16 @@
       "sha256": "dda91b37e24df5bcc45e1f1e573b1666204d77675ae2d6154c473af3e70357c1"
     },
     "tools/build_repository_manifest.py": {
-      "bytes": 1511,
-      "sha256": "336e3fe1850ae3193d01ddc1f089a15db54faebfaefcb6e308908c7b6716a935"
+      "bytes": 2104,
+      "sha256": "cad742bb9b8ae1133c131b02d4c3a90e01195bedac456dcb49b912057947925a"
     },
     "tools/fetch_release_assets.py": {
       "bytes": 2106,
       "sha256": "dd8ec6a6ccd354598e091efd6547be8014187e259e04f737e8d54f12fb043f86"
     },
     "tools/verify_repository.py": {
-      "bytes": 8513,
-      "sha256": "630381be85cb9eb2ef90db0cc54ca82ec16eae2f95bbd880fe4b13bd62d10a4a"
+      "bytes": 10080,
+      "sha256": "6d7835c713d88dfe631339add17840b33abc7b9385734e8f73e5d1c1d151e013"
     }
   },
   "status": "PASS"

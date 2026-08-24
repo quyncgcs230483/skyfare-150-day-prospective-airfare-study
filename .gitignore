@@ -15,6 +15,7 @@ artifacts/jobs/
 artifacts/logs/
 artifacts/models/
 artifacts/predictions/
+artifacts/release_assets/
 *.tar.gz
 *.parquet
 *.joblib

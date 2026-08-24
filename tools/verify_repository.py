@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import ast
+import hashlib
 import json
 import stat
 import zipfile
@@ -49,11 +50,25 @@ ALLOWED_LEGACY_SOURCE_FILES = {
 }
 FORBIDDEN_CODE_FRAGMENTS = ("/workspace", "/Users/", "\\Users\\")
 EXCLUDED_PARTS = {".git", ".pytest_cache", ".ruff_cache", "__pycache__"}
+EXCLUDED_NAMES = {".DS_Store", ".env"}
+EXCLUDED_SUFFIXES = (".joblib", ".keras", ".npz", ".parquet", ".pyc", ".tar.gz")
+EXCLUDED_RUNTIME_PREFIXES = (
+    ("artifacts", "cache"),
+    ("artifacts", "jobs"),
+    ("artifacts", "logs"),
+    ("artifacts", "models"),
+    ("artifacts", "predictions"),
+    ("artifacts", "release_assets"),
+    ("data", "interim"),
+    ("data", "processed"),
+    ("data", "raw"),
+)
 
 
 def _ignored(path: Path) -> bool:
     parts = path.relative_to(ROOT).parts
-    return any(
+    generated = any(parts[: len(prefix)] == prefix for prefix in EXCLUDED_RUNTIME_PREFIXES)
+    return generated or path.name in EXCLUDED_NAMES or path.name.endswith(EXCLUDED_SUFFIXES) or any(
         part in EXCLUDED_PARTS
         or part.startswith(".venv")
         or part.endswith(".egg-info")
@@ -168,6 +183,33 @@ def _verify_internal_imports() -> None:
         raise RuntimeError(f"Unresolved internal imports: {sorted(unresolved)}")
 
 
+def _digest(path: Path) -> str:
+    value = hashlib.sha256()
+    with path.open("rb") as handle:
+        for block in iter(lambda: handle.read(1024 * 1024), b""):
+            value.update(block)
+    return value.hexdigest()
+
+
+def _verify_repository_manifest() -> None:
+    manifest_path = ROOT / "artifacts" / "repository_manifest.json"
+    payload = json.loads(manifest_path.read_text(encoding="utf-8"))
+    files = sorted(
+        path
+        for path in ROOT.rglob("*")
+        if path != manifest_path and path.is_file() and not path.is_symlink() and not _ignored(path)
+    )
+    expected = {
+        path.relative_to(ROOT).as_posix(): {
+            "bytes": path.stat().st_size,
+            "sha256": _digest(path),
+        }
+        for path in files
+    }
+    if payload.get("status") != "PASS" or payload.get("files") != expected:
+        raise RuntimeError("Repository manifest does not match publishable file inventory")
+
+
 def _verify_sources() -> None:
     for path in ROOT.rglob("*"):
         if not path.is_file() or _ignored(path):
@@ -200,6 +242,7 @@ def _verify_manuscript() -> None:
 def main() -> None:
     _verify_files()
     _verify_internal_imports()
+    _verify_repository_manifest()
     _verify_sources()
     _verify_dates()
     _verify_models()

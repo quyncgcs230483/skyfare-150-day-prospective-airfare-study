@@ -11,6 +11,19 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "artifacts" / "repository_manifest.json"
 EXCLUDED_PARTS = {".git", "__pycache__", ".pytest_cache", ".ruff_cache"}
+EXCLUDED_NAMES = {".DS_Store", ".env"}
+EXCLUDED_SUFFIXES = (".joblib", ".keras", ".npz", ".parquet", ".pyc", ".tar.gz")
+EXCLUDED_RUNTIME_PREFIXES = (
+    ("artifacts", "cache"),
+    ("artifacts", "jobs"),
+    ("artifacts", "logs"),
+    ("artifacts", "models"),
+    ("artifacts", "predictions"),
+    ("artifacts", "release_assets"),
+    ("data", "interim"),
+    ("data", "processed"),
+    ("data", "raw"),
+)
 
 
 def digest(path: Path) -> str:
@@ -23,7 +36,8 @@ def digest(path: Path) -> str:
 
 def included(path: Path) -> bool:
     relative = path.relative_to(ROOT)
-    if path == OUTPUT or any(
+    generated = any(relative.parts[: len(prefix)] == prefix for prefix in EXCLUDED_RUNTIME_PREFIXES)
+    if path == OUTPUT or generated or path.name in EXCLUDED_NAMES or path.name.endswith(EXCLUDED_SUFFIXES) or any(
         part in EXCLUDED_PARTS
         or part.startswith(".venv")
         or part.endswith(".egg-info")
