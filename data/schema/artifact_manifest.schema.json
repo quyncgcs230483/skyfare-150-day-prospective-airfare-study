@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "files": {
+      "additionalProperties": {"pattern": "^[a-f0-9]{64}$", "type": "string"},
+      "type": "object"
+    },
+    "status": {"enum": ["PASS", "COMPLETE", "FROZEN"]}
+  },
+  "required": ["status"],
+  "title": "SkyFare artifact manifest",
+  "type": "object"
+}

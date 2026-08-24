@@ -1,0 +1,35 @@
+{
+  "inputs": {
+    "classification_training_frame.parquet": {
+      "bytes": 154844658,
+      "columns": 195,
+      "feature_time_max": "2026-08-18 19:00:00",
+      "feature_time_min": "2026-03-21 13:38:26",
+      "label_time_max": "2026-08-19 18:00:00",
+      "label_time_min": "2026-03-22 17:27:29",
+      "rows": 720155,
+      "sha256": "43abf21c149cac2ac7d13fe06f05972083c6bb4ff5579cd48f88bd168cae6c3d"
+    },
+    "regression_training_frame.parquet": {
+      "bytes": 126402126,
+      "columns": 138,
+      "feature_time_max": "2026-08-19 07:00:00",
+      "feature_time_min": "2026-03-21 13:38:26",
+      "label_time_max": "2026-08-19 18:00:00",
+      "label_time_min": "2026-03-22 17:27:29",
+      "rows": 1106785,
+      "sha256": "c1d0d30b1ccfbe678dc24382485fe390b015051513cd046e32bd12af4ba7deff"
+    },
+    "standard_128_day_offers.parquet": {
+      "bytes": 98896327,
+      "columns": 71,
+      "feature_time_max": "2026-08-19 18:00:00",
+      "feature_time_min": "2026-03-21 13:38:26",
+      "rows": 1114445,
+      "sha256": "48f9502f0cab025f84a9f83ad6d7d95193fa3a0d6675615c784ec0aa9e5e511a"
+    }
+  },
+  "post_cutoff_rows": 0,
+  "status": "PASS",
+  "training_cutoff_inclusive": "2026-08-19"
+}

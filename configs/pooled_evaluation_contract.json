@@ -1,0 +1,33 @@
+{
+  "automatic_promotion": false,
+  "contract_id": "SKYFARE_128_DAY_TWO_BLOCK_FINAL_REPORT_R1",
+  "expected_archives": {
+    "test_1": {
+      "filename": "SKYFARE_TEST_1_EVALUATION_RESULTS_R2.tar.gz",
+      "sha256": "5fe2348ef3098fca189ee8ead182738ea9c95b8f2c990f2e5704113021e6ac7e"
+    },
+    "test_2": {
+      "filename": "SKYFARE_TEST_2_EVALUATION_RESULTS_R1.tar.gz",
+      "sha256": "3207a539c4689ca9df007da01c5374e50b796fe740c4abee35a4cabd907dd293"
+    }
+  },
+  "expected_blocks": {
+    "test_1": ["2026-07-29", "2026-08-08"],
+    "test_2": ["2026-08-09", "2026-08-19"]
+  },
+  "expected_recipes": {
+    "CLASSIFICATION": "V24_MEAN",
+    "DISTRIBUTION": "V24_MEAN",
+    "POINT": "V24_MEAN",
+    "RANKING": "V24_MEAN"
+  },
+  "policy": {
+    "friction_vnd": 50000,
+    "threshold": 0.3
+  },
+  "pooled_design": "TWO_BLOCK_PROSPECTIVE_WALK_FORWARD",
+  "quantiles": [0.05, 0.1, 0.25, 0.5, 0.75, 0.9, 0.95],
+  "recipe_selection_allowed": false,
+  "retraining_required": false,
+  "status": "LOCKED_BEFORE_POOLED_ANALYSIS"
+}

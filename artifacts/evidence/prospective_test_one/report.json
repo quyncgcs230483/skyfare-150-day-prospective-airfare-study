@@ -1,0 +1,149 @@
+{
+  "automatic_promotion": false,
+  "buy_wait": {
+    "buy_all": {
+      "cvar95_regret_vnd": 394641.84375,
+      "mean_regret_vnd": 26780.239265869674,
+      "p95_regret_vnd": 200000.0,
+      "rows": 41573,
+      "wait_rate": 0.0
+    },
+    "friction_vnd": 50000,
+    "frozen": {
+      "cvar95_regret_vnd": 383054.27556409023,
+      "mean_regret_vnd": 26283.855555288286,
+      "p95_regret_vnd": 199000.0,
+      "rows": 41573,
+      "wait_rate": 0.014119741178168523
+    },
+    "paired_day_bootstrap_vs_buy_all": {
+      "ci95_high": 105.94709916024654,
+      "ci95_low": -1036.7940621476316,
+      "day_blocks": 10,
+      "draws": 4000,
+      "mean_model_minus_baseline": -423.5726567603398
+    },
+    "threshold": 0.3,
+    "wait_all": {
+      "cvar95_regret_vnd": 888960.6200477327,
+      "mean_regret_vnd": 159766.11776874412,
+      "p95_regret_vnd": 544000.0,
+      "rows": 41573,
+      "wait_rate": 1.0
+    }
+  },
+  "classification": {
+    "baseline_constant_dev_rate": {
+      "auc": 0.5,
+      "brier": 0.13012740387064523,
+      "ece15": 0.17029216340735212,
+      "log_loss": 0.4400186384658277,
+      "proper_score": 0.5701460423364729
+    },
+    "model": {
+      "auc": 0.662589823437386,
+      "brier": 0.09816310426037224,
+      "ece15": 0.012984306443618029,
+      "log_loss": 0.33967210804543313,
+      "proper_score": 0.43783521230580535
+    },
+    "paired_day_bootstrap": {
+      "ci95_high": -0.10827761250243291,
+      "ci95_low": -0.1560904446006301,
+      "day_blocks": 10,
+      "draws": 4000,
+      "mean_model_minus_baseline": -0.13260885716561793
+    }
+  },
+  "distribution": {
+    "baseline_empirical_dev_residual": {
+      "coverage50": 0.44497822054563263,
+      "coverage80": 0.7221921177132615,
+      "coverage90": 0.8460223838602781,
+      "crossing_rate": 0.0,
+      "lower_tail90": 0.07874992184406328,
+      "pinball_mean": 0.047756205763525406,
+      "upper_tail90": 0.0752276942956587,
+      "width50": 0.13460562189006328,
+      "width80": 0.37566995572823425,
+      "width90": 0.5740634795917352,
+      "wis": 0.09551241152705081
+    },
+    "model": {
+      "coverage50": 0.49180925783122487,
+      "coverage80": 0.7834142681478085,
+      "coverage90": 0.8856839165503012,
+      "crossing_rate": 0.0,
+      "lower_tail90": 0.05155165586377941,
+      "pinball_mean": 0.03069086750405319,
+      "upper_tail90": 0.06276442758591942,
+      "width50": 0.14712523575931122,
+      "width80": 0.3040080314015765,
+      "width90": 0.4207089578406312,
+      "wis": 0.06138173500810638
+    },
+    "paired_day_bootstrap": {
+      "ci95_high": -0.03222033968303093,
+      "ci95_low": -0.0370714859838704,
+      "day_blocks": 11,
+      "draws": 4000,
+      "mean_model_minus_baseline": -0.034569513253210594
+    }
+  },
+  "evaluation_complete": true,
+  "gates": {
+    "classification_proper_score_beats_constant_prior": true,
+    "distribution_quantiles_coherent": true,
+    "distribution_wis_beats_empirical_residual": true,
+    "point_mape_beats_prior_anchor": true,
+    "policy_cvar_not_materially_worse_than_buy_all": true,
+    "policy_mean_regret_beats_buy_all": true,
+    "ranking_ndcg5_beats_prior_anchor": true
+  },
+  "next_action": "RUN_TEST_2_WITH_SAME_DEPLOYABLE_LOCK",
+  "operational_adapter": {
+    "id": "EVALUATE_QUERY_JOIN_ADAPTER_R1",
+    "identity_equality_verified": true,
+    "models_refit": false,
+    "predictions_changed": false,
+    "reason": "prediction and label query_id columns received pandas _x/_y suffixes after one-to-one merge",
+    "sha256": "4c01a6d15106abcd2cf6a65c74cf0c0dddb181eb0ff5fd66767c96913360828a"
+  },
+  "point": {
+    "baseline_prior_anchor": {
+      "bias": -9008.650450178195,
+      "mae": 232078.88103103312,
+      "mape": 0.14178239293609515,
+      "median_ape": 0.0862657846125158,
+      "rmse": 382344.83491389535
+    },
+    "model": {
+      "bias": -30521.182405596002,
+      "mae": 119522.79550625957,
+      "mape": 0.07306203902754833,
+      "median_ape": 0.03667576117635613,
+      "rmse": 220318.20741159673
+    },
+    "paired_day_bootstrap": {
+      "ci95_high": -0.06526516295758895,
+      "ci95_low": -0.07609222200864539,
+      "day_blocks": 11,
+      "draws": 4000,
+      "mean_model_minus_baseline": -0.06993839933441294
+    }
+  },
+  "ranking": {
+    "baseline_prior_anchor": {
+      "ndcg5": 0.6445583480462653,
+      "pairwise_concordance": 0.7148486854220428,
+      "queries": 4611.0
+    },
+    "model": {
+      "ndcg5": 0.8179069030420502,
+      "pairwise_concordance": 0.8727072527209734,
+      "queries": 4611.0
+    }
+  },
+  "status": "PASS",
+  "test_2_access": false
+}

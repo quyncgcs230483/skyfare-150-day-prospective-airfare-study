@@ -1,0 +1,59 @@
+{
+  "ensemble": {
+    "display_name": "Equal-weight frozen finalist ensemble",
+    "immutable_identifier": "V24_MEAN",
+    "members_per_task": 2,
+    "note": "The immutable identifier is retained solely for compatibility with signed result archives."
+  },
+  "models": {
+    "C24_FT_WIDE_D015": {
+      "configuration": "wide architecture; dropout 0.15",
+      "family": "TabTransformer",
+      "resource": "GPU",
+      "task": "temporal fare-drop classification"
+    },
+    "C24_GRU_EXACT_MTL_U64": {
+      "configuration": "exact legal history; multitask objective; 64 recurrent units",
+      "family": "gated recurrent unit",
+      "resource": "GPU",
+      "task": "temporal fare-drop classification"
+    },
+    "D24_CAT_Q7_D7": {
+      "configuration": "seven conditional quantiles; tree depth 7",
+      "family": "CatBoost quantile model",
+      "resource": "CPU",
+      "task": "probabilistic fare forecasting"
+    },
+    "D24_XGB_Q7_D7": {
+      "configuration": "seven conditional quantiles; tree depth 7",
+      "family": "XGBoost quantile model",
+      "resource": "GPU",
+      "task": "probabilistic fare forecasting"
+    },
+    "K24_LGBM_LAMBDA_R84_L63": {
+      "configuration": "recent 84-day window; 63 leaves; LambdaRank objective",
+      "family": "LightGBM LambdaRank",
+      "resource": "CPU",
+      "task": "within-query learning-to-rank"
+    },
+    "K24_LGBM_XENDCG_R84_L63": {
+      "configuration": "recent 84-day window; 63 leaves; XE-NDCG objective",
+      "family": "LightGBM XE-NDCG",
+      "resource": "CPU",
+      "task": "within-query learning-to-rank"
+    },
+    "R24_GRU_EXACT_HUBER_U64": {
+      "configuration": "exact legal history; Huber objective; 64 recurrent units",
+      "family": "gated recurrent unit",
+      "resource": "GPU",
+      "task": "point fare regression"
+    },
+    "R24_LSTM_EXACT_HUBER_U64": {
+      "configuration": "exact legal history; Huber objective; 64 recurrent units",
+      "family": "long short-term memory",
+      "resource": "GPU",
+      "task": "point fare regression"
+    }
+  },
+  "status": "FROZEN_AFTER_DEVELOPMENT"
+}

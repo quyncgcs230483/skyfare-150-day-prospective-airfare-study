@@ -1,0 +1,14 @@
+{
+  "assets": [
+    {"bytes": 30467, "filename": "SKYFARE_V23_FINAL_COMPLETION_EVIDENCE_R1.tar.gz", "role": "compact development-search completion evidence", "sha256": "529795b24d2f3c09f294168b2b0bf880fc098a1ae9955c1e5444c85af667e474"},
+    {"bytes": 1173571430, "filename": "SKYFARE_V24_FINAL_REFINEMENT_FREEZE_RESULTS_R1.tar.gz", "role": "development selection and frozen recipes", "sha256": "eebcef7335add5bb918272023804f9d59f0c6480e5bdf7b5ac58a41b0f62792c"},
+    {"bytes": 83744, "filename": "SKYFARE_V24_FINAL_COMPLETION_EVIDENCE_R1.tar.gz", "role": "compact development-selection completion evidence", "sha256": "c3a833c886155288dc99ac3e1213b4257ac7f0908554722de009affba0b3060a"},
+    {"bytes": 227823449, "filename": "SKYFARE_TEST_1_EVALUATION_RESULTS_R2.tar.gz", "role": "first prospective evaluation block", "sha256": "5fe2348ef3098fca189ee8ead182738ea9c95b8f2c990f2e5704113021e6ac7e"},
+    {"bytes": 8750, "filename": "SKYFARE_TEST_1_FINAL_EVIDENCE_R2.tar.gz", "role": "compact first-block completion evidence", "sha256": "dde7022bfd8403b725d6fa4e1ac258f013661bbf9f9d389da79222379ad99b72"},
+    {"bytes": 227462512, "filename": "SKYFARE_TEST_2_EVALUATION_RESULTS_R1.tar.gz", "role": "second prospective evaluation block", "sha256": "3207a539c4689ca9df007da01c5374e50b796fe740c4abee35a4cabd907dd293"},
+    {"bytes": 8092, "filename": "SKYFARE_TEST_2_FINAL_EVIDENCE_R1.tar.gz", "role": "compact second-block completion evidence", "sha256": "9bc76213e09e223bdf14ab34334b115b6a6f8a638210e15ff7804f75da98f457"},
+    {"bytes": 369057710, "filename": "SKYFARE_128_DAY_FINAL_PRODUCTION_MODELS_R1.tar.gz", "role": "final frozen production refit through the 150-day boundary", "sha256": "8a2a883744814a2aac1606e8e00cbbbff1066d94c68b268afca9c1ecd45edd01"}
+  ],
+  "release_tag": "study-results-2026-08",
+  "repository": "quyncgcs230483/skyfare-150-day-prospective-airfare-study"
+}

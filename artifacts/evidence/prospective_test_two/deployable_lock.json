@@ -1,0 +1,30 @@
+{
+  "candidate_search": false,
+  "contract_sha256": "079c4864f99a4b63fc8f9f85c13a5336c73121f8ef95913a8528ab4caa1d3ed2",
+  "deployable_recipes": {
+    "CLASSIFICATION": "V24_MEAN",
+    "DISTRIBUTION": "V24_MEAN",
+    "POINT": "V24_MEAN",
+    "RANKING": "V24_MEAN"
+  },
+  "hyperparameter_tuning": false,
+  "original_v24_recipes": {
+    "CLASSIFICATION": "V24_MEAN",
+    "DISTRIBUTION": "V24_BLEND_50",
+    "POINT": "V24_BLEND_50",
+    "RANKING": "V24_BLEND_75"
+  },
+  "reason": "incumbent blend terms lack serialized deployment models",
+  "refit_rule": "label_time < 2026-08-09; frozen recipe unchanged",
+  "status": "LOCKED_BEFORE_SCORING",
+  "test_1_labels_used_for_recipe_selection": false,
+  "test_1_training_extension": [
+    "2026-07-29",
+    "2026-08-08"
+  ],
+  "test_2": [
+    "2026-08-09",
+    "2026-08-19"
+  ],
+  "test_2_labels_used_for_recipe_selection": false
+}

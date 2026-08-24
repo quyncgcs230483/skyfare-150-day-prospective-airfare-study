@@ -1,0 +1,661 @@
+{
+  "archive": "SKYFARE_TEST_1_EVALUATION_RESULTS_R2.tar.gz",
+  "archive_sha256": "5fe2348ef3098fca189ee8ead182738ea9c95b8f2c990f2e5704113021e6ac7e",
+  "files": [
+    {
+      "path": "test1_outputs/VERIFICATION_TEST_1.json",
+      "size": 1053
+    },
+    {
+      "path": "test1_outputs/analysis/TEST_1_REPORT.json",
+      "size": 4564
+    },
+    {
+      "path": "test1_outputs/cache/sequence_exact_v19.joblib",
+      "size": 32053599
+    },
+    {
+      "path": "test1_outputs/cache/sequence_exact_v19.json",
+      "size": 283
+    },
+    {
+      "path": "test1_outputs/frozen_predictions/classification_test1_predictions.parquet",
+      "size": 2096215
+    },
+    {
+      "path": "test1_outputs/frozen_predictions/distribution_test1_predictions.parquet",
+      "size": 15437810
+    },
+    {
+      "path": "test1_outputs/frozen_predictions/point_test1_predictions.parquet",
+      "size": 4385142
+    },
+    {
+      "path": "test1_outputs/frozen_predictions/ranking_test1_predictions.parquet",
+      "size": 3476314
+    },
+    {
+      "path": "test1_outputs/jobs/C24_FT_WIDE_D015__TEST_1__S2026082501/best.weights.h5",
+      "size": 1150504
+    },
+    {
+      "path": "test1_outputs/jobs/C24_FT_WIDE_D015__TEST_1__S2026082501/done.json",
+      "size": 3831
+    },
+    {
+      "path": "test1_outputs/jobs/C24_FT_WIDE_D015__TEST_1__S2026082501/heartbeat.json",
+      "size": 237
+    },
+    {
+      "path": "test1_outputs/jobs/C24_FT_WIDE_D015__TEST_1__S2026082501/job.log",
+      "size": 4450
+    },
+    {
+      "path": "test1_outputs/jobs/C24_FT_WIDE_D015__TEST_1__S2026082501/predictions.parquet",
+      "size": 1719002
+    },
+    {
+      "path": "test1_outputs/jobs/C24_FT_WIDE_D015__TEST_1__S2026082502/best.weights.h5",
+      "size": 1150504
+    },
+    {
+      "path": "test1_outputs/jobs/C24_FT_WIDE_D015__TEST_1__S2026082502/done.json",
+      "size": 3704
+    },
+    {
+      "path": "test1_outputs/jobs/C24_FT_WIDE_D015__TEST_1__S2026082502/heartbeat.json",
+      "size": 237
+    },
+    {
+      "path": "test1_outputs/jobs/C24_FT_WIDE_D015__TEST_1__S2026082502/job.log",
+      "size": 4309
+    },
+    {
+      "path": "test1_outputs/jobs/C24_FT_WIDE_D015__TEST_1__S2026082502/predictions.parquet",
+      "size": 1720151
+    },
+    {
+      "path": "test1_outputs/jobs/C24_FT_WIDE_D015__TEST_1__S2026082503/best.weights.h5",
+      "size": 1150504
+    },
+    {
+      "path": "test1_outputs/jobs/C24_FT_WIDE_D015__TEST_1__S2026082503/done.json",
+      "size": 3096
+    },
+    {
+      "path": "test1_outputs/jobs/C24_FT_WIDE_D015__TEST_1__S2026082503/heartbeat.json",
+      "size": 238
+    },
+    {
+      "path": "test1_outputs/jobs/C24_FT_WIDE_D015__TEST_1__S2026082503/job.log",
+      "size": 3528
+    },
+    {
+      "path": "test1_outputs/jobs/C24_FT_WIDE_D015__TEST_1__S2026082503/predictions.parquet",
+      "size": 1718611
+    },
+    {
+      "path": "test1_outputs/jobs/C24_GRU_EXACT_MTL_U64__TEST_1__S2026082501/best.weights.h5",
+      "size": 399664
+    },
+    {
+      "path": "test1_outputs/jobs/C24_GRU_EXACT_MTL_U64__TEST_1__S2026082501/done.json",
+      "size": 3794
+    },
+    {
+      "path": "test1_outputs/jobs/C24_GRU_EXACT_MTL_U64__TEST_1__S2026082501/heartbeat.json",
+      "size": 241
+    },
+    {
+      "path": "test1_outputs/jobs/C24_GRU_EXACT_MTL_U64__TEST_1__S2026082501/job.log",
+      "size": 3234
+    },
+    {
+      "path": "test1_outputs/jobs/C24_GRU_EXACT_MTL_U64__TEST_1__S2026082501/predictions.parquet",
+      "size": 1716462
+    },
+    {
+      "path": "test1_outputs/jobs/C24_GRU_EXACT_MTL_U64__TEST_1__S2026082502/best.weights.h5",
+      "size": 399664
+    },
+    {
+      "path": "test1_outputs/jobs/C24_GRU_EXACT_MTL_U64__TEST_1__S2026082502/done.json",
+      "size": 3800
+    },
+    {
+      "path": "test1_outputs/jobs/C24_GRU_EXACT_MTL_U64__TEST_1__S2026082502/heartbeat.json",
+      "size": 241
+    },
+    {
+      "path": "test1_outputs/jobs/C24_GRU_EXACT_MTL_U64__TEST_1__S2026082502/job.log",
+      "size": 3958
+    },
+    {
+      "path": "test1_outputs/jobs/C24_GRU_EXACT_MTL_U64__TEST_1__S2026082502/predictions.parquet",
+      "size": 1717004
+    },
+    {
+      "path": "test1_outputs/jobs/C24_GRU_EXACT_MTL_U64__TEST_1__S2026082503/best.weights.h5",
+      "size": 399664
+    },
+    {
+      "path": "test1_outputs/jobs/C24_GRU_EXACT_MTL_U64__TEST_1__S2026082503/done.json",
+      "size": 3799
+    },
+    {
+      "path": "test1_outputs/jobs/C24_GRU_EXACT_MTL_U64__TEST_1__S2026082503/heartbeat.json",
+      "size": 241
+    },
+    {
+      "path": "test1_outputs/jobs/C24_GRU_EXACT_MTL_U64__TEST_1__S2026082503/job.log",
+      "size": 3234
+    },
+    {
+      "path": "test1_outputs/jobs/C24_GRU_EXACT_MTL_U64__TEST_1__S2026082503/predictions.parquet",
+      "size": 1716675
+    },
+    {
+      "path": "test1_outputs/jobs/D24_CAT_Q7_D7__TEST_1__S2026082501/done.json",
+      "size": 5319
+    },
+    {
+      "path": "test1_outputs/jobs/D24_CAT_Q7_D7__TEST_1__S2026082501/heartbeat.json",
+      "size": 236
+    },
+    {
+      "path": "test1_outputs/jobs/D24_CAT_Q7_D7__TEST_1__S2026082501/job.log",
+      "size": 184
+    },
+    {
+      "path": "test1_outputs/jobs/D24_CAT_Q7_D7__TEST_1__S2026082501/predictions.parquet",
+      "size": 15119361
+    },
+    {
+      "path": "test1_outputs/jobs/D24_CAT_Q7_D7__TEST_1__S2026082502/done.json",
+      "size": 5328
+    },
+    {
+      "path": "test1_outputs/jobs/D24_CAT_Q7_D7__TEST_1__S2026082502/heartbeat.json",
+      "size": 235
+    },
+    {
+      "path": "test1_outputs/jobs/D24_CAT_Q7_D7__TEST_1__S2026082502/job.log",
+      "size": 184
+    },
+    {
+      "path": "test1_outputs/jobs/D24_CAT_Q7_D7__TEST_1__S2026082502/predictions.parquet",
+      "size": 15127215
+    },
+    {
+      "path": "test1_outputs/jobs/D24_CAT_Q7_D7__TEST_1__S2026082503/done.json",
+      "size": 5324
+    },
+    {
+      "path": "test1_outputs/jobs/D24_CAT_Q7_D7__TEST_1__S2026082503/heartbeat.json",
+      "size": 236
+    },
+    {
+      "path": "test1_outputs/jobs/D24_CAT_Q7_D7__TEST_1__S2026082503/job.log",
+      "size": 184
+    },
+    {
+      "path": "test1_outputs/jobs/D24_CAT_Q7_D7__TEST_1__S2026082503/predictions.parquet",
+      "size": 15119170
+    },
+    {
+      "path": "test1_outputs/jobs/D24_XGB_Q7_D7__TEST_1__S2026082501/done.json",
+      "size": 5483
+    },
+    {
+      "path": "test1_outputs/jobs/D24_XGB_Q7_D7__TEST_1__S2026082501/heartbeat.json",
+      "size": 234
+    },
+    {
+      "path": "test1_outputs/jobs/D24_XGB_Q7_D7__TEST_1__S2026082501/job.log",
+      "size": 183
+    },
+    {
+      "path": "test1_outputs/jobs/D24_XGB_Q7_D7__TEST_1__S2026082501/predictions.parquet",
+      "size": 14948315
+    },
+    {
+      "path": "test1_outputs/jobs/D24_XGB_Q7_D7__TEST_1__S2026082502/done.json",
+      "size": 5488
+    },
+    {
+      "path": "test1_outputs/jobs/D24_XGB_Q7_D7__TEST_1__S2026082502/heartbeat.json",
+      "size": 235
+    },
+    {
+      "path": "test1_outputs/jobs/D24_XGB_Q7_D7__TEST_1__S2026082502/job.log",
+      "size": 183
+    },
+    {
+      "path": "test1_outputs/jobs/D24_XGB_Q7_D7__TEST_1__S2026082502/predictions.parquet",
+      "size": 14877574
+    },
+    {
+      "path": "test1_outputs/jobs/D24_XGB_Q7_D7__TEST_1__S2026082503/done.json",
+      "size": 5525
+    },
+    {
+      "path": "test1_outputs/jobs/D24_XGB_Q7_D7__TEST_1__S2026082503/heartbeat.json",
+      "size": 235
+    },
+    {
+      "path": "test1_outputs/jobs/D24_XGB_Q7_D7__TEST_1__S2026082503/job.log",
+      "size": 183
+    },
+    {
+      "path": "test1_outputs/jobs/D24_XGB_Q7_D7__TEST_1__S2026082503/predictions.parquet",
+      "size": 14866551
+    },
+    {
+      "path": "test1_outputs/jobs/K24_LGBM_LAMBDA_R84_L63__TEST_1__S2026082501/done.json",
+      "size": 1161
+    },
+    {
+      "path": "test1_outputs/jobs/K24_LGBM_LAMBDA_R84_L63__TEST_1__S2026082501/heartbeat.json",
+      "size": 243
+    },
+    {
+      "path": "test1_outputs/jobs/K24_LGBM_LAMBDA_R84_L63__TEST_1__S2026082501/job.log",
+      "size": 499
+    },
+    {
+      "path": "test1_outputs/jobs/K24_LGBM_LAMBDA_R84_L63__TEST_1__S2026082501/predictions.parquet",
+      "size": 3151841
+    },
+    {
+      "path": "test1_outputs/jobs/K24_LGBM_LAMBDA_R84_L63__TEST_1__S2026082502/done.json",
+      "size": 1161
+    },
+    {
+      "path": "test1_outputs/jobs/K24_LGBM_LAMBDA_R84_L63__TEST_1__S2026082502/heartbeat.json",
+      "size": 243
+    },
+    {
+      "path": "test1_outputs/jobs/K24_LGBM_LAMBDA_R84_L63__TEST_1__S2026082502/job.log",
+      "size": 499
+    },
+    {
+      "path": "test1_outputs/jobs/K24_LGBM_LAMBDA_R84_L63__TEST_1__S2026082502/predictions.parquet",
+      "size": 3152223
+    },
+    {
+      "path": "test1_outputs/jobs/K24_LGBM_LAMBDA_R84_L63__TEST_1__S2026082503/done.json",
+      "size": 1161
+    },
+    {
+      "path": "test1_outputs/jobs/K24_LGBM_LAMBDA_R84_L63__TEST_1__S2026082503/heartbeat.json",
+      "size": 243
+    },
+    {
+      "path": "test1_outputs/jobs/K24_LGBM_LAMBDA_R84_L63__TEST_1__S2026082503/job.log",
+      "size": 499
+    },
+    {
+      "path": "test1_outputs/jobs/K24_LGBM_LAMBDA_R84_L63__TEST_1__S2026082503/predictions.parquet",
+      "size": 3151668
+    },
+    {
+      "path": "test1_outputs/jobs/K24_LGBM_XENDCG_R84_L63__TEST_1__S2026082501/done.json",
+      "size": 1157
+    },
+    {
+      "path": "test1_outputs/jobs/K24_LGBM_XENDCG_R84_L63__TEST_1__S2026082501/heartbeat.json",
+      "size": 243
+    },
+    {
+      "path": "test1_outputs/jobs/K24_LGBM_XENDCG_R84_L63__TEST_1__S2026082501/job.log",
+      "size": 499
+    },
+    {
+      "path": "test1_outputs/jobs/K24_LGBM_XENDCG_R84_L63__TEST_1__S2026082501/predictions.parquet",
+      "size": 3148567
+    },
+    {
+      "path": "test1_outputs/jobs/K24_LGBM_XENDCG_R84_L63__TEST_1__S2026082502/done.json",
+      "size": 1157
+    },
+    {
+      "path": "test1_outputs/jobs/K24_LGBM_XENDCG_R84_L63__TEST_1__S2026082502/heartbeat.json",
+      "size": 242
+    },
+    {
+      "path": "test1_outputs/jobs/K24_LGBM_XENDCG_R84_L63__TEST_1__S2026082502/job.log",
+      "size": 499
+    },
+    {
+      "path": "test1_outputs/jobs/K24_LGBM_XENDCG_R84_L63__TEST_1__S2026082502/predictions.parquet",
+      "size": 3147515
+    },
+    {
+      "path": "test1_outputs/jobs/K24_LGBM_XENDCG_R84_L63__TEST_1__S2026082503/done.json",
+      "size": 1158
+    },
+    {
+      "path": "test1_outputs/jobs/K24_LGBM_XENDCG_R84_L63__TEST_1__S2026082503/heartbeat.json",
+      "size": 243
+    },
+    {
+      "path": "test1_outputs/jobs/K24_LGBM_XENDCG_R84_L63__TEST_1__S2026082503/job.log",
+      "size": 499
+    },
+    {
+      "path": "test1_outputs/jobs/K24_LGBM_XENDCG_R84_L63__TEST_1__S2026082503/predictions.parquet",
+      "size": 3147337
+    },
+    {
+      "path": "test1_outputs/jobs/R24_GRU_EXACT_HUBER_U64__TEST_1__S2026082501/best.weights.h5",
+      "size": 390816
+    },
+    {
+      "path": "test1_outputs/jobs/R24_GRU_EXACT_HUBER_U64__TEST_1__S2026082501/done.json",
+      "size": 2615
+    },
+    {
+      "path": "test1_outputs/jobs/R24_GRU_EXACT_HUBER_U64__TEST_1__S2026082501/heartbeat.json",
+      "size": 245
+    },
+    {
+      "path": "test1_outputs/jobs/R24_GRU_EXACT_HUBER_U64__TEST_1__S2026082501/job.log",
+      "size": 11929
+    },
+    {
+      "path": "test1_outputs/jobs/R24_GRU_EXACT_HUBER_U64__TEST_1__S2026082501/predictions.parquet",
+      "size": 3817523
+    },
+    {
+      "path": "test1_outputs/jobs/R24_GRU_EXACT_HUBER_U64__TEST_1__S2026082502/best.weights.h5",
+      "size": 390816
+    },
+    {
+      "path": "test1_outputs/jobs/R24_GRU_EXACT_HUBER_U64__TEST_1__S2026082502/done.json",
+      "size": 3286
+    },
+    {
+      "path": "test1_outputs/jobs/R24_GRU_EXACT_HUBER_U64__TEST_1__S2026082502/heartbeat.json",
+      "size": 245
+    },
+    {
+      "path": "test1_outputs/jobs/R24_GRU_EXACT_HUBER_U64__TEST_1__S2026082502/job.log",
+      "size": 12699
+    },
+    {
+      "path": "test1_outputs/jobs/R24_GRU_EXACT_HUBER_U64__TEST_1__S2026082502/predictions.parquet",
+      "size": 3816614
+    },
+    {
+      "path": "test1_outputs/jobs/R24_GRU_EXACT_HUBER_U64__TEST_1__S2026082503/best.weights.h5",
+      "size": 390816
+    },
+    {
+      "path": "test1_outputs/jobs/R24_GRU_EXACT_HUBER_U64__TEST_1__S2026082503/done.json",
+      "size": 3290
+    },
+    {
+      "path": "test1_outputs/jobs/R24_GRU_EXACT_HUBER_U64__TEST_1__S2026082503/heartbeat.json",
+      "size": 245
+    },
+    {
+      "path": "test1_outputs/jobs/R24_GRU_EXACT_HUBER_U64__TEST_1__S2026082503/job.log",
+      "size": 4274
+    },
+    {
+      "path": "test1_outputs/jobs/R24_GRU_EXACT_HUBER_U64__TEST_1__S2026082503/predictions.parquet",
+      "size": 3817100
+    },
+    {
+      "path": "test1_outputs/jobs/R24_LSTM_EXACT_HUBER_U64__TEST_1__S2026082501/best.weights.h5",
+      "size": 442912
+    },
+    {
+      "path": "test1_outputs/jobs/R24_LSTM_EXACT_HUBER_U64__TEST_1__S2026082501/done.json",
+      "size": 3292
+    },
+    {
+      "path": "test1_outputs/jobs/R24_LSTM_EXACT_HUBER_U64__TEST_1__S2026082501/heartbeat.json",
+      "size": 246
+    },
+    {
+      "path": "test1_outputs/jobs/R24_LSTM_EXACT_HUBER_U64__TEST_1__S2026082501/job.log",
+      "size": 4276
+    },
+    {
+      "path": "test1_outputs/jobs/R24_LSTM_EXACT_HUBER_U64__TEST_1__S2026082501/predictions.parquet",
+      "size": 3820338
+    },
+    {
+      "path": "test1_outputs/jobs/R24_LSTM_EXACT_HUBER_U64__TEST_1__S2026082502/best.weights.h5",
+      "size": 442912
+    },
+    {
+      "path": "test1_outputs/jobs/R24_LSTM_EXACT_HUBER_U64__TEST_1__S2026082502/done.json",
+      "size": 3171
+    },
+    {
+      "path": "test1_outputs/jobs/R24_LSTM_EXACT_HUBER_U64__TEST_1__S2026082502/heartbeat.json",
+      "size": 246
+    },
+    {
+      "path": "test1_outputs/jobs/R24_LSTM_EXACT_HUBER_U64__TEST_1__S2026082502/job.log",
+      "size": 4136
+    },
+    {
+      "path": "test1_outputs/jobs/R24_LSTM_EXACT_HUBER_U64__TEST_1__S2026082502/predictions.parquet",
+      "size": 3816392
+    },
+    {
+      "path": "test1_outputs/jobs/R24_LSTM_EXACT_HUBER_U64__TEST_1__S2026082503/best.weights.h5",
+      "size": 442912
+    },
+    {
+      "path": "test1_outputs/jobs/R24_LSTM_EXACT_HUBER_U64__TEST_1__S2026082503/done.json",
+      "size": 3228
+    },
+    {
+      "path": "test1_outputs/jobs/R24_LSTM_EXACT_HUBER_U64__TEST_1__S2026082503/heartbeat.json",
+      "size": 245
+    },
+    {
+      "path": "test1_outputs/jobs/R24_LSTM_EXACT_HUBER_U64__TEST_1__S2026082503/job.log",
+      "size": 4206
+    },
+    {
+      "path": "test1_outputs/jobs/R24_LSTM_EXACT_HUBER_U64__TEST_1__S2026082503/predictions.parquet",
+      "size": 3819637
+    },
+    {
+      "path": "test1_outputs/runtime/deployable_lock_test1.json",
+      "size": 769
+    },
+    {
+      "path": "test1_outputs/runtime/evaluate_query_join_adapter_r1.py",
+      "size": 2054
+    },
+    {
+      "path": "test1_outputs/runtime/evaluation_query_join_adapter_r1.json",
+      "size": 251
+    },
+    {
+      "path": "test1_outputs/runtime/pipeline_status_test1.json",
+      "size": 166
+    },
+    {
+      "path": "test1_outputs/runtime/prediction_commit_test1.json",
+      "size": 1510
+    },
+    {
+      "path": "test1_outputs/runtime/preflight_test1.json",
+      "size": 5257
+    },
+    {
+      "path": "test1_outputs/runtime/recover_remaining_test1_r1.py",
+      "size": 4688
+    },
+    {
+      "path": "test1_outputs/runtime/scheduler_test1.json",
+      "size": 408
+    },
+    {
+      "path": "test1_outputs/runtime/targetfree_seq_point_adapter_r1.py",
+      "size": 1874
+    },
+    {
+      "path": "test1_outputs/staging/classification_features.parquet",
+      "size": 10354557
+    },
+    {
+      "path": "test1_outputs/staging/classification_labels.parquet",
+      "size": 743844
+    },
+    {
+      "path": "test1_outputs/staging/regression_features.parquet",
+      "size": 13224635
+    },
+    {
+      "path": "test1_outputs/staging/regression_labels.parquet",
+      "size": 1703946
+    },
+    {
+      "path": "05_MODEL_TRAINING/41_TEST_1_EVALUATION_R2/README_TEST1.md",
+      "size": 2002
+    },
+    {
+      "path": "05_MODEL_TRAINING/41_TEST_1_EVALUATION_R2/__pycache__/contract_test1.cpython-310.pyc",
+      "size": 5172
+    },
+    {
+      "path": "05_MODEL_TRAINING/41_TEST_1_EVALUATION_R2/__pycache__/evaluate_test1.cpython-310.pyc",
+      "size": 7002
+    },
+    {
+      "path": "05_MODEL_TRAINING/41_TEST_1_EVALUATION_R2/__pycache__/runtime_test1.cpython-310.pyc",
+      "size": 8102
+    },
+    {
+      "path": "05_MODEL_TRAINING/41_TEST_1_EVALUATION_R2/__pycache__/score_job_test1.cpython-310.pyc",
+      "size": 6566
+    },
+    {
+      "path": "05_MODEL_TRAINING/41_TEST_1_EVALUATION_R2/build_result_archive_test1.py",
+      "size": 2974
+    },
+    {
+      "path": "05_MODEL_TRAINING/41_TEST_1_EVALUATION_R2/build_source_bundle_test1.py",
+      "size": 3498
+    },
+    {
+      "path": "05_MODEL_TRAINING/41_TEST_1_EVALUATION_R2/contract_test1.py",
+      "size": 5170
+    },
+    {
+      "path": "05_MODEL_TRAINING/41_TEST_1_EVALUATION_R2/evaluate_test1.py",
+      "size": 9027
+    },
+    {
+      "path": "05_MODEL_TRAINING/41_TEST_1_EVALUATION_R2/freeze_predictions_test1.py",
+      "size": 4478
+    },
+    {
+      "path": "05_MODEL_TRAINING/41_TEST_1_EVALUATION_R2/monitor_test1.py",
+      "size": 1774
+    },
+    {
+      "path": "05_MODEL_TRAINING/41_TEST_1_EVALUATION_R2/preflight_test1.py",
+      "size": 10775
+    },
+    {
+      "path": "05_MODEL_TRAINING/41_TEST_1_EVALUATION_R2/prepare_sealed_test1.py",
+      "size": 18742
+    },
+    {
+      "path": "05_MODEL_TRAINING/41_TEST_1_EVALUATION_R2/requirements_test1.txt",
+      "size": 58
+    },
+    {
+      "path": "05_MODEL_TRAINING/41_TEST_1_EVALUATION_R2/run_test1_fresh_host.sh",
+      "size": 3847
+    },
+    {
+      "path": "05_MODEL_TRAINING/41_TEST_1_EVALUATION_R2/run_test1_pipeline.sh",
+      "size": 1249
+    },
+    {
+      "path": "05_MODEL_TRAINING/41_TEST_1_EVALUATION_R2/runtime_test1.py",
+      "size": 7569
+    },
+    {
+      "path": "05_MODEL_TRAINING/41_TEST_1_EVALUATION_R2/scheduler_test1.py",
+      "size": 5326
+    },
+    {
+      "path": "05_MODEL_TRAINING/41_TEST_1_EVALUATION_R2/score_job_test1.py",
+      "size": 8150
+    },
+    {
+      "path": "05_MODEL_TRAINING/41_TEST_1_EVALUATION_R2/tests/__pycache__/test_contract_test1.cpython-310.pyc",
+      "size": 2435
+    },
+    {
+      "path": "05_MODEL_TRAINING/41_TEST_1_EVALUATION_R2/tests/__pycache__/test_runtime_test1.cpython-310.pyc",
+      "size": 1809
+    },
+    {
+      "path": "05_MODEL_TRAINING/41_TEST_1_EVALUATION_R2/tests/test_contract_test1.py",
+      "size": 1385
+    },
+    {
+      "path": "05_MODEL_TRAINING/41_TEST_1_EVALUATION_R2/tests/test_runtime_test1.py",
+      "size": 1088
+    },
+    {
+      "path": "05_MODEL_TRAINING/41_TEST_1_EVALUATION_R2/verify_bundle_test1.py",
+      "size": 2518
+    },
+    {
+      "path": "05_MODEL_TRAINING/41_TEST_1_EVALUATION_R2/verify_test1.py",
+      "size": 2953
+    },
+    {
+      "path": "v24_lock/V24_RECIPE_LOCK.json",
+      "size": 2258
+    },
+    {
+      "path": "v24_lock/VERIFICATION_V24.json",
+      "size": 802
+    },
+    {
+      "path": "v24_lock/buy_wait_policy_v24.json",
+      "size": 30571
+    },
+    {
+      "path": "v24_lock/classification_selection_v24.json",
+      "size": 13080
+    },
+    {
+      "path": "v24_lock/distribution_selection_v24.json",
+      "size": 25073
+    },
+    {
+      "path": "v24_lock/finalists_v24.json",
+      "size": 13313
+    },
+    {
+      "path": "v24_lock/point_selection_v24.json",
+      "size": 12771
+    },
+    {
+      "path": "v24_lock/ranking_selection_v24.json",
+      "size": 9733
+    },
+    {
+      "path": "v24_lock/research_report_v24.json",
+      "size": 1850
+    }
+  ],
+  "scientific_decision": "PASS",
+  "status": "PASS",
+  "test_2_access": false
+}

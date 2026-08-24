@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skyfare-prospective-study"
+version = "1.0.0"
+description = "Reproducible 150-day prospective airfare forecasting study"
+readme = "README.rst"
+requires-python = ">=3.10,<3.12"
+dependencies = [
+  "numpy==2.0.2",
+  "pandas==2.3.3",
+  "scipy==1.15.3",
+  "pyarrow==19.0.1",
+  "scikit-learn==1.7.2",
+  "joblib==1.5.3",
+  "lightgbm==4.7.0",
+  "catboost==1.2.10",
+  "xgboost==3.2.0",
+]
+
+[project.optional-dependencies]
+gpu = ["tensorflow[and-cuda]==2.19.1"]
+collection-fli = ["fli"]
+collection-trip = ["camoufox[geoip]"]
+figures = ["matplotlib==3.10.9"]
+quality = ["pytest>=8.3,<9", "ruff>=0.12,<1"]
+
+[project.scripts]
+skyfare = "skyfare.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E9", "F63", "F7", "F82"]

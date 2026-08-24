@@ -1,0 +1,10 @@
+{
+  "artifact_mutation": false,
+  "hotfix_id": "SKYFARE_PRODUCTION_FINALIZATION_SCHEMA_HOTFIX_R2",
+  "models_retrained": false,
+  "reason": "Finalization expected target_anchor_relative_log although artifacts serialize target, and prefix matching incorrectly selected query_dud as an eighth quantile.",
+  "recovery": "Map target in memory and select exactly seven qNN columns derived from the frozen QUANTILES contract.",
+  "scope": "FINALIZATION_ONLY",
+  "status": "APPROVED",
+  "supersedes": "SKYFARE_PRODUCTION_FINALIZATION_SCHEMA_HOTFIX_R1"
+}

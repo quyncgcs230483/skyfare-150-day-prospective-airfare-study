@@ -1,0 +1,14 @@
+{
+  "adapter_id": "TARGETFREE_SEQ_POINT_ADAPTER_R1",
+  "adapter_sha256": "ce1fd224410f914327cb70398107433c2a266e7adc4b4fd425d6ca5eda888e25",
+  "cpu_workers": 6,
+  "elapsed_seconds": 470.986,
+  "gpu_workers": 4,
+  "gpu_workers_per_device": 2,
+  "initial_jobs_preserved": 15,
+  "jobs_complete": 24,
+  "jobs_expected": 24,
+  "jobs_recovered": 9,
+  "status": "PASS",
+  "test_labels_read_during_scoring": false
+}

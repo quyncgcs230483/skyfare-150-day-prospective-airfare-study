@@ -1,0 +1,42 @@
+{
+  "buy_wait": {
+    "pilot_automatic": false,
+    "pilot_status": "GUARDED_PILOT_NOT_PROVEN_SUPERIOR",
+    "production_action": "BUY"
+  },
+  "deployment_manifest_sha256": "567443b4fd6bfdeac91f3a898ffe1888893cc1a07a95124fdbadbcc561b19fec",
+  "finalization_recovery": {
+    "adapter_id": "SKYFARE_PRODUCTION_FINALIZATION_SCHEMA_ADAPTER_R2",
+    "adapter_path": "evidence/finalize_production_schema_adapter_r2.py",
+    "adapter_sha256": "f57dfabbd678817c893426719ebbc88e593901f0d81969e8ea4dcf748190c70e",
+    "input_artifacts_modified": false,
+    "models_retrained": false,
+    "schema_counts": {
+      "CLASSIFICATION": 6,
+      "DISTRIBUTION": 6,
+      "POINT": 6,
+      "RANKING": 6
+    },
+    "schema_mapping": {
+      "calibration_target": "target_anchor_relative_log",
+      "quantile_selector": "exact qNN names from frozen QUANTILES",
+      "serialized_distribution_target": "target"
+    },
+    "status": "PASS"
+  },
+  "production_jobs": 24,
+  "recipes": {
+    "CLASSIFICATION": "V24_MEAN",
+    "DISTRIBUTION": "V24_MEAN",
+    "POINT": "V24_MEAN",
+    "RANKING": "V24_MEAN"
+  },
+  "status": "PASS",
+  "tasks": [
+    "CLASSIFICATION",
+    "POINT",
+    "DISTRIBUTION",
+    "RANKING"
+  ],
+  "training_cutoff_inclusive": "2026-08-19"
+}

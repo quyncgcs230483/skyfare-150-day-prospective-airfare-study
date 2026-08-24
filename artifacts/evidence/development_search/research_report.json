@@ -1,0 +1,18 @@
+{
+  "automatic_promotion": false,
+  "classification_best_component": "V17_SYSTEM_BLEND",
+  "classification_best_score": 0.3048593531002836,
+  "classification_oof_sha256": "009de98c479e348e22859e47f4a13cce718682812edbd3d152c46118ebb2b7b6",
+  "classification_rows": 232696,
+  "completion_basis": "CONFIGURED_JOB_AND_ARTIFACT_COVERAGE",
+  "distribution_output": "v22_reg_dist_outputs/analysis/regression_distribution_oof_v22.parquet",
+  "late_fold_labels_used_for_selection": false,
+  "prospective_rows_used": false,
+  "ranking_output": "v22_reg_dist_outputs/analysis/query_ranking_oof_v22.parquet",
+  "regression_best_component": "V19_REG_ENSEMBLE",
+  "regression_best_mape": 0.06381460632088679,
+  "regression_oof_sha256": "3d11be6599b0d29ab855825e9c95e7b4fa77c4715d8d50e2c39ecd3c2c36951b",
+  "regression_rows": 286810,
+  "status": "PASS",
+  "test_blocks_opened": false
+}

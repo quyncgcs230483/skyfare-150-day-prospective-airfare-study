@@ -1,0 +1,17 @@
+{
+  "classification_training_frame": {
+    "identity": ["row_key", "feature_time", "label_time"],
+    "required_targets": ["DROP_5PCT"],
+    "temporal_rule": "feature_time < label_time"
+  },
+  "regression_training_frame": {
+    "identity": ["target_offer_id", "feature_time", "label_time"],
+    "required_targets": [
+      "target_session_price_vnd",
+      "target_anchor_relative_log"
+    ],
+    "temporal_rule": "feature_time < label_time"
+  },
+  "source_taxonomy": ["FLI_LIBRARY_ERA", "TRIP_COM_BROWSER_ERA"],
+  "status": "CONTRACT"
+}

@@ -1,0 +1,182 @@
+{
+  "classification": {
+    "feature_dates": [
+      "2026-08-09",
+      "2026-08-10",
+      "2026-08-11",
+      "2026-08-12",
+      "2026-08-13",
+      "2026-08-14",
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18"
+    ],
+    "label_max": "2026-08-19 18:00:00",
+    "metric_denominator": "OBSERVED_AND_MATURE_ONLY",
+    "observability": {
+      "IMMATURE_RIGHT_CENSORED": 39034,
+      "MATURE_NOT_OBSERVED": 5094,
+      "OBSERVED": 42146
+    },
+    "rows": 42146
+  },
+  "contract": {
+    "automatic_promotion": false,
+    "buy_wait": {
+      "fallback": "BUY",
+      "nominal_friction_vnd": 50000,
+      "threshold": 0.3
+    },
+    "classification_observability": {
+      "metric_denominator": "OBSERVED_AND_MATURE_ONLY",
+      "missing_session_policy": "KEEP_OBSERVED_ROWS; NEVER_IMPUTE; REPORT_DENOMINATOR",
+      "right_censor_at_test_2_end": true
+    },
+    "contract_id": "SKYFARE_128_DAY_TEST_2_EVALUATION_R1",
+    "contract_sha256": "079c4864f99a4b63fc8f9f85c13a5336c73121f8ef95913a8528ab4caa1d3ed2",
+    "deployable_recipes": {
+      "CLASSIFICATION": "V24_MEAN",
+      "DISTRIBUTION": "V24_MEAN",
+      "POINT": "V24_MEAN",
+      "RANKING": "V24_MEAN"
+    },
+    "development_cutoff": "2026-07-28",
+    "failure_action": "RETAIN_INCUMBENT; NO_POST_TEST_TUNING",
+    "finalists": {
+      "CLASSIFICATION": [
+        "C24_FT_WIDE_D015",
+        "C24_GRU_EXACT_MTL_U64"
+      ],
+      "DISTRIBUTION": [
+        "D24_CAT_Q7_D7",
+        "D24_XGB_Q7_D7"
+      ],
+      "POINT": [
+        "R24_GRU_EXACT_HUBER_U64",
+        "R24_LSTM_EXACT_HUBER_U64"
+      ],
+      "RANKING": [
+        "K24_LGBM_XENDCG_R84_L63",
+        "K24_LGBM_LAMBDA_R84_L63"
+      ]
+    },
+    "jobs": 24,
+    "operational_fixes_integrated": {
+      "ranking_query_join": "VALIDATED_NO_SUFFIX_JOIN",
+      "restartable_scheduler": true,
+      "runtime_hotfix_required": false,
+      "target_free_sequence_point": "NATIVE_TEST2_SCORER"
+    },
+    "original_v24_recipes": {
+      "CLASSIFICATION": "V24_MEAN",
+      "DISTRIBUTION": "V24_BLEND_50",
+      "POINT": "V24_BLEND_50",
+      "RANKING": "V24_BLEND_75"
+    },
+    "pass_action": "FINAL_FREEZE_AND_REPORT",
+    "quantiles": [
+      0.05,
+      0.1,
+      0.25,
+      0.5,
+      0.75,
+      0.9,
+      0.95
+    ],
+    "refit_cutoff": "2026-08-08",
+    "runtime": {
+      "cpu_threads_per_worker": 6,
+      "cpu_workers": 6,
+      "gpu_host_threads": 4,
+      "gpu_workers": 4,
+      "gpu_workers_per_device": 2,
+      "heartbeat_seconds": 30,
+      "heartbeat_stale_minutes": 35,
+      "job_timeout_minutes": 120,
+      "minimum_effective_cpus": 56,
+      "minimum_effective_ram_gib": 80,
+      "minimum_free_disk_gib": 25,
+      "minimum_gpu_memory_mib": 20000,
+      "minimum_gpus": 2,
+      "tensorflow_memory_limit_mib": 8500
+    },
+    "seeds": [
+      2026082501,
+      2026082502,
+      2026082503
+    ],
+    "status": "PASS",
+    "test1_contract_id": "SKYFARE_128_DAY_TEST_1_EVALUATION_R2",
+    "test_1_training_extension": [
+      "2026-07-29",
+      "2026-08-08"
+    ],
+    "test_2": [
+      "2026-08-09",
+      "2026-08-19"
+    ],
+    "training_protocol": {
+      "allowed_labels": "label_time < 2026-08-09",
+      "candidate_search": false,
+      "hyperparameter_tuning": false,
+      "mode": "EXPANDING_REFIT_AT_TEST_2_BOUNDARY",
+      "test_1_recipe_selection": false
+    },
+    "v24_contract_id": "SKYFARE_V24_FINAL_REFINEMENT_FREEZE_R1"
+  },
+  "extended_offers": {
+    "classification_sequence_ids_covered": 42146,
+    "first_feature_time": "2026-03-21 13:38:26",
+    "last_feature_time": "2026-08-19 18:00:00",
+    "regression_sequence_ids_covered": 94127,
+    "rows": 1114445
+  },
+  "feature_label_files_disjoint": true,
+  "regression": {
+    "dates": [
+      "2026-08-09",
+      "2026-08-10",
+      "2026-08-11",
+      "2026-08-12",
+      "2026-08-13",
+      "2026-08-14",
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19"
+    ],
+    "rows": 94127
+  },
+  "scorer_reads_label_files": false,
+  "source_hashes": {
+    "inputs/classification_training_frame.parquet": "4e7f43db8c5ad94146dfe2d41e53e23a36f0c7c8ffa07af789eb5c063dcfa281",
+    "inputs/regression_training_frame.parquet": "f2399f108f6a9d59fd93069121331aaa9d3119ce0af85bc10c13c82e66f5c20c",
+    "prior_test_1/classification_test_1_frame.parquet": "42cce09584654f9236c2847e3a675d0c4b0d5104b87417d3b621d12fdf1d8b3d",
+    "prior_test_1/regression_test_1_frame.parquet": "0214267216c3d11061e9a42a58b8839e02d679669b1424867cb1d1bb95e5e35b",
+    "sealed_test_2/classification_test_2_frame.parquet": "f5504e1162ea8e89353c3d577d1bd71e01cfad473b8f8ba337026b2320ea7711",
+    "sealed_test_2/classification_test_2_observability.parquet": "dacf982db4bc834f44d691bb1c5b1b0037d25d6cb4dbbf7d5452a60b513d0b0c",
+    "sealed_test_2/regression_test_2_frame.parquet": "9a6f04d991834f50a108b0e11a4935a5f75aca5ebc2eda07efe2593b180981e4",
+    "sealed_test_2/standard_128_day_offers.parquet": "5f590f2076c82938a824043ed34d40ae48db6809343da5c1720e4ed779e6389a"
+  },
+  "staged_hashes": {
+    "test2_outputs/staging/classification_features.parquet": "4b39000969c7ebf61b6d95698920332f6d99127e8bcab1a31d79151e6c410fed",
+    "test2_outputs/staging/classification_labels.parquet": "d9f95c738839d931c80dd736ba7d4eeabf7adcb00bd65decd28373d08ea84b66",
+    "test2_outputs/staging/regression_features.parquet": "3327ac721f3efc4b9f6184b3d9dfeae8992037097e36552cd0c23ada455014fc",
+    "test2_outputs/staging/regression_labels.parquet": "3b77d5bed263e9ef690ae377fc91b188733beae571aa10dd783f4e4d2df116a8"
+  },
+  "status": "PASS",
+  "test1_lock": {
+    "contract_id": "SKYFARE_128_DAY_TEST_1_EVALUATION_R2",
+    "gates_passed": 7,
+    "report_sha256": "cb27cfd0790765eb89c09551f0084a66a26f8ce573d8ec4b5fe9d6b5ac6015b8",
+    "verification_sha256": "6ee8d85f3fb49a58873dcfdb12f72ba122f8de3ee67b0bbc508b7f34aedf9924"
+  },
+  "test_2_labels_staged": true,
+  "test_2_labels_visible_to_scorer": false,
+  "v24_lock": {
+    "path": "v24_lock/V24_RECIPE_LOCK.json",
+    "sha256": "e341ad4c5bcd665787c58ac24d0f4f40b982212f3205e95e4b038c540e563151"
+  }
+}

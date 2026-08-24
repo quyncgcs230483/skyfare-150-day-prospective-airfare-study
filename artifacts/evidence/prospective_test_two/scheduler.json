@@ -1,0 +1,14 @@
+{
+  "cpu_workers": 6,
+  "elapsed_seconds": 1309.85,
+  "gpu_workers": 4,
+  "gpu_workers_per_device": 2,
+  "jobs_complete": 24,
+  "jobs_expected": 24,
+  "status": "PASS",
+  "watchdog": {
+    "heartbeat_stale_minutes": 35,
+    "job_timeout_minutes": 120,
+    "process_group_termination": true
+  }
+}

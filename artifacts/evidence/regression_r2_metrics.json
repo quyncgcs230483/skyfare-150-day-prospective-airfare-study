@@ -1,0 +1,21 @@
+{
+  "definition": "sklearn.metrics.r2_score on target_session_price_vnd and clipped-to-positive predictions, matching pooled point-metric preprocessing",
+  "pooled": {
+    "baseline_r2": 0.527357231266,
+    "model_minus_baseline": 0.306544908108,
+    "model_r2": 0.833902139374,
+    "rows": 190089
+  },
+  "test_1": {
+    "baseline_r2": 0.554190148194,
+    "model_minus_baseline": 0.297783176518,
+    "model_r2": 0.851973324712,
+    "rows": 95962
+  },
+  "test_2": {
+    "baseline_r2": 0.494547752072,
+    "model_minus_baseline": 0.317927692688,
+    "model_r2": 0.812475444761,
+    "rows": 94127
+  }
+}

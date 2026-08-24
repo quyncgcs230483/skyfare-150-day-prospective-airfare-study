@@ -1,0 +1,193 @@
+{
+  "contract_id": "SKYFARE_V24_FINAL_REFINEMENT_FREEZE_R1",
+  "contract_sha256": "505da128fc13d06301c4911e1fba5d26c488efb3b1b91fea99833a8565d93038",
+  "controls": {
+    "v22_distribution_oof.parquet": {
+      "folds": {
+        "F02": 28285,
+        "F03": 54398,
+        "F04": 70602,
+        "F05": 65227,
+        "F06": 68298
+      },
+      "rows": 286810,
+      "sha256": "5427f428036a765af4a6617535088db67ac380261ab5911cfa017f4827a285db"
+    },
+    "v22_ranking_oof.parquet": {
+      "folds": {
+        "F02": 28285,
+        "F03": 54398,
+        "F04": 70602,
+        "F05": 65227,
+        "F06": 68298
+      },
+      "rows": 286810,
+      "sha256": "472f705660f3e76e86daa40cd61d8a14b98a4d685c88e2250e9cc72f60be69bf"
+    },
+    "v23_classification_final_oof.parquet": {
+      "folds": {
+        "F02": 12726,
+        "F03": 47005,
+        "F04": 58661,
+        "F05": 57115,
+        "F06": 57189
+      },
+      "rows": 232696,
+      "sha256": "009de98c479e348e22859e47f4a13cce718682812edbd3d152c46118ebb2b7b6"
+    },
+    "v23_regression_final_oof.parquet": {
+      "folds": {
+        "F02": 28285,
+        "F03": 54398,
+        "F04": 70602,
+        "F05": 65227,
+        "F06": 68298
+      },
+      "rows": 286810,
+      "sha256": "3d11be6599b0d29ab855825e9c95e7b4fa77c4715d8d50e2c39ecd3c2c36951b"
+    }
+  },
+  "data": {
+    "classification_rows": 636436,
+    "classification_sha256": "4e7f43db8c5ad94146dfe2d41e53e23a36f0c7c8ffa07af789eb5c063dcfa281",
+    "maximum_label_time": "2026-07-28 19:00:00",
+    "offers_rows": 923855,
+    "offers_sha256": "1077c9bb7c82110e77aaaeca88f52e54551e6ec94dc7fabdf34cbec08200dd93",
+    "regression_rows": 916696,
+    "regression_sha256": "f2399f108f6a9d59fd93069121331aaa9d3119ce0af85bc10c13c82e66f5c20c",
+    "split_audit": {
+      "CLASSIFICATION/F02/EXPANDING": {
+        "fit": 41880,
+        "head": 4159,
+        "valid": 12726
+      },
+      "CLASSIFICATION/F03/EXPANDING": {
+        "fit": 54487,
+        "head": 6915,
+        "valid": 47005
+      },
+      "CLASSIFICATION/F04/EXPANDING": {
+        "fit": 115441,
+        "head": 56043,
+        "valid": 58661
+      },
+      "CLASSIFICATION/F05/EXPANDING": {
+        "fit": 209982,
+        "head": 66000,
+        "valid": 57115
+      },
+      "CLASSIFICATION/F06/EXPANDING": {
+        "fit": 324206,
+        "head": 87242,
+        "valid": 57189
+      },
+      "REGRESSION/F01/EXPANDING": {
+        "fit": 33412,
+        "head": 26314,
+        "valid": 27608
+      },
+      "REGRESSION/F01/RECENT84": {
+        "fit": 33412,
+        "head": 26314,
+        "valid": 27608
+      },
+      "REGRESSION/F02/EXPANDING": {
+        "fit": 107799,
+        "head": 43453,
+        "valid": 28285
+      },
+      "REGRESSION/F02/RECENT84": {
+        "fit": 107799,
+        "head": 43453,
+        "valid": 28285
+      },
+      "REGRESSION/F03/EXPANDING": {
+        "fit": 159380,
+        "head": 37500,
+        "valid": 54398
+      },
+      "REGRESSION/F03/RECENT84": {
+        "fit": 159380,
+        "head": 37500,
+        "valid": 54398
+      },
+      "REGRESSION/F04/EXPANDING": {
+        "fit": 288939,
+        "head": 110015,
+        "valid": 70602
+      },
+      "REGRESSION/F04/RECENT84": {
+        "fit": 288939,
+        "head": 110015,
+        "valid": 70602
+      },
+      "REGRESSION/F05/EXPANDING": {
+        "fit": 499208,
+        "head": 142967,
+        "valid": 65227
+      },
+      "REGRESSION/F05/RECENT84": {
+        "fit": 459538,
+        "head": 122911,
+        "valid": 65227
+      },
+      "REGRESSION/F06/EXPANDING": {
+        "fit": 672367,
+        "head": 176031,
+        "valid": 68298
+      },
+      "REGRESSION/F06/RECENT84": {
+        "fit": 574108,
+        "head": 130911,
+        "valid": 68298
+      }
+    }
+  },
+  "dependencies": {
+    "catboost": "1.2.10",
+    "joblib": "1.5.3",
+    "lightgbm": "4.7.0",
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "pyarrow": "19.0.1",
+    "scikit-learn": "1.7.2",
+    "scipy": "1.15.3",
+    "tensorflow": "2.19.1",
+    "xgboost": "3.2.0"
+  },
+  "host": {
+    "effective_cpus": 255,
+    "effective_ram_gib": 503.6505584716797,
+    "free_disk_gib": 45.079097747802734,
+    "gpus": [
+      {
+        "compute_capability": "8.9",
+        "index": 0,
+        "memory_mib": 24564,
+        "name": "NVIDIA GeForce RTX 4090"
+      },
+      {
+        "compute_capability": "8.9",
+        "index": 1,
+        "memory_mib": 24564,
+        "name": "NVIDIA GeForce RTX 4090"
+      }
+    ],
+    "tensorflow_gpus": [
+      "PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')",
+      "PhysicalDevice(name='/physical_device:GPU:1', device_type='GPU')"
+    ]
+  },
+  "sealed_test_blocks": {
+    "TEST_1": [
+      "2026-07-29",
+      "2026-08-08"
+    ],
+    "TEST_2": [
+      "2026-08-09",
+      "2026-08-19"
+    ]
+  },
+  "status": "PASS",
+  "test_access": false
+}

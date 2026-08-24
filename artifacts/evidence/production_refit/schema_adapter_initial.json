@@ -1,0 +1,9 @@
+{
+  "artifact_mutation": false,
+  "hotfix_id": "SKYFARE_PRODUCTION_FINALIZATION_SCHEMA_HOTFIX_R1",
+  "models_retrained": false,
+  "reason": "Distribution head predictions serialize the calibration label as target while the final calibration module reads target_anchor_relative_log.",
+  "recovery": "Map target to target_anchor_relative_log in memory during finalization, then run the original verification and archive builders.",
+  "scope": "FINALIZATION_ONLY",
+  "status": "APPROVED"
+}

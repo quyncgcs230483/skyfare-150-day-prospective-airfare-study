@@ -1,0 +1,52 @@
+{
+  "files": {
+    "CLASSIFICATION": {
+      "path": "frozen_predictions/classification_test1_predictions.parquet",
+      "rows": 41573,
+      "sha256": "112e7bbaacc761dc6e333bb796f617199107cbaa5f2356eafeef2cb52789e225"
+    },
+    "DISTRIBUTION": {
+      "path": "frozen_predictions/distribution_test1_predictions.parquet",
+      "rows": 95962,
+      "sha256": "0491b22ac55f2ba0701ad43b98e5f6868e2c774c6e2b77f84070ef8eed063dea"
+    },
+    "POINT": {
+      "path": "frozen_predictions/point_test1_predictions.parquet",
+      "rows": 95962,
+      "sha256": "9e0ea1e69607ae336c951866e41db2d0ed4fe0133cdda34abf6b5121f36313e2"
+    },
+    "RANKING": {
+      "path": "frozen_predictions/ranking_test1_predictions.parquet",
+      "rows": 95962,
+      "sha256": "73fddcbeac43866f19325f011a24fd03c7aa9ed5a1855c9d59eef39c219da2e0"
+    }
+  },
+  "finalists": {
+    "CLASSIFICATION": [
+      "C24_FT_WIDE_D015",
+      "C24_GRU_EXACT_MTL_U64"
+    ],
+    "DISTRIBUTION": [
+      "D24_CAT_Q7_D7",
+      "D24_XGB_Q7_D7"
+    ],
+    "POINT": [
+      "R24_GRU_EXACT_HUBER_U64",
+      "R24_LSTM_EXACT_HUBER_U64"
+    ],
+    "RANKING": [
+      "K24_LGBM_XENDCG_R84_L63",
+      "K24_LGBM_LAMBDA_R84_L63"
+    ]
+  },
+  "jobs": 24,
+  "preflight_sha256": "b91b23b165629c80dc0f5c108acd6ffd80beda368bb9943f14b7ce18dc500ac0",
+  "recipes": {
+    "CLASSIFICATION": "V24_MEAN",
+    "DISTRIBUTION": "V24_MEAN",
+    "POINT": "V24_MEAN",
+    "RANKING": "V24_MEAN"
+  },
+  "status": "COMMITTED_BEFORE_LABEL_EVALUATION",
+  "test_labels_read": false
+}

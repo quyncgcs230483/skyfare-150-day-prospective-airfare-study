@@ -1,0 +1,16 @@
+{
+  "contract_id": "SKYFARE_128_DAY_FINAL_PRODUCTION_REFIT_R1",
+  "deployment_manifest_sha256": "567443b4fd6bfdeac91f3a898ffe1888893cc1a07a95124fdbadbcc561b19fec",
+  "input_integrity": "PASS",
+  "jobs": 24,
+  "production_default_action": "BUY",
+  "reload_parity": "PASS",
+  "status": "PASS",
+  "tasks": [
+    "CLASSIFICATION",
+    "POINT",
+    "DISTRIBUTION",
+    "RANKING"
+  ],
+  "two_block_final_lock": "PASS"
+}

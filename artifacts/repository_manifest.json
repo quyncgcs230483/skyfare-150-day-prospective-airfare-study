@@ -1,0 +1,865 @@
+{
+  "files": {
+    ".github/workflows/quality.yml": {
+      "bytes": 663,
+      "sha256": "06d9b89ca87b0ff883f0b53de67b81d8f0194dfc9e08e195373442cbc611be9e"
+    },
+    ".gitignore": {
+      "bytes": 266,
+      "sha256": "65f92f5e2b51563cea98893545f870bb2a4c83ca6e4ba3c128b9f18b55042c57"
+    },
+    "CITATION.cff": {
+      "bytes": 534,
+      "sha256": "d7a9ff0d11ae76bddc0df16b8d0a841d8c871cb6c3729def23e5704f1c9dbd2c"
+    },
+    "CONTRIBUTING.rst": {
+      "bytes": 648,
+      "sha256": "315cf12ef1c424f8db1cf8c5c413c56b8f6f465fd34a9ebfc369de5697449d26"
+    },
+    "LICENSE": {
+      "bytes": 1076,
+      "sha256": "d693568e8274852f1812fc124e5457ca141704915d8cf3a3b3a74b38c9dcf3ee"
+    },
+    "README.rst": {
+      "bytes": 5135,
+      "sha256": "1093fd782b4127759bd1f2c483296d02990f546825e3007f89dd88c719af7ce5"
+    },
+    "SECURITY.rst": {
+      "bytes": 455,
+      "sha256": "bfeb311973697f09145fd4dcea39c636d29ae01af5b9aa8986d4de7dfc9b87ef"
+    },
+    "artifacts/evidence/daily_stratified_deltas.csv": {
+      "bytes": 5783,
+      "sha256": "4d47684bdcca80102080a8942f2bfd09e632c6b690ba283a46dd4148055930f6"
+    },
+    "artifacts/evidence/development_search/orchestration.json": {
+      "bytes": 334,
+      "sha256": "955a32a2ee9bfff62d6bac357fcdcc5a3b9c3ca5142cf9175c3684f46c9a4bcb"
+    },
+    "artifacts/evidence/development_search/pipeline_status.json": {
+      "bytes": 86,
+      "sha256": "1cbae66e544d5b094c79cb0636f14cf810eb0757f037fd8f0b65b722664a554e"
+    },
+    "artifacts/evidence/development_search/research_report.json": {
+      "bytes": 871,
+      "sha256": "24682ae2dbfd8d5d1e5cdcf49bc6245da811f88515e29dd387dc07a7eef3a05f"
+    },
+    "artifacts/evidence/development_search/verification.json": {
+      "bytes": 4788,
+      "sha256": "7ddd6500f55a019a56ac1388ee597cff1bd0a3fb529f3e5ebecf58f7b536ca30"
+    },
+    "artifacts/evidence/development_selection/buy_wait_policy.json": {
+      "bytes": 30571,
+      "sha256": "bf0941cdf9f73ac9b4aed43511b0ff858058ed45f8ad023c004983328c81a481"
+    },
+    "artifacts/evidence/development_selection/finalist_recipe_lock.json": {
+      "bytes": 2258,
+      "sha256": "e341ad4c5bcd665787c58ac24d0f4f40b982212f3205e95e4b038c540e563151"
+    },
+    "artifacts/evidence/development_selection/pipeline_status.json": {
+      "bytes": 129,
+      "sha256": "7d13cf1cc0a54053e1d60a95e567f29d12f955076766e3bb4631db3e3f12f41c"
+    },
+    "artifacts/evidence/development_selection/preflight.json": {
+      "bytes": 4821,
+      "sha256": "83ccc95d7eb80d167af7b221d39df285407f65a5a31008ddddca20a8d570e413"
+    },
+    "artifacts/evidence/development_selection/research_report.json": {
+      "bytes": 1850,
+      "sha256": "aa99cbca5deca1f9f6b555f6c2751af8d07bcc6329dedc8d62f65cabc7e8c38b"
+    },
+    "artifacts/evidence/development_selection/verification.json": {
+      "bytes": 802,
+      "sha256": "9492db1adb9242735cbd9d54ab5d0f8f35c6d06b7c9fffae0c41180fa68b0b46"
+    },
+    "artifacts/evidence/figure_data_summary.json": {
+      "bytes": 10721,
+      "sha256": "f8749e8039e6ebf5f45ae4219d7e4f23839a752c28814ac52d6736b8c3086d3b"
+    },
+    "artifacts/evidence/final_deployment_decision.json": {
+      "bytes": 926,
+      "sha256": "00d006f57890d7f35b604a67ae39d16fb7a76e0a3f632957a448d554e8b6f36e"
+    },
+    "artifacts/evidence/pooled_evaluation_provenance.json": {
+      "bytes": 602,
+      "sha256": "0bd4389ffc3f75542ddea0d1d4e9ae87bcd54790d61e46ca2cda6b4320f97e58"
+    },
+    "artifacts/evidence/pooled_evaluation_report.json": {
+      "bytes": 18058,
+      "sha256": "8074c4405a369e37707896cac2ec5b35611cf1639c2acdc64dff206c5dc977ad"
+    },
+    "artifacts/evidence/pooled_evaluation_verification.json": {
+      "bytes": 1488,
+      "sha256": "c7962a174b35d860df205f241292f02e8788ff53d76f2cc75c5740ed9ba4c97e"
+    },
+    "artifacts/evidence/pooled_metric_summary.csv": {
+      "bytes": 314,
+      "sha256": "4b180634466eb11d53d66bc594a20eb00ead300e3a5422b1b0c97dd35284bfad"
+    },
+    "artifacts/evidence/production_refit/classification_calibration.json": {
+      "bytes": 6106,
+      "sha256": "696759a007ae0ad85f9ae453545a891d610008aabf98f8b62dee2347c89aac4e"
+    },
+    "artifacts/evidence/production_refit/deployment_manifest.json": {
+      "bytes": 55122,
+      "sha256": "567443b4fd6bfdeac91f3a898ffe1888893cc1a07a95124fdbadbcc561b19fec"
+    },
+    "artifacts/evidence/production_refit/distribution_calibration.json": {
+      "bytes": 2702,
+      "sha256": "35ca941f2ef5abb9633bcc86334bf9e4f6c31c37cfb3a361f05e30738f4ab135"
+    },
+    "artifacts/evidence/production_refit/result_content_manifest.json": {
+      "bytes": 34620,
+      "sha256": "bca3926ee6961c808bf81f16853b79c3d504fe6c7c96eb8b8369509a19b36ac6"
+    },
+    "artifacts/evidence/production_refit/schema_adapter_final.json": {
+      "bytes": 547,
+      "sha256": "7e2c305627a10461c07b6db7c507e8c4a690b0338aa9745134ebbdf21fb55298"
+    },
+    "artifacts/evidence/production_refit/schema_adapter_initial.json": {
+      "bytes": 487,
+      "sha256": "f4804c8f69979210f6667b61d95c82077adc60d83818723e266f943a84ead883"
+    },
+    "artifacts/evidence/production_refit/summary.json": {
+      "bytes": 1240,
+      "sha256": "634e57203bba228c065b49096e4c56e656dd81c55224214779449b59392f5096"
+    },
+    "artifacts/evidence/production_refit/verification.json": {
+      "bytes": 414,
+      "sha256": "0685868366987fd16fe6b3df6165c90bf683310c7e6f36299aebd1504d4127c8"
+    },
+    "artifacts/evidence/prospective_test_one/deployable_lock.json": {
+      "bytes": 769,
+      "sha256": "23a51b58e0f9a1adcce78c96d305d31e5a1160af26ebced4722ccf8c257b9896"
+    },
+    "artifacts/evidence/prospective_test_one/pipeline_status.json": {
+      "bytes": 166,
+      "sha256": "a9cc6e02b4936568e4d1131f958636ca793eea00f89a0a803fab51d8da166fda"
+    },
+    "artifacts/evidence/prospective_test_one/prediction_commit.json": {
+      "bytes": 1510,
+      "sha256": "07c5537857976290299c3735aeeecdd72d5ac9b3b56edca814887bce69ac94f8"
+    },
+    "artifacts/evidence/prospective_test_one/preflight.json": {
+      "bytes": 5257,
+      "sha256": "b91b23b165629c80dc0f5c108acd6ffd80beda368bb9943f14b7ce18dc500ac0"
+    },
+    "artifacts/evidence/prospective_test_one/report.json": {
+      "bytes": 4564,
+      "sha256": "cb27cfd0790765eb89c09551f0084a66a26f8ce573d8ec4b5fe9d6b5ac6015b8"
+    },
+    "artifacts/evidence/prospective_test_one/scheduler.json": {
+      "bytes": 408,
+      "sha256": "0fe466753f7c06d1cb113f209e93660c9b5380ed81110cdd793cf332437f0934"
+    },
+    "artifacts/evidence/prospective_test_one/verification.json": {
+      "bytes": 1053,
+      "sha256": "6ee8d85f3fb49a58873dcfdb12f72ba122f8de3ee67b0bbc508b7f34aedf9924"
+    },
+    "artifacts/evidence/prospective_test_two/deployable_lock.json": {
+      "bytes": 872,
+      "sha256": "3fe1585d82f5e35c3be55018735b0b041014170ddbe607710e8b6c5e1024f67d"
+    },
+    "artifacts/evidence/prospective_test_two/pipeline_status.json": {
+      "bytes": 152,
+      "sha256": "9b0a2bfe582088f01e0a25db170d0c93326d945f0b566a3778e9b7d4fcc4450c"
+    },
+    "artifacts/evidence/prospective_test_two/prediction_commit.json": {
+      "bytes": 1510,
+      "sha256": "f75cc47864f105a9c41ccf5a96f83db9ded13650f5bda451d0ee1cecdbad2840"
+    },
+    "artifacts/evidence/prospective_test_two/preflight.json": {
+      "bytes": 6085,
+      "sha256": "8cd80ae51a41c3dc2c9d38ae7122c4e79f3f1f0fcf11efa153b6601134b195b7"
+    },
+    "artifacts/evidence/prospective_test_two/report.json": {
+      "bytes": 4335,
+      "sha256": "93352e8f861a627e6ec9bfd4076abe00c71722fbbbe8d5b4ecaac8963c193545"
+    },
+    "artifacts/evidence/prospective_test_two/scheduler.json": {
+      "bytes": 296,
+      "sha256": "3c27a020cfabdf379dc65ebfbafa924ef8be818aacd782cf8a193c2ca0a7cb16"
+    },
+    "artifacts/evidence/prospective_test_two/verification.json": {
+      "bytes": 1084,
+      "sha256": "ffe1b133ea51b183ce2b821726bc93aee789583dc12e0e8a962c873e80ebf896"
+    },
+    "artifacts/evidence/regression_r2_metrics.json": {
+      "bytes": 600,
+      "sha256": "02a052ca16205bae2e11531b1c62c071979c042f8237eeebdfb5f9ed949cfd80"
+    },
+    "artifacts/release_manifests/development_selection_results.json": {
+      "bytes": 139870,
+      "sha256": "c81aa932a5fe3eb5aa85868b65688bbcfb9b4c5a0e7d6396a8deab2d17fd1127"
+    },
+    "artifacts/release_manifests/development_selection_results.sha256": {
+      "bytes": 120,
+      "sha256": "bb96e0572d04b525352b83c62a626817534271d52079a9fac52c5f543d7feeac"
+    },
+    "artifacts/release_manifests/final_production_models.json": {
+      "bytes": 305,
+      "sha256": "a4903ee7f322becd57cd0a138c9e98f69a09a085350526c036210790fec1fc84"
+    },
+    "artifacts/release_manifests/final_production_models.sha256": {
+      "bytes": 116,
+      "sha256": "6c24ebdee01f418506584f946f085118462cb3682626d64bca132913fe875c22"
+    },
+    "artifacts/release_manifests/prospective_test_one_results.json": {
+      "bytes": 19522,
+      "sha256": "52bbff69f45b534728413fc9b69f350fd7dee9d48c4bf200b62dbffcf18ceaec"
+    },
+    "artifacts/release_manifests/prospective_test_one_results.sha256": {
+      "bytes": 110,
+      "sha256": "07687dd47e988d83dd3aef94bd499e26fd9ad92da47d6442bdd6d41e16774a72"
+    },
+    "artifacts/release_manifests/prospective_test_two_results.json": {
+      "bytes": 24276,
+      "sha256": "3c6491e9e1584d50d033e8051296130edf06717ae120f5496429b4640d2606d8"
+    },
+    "artifacts/release_manifests/prospective_test_two_results.sha256": {
+      "bytes": 110,
+      "sha256": "8a3adad022209fa87bb387fef7470aa0036f85170cce0d6f77833cbea5b336e8"
+    },
+    "configs/baseline_metrics.json": {
+      "bytes": 1087,
+      "sha256": "4a088a483366010232500bce700b7e0fb65e15bb6f037a9e63d240fb3a84bc27"
+    },
+    "configs/data_sources.json": {
+      "bytes": 443,
+      "sha256": "48512c9ec9fd822014c2126ebe2eee0d9b88483011ca157679a878cbd516c742"
+    },
+    "configs/finalist_models.json": {
+      "bytes": 945,
+      "sha256": "f6775016499b1cb4fc6050396e6b72348084b125917fc9efbdb46fdf5ce28e1e"
+    },
+    "configs/model_identifier_registry.json": {
+      "bytes": 2089,
+      "sha256": "e54d427d4bb99181bdf677f63aa145e1f067726d1e22f0b858d7ae43ff1a767f"
+    },
+    "configs/peak_dates_vietnam_2026.json": {
+      "bytes": 1245,
+      "sha256": "c299474051d35130d4d52cf127b62df56e73773204909a56d61d6486737ebf3e"
+    },
+    "configs/pooled_evaluation_contract.json": {
+      "bytes": 1023,
+      "sha256": "328e7dde326412b35dfe7c0766e3e210ef2be048bf1f966de9ecfd7a5929abbf"
+    },
+    "configs/release_assets.json": {
+      "bytes": 1879,
+      "sha256": "36947020464f3467d0881d226a92b4e9b62d4a3b0b58302473806e986761413b"
+    },
+    "configs/study.json": {
+      "bytes": 701,
+      "sha256": "a4dda1fe1bbe248663ca1fe444ec273d8f22b20b45363f84294952d8910e052e"
+    },
+    "data/manifests/production_input_manifest.json": {
+      "bytes": 1204,
+      "sha256": "8240d8bf65c746de5d6aabcf0788414626a020f896827af28852051c09193a19"
+    },
+    "data/processed/production/input_manifest.json": {
+      "bytes": 1204,
+      "sha256": "8240d8bf65c746de5d6aabcf0788414626a020f896827af28852051c09193a19"
+    },
+    "data/schema/artifact_manifest.schema.json": {
+      "bytes": 352,
+      "sha256": "d719041d513e4f297c158cb91293c0525c6edf9e0f33b97ab293d59105af9f09"
+    },
+    "data/schema/processed_frames.schema.json": {
+      "bytes": 538,
+      "sha256": "2f75a9be47a0551547fd2a1b806aa640ca0b6644359b4cb93efc47c2081bb0ec"
+    },
+    "data/schema/raw_offer.schema.json": {
+      "bytes": 1149,
+      "sha256": "31958fce9ed534942a88e8d6533171ec2c3edf1a9aba11ebacbe803f97467924"
+    },
+    "experiments/registry.json": {
+      "bytes": 7099,
+      "sha256": "7fc098be431fd03d5a1fba02ca856db36ed8b0e99e3ae94e145c635e7a2e455e"
+    },
+    "pyproject.toml": {
+      "bytes": 981,
+      "sha256": "ff6648fbb72d51b519e70db16ff3e6e8304bf834ad6b3795c96312163ca737f6"
+    },
+    "reports/figures/AIRFARE_MODELLING_PIPELINES_HORIZONTAL.drawio": {
+      "bytes": 77363,
+      "sha256": "193503772cfb9085b4b56eec2f656f4d92c81407a5da1789b14dd9a18764e4f9"
+    },
+    "reports/figures/airline_composition_temporal_drift.png": {
+      "bytes": 287097,
+      "sha256": "4ad40099ab64a9926d87300ebe46769ce3c6187dbe45e1d7cc27287be1f02aa4"
+    },
+    "reports/figures/classification_modelling_pipeline_horizontal.drawio": {
+      "bytes": 19180,
+      "sha256": "8635e261f357068c66066cd3610889f49d5332639122d465b5b07578f44ef6ea"
+    },
+    "reports/figures/classification_modelling_pipeline_horizontal.png": {
+      "bytes": 424482,
+      "sha256": "94674999689ef4783d5e4498affb0571b0261300cc14719f3ffc2628307ec9c3"
+    },
+    "reports/figures/classification_prospective_diagnostics.png": {
+      "bytes": 171329,
+      "sha256": "d023dfd4b47243007e468d9574fc35f29a23fa33054d1cdcf1be81498a392c4d"
+    },
+    "reports/figures/distribution_ranking_prospective_diagnostics.png": {
+      "bytes": 167425,
+      "sha256": "d267864c5c71575897d6dd06a456fc0e893e4c2e45ce0a0c1325108bc7bff8af"
+    },
+    "reports/figures/learning_to_rank_modelling_pipeline_horizontal.drawio": {
+      "bytes": 18970,
+      "sha256": "d341eedffc3604ad650046bee9b0950586f31e6fe1f16bec3aae1a738c73f4a1"
+    },
+    "reports/figures/learning_to_rank_modelling_pipeline_horizontal.png": {
+      "bytes": 389561,
+      "sha256": "d836688d460ad32f28fa84f9a8b00737a34db47463cf36265649c3717bfcf1e5"
+    },
+    "reports/figures/probabilistic_forecasting_modelling_pipeline_horizontal.drawio": {
+      "bytes": 19911,
+      "sha256": "9e67873b9eb2b27405e1bfa284660dbc03da79278b61365fe171a2f079657157"
+    },
+    "reports/figures/probabilistic_forecasting_modelling_pipeline_horizontal.png": {
+      "bytes": 410542,
+      "sha256": "fd13655bc9f6d27610bd9182d54737582bf9440e0dd41614029b4c7311f87888"
+    },
+    "reports/figures/prospective_evaluation_decision_utility.png": {
+      "bytes": 298185,
+      "sha256": "dd3818333bc70c69159a730a4b9149bc041b8193fb608eaeeb5ab62290c0b225"
+    },
+    "reports/figures/regression_modelling_pipeline_horizontal.drawio": {
+      "bytes": 19848,
+      "sha256": "4aab790ea6d3164ffbcba8dce4d8de79c4a0b9e7ef379180bcdcc3864ea718e7"
+    },
+    "reports/figures/regression_modelling_pipeline_horizontal.png": {
+      "bytes": 384537,
+      "sha256": "6c7cb7463d978fad1871536f647305a2158fa4d96e00968908df09d7e5430432"
+    },
+    "reports/figures/regression_prospective_diagnostics.png": {
+      "bytes": 291050,
+      "sha256": "7fc48cdf72545b0ed43ea4d3933ae50a6a245f42c2ac186f5e4791bd942b1e04"
+    },
+    "reports/manuscript/LITERATURE_REVIEW_AND_RESULTS_FINAL.docx": {
+      "bytes": 10470072,
+      "sha256": "02a57f978b566ebe2fb903c2c0b1f25a039db950b5af56319432e28a47dec21c"
+    },
+    "requirements.txt": {
+      "bytes": 262,
+      "sha256": "ff7c4f6a4612e555515ff9a70a858db3335eb8d5853b4a4bcbf46686169e97b4"
+    },
+    "scripts/build_result_figures.sh": {
+      "bytes": 221,
+      "sha256": "e700266542e5c86aed8a206610c6d5bdca76e34744ddaf7be73d74f62f78ec3f"
+    },
+    "scripts/collect_fli.sh": {
+      "bytes": 233,
+      "sha256": "3bb983f02bbeb120dd968f3ebfa98c5b9a09440412963275f7223007bc5ef2aa"
+    },
+    "scripts/collect_trip_com.sh": {
+      "bytes": 239,
+      "sha256": "4a8c9e177438616df9a7dd4f07dc38e6e2de9110aa856c90f68fddecfb89befa"
+    },
+    "scripts/prepare_development_data.sh": {
+      "bytes": 232,
+      "sha256": "0a51016595c6b4746f872aafb12342ca4baa06ab9c274689f0772376758ad124"
+    },
+    "scripts/run_development_selection.sh": {
+      "bytes": 221,
+      "sha256": "81df497526c34d4d180e8fac1f1195438919592895c0d1dbb69a8e34a637703d"
+    },
+    "scripts/run_feature_audit.sh": {
+      "bytes": 222,
+      "sha256": "279eddfc2e80e1cca9a2ce60a655a02c7528d223540401bf0adca619ce055f83"
+    },
+    "scripts/run_final_production_refit.sh": {
+      "bytes": 224,
+      "sha256": "d19c12f1a8ab8cfa80ed44ac24244cfe777a79b06e5d2c0cbaccd5e1e65520c1"
+    },
+    "scripts/run_pooled_evaluation.sh": {
+      "bytes": 225,
+      "sha256": "4cb4bb0c24f029686ea6dfb546c4ad4bd8c333ae2e2fee5e3c83f7396ece45f5"
+    },
+    "scripts/run_prospective_test_one.sh": {
+      "bytes": 220,
+      "sha256": "68b6c460510b3301159bace29ee07921e48f34a70f1fe350ce1c0b53595aaacb"
+    },
+    "scripts/run_prospective_test_two.sh": {
+      "bytes": 220,
+      "sha256": "c65feef2a0359679ef059f620e78f5dda295091c835767801f4d694cf63cb682"
+    },
+    "src/skyfare/__init__.py": {
+      "bytes": 72,
+      "sha256": "0b118cc93aa98f11176bb1ea5e175a3069834fc1e255c84d08778ca08b59aedd"
+    },
+    "src/skyfare/__main__.py": {
+      "bytes": 1650,
+      "sha256": "7170a447bf88ffbba0e2fc2196ae4b115a1ec47df3d3f3599e115b1edcd5cb58"
+    },
+    "src/skyfare/acquisition/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "src/skyfare/acquisition/fli_collector.py": {
+      "bytes": 11088,
+      "sha256": "ff388bd0a2333abec96cad6fbd49dde6a6aced7caa0f6f244b4c59859a738bbf"
+    },
+    "src/skyfare/acquisition/trip_collector.py": {
+      "bytes": 27316,
+      "sha256": "c501dcac8c8981762ae1f40ec55900dc649cbc01375228e7a3f4a2b13f825ba8"
+    },
+    "src/skyfare/acquisition/trip_resume.py": {
+      "bytes": 32894,
+      "sha256": "16bbaaa8807a926d08f496864c246634c313fddf5fdf2d8979577c8e6fd84e55"
+    },
+    "src/skyfare/calibration/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "src/skyfare/calibration/methods.py": {
+      "bytes": 6859,
+      "sha256": "d0338938d0d9cb5511b71c94ec67cb7665f83c98275245904d12f21309d843e1"
+    },
+    "src/skyfare/core/__init__.py": {
+      "bytes": 58,
+      "sha256": "9db53070bc58af94c0aa83ab6011c12752d1976866e37da32d62e57985245f8a"
+    },
+    "src/skyfare/core/integrity.py": {
+      "bytes": 821,
+      "sha256": "71ff5974e091bcd6ad6d1b2895a39fa59ec2c5f3c5c7162af2fdb5b718b4bd72"
+    },
+    "src/skyfare/core/paths.py": {
+      "bytes": 2086,
+      "sha256": "976583c53c0125aebbcb6212f2dcb778cfc4dd26174c3d26f4fc49e3a80ac31b"
+    },
+    "src/skyfare/core/sources.py": {
+      "bytes": 1465,
+      "sha256": "0ea1660786ab3a2a355e6d592c7e344be534e555ed9d749fe9ba692c63a29f69"
+    },
+    "src/skyfare/evaluation/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "src/skyfare/evaluation/metrics.py": {
+      "bytes": 5843,
+      "sha256": "72e6414974007595dabf2f4bf329b996e4deb2f3cfb1033a325de0a801a9b84f"
+    },
+    "src/skyfare/evaluation/pooled/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "src/skyfare/evaluation/pooled/archive.py": {
+      "bytes": 2651,
+      "sha256": "c9275741628cf86dc8305390a20d7c7977c9af9aa480240986610de711ab8698"
+    },
+    "src/skyfare/evaluation/pooled/finalize.py": {
+      "bytes": 20877,
+      "sha256": "1d3e0a01ead02b830979dedad609344e35e06745271db7960c4a2c7054c362bb"
+    },
+    "src/skyfare/evaluation/pooled/metrics.py": {
+      "bytes": 8843,
+      "sha256": "91d6bdee9505343948fca063e9894617df6fd687612ed750dbf47fb6b06f468a"
+    },
+    "src/skyfare/evaluation/pooled/verify.py": {
+      "bytes": 2375,
+      "sha256": "ca441fcae05d23321d29c145eef598ceb77c21867b5d6dcfeb57eaccc6340d12"
+    },
+    "src/skyfare/evaluation/prospective_test_one/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "src/skyfare/evaluation/prospective_test_one/archive.py": {
+      "bytes": 3307,
+      "sha256": "612ba7f115d47b9f63e56bb28070a8be6872f78db8d60fa1b13aadec1d9c8491"
+    },
+    "src/skyfare/evaluation/prospective_test_one/contract.py": {
+      "bytes": 5191,
+      "sha256": "abd5619b38e3edc723157689fc181eae7d7d11ec51d446589e266a88f4e28665"
+    },
+    "src/skyfare/evaluation/prospective_test_one/evaluate.py": {
+      "bytes": 9110,
+      "sha256": "ad22507512d59dcf8e3e930ba1e600a1627d292d5e6b73faad9442342fe37879"
+    },
+    "src/skyfare/evaluation/prospective_test_one/freeze_predictions.py": {
+      "bytes": 4561,
+      "sha256": "604f4017a7fecdf5645b0b0ba00da13536eafd0cda3bd25f9aa4c3a597f98ade"
+    },
+    "src/skyfare/evaluation/prospective_test_one/monitor.py": {
+      "bytes": 1842,
+      "sha256": "fdfdb4254f9ef8d0d21e51740b02c0982874b4cd0696a4a308d30ff1b918fc49"
+    },
+    "src/skyfare/evaluation/prospective_test_one/prepare.py": {
+      "bytes": 17588,
+      "sha256": "353a7bac680d089ad5e6f18957745dbf547d5ef1845db321c9a1d3d694b7e67a"
+    },
+    "src/skyfare/evaluation/prospective_test_one/runtime.py": {
+      "bytes": 7761,
+      "sha256": "27bc65af2fee3346b08111efe03f717c0462be2b4fbae918a061db2c74b6bbe4"
+    },
+    "src/skyfare/evaluation/prospective_test_one/scheduler.py": {
+      "bytes": 5400,
+      "sha256": "0d0d6b45d69d1593445adcca2d0a8a694ba1bd2dd14e945becc80a7b6223a6a2"
+    },
+    "src/skyfare/evaluation/prospective_test_one/score_job.py": {
+      "bytes": 8251,
+      "sha256": "dbe13028e5ab20fac9bbc25e716e7750eec36b4bea93a46afd41d06a17bbe083"
+    },
+    "src/skyfare/evaluation/prospective_test_one/verify.py": {
+      "bytes": 3021,
+      "sha256": "80ecc1f72263d3538e512340efaf0587c3828ea84932292af82ea7b6fcde2903"
+    },
+    "src/skyfare/evaluation/prospective_test_two/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "src/skyfare/evaluation/prospective_test_two/archive.py": {
+      "bytes": 3344,
+      "sha256": "2e6327bd796ba1d7822b909fb306df0ece5032ab0b4a846cf8a027e8ee3f30f0"
+    },
+    "src/skyfare/evaluation/prospective_test_two/contract.py": {
+      "bytes": 5851,
+      "sha256": "fae6610b24df5bea3ca1e7534a747ef6eb31d4b88ca65ed6686479f80ffea683"
+    },
+    "src/skyfare/evaluation/prospective_test_two/evaluate.py": {
+      "bytes": 10803,
+      "sha256": "1ed01034841a4f2de9a73ab64254824600e3c2bcf350576628d57a3cf48cf688"
+    },
+    "src/skyfare/evaluation/prospective_test_two/freeze_predictions.py": {
+      "bytes": 4642,
+      "sha256": "6a1f5b0209aa84e44a03b035480857c04f1d7b3141ce9ba5d20a6716fad23c9e"
+    },
+    "src/skyfare/evaluation/prospective_test_two/models.py": {
+      "bytes": 3250,
+      "sha256": "07853c2b6ed2853be02fa92a8d3c4b2f18f3f72115c627deaed0596284adcd82"
+    },
+    "src/skyfare/evaluation/prospective_test_two/monitor.py": {
+      "bytes": 3735,
+      "sha256": "37b14632c3e983785c5708204eed4410567df62fc18fc341904c9f0f05b56e76"
+    },
+    "src/skyfare/evaluation/prospective_test_two/prepare.py": {
+      "bytes": 17867,
+      "sha256": "39511afd99d9e640a8a36fb9c7ed5b121a7a2f85121a4e56a9c8efe54d0a5eb5"
+    },
+    "src/skyfare/evaluation/prospective_test_two/runtime.py": {
+      "bytes": 9174,
+      "sha256": "f9a3fe48c6219127a652a5d7a6cb7a3dd3bb7a3c7602a485c4c9211522c04fe6"
+    },
+    "src/skyfare/evaluation/prospective_test_two/scheduler.py": {
+      "bytes": 8037,
+      "sha256": "952024a4231dccb44aab02e32d45282fcec16c2d196101687c55f53f06fa9f34"
+    },
+    "src/skyfare/evaluation/prospective_test_two/score_job.py": {
+      "bytes": 8266,
+      "sha256": "06061d66620b85d40f39ab2d0104ef3943a7195a920d77cf66300757604ddc17"
+    },
+    "src/skyfare/evaluation/prospective_test_two/verify.py": {
+      "bytes": 3057,
+      "sha256": "c33d64fbb4635f6f01e9b39e2e5b13e277375cba227b096e8d250541e5776018"
+    },
+    "src/skyfare/features/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "src/skyfare/features/audit_common.py": {
+      "bytes": 11745,
+      "sha256": "5235594e4649269978baf738c333a5fcd31d67151afe1dd5097e0caac05a4b56"
+    },
+    "src/skyfare/features/build_error_analysis_core_figures.py": {
+      "bytes": 10851,
+      "sha256": "307ea4a13f4ee03300be550ef98c1af76fb236d817b77723ca5298e4740d97b5"
+    },
+    "src/skyfare/features/build_error_analysis_feature_selection_bridge.py": {
+      "bytes": 16291,
+      "sha256": "aae1af39ff2c7bf3d18288d9cea8f100dfa45db92614ecd13e8b85e5bce5c9df"
+    },
+    "src/skyfare/features/build_error_analysis_notebook.py": {
+      "bytes": 11933,
+      "sha256": "74c4917d937e3dad41c8fbbcdcdd035665faae4ad8eddca6eaa58da97b730b86"
+    },
+    "src/skyfare/features/build_feature_lineage.py": {
+      "bytes": 13595,
+      "sha256": "542510b6e6d1a5768ffb039b52a6d20b99b622cd560f8f463044333857d043ef"
+    },
+    "src/skyfare/features/build_post_selection_eda.py": {
+      "bytes": 10944,
+      "sha256": "1df390b1dafe1f685d0c25cc73af7f959bb6651dd529cf63f1c0fe9f3204cab1"
+    },
+    "src/skyfare/features/build_prefit_contract.py": {
+      "bytes": 12041,
+      "sha256": "b2223830a0efc39f88c04ca6a863ee6e177cac577fa9e86b8bb4a2956fcb2a87"
+    },
+    "src/skyfare/features/build_prefit_training_contract.py": {
+      "bytes": 40103,
+      "sha256": "6dbd27ab9d6e00dde3881c523aae000c4bf491fbbed6198c82d1ba9099cd68a8"
+    },
+    "src/skyfare/features/candidate_feature_contract.py": {
+      "bytes": 13685,
+      "sha256": "67f68d64bed0a88671d99c9fcef87a01d4716a1928b94eb6371e011ef85c25af"
+    },
+    "src/skyfare/features/causal_baseline_audit.py": {
+      "bytes": 11870,
+      "sha256": "28af59059b9be967cfb568dacc965d2405cee69ab23bb36acda1e4ca4ed50b94"
+    },
+    "src/skyfare/features/feature_legality_audit.py": {
+      "bytes": 14961,
+      "sha256": "de4cb5e6ad415c5d81077488f88386dcfc3ec3a3137885f9af00f2a7e331cc27"
+    },
+    "src/skyfare/features/identity_continuity_audit.py": {
+      "bytes": 8392,
+      "sha256": "0819c8d6f56a527ae21c438f0817f740f8bbbcea0b15c27693c0366a8f564053"
+    },
+    "src/skyfare/features/listed_price_semantics_audit.py": {
+      "bytes": 21849,
+      "sha256": "e83d8707e0c7f15920be563df716a62beb95486eaef2b83f5526c5d5b2079d5e"
+    },
+    "src/skyfare/features/peer_anchor.py": {
+      "bytes": 22043,
+      "sha256": "8cd1022b294b8a7fe8557b444fcea261bc29a3f4949c919062699d290f65942d"
+    },
+    "src/skyfare/features/peer_anchor_contract.py": {
+      "bytes": 10726,
+      "sha256": "f4673948fdaad0561ae49de9db5017634774470d99f16d92d0617605dc2778ce"
+    },
+    "src/skyfare/features/redundancy_and_adapter_audit.py": {
+      "bytes": 18549,
+      "sha256": "28b2f75ed0dc9331c6b167f8248df77adc3227a2792ff09e8c1a84e32a2b12d3"
+    },
+    "src/skyfare/features/run_model_free_feature_selection_gates.py": {
+      "bytes": 3902,
+      "sha256": "f3d3ff6c84f78d45b928e95d2fb79ee8c40cba62e5b31b7d7baabca58e627e7e"
+    },
+    "src/skyfare/features/sequence_structure_audit.py": {
+      "bytes": 7404,
+      "sha256": "e3d3dc5d9babd162a659edea3183aaf0c33919b0451ab362388b4717df57d7b4"
+    },
+    "src/skyfare/features/target_horizon_audit.py": {
+      "bytes": 11312,
+      "sha256": "aa050ca2aa8fd3770e448e769f394afa0355ead2e8d3e174f5d116faf70ae216"
+    },
+    "src/skyfare/features/validate_prefit_contract.py": {
+      "bytes": 25717,
+      "sha256": "3b51ab363b85497cc32593d7f81eda03e6fb1f2ffe2e13220f32c6647b3fb1a4"
+    },
+    "src/skyfare/models/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "src/skyfare/models/analyse_candidates.py": {
+      "bytes": 14105,
+      "sha256": "4e763ce134cd625146b19af792b0fad4286a21dfeadf3979ce9ac31bd941c369"
+    },
+    "src/skyfare/models/candidate_models.py": {
+      "bytes": 28511,
+      "sha256": "3fa2f152183ce607839b9dccfbe1df8e7a05f2d239fbc18d27140824c91f4b6f"
+    },
+    "src/skyfare/models/candidate_registry.py": {
+      "bytes": 2147,
+      "sha256": "0f9265ce5849eaa4ff5230667c42ad33a735f5e5e741c7b22ad4718ff79841e7"
+    },
+    "src/skyfare/models/classification_contract.py": {
+      "bytes": 5823,
+      "sha256": "61a87e096e99177adbe15cf03ed428bad6818c75984393684ff82dad1c975fb1"
+    },
+    "src/skyfare/models/classification_event_contract.py": {
+      "bytes": 12347,
+      "sha256": "01103b50cfa5850f506ce876cc2878ee75ce3c2ded854b470e131510546e2250"
+    },
+    "src/skyfare/models/classification_event_runtime.py": {
+      "bytes": 17002,
+      "sha256": "74c96f813e871ddd03b7b5eb908d474f2141e135b4d1e76f7756303f178d1091"
+    },
+    "src/skyfare/models/classification_runtime.py": {
+      "bytes": 12039,
+      "sha256": "b64dac0a1bf00fa9a47549a96109a08f1ad056603f213da0083ad3a5dcc6821b"
+    },
+    "src/skyfare/models/deep_temporal_contract.py": {
+      "bytes": 8695,
+      "sha256": "804656ad2456789c7b32d0ca2225f077d2e2c373361d032a0f61148773ce2243"
+    },
+    "src/skyfare/models/deep_temporal_models.py": {
+      "bytes": 18541,
+      "sha256": "b5d8860e41d4172a80aaa8916597c890cd6994ab214a40f45da1263bae5420e8"
+    },
+    "src/skyfare/models/fare_frame_contract.py": {
+      "bytes": 8723,
+      "sha256": "d11178aa7174442efb20e0a6e05dffd801a434b8ce762c595f0fa794c7c0adb2"
+    },
+    "src/skyfare/models/fare_frame_runtime.py": {
+      "bytes": 31941,
+      "sha256": "001799c73722481da1bb4c7f53e1eb01af85770cd2871e5723550d9da516c14f"
+    },
+    "src/skyfare/models/freeze_finalists.py": {
+      "bytes": 1914,
+      "sha256": "8f77480ca018c621e8c63ad9cfd6f00885160982e0c30c14883c83920ad1b13c"
+    },
+    "src/skyfare/models/preflight.py": {
+      "bytes": 8375,
+      "sha256": "67aad18ef1e005f0b0634b7d4a790f02ffad682480e30bae9f0199de3bd97e17"
+    },
+    "src/skyfare/models/regression_contract.py": {
+      "bytes": 6602,
+      "sha256": "1033dda90491b922683c8172ece02725f1161147b6d2c5e73b840a05f7be844d"
+    },
+    "src/skyfare/models/regression_runtime.py": {
+      "bytes": 19109,
+      "sha256": "018a94615cdf774a94727abc5519fd42a7cc19e7a55b2b9c25f73018b6378941"
+    },
+    "src/skyfare/models/scheduler.py": {
+      "bytes": 7135,
+      "sha256": "26e3318fe6e51798dcd53525640b1fbad53452d8c9eb1c84a36d52c4ac67b2ad"
+    },
+    "src/skyfare/models/select_finalists.py": {
+      "bytes": 2914,
+      "sha256": "b5fb863e5647c17169d85653ac1b49db0e373b6aca7c3299fe13604deca1174e"
+    },
+    "src/skyfare/models/selection_contract.py": {
+      "bytes": 9673,
+      "sha256": "3a6869922771f61af645f28a7cefeefc42b97e3ccdc859115e5557a477fa11ba"
+    },
+    "src/skyfare/models/sequence_runtime.py": {
+      "bytes": 18542,
+      "sha256": "9f0ef7686643e93e6b1a46a1453bc56460ea354262afe9de44beded98cfa8e20"
+    },
+    "src/skyfare/models/temporal_runtime.py": {
+      "bytes": 17670,
+      "sha256": "c1706074409e5bdff3ea4cc91f8d880eed68a984f02d24a8b9a18ad046f502f9"
+    },
+    "src/skyfare/models/train_candidate.py": {
+      "bytes": 11712,
+      "sha256": "abd64841a698388e85148de5be1639ab1123a73a08b6bdaef69d39ef2865ced4"
+    },
+    "src/skyfare/models/verify_selection.py": {
+      "bytes": 2984,
+      "sha256": "ad43b8b4db4562c02c706221a9647d7e125a951d4fa87369ecfd15624e1d66cf"
+    },
+    "src/skyfare/policy/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "src/skyfare/policy/buy_wait.py": {
+      "bytes": 4350,
+      "sha256": "83a42ebd1840f20cd86320d62129a8e02333c4ec060d7a6f14fc4a7f97f75f58"
+    },
+    "src/skyfare/preparation/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "src/skyfare/preparation/build_training_frames.py": {
+      "bytes": 8509,
+      "sha256": "73f7b1ef3f544d01ec59e95a21a395ae44d4bc4c6965617b166e36a4046e4917"
+    },
+    "src/skyfare/preparation/data_contract.py": {
+      "bytes": 1540,
+      "sha256": "f5151f7ee1217b73719988c20d30839dba121725632ca409481c0fa606355952"
+    },
+    "src/skyfare/preparation/merge_daily_offers.py": {
+      "bytes": 10003,
+      "sha256": "7668f0c00c49c993360f83dd394664ff67c53a5f2b652e3c8e1fae7954fa77a6"
+    },
+    "src/skyfare/preparation/standardize_sources.py": {
+      "bytes": 7409,
+      "sha256": "a61af78323b330e7bfac35cf1ff2268001c6e80561b9f505bc7dafc4a5f3d85c"
+    },
+    "src/skyfare/preparation/temporal_sessions.py": {
+      "bytes": 2283,
+      "sha256": "38bd4f4e7f35567762919f07f9895f6ebad942287eaf0bacc1b182e51d389ef1"
+    },
+    "src/skyfare/production/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "src/skyfare/production/archive.py": {
+      "bytes": 3265,
+      "sha256": "d29f4bdd65401c9334a79a1319bf1b4f7a6d7cbff95b082642a0bbe384dedd13"
+    },
+    "src/skyfare/production/calibration.py": {
+      "bytes": 6794,
+      "sha256": "3914e06e572f24c09f97a52b437a427ef7131db02f346ebf96be0a7bf0d92ceb"
+    },
+    "src/skyfare/production/contract.py": {
+      "bytes": 5577,
+      "sha256": "f5537c77901e646fb3210bb610c497d71759e939385402e57e13b19bf6d65e7a"
+    },
+    "src/skyfare/production/finalize.py": {
+      "bytes": 5641,
+      "sha256": "42d44e219809ff3be88c065a5e1bcb3945a74a7ad95177c106e3c8b2a28cafba"
+    },
+    "src/skyfare/production/inference.py": {
+      "bytes": 6849,
+      "sha256": "d492ea3451aa608d8481a48f7288ccd163648bb4de5da48ab68e527c27eec10e"
+    },
+    "src/skyfare/production/models.py": {
+      "bytes": 20798,
+      "sha256": "70e15484c5d9081de4f73853cf7b6cd449b2adafcc7ae602c7356f09fbd4474c"
+    },
+    "src/skyfare/production/monitor.py": {
+      "bytes": 1459,
+      "sha256": "ba2fbe671f88fbdf1812ad49ddb00d881b553b79da477a3560eae469ad4cb08b"
+    },
+    "src/skyfare/production/preflight.py": {
+      "bytes": 3268,
+      "sha256": "8704ba3c5cfe48df8a6452cf697ae3812a1a6ba383389bd8b97f8e017adc18f5"
+    },
+    "src/skyfare/production/refit_contract.py": {
+      "bytes": 1573,
+      "sha256": "c5d002719e5d9df5a90c363567a1820e866d0ec7af037d9436cc3163062869aa"
+    },
+    "src/skyfare/production/refit_io.py": {
+      "bytes": 1813,
+      "sha256": "5f6cabcaa7e08e11125ff949b7b7535a2e12213479be90408a62bf489ba45505"
+    },
+    "src/skyfare/production/runtime.py": {
+      "bytes": 6478,
+      "sha256": "2545dbb75694b19afac68336145b199f7b38a55e8e1a8ca1038bde3e9561ccbb"
+    },
+    "src/skyfare/production/scheduler.py": {
+      "bytes": 5460,
+      "sha256": "83c0a38dcbe3f313a4411f14995825e429ff3fa9cb71f0fecdd96453b05e1808"
+    },
+    "src/skyfare/production/sequence.py": {
+      "bytes": 2566,
+      "sha256": "52beb934ac5a95051c4c082a8f33b766d841c318a94747dec675345ad1f0b68b"
+    },
+    "src/skyfare/production/train_job.py": {
+      "bytes": 4058,
+      "sha256": "e973c719f5e3b5738e879555989b555529e14e23adad5f4bd9152f33e5d20f9d"
+    },
+    "src/skyfare/production/verify.py": {
+      "bytes": 2851,
+      "sha256": "57bbd5749c2520b04e6f9e4a04a8f967530adf03794824486b04c98b3acf176b"
+    },
+    "src/skyfare/reporting/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "src/skyfare/reporting/results_figures.py": {
+      "bytes": 81554,
+      "sha256": "0890d73e164d3c80cf526d321cea3d21d9549847ffdb5ea1f87e96e53454307a"
+    },
+    "src/skyfare/workflow.py": {
+      "bytes": 6050,
+      "sha256": "a3e1f3082ec3bc3bc21433e0b421eb49970c78571764e8eac222da5c648d435f"
+    },
+    "tests/test_paths.py": {
+      "bytes": 958,
+      "sha256": "1e3130d29bc966b962b83ae78ba672b8bb63390be328179f2dc796cca06c8df7"
+    },
+    "tests/test_repository_contract.py": {
+      "bytes": 2228,
+      "sha256": "dbb4a8dbfc1a79b72aa096c3287f753c7e3e037379b93f09ff303f13a33d2cc6"
+    },
+    "tests/test_sources.py": {
+      "bytes": 1419,
+      "sha256": "dda91b37e24df5bcc45e1f1e573b1666204d77675ae2d6154c473af3e70357c1"
+    },
+    "tools/build_repository_manifest.py": {
+      "bytes": 1511,
+      "sha256": "336e3fe1850ae3193d01ddc1f089a15db54faebfaefcb6e308908c7b6716a935"
+    },
+    "tools/fetch_release_assets.py": {
+      "bytes": 2106,
+      "sha256": "dd8ec6a6ccd354598e091efd6547be8014187e259e04f737e8d54f12fb043f86"
+    },
+    "tools/verify_repository.py": {
+      "bytes": 8513,
+      "sha256": "630381be85cb9eb2ef90db0cc54ca82ec16eae2f95bbd880fe4b13bd62d10a4a"
+    }
+  },
+  "status": "PASS"
+}

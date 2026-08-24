@@ -1,0 +1,21 @@
+{
+  "automatic_promotion": false,
+  "contract_id": "SKYFARE_V24_FINAL_REFINEMENT_FREEZE_R1",
+  "contract_sha256": "505da128fc13d06301c4911e1fba5d26c488efb3b1b91fea99833a8565d93038",
+  "coverage": {
+    "late": 48,
+    "screen_history": 188,
+    "smoke": 28
+  },
+  "lock_sha256": "e341ad4c5bcd665787c58ac24d0f4f40b982212f3205e95e4b038c540e563151",
+  "oof_sha256": {
+    "classification": "8489cecbe6adb3ebb8032d2acc0de5a607fe56608a02489fb02ccbf7862660b5",
+    "distribution": "74447772dbb80e7d38ae2792ff98e2d1b91b0daae3c925d71c8587782e3ee727",
+    "point": "e4eb029cf2ce6fc4eea0228fe0a3dbd9e523bd3c0b240d9276897d284006e655",
+    "ranking": "2c6931fda99c30e0237a1d0a482fcd6f1dab98c8b0888226a9b0b120d9666ff2"
+  },
+  "production_jobs": 236,
+  "smoke_jobs": 28,
+  "status": "PASS",
+  "test_access": false
+}

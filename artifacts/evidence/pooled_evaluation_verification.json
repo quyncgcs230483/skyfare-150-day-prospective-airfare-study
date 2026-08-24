@@ -1,0 +1,42 @@
+{
+  "files": {
+    "DAILY_STRATIFIED_DELTAS.csv": {
+      "sha256": "4d47684bdcca80102080a8942f2bfd09e632c6b690ba283a46dd4148055930f6",
+      "size": 5783
+    },
+    "FINAL_DEPLOYMENT_DECISION.json": {
+      "sha256": "00d006f57890d7f35b604a67ae39d16fb7a76e0a3f632957a448d554e8b6f36e",
+      "size": 926
+    },
+    "FINAL_REPORT.md": {
+      "sha256": "aaddfdc22a8d5512a460a0cb6acff17adfb2db5563f379d2d1856914edd2ac5f",
+      "size": 1657
+    },
+    "POOLED_METRIC_SUMMARY.csv": {
+      "sha256": "4b180634466eb11d53d66bc594a20eb00ead300e3a5422b1b0c97dd35284bfad",
+      "size": 314
+    },
+    "TWO_BLOCK_POOLED_REPORT.json": {
+      "sha256": "8074c4405a369e37707896cac2ec5b35611cf1639c2acdc64dff206c5dc977ad",
+      "size": 18058
+    },
+    "TWO_BLOCK_PROVENANCE.json": {
+      "sha256": "0bd4389ffc3f75542ddea0d1d4e9ae87bcd54790d61e46ca2cda6b4320f97e58",
+      "size": 602
+    }
+  },
+  "gates": {
+    "both_prospective_blocks_pass": true,
+    "classification_proper_score_beats_block_specific_prior": true,
+    "distribution_quantiles_coherent": true,
+    "distribution_wis_beats_block_specific_empirical_residual": true,
+    "no_cross_block_row_or_query_overlap": true,
+    "point_mape_beats_prior_anchor": true,
+    "policy_cvar_not_materially_worse_than_buy_all": true,
+    "policy_mean_regret_beats_buy_all": true,
+    "ranking_ndcg5_beats_prior_anchor": true,
+    "recipe_unchanged_between_blocks": true
+  },
+  "scientific_conclusion": "TWO_BLOCK_CONFIRMED",
+  "status": "PASS"
+}

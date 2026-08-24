@@ -1,0 +1,385 @@
+{
+  "eda": {
+    "airline_source_rows": {
+      "9G": {
+        "Fli": 27122,
+        "Trip.com": 132713
+      },
+      "QH": {
+        "Fli": 10607,
+        "Trip.com": 17801
+      },
+      "VJ": {
+        "Fli": 73168,
+        "Trip.com": 362281
+      },
+      "VN": {
+        "Fli": 84249,
+        "Trip.com": 355756
+      },
+      "VU": {
+        "Fli": 6946,
+        "Trip.com": 43802
+      }
+    },
+    "airlines": {
+      "9G": 159835,
+      "QH": 28408,
+      "VJ": 435449,
+      "VN": 440005,
+      "VU": 50748
+    },
+    "collection_transition": "2026-05-15",
+    "date_max": "2026-08-19",
+    "date_min": "2026-03-21",
+    "dates": 150,
+    "minimum_airline_day_support": 100,
+    "missing_collection_dates": [
+      "2026-05-08",
+      "2026-05-09"
+    ],
+    "offer_count_definition": "unique offer_id after final standard-population deduplication",
+    "routes": 20,
+    "rows": 1114445,
+    "sources": {
+      "Fli": 202092,
+      "Trip.com": 912353
+    },
+    "temporal_fare_index": {
+      "definition": "100 * exp(daily median log(fare / stratum median fare))",
+      "maximum": 127.05,
+      "minimum": 78.22,
+      "normalisation": "route_airline_dud_session_label",
+      "observed_days": 150,
+      "peak_to_trough_points": 48.83,
+      "reference": 100,
+      "smoothing": "trailing 7-day rolling median; collection gaps retained"
+    }
+  },
+  "evaluation": {
+    "baseline_to_finalist_raw_metrics": {
+      "Classification\nBrier score": {
+        "Pooled": {
+          "baseline": 0.1372652904203139,
+          "finalist": 0.11256778286060982,
+          "improvement_percent": 17.992536557551396
+        },
+        "Test 1": {
+          "baseline": 0.13012740387064523,
+          "finalist": 0.09816310426037224
+        },
+        "Test 2": {
+          "baseline": 0.1443061331462992,
+          "finalist": 0.12677662126633463
+        }
+      },
+      "Distribution\nWIS": {
+        "Pooled": {
+          "baseline": 0.09385004929549728,
+          "finalist": 0.06121193260445971,
+          "improvement_percent": 34.77687751476064
+        },
+        "Test 1": {
+          "baseline": 0.09551241152705081,
+          "finalist": 0.06138173500810638
+        },
+        "Test 2": {
+          "baseline": 0.09215527941582045,
+          "finalist": 0.06103881991353422
+        }
+      },
+      "Ranking\nNDCG@5": {
+        "Pooled": {
+          "baseline": 0.6594239638986037,
+          "finalist": 0.8207678596494696,
+          "improvement_percent": 24.46739951593191
+        },
+        "Test 1": {
+          "baseline": 0.6445583480462653,
+          "finalist": 0.8179069030420502
+        },
+        "Test 2": {
+          "baseline": 0.6735979412962736,
+          "finalist": 0.8234957072335912
+        }
+      },
+      "Regression\nMAPE": {
+        "Pooled": {
+          "baseline": 0.13770691090874032,
+          "finalist": 0.0709090263864857,
+          "improvement_percent": 48.50728556863948
+        },
+        "Test 1": {
+          "baseline": 0.14178239293609515,
+          "finalist": 0.07306203902754833
+        },
+        "Test 2": {
+          "baseline": 0.13355197761320314,
+          "finalist": 0.06871404089813853
+        }
+      }
+    },
+    "classification_calibration": {
+      "Test 1": {
+        "binning": "equal-frequency",
+        "bins": 6,
+        "rows": 41573,
+        "rows_per_bin": [
+          6929,
+          6929,
+          6929,
+          6928,
+          6929,
+          6929
+        ]
+      },
+      "Test 2": {
+        "binning": "equal-frequency",
+        "bins": 6,
+        "rows": 42146,
+        "rows_per_bin": [
+          7025,
+          7024,
+          7024,
+          7024,
+          7024,
+          7025
+        ]
+      }
+    },
+    "classification_diagnostics": {
+      "Test 1": {
+        "auc": 0.662589823437386,
+        "auprc": 0.18870621481395916,
+        "auprc_over_prevalence": 1.6529885100001527,
+        "brier": 0.09816310426037224,
+        "ece15": 0.012984306443618029,
+        "prevalence": 0.11416063310321603,
+        "rows": 41573
+      },
+      "Test 2": {
+        "auc": 0.6551827317359795,
+        "auprc": 0.24772246483213742,
+        "auprc_over_prevalence": 1.6174300546576705,
+        "brier": 0.12677662126633463,
+        "ece15": 0.04597947404753501,
+        "prevalence": 0.15315806956769326,
+        "rows": 42146
+      }
+    },
+    "distribution_ranking_diagnostics": {
+      "distribution": {
+        "Test 1": {
+          "baseline_wis": 0.09551241152705081,
+          "coverage_percent": {
+            "50": 49.18092578312249,
+            "80": 78.34142681478085,
+            "90": 88.56839165503013
+          },
+          "finalist_wis": 0.06138173500810638
+        },
+        "Test 2": {
+          "baseline_wis": 0.09215527941582045,
+          "coverage_percent": {
+            "50": 48.11796827690248,
+            "80": 77.89688399715278,
+            "90": 88.49639317092864
+          },
+          "finalist_wis": 0.06103881991353422
+        }
+      },
+      "maximum_absolute_coverage_error_pp": 2.103116002847216,
+      "pooled_ndcg5_gain_percent": 24.46739951593191,
+      "pooled_wis_reduction_percent": 34.77687751476064,
+      "ranking": {
+        "Test 1": {
+          "baseline_ndcg5": 0.6445583480462653,
+          "finalist_ndcg5": 0.8179069030420502
+        },
+        "Test 2": {
+          "baseline_ndcg5": 0.6735979412962736,
+          "finalist_ndcg5": 0.8234957072335912
+        }
+      }
+    },
+    "policy_assumptions": {
+      "baseline": "always buy",
+      "bootstrap_draws": 4000,
+      "friction_vnd": 50000,
+      "pooled_wait_rate": 0.01350947813519034,
+      "wait_threshold": 0.3
+    },
+    "policy_regret_reduction_vnd": [
+      {
+        "effect": 423.5726567603398,
+        "high": 1036.7940621476316,
+        "low": -105.94709916024654,
+        "name": "Test 1"
+      },
+      {
+        "effect": 971.8808263950414,
+        "high": 2896.7251335625165,
+        "low": -769.8855965405642,
+        "name": "Test 2"
+      },
+      {
+        "effect": 724.5,
+        "high": 1671.25,
+        "low": -187.37,
+        "name": "Pooled"
+      }
+    ],
+    "pooled_coverage": {
+      "50": 0.4865457759260136,
+      "80": 0.7812130107475972,
+      "90": 0.8853273992708679
+    },
+    "pooled_coverage_error_percentage_points": {
+      "50": -1.3454224073986387,
+      "80": -1.8786989252402853,
+      "90": -1.4672600729132124
+    },
+    "regression_diagnostics": {
+      "Test 1": {
+        "mae_vnd": 119522.79550625957,
+        "mape": 0.07306203902754833,
+        "r_squared": 0.8519733247116501,
+        "rmse_vnd": 220318.20741159673,
+        "rows": 95962
+      },
+      "Test 2": {
+        "mae_vnd": 115145.47553159622,
+        "mape": 0.06871404089813853,
+        "r_squared": 0.8124754447607193,
+        "rmse_vnd": 233965.14825293873,
+        "rows": 94127
+      },
+      "booking_window_error": {
+        "booking_windows": [
+          60,
+          45,
+          30,
+          21,
+          14,
+          10,
+          7,
+          5,
+          3,
+          2,
+          1
+        ],
+        "series": {
+          "Test 1": {
+            "median_ape_percent": [
+              3.5778674988254684,
+              3.2536514949436075,
+              3.467952814449319,
+              2.99682623820562,
+              3.0879039948124642,
+              3.198643309092807,
+              3.1360690207516777,
+              3.4359597615780264,
+              4.394193551212575,
+              4.229616374980065,
+              5.378236803709973
+            ],
+            "q25_ape_percent": [
+              1.1759379066847795,
+              1.1048098436750813,
+              1.2183891793126862,
+              1.1619142236524256,
+              1.241018887039623,
+              1.285464792480517,
+              1.330844891987556,
+              1.5216870793184452,
+              1.9993027718989906,
+              2.1397900770515124,
+              2.544298414012919
+            ],
+            "q75_ape_percent": [
+              12.582320041345396,
+              9.558947521855792,
+              10.260634755311521,
+              8.457762818352869,
+              8.41459435327564,
+              7.684768165310871,
+              7.867888886391448,
+              7.684883593696059,
+              8.97874981979534,
+              7.67779795926187,
+              10.949810534598672
+            ]
+          },
+          "Test 2": {
+            "median_ape_percent": [
+              2.4584495799336645,
+              2.1578092510869324,
+              2.4236769085845817,
+              2.335214195571683,
+              2.5304192442041735,
+              2.5428632194211547,
+              2.489793453479414,
+              2.704894754196887,
+              3.28089067148475,
+              4.015918140773167,
+              5.554655589711951
+            ],
+            "q25_ape_percent": [
+              0.9532185739800726,
+              0.7813370992284735,
+              0.9064368991621075,
+              0.881849311664315,
+              0.8968192906101455,
+              0.9729311724195269,
+              0.9715868646593042,
+              1.0877294675297986,
+              1.3747894388165804,
+              1.8524924163947392,
+              2.5280845599372723
+            ],
+            "q75_ape_percent": [
+              10.956091069822719,
+              7.5195291466697105,
+              7.962372959305414,
+              7.442888562516781,
+              8.755286454400071,
+              6.88916485374633,
+              6.947551712868146,
+              7.006077107634262,
+              8.607972258941956,
+              8.592048411909023,
+              13.105461984006283
+            ]
+          }
+        }
+      },
+      "display_axis_cap_vnd": 4377822.999999975,
+      "display_axis_quantile": 0.999
+    },
+    "relative_skill_definition": {
+      "higher_is_better": "100 * (finalist / baseline - 1)",
+      "lower_is_better": "100 * (1 - finalist / baseline)",
+      "uncertainty": "Panel A reports descriptive raw point estimates; bootstrap inference remains in the result tables"
+    },
+    "relative_skill_percent": {
+      "Pooled": {
+        "Classification\nBrier score": 17.992536557551396,
+        "Distribution\nWIS": 34.77687751476064,
+        "Ranking\nNDCG@5": 24.46739951593191,
+        "Regression\nMAPE": 48.50728556863948
+      },
+      "Test 1": {
+        "Classification\nBrier score": 24.56384947328043,
+        "Distribution\nWIS": 35.73428413466245,
+        "Ranking\nNDCG@5": 26.894160244953056,
+        "Regression\nMAPE": 48.46889129563555
+      },
+      "Test 2": {
+        "Classification\nBrier score": 12.147447580895921,
+        "Distribution\nWIS": 33.76524893585686,
+        "Ranking\nNDCG@5": 22.253299297330685,
+        "Regression\nMAPE": 48.54884058913002
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "buy_wait_evidence": "Operationally safe; superiority requires CI review and remains conservative when pooled CI includes zero.",
+  "buy_wait_policy_status": "GUARDED_PILOT_NOT_PROVEN_SUPERIOR",
+  "contract_id": "SKYFARE_128_DAY_TWO_BLOCK_FINAL_REPORT_R1",
+  "gpu_required_for_pooled_confirmation": false,
+  "model_stack_status": "FINAL_LOCK",
+  "operational_refit": "Expanding refit may occur only at future production boundary; recipe and hyperparameters remain frozen.",
+  "policy": {
+    "friction_vnd": 50000,
+    "threshold": 0.3
+  },
+  "recipe_note": "Deployable V24_MEAN recipes are confirmed; original research blends were not carried forward because serialized deployment models were absent.",
+  "recipes": {
+    "CLASSIFICATION": "V24_MEAN",
+    "DISTRIBUTION": "V24_MEAN",
+    "POINT": "V24_MEAN",
+    "RANKING": "V24_MEAN"
+  },
+  "status": "FINAL_LOCK",
+  "training_required_for_pooled_confirmation": false
+}

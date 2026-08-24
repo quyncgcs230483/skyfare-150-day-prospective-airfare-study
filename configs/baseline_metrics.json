@@ -1,0 +1,18 @@
+{
+  "classification_constant_probability": {
+    "TEST_1": 0.2844527965105682,
+    "TEST_2": 0.27401111194689154
+  },
+  "derivation": "Frozen development data available before each prospective block; values reproduce block reports to floating-point precision.",
+  "distribution_empirical_quantiles": {
+    "TEST_1": [-0.2842913897209588, -0.18983708684783474, -0.07076460561574752, 0.0, 0.06384101627431574, 0.1858328688803995, 0.2897720898707765],
+    "TEST_2": [-0.2929801339462542, -0.1953920973653349, -0.07157426115076682, 0.0, 0.06564760783923365, 0.1912762441547408, 0.2984336923098069]
+  },
+  "source_sha256": {
+    "classification_training_frame.parquet": "4e7f43db8c5ad94146dfe2d41e53e23a36f0c7c8ffa07af789eb5c063dcfa281",
+    "classification_test_1_frame.parquet": "42cce09584654f9236c2847e3a675d0c4b0d5104b87417d3b621d12fdf1d8b3d",
+    "regression_training_frame.parquet": "f2399f108f6a9d59fd93069121331aaa9d3119ce0af85bc10c13c82e66f5c20c",
+    "regression_test_1_frame.parquet": "0214267216c3d11061e9a42a58b8839e02d679669b1424867cb1d1bb95e5e35b"
+  },
+  "status": "LOCKED"
+}

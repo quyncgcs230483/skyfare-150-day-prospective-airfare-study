@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Logical schema for one raw airfare observation emitted by either collector.",
+  "properties": {
+    "airline": {"type": "string"},
+    "airline_name": {"type": "string"},
+    "data_source": {"enum": ["fli_library", "trip_com"]},
+    "days_until_departure": {"minimum": 0, "type": "integer"},
+    "departure_time": {"format": "date-time", "type": "string"},
+    "dest": {"type": "string"},
+    "flight_date": {"format": "date", "type": "string"},
+    "flight_no": {"type": ["string", "null"]},
+    "origin": {"type": "string"},
+    "price_vnd": {"exclusiveMinimum": 0, "type": "number"},
+    "route": {"pattern": "^[A-Z]{3}-[A-Z]{3}$", "type": "string"},
+    "scraped_at": {"format": "date-time", "type": "string"},
+    "session_id": {"format": "date-time", "type": "string"}
+  },
+  "required": [
+    "scraped_at",
+    "session_id",
+    "origin",
+    "dest",
+    "route",
+    "days_until_departure",
+    "flight_date",
+    "airline",
+    "airline_name",
+    "departure_time",
+    "price_vnd",
+    "data_source"
+  ],
+  "title": "SkyFare raw offer",
+  "type": "object"
+}

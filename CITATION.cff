@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the software and accompanying study."
+title: "SkyFare 150-Day Prospective Airfare Study"
+type: software
+authors:
+  - family-names: "Nguyen"
+    given-names: "Cong Quy"
+version: "1.0.0"
+date-released: "2026-08-25"
+repository-code: "https://github.com/quyncgcs230483/skyfare-150-day-prospective-airfare-study"
+keywords:
+  - airfare forecasting
+  - prospective evaluation
+  - temporal validation
+  - probabilistic forecasting
+  - learning to rank
+  - decision support

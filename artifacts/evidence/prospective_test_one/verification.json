@@ -1,0 +1,32 @@
+{
+  "automatic_promotion": false,
+  "integrity": "PASS",
+  "jobs": 24,
+  "json_hashes": {
+    "commit": "07c5537857976290299c3735aeeecdd72d5ac9b3b56edca814887bce69ac94f8",
+    "preflight": "b91b23b165629c80dc0f5c108acd6ffd80beda368bb9943f14b7ce18dc500ac0",
+    "report": "cb27cfd0790765eb89c09551f0084a66a26f8ce573d8ec4b5fe9d6b5ac6015b8",
+    "scheduler": "0fe466753f7c06d1cb113f209e93660c9b5380ed81110cdd793cf332437f0934"
+  },
+  "predictions": {
+    "CLASSIFICATION": {
+      "rows": 41573,
+      "sha256": "112e7bbaacc761dc6e333bb796f617199107cbaa5f2356eafeef2cb52789e225"
+    },
+    "DISTRIBUTION": {
+      "rows": 95962,
+      "sha256": "0491b22ac55f2ba0701ad43b98e5f6868e2c774c6e2b77f84070ef8eed063dea"
+    },
+    "POINT": {
+      "rows": 95962,
+      "sha256": "9e0ea1e69607ae336c951866e41db2d0ed4fe0133cdda34abf6b5121f36313e2"
+    },
+    "RANKING": {
+      "rows": 95962,
+      "sha256": "73fddcbeac43866f19325f011a24fd03c7aa9ed5a1855c9d59eef39c219da2e0"
+    }
+  },
+  "scientific_decision": "PASS",
+  "status": "PASS",
+  "test_2_access": false
+}

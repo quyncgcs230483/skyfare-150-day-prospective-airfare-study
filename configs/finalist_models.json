@@ -1,0 +1,20 @@
+{
+  "classification": [
+    {"family": "TabTransformer", "configuration": "wide, dropout 0.15"},
+    {"family": "gated recurrent unit", "configuration": "exact-history multitask, 64 units"}
+  ],
+  "point_regression": [
+    {"family": "gated recurrent unit", "configuration": "exact-history Huber, 64 units"},
+    {"family": "long short-term memory", "configuration": "exact-history Huber, 64 units"}
+  ],
+  "probabilistic_forecasting": [
+    {"family": "CatBoost", "configuration": "seven-quantile depth-7 model"},
+    {"family": "XGBoost", "configuration": "seven-quantile depth-7 model"}
+  ],
+  "learning_to_rank": [
+    {"family": "LightGBM XE-NDCG", "configuration": "recent-84-day window, 63 leaves"},
+    {"family": "LightGBM LambdaRank", "configuration": "recent-84-day window, 63 leaves"}
+  ],
+  "ensemble_recipe": "equal-weight mean of the two frozen finalists within each task",
+  "selection_reopened_after_prospective_tests": false
+}

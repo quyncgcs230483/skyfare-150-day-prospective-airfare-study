@@ -1,0 +1,922 @@
+{
+  "fallback_on_missing_prediction": "BUY",
+  "friction_stress": [
+    {
+      "cvar95_regret_vnd": 680785.2812394745,
+      "fold_set": "SCREEN",
+      "friction_vnd": 0,
+      "mean_regret_vnd": 75734.48645178728,
+      "oracle_savings_capture": 0.2954185919179684,
+      "p95_regret_vnd": 434000.0,
+      "policy": "V24_FROZEN",
+      "rows": 118392.0,
+      "wait_rate": 0.3557250489897966
+    },
+    {
+      "cvar95_regret_vnd": 762663.6517043537,
+      "fold_set": "SCREEN",
+      "friction_vnd": 0,
+      "mean_regret_vnd": 107488.62456922766,
+      "oracle_savings_capture": 0.0,
+      "p95_regret_vnd": 533000.0,
+      "policy": "BUY_ALL",
+      "rows": 118392.0,
+      "wait_rate": 0.0
+    },
+    {
+      "cvar95_regret_vnd": 796364.4159784258,
+      "fold_set": "SCREEN",
+      "friction_vnd": 0,
+      "mean_regret_vnd": 80345.70984525981,
+      "oracle_savings_capture": 0.2525189510308279,
+      "p95_regret_vnd": 399000.0,
+      "policy": "WAIT_ALL",
+      "rows": 118392.0,
+      "wait_rate": 1.0
+    },
+    {
+      "cvar95_regret_vnd": 568084.0876855896,
+      "fold_set": "LATE",
+      "friction_vnd": 0,
+      "mean_regret_vnd": 51904.26412898936,
+      "oracle_savings_capture": 0.48000447382322153,
+      "p95_regret_vnd": 298000.0,
+      "policy": "V24_FROZEN",
+      "rows": 114304.0,
+      "wait_rate": 0.47579262318029114
+    },
+    {
+      "cvar95_regret_vnd": 766481.1657073086,
+      "fold_set": "LATE",
+      "friction_vnd": 0,
+      "mean_regret_vnd": 99816.75132978724,
+      "oracle_savings_capture": 0.0,
+      "p95_regret_vnd": 498000.0,
+      "policy": "BUY_ALL",
+      "rows": 114304.0,
+      "wait_rate": 0.0
+    },
+    {
+      "cvar95_regret_vnd": 904930.4082024433,
+      "fold_set": "LATE",
+      "friction_vnd": 0,
+      "mean_regret_vnd": 92147.04208951567,
+      "oracle_savings_capture": 0.07683789682687026,
+      "p95_regret_vnd": 465000.0,
+      "policy": "WAIT_ALL",
+      "rows": 114304.0,
+      "wait_rate": 1.0
+    },
+    {
+      "cvar95_regret_vnd": 669205.9359190556,
+      "fold_set": "SCREEN",
+      "friction_vnd": 25000,
+      "mean_regret_vnd": 74971.02777214677,
+      "oracle_savings_capture": 0.23367612462148213,
+      "p95_regret_vnd": 414000.0,
+      "policy": "V24_FROZEN",
+      "rows": 118392.0,
+      "wait_rate": 0.3557250489897966
+    },
+    {
+      "cvar95_regret_vnd": 737663.6517043537,
+      "fold_set": "SCREEN",
+      "friction_vnd": 25000,
+      "mean_regret_vnd": 97832.03966484222,
+      "oracle_savings_capture": 0.0,
+      "p95_regret_vnd": 508000.0,
+      "policy": "BUY_ALL",
+      "rows": 118392.0,
+      "wait_rate": 0.0
+    },
+    {
+      "cvar95_regret_vnd": 821364.4159784258,
+      "fold_set": "SCREEN",
+      "friction_vnd": 25000,
+      "mean_regret_vnd": 95689.12494087439,
+      "oracle_savings_capture": 0.021904017654228003,
+      "p95_regret_vnd": 424000.0,
+      "policy": "WAIT_ALL",
+      "rows": 118392.0,
+      "wait_rate": 1.0
+    },
+    {
+      "cvar95_regret_vnd": 568464.2491723297,
+      "fold_set": "LATE",
+      "friction_vnd": 25000,
+      "mean_regret_vnd": 53661.2694918813,
+      "oracle_savings_capture": 0.4016290912248559,
+      "p95_regret_vnd": 298000.0,
+      "policy": "V24_FROZEN",
+      "rows": 114304.0,
+      "wait_rate": 0.47579262318029114
+    },
+    {
+      "cvar95_regret_vnd": 741481.1657073086,
+      "fold_set": "LATE",
+      "friction_vnd": 25000,
+      "mean_regret_vnd": 89678.9411131719,
+      "oracle_savings_capture": 0.0,
+      "p95_regret_vnd": 473000.0,
+      "policy": "BUY_ALL",
+      "rows": 114304.0,
+      "wait_rate": 0.0
+    },
+    {
+      "cvar95_regret_vnd": 929930.4082024433,
+      "fold_set": "LATE",
+      "friction_vnd": 25000,
+      "mean_regret_vnd": 107009.23187290033,
+      "oracle_savings_capture": -0.19324816444763981,
+      "p95_regret_vnd": 490000.0,
+      "policy": "WAIT_ALL",
+      "rows": 114304.0,
+      "wait_rate": 1.0
+    },
+    {
+      "cvar95_regret_vnd": 659641.0195813639,
+      "fold_set": "SCREEN",
+      "friction_vnd": 50000,
+      "mean_regret_vnd": 75350.45543617812,
+      "oracle_savings_capture": 0.15638317388437128,
+      "p95_regret_vnd": 399000.0,
+      "policy": "V24_FROZEN",
+      "rows": 118392.0,
+      "wait_rate": 0.3557250489897966
+    },
+    {
+      "cvar95_regret_vnd": 712663.6517043537,
+      "fold_set": "SCREEN",
+      "friction_vnd": 50000,
+      "mean_regret_vnd": 89318.34110412866,
+      "oracle_savings_capture": 0.0,
+      "p95_regret_vnd": 483000.0,
+      "policy": "BUY_ALL",
+      "rows": 118392.0,
+      "wait_rate": 0.0
+    },
+    {
+      "cvar95_regret_vnd": 846364.4159784258,
+      "fold_set": "SCREEN",
+      "friction_vnd": 50000,
+      "mean_regret_vnd": 112175.42638016082,
+      "oracle_savings_capture": -0.25590584188509546,
+      "p95_regret_vnd": 449000.0,
+      "policy": "WAIT_ALL",
+      "rows": 118392.0,
+      "wait_rate": 1.0
+    },
+    {
+      "cvar95_regret_vnd": 573291.8095902354,
+      "fold_set": "LATE",
+      "friction_vnd": 50000,
+      "mean_regret_vnd": 57344.919941559354,
+      "oracle_savings_capture": 0.29610303890848333,
+      "p95_regret_vnd": 301000.0,
+      "policy": "V24_FROZEN",
+      "rows": 114304.0,
+      "wait_rate": 0.47579262318029114
+    },
+    {
+      "cvar95_regret_vnd": 716481.1657073086,
+      "fold_set": "LATE",
+      "friction_vnd": 50000,
+      "mean_regret_vnd": 81467.77598334267,
+      "oracle_savings_capture": 0.0,
+      "p95_regret_vnd": 448000.0,
+      "policy": "BUY_ALL",
+      "rows": 114304.0,
+      "wait_rate": 0.0
+    },
+    {
+      "cvar95_regret_vnd": 954930.4082024433,
+      "fold_set": "LATE",
+      "friction_vnd": 50000,
+      "mean_regret_vnd": 123798.0667430711,
+      "oracle_savings_capture": -0.5195955118301441,
+      "p95_regret_vnd": 515000.0,
+      "policy": "WAIT_ALL",
+      "rows": 114304.0,
+      "wait_rate": 1.0
+    },
+    {
+      "cvar95_regret_vnd": 648042.258173239,
+      "fold_set": "SCREEN",
+      "friction_vnd": 100000,
+      "mean_regret_vnd": 77100.28110007432,
+      "oracle_savings_capture": -0.052105172429611546,
+      "p95_regret_vnd": 376000.0,
+      "policy": "V24_FROZEN",
+      "rows": 118392.0,
+      "wait_rate": 0.3557250489897966
+    },
+    {
+      "cvar95_regret_vnd": 662663.6517043537,
+      "fold_set": "SCREEN",
+      "friction_vnd": 100000,
+      "mean_regret_vnd": 73281.91431853504,
+      "oracle_savings_capture": 0.0,
+      "p95_regret_vnd": 433000.0,
+      "policy": "BUY_ALL",
+      "rows": 118392.0,
+      "wait_rate": 0.0
+    },
+    {
+      "cvar95_regret_vnd": 896364.4159784258,
+      "fold_set": "SCREEN",
+      "friction_vnd": 100000,
+      "mean_regret_vnd": 146138.9995945672,
+      "oracle_savings_capture": -0.9942028118881248,
+      "p95_regret_vnd": 499000.0,
+      "policy": "WAIT_ALL",
+      "rows": 118392.0,
+      "wait_rate": 1.0
+    },
+    {
+      "cvar95_regret_vnd": 592241.4716553288,
+      "fold_set": "LATE",
+      "friction_vnd": 100000,
+      "mean_regret_vnd": 66564.73875804871,
+      "oracle_savings_capture": 0.004981091570408269,
+      "p95_regret_vnd": 321000.0,
+      "policy": "V24_FROZEN",
+      "rows": 114304.0,
+      "wait_rate": 0.47579262318029114
+    },
+    {
+      "cvar95_regret_vnd": 666481.1657073086,
+      "fold_set": "LATE",
+      "friction_vnd": 100000,
+      "mean_regret_vnd": 66897.96364081747,
+      "oracle_savings_capture": 0.0,
+      "p95_regret_vnd": 398000.0,
+      "policy": "BUY_ALL",
+      "rows": 114304.0,
+      "wait_rate": 0.0
+    },
+    {
+      "cvar95_regret_vnd": 1004930.4082024433,
+      "fold_set": "LATE",
+      "friction_vnd": 100000,
+      "mean_regret_vnd": 159228.2544005459,
+      "oracle_savings_capture": -1.380165938315551,
+      "p95_regret_vnd": 565000.0,
+      "policy": "WAIT_ALL",
+      "rows": 114304.0,
+      "wait_rate": 1.0
+    }
+  ],
+  "late_folds_used_for_stability_audit_only": [
+    "F05",
+    "F06"
+  ],
+  "nominal_friction_vnd": 50000,
+  "policy": "WAIT when calibrated P(DROP_5PCT) >= threshold; otherwise BUY",
+  "selection_folds": [
+    "F02",
+    "F03",
+    "F04"
+  ],
+  "status": "PASS",
+  "test_access": false,
+  "threshold": 0.3,
+  "threshold_tournament": [
+    {
+      "fold_metrics": {
+        "F02": {
+          "cvar95_regret_vnd": 388652.3076923077,
+          "mean_regret_vnd": 35688.06537796637,
+          "oracle_savings_capture": 0.20918422853630914,
+          "p95_regret_vnd": 199850.0,
+          "rows": 12726.0,
+          "wait_rate": 0.18953323903818953
+        },
+        "F03": {
+          "cvar95_regret_vnd": 566425.1700680272,
+          "mean_regret_vnd": 61371.76896074886,
+          "oracle_savings_capture": 0.4028212585347697,
+          "p95_regret_vnd": 355000.0,
+          "rows": 47005.0,
+          "wait_rate": 0.40989256462078505
+        },
+        "F04": {
+          "cvar95_regret_vnd": 812846.3107786467,
+          "mean_regret_vnd": 99125.15981657318,
+          "oracle_savings_capture": -0.12480397400570054,
+          "p95_regret_vnd": 413000.0,
+          "rows": 58661.0,
+          "wait_rate": 0.8863469766966128
+        },
+        "F05": {
+          "cvar95_regret_vnd": 513385.8625393494,
+          "mean_regret_vnd": 50632.44300096297,
+          "oracle_savings_capture": 0.5150657667659213,
+          "p95_regret_vnd": 263000.0,
+          "rows": 57115.0,
+          "wait_rate": 0.6643088505646503
+        },
+        "F06": {
+          "cvar95_regret_vnd": 808005.3325183374,
+          "mean_regret_vnd": 99584.51160188149,
+          "oracle_savings_capture": -0.7007209751395549,
+          "p95_regret_vnd": 428000.0,
+          "rows": 57189.0,
+          "wait_rate": 0.7728759027085629
+        }
+      },
+      "screen_cvar95_regret_vnd": 589307.9295129939,
+      "screen_mean_regret_vnd": 65394.99805176281,
+      "screen_worst_fold_regret_vnd": 99125.15981657318,
+      "selection_score": 193169.0999360189,
+      "threshold": 0.2
+    },
+    {
+      "fold_metrics": {
+        "F02": {
+          "cvar95_regret_vnd": 381348.77742946707,
+          "mean_regret_vnd": 32822.52396668238,
+          "oracle_savings_capture": 0.2726820762852876,
+          "p95_regret_vnd": 192000.0,
+          "rows": 12726.0,
+          "wait_rate": 0.11684739902561685
+        },
+        "F03": {
+          "cvar95_regret_vnd": 654099.3657505285,
+          "mean_regret_vnd": 77552.21784916498,
+          "oracle_savings_capture": 0.24537720458047219,
+          "p95_regret_vnd": 417000.0,
+          "rows": 47005.0,
+          "wait_rate": 0.20302095521753005
+        },
+        "F04": {
+          "cvar95_regret_vnd": 721620.4081632653,
+          "mean_regret_vnd": 83994.66425734304,
+          "oracle_savings_capture": 0.04688645822351656,
+          "p95_regret_vnd": 369000.0,
+          "rows": 58661.0,
+          "wait_rate": 0.7681253302875846
+        },
+        "F05": {
+          "cvar95_regret_vnd": 467506.0663871419,
+          "mean_regret_vnd": 43712.45383874639,
+          "oracle_savings_capture": 0.5813422377294852,
+          "p95_regret_vnd": 242000.0,
+          "rows": 57115.0,
+          "wait_rate": 0.5094283463188304
+        },
+        "F06": {
+          "cvar95_regret_vnd": 731752.4376528118,
+          "mean_regret_vnd": 83469.00138138453,
+          "oracle_savings_capture": -0.42549759134020904,
+          "p95_regret_vnd": 375000.0,
+          "rows": 57189.0,
+          "wait_rate": 0.6452989211211947
+        }
+      },
+      "screen_cvar95_regret_vnd": 585689.5171144203,
+      "screen_mean_regret_vnd": 64789.802024396806,
+      "screen_worst_fold_regret_vnd": 83994.66425734304,
+      "selection_score": 190327.17187301518,
+      "threshold": 0.25
+    },
+    {
+      "fold_metrics": {
+        "F02": {
+          "cvar95_regret_vnd": 390551.7262830482,
+          "mean_regret_vnd": 33144.75247524752,
+          "oracle_savings_capture": 0.2655417792731143,
+          "p95_regret_vnd": 199000.0,
+          "rows": 12726.0,
+          "wait_rate": 0.0891089108910891
+        },
+        "F03": {
+          "cvar95_regret_vnd": 704117.2238679645,
+          "mean_regret_vnd": 89037.76194021912,
+          "oracle_savings_capture": 0.13361697864131372,
+          "p95_regret_vnd": 475000.0,
+          "rows": 47005.0,
+          "wait_rate": 0.09890437187533241
+        },
+        "F04": {
+          "cvar95_regret_vnd": 647944.5578231292,
+          "mean_regret_vnd": 73538.99524385878,
+          "oracle_savings_capture": 0.16553018176472234,
+          "p95_regret_vnd": 343000.0,
+          "rows": 58661.0,
+          "wait_rate": 0.6193552786348682
+        },
+        "F05": {
+          "cvar95_regret_vnd": 474175.8986768802,
+          "mean_regret_vnd": 43520.19427470892,
+          "oracle_savings_capture": 0.5831836113378386,
+          "p95_regret_vnd": 247000.0,
+          "rows": 57115.0,
+          "wait_rate": 0.43035980040269634
+        },
+        "F06": {
+          "cvar95_regret_vnd": 659983.8473574409,
+          "mean_regret_vnd": 71151.75703369529,
+          "oracle_savings_capture": -0.21514162853968033,
+          "p95_regret_vnd": 341000.0,
+          "rows": 57189.0,
+          "wait_rate": 0.5211666579237266
+        }
+      },
+      "screen_cvar95_regret_vnd": 580871.169324714,
+      "screen_mean_regret_vnd": 65240.503219775135,
+      "screen_worst_fold_regret_vnd": 89037.76194021912,
+      "selection_score": 190318.51327873985,
+      "threshold": 0.3
+    },
+    {
+      "fold_metrics": {
+        "F02": {
+          "cvar95_regret_vnd": 402993.1981279251,
+          "mean_regret_vnd": 33921.43642935722,
+          "oracle_savings_capture": 0.24833115398850747,
+          "p95_regret_vnd": 209200.0,
+          "rows": 12726.0,
+          "wait_rate": 0.07182146786107182
+        },
+        "F03": {
+          "cvar95_regret_vnd": 720042.4448217318,
+          "mean_regret_vnd": 94397.14923944262,
+          "oracle_savings_capture": 0.08146739559080796,
+          "p95_regret_vnd": 499000.0,
+          "rows": 47005.0,
+          "wait_rate": 0.05246250398893735
+        },
+        "F04": {
+          "cvar95_regret_vnd": 615039.4826412526,
+          "mean_regret_vnd": 69583.38589522852,
+          "oracle_savings_capture": 0.2104157095478466,
+          "p95_regret_vnd": 348000.0,
+          "rows": 58661.0,
+          "wait_rate": 0.46973287192512914
+        },
+        "F05": {
+          "cvar95_regret_vnd": 490060.05528341496,
+          "mean_regret_vnd": 45142.599019522015,
+          "oracle_savings_capture": 0.5676449654758109,
+          "p95_regret_vnd": 262000.0,
+          "rows": 57115.0,
+          "wait_rate": 0.3669613936794187
+        },
+        "F06": {
+          "cvar95_regret_vnd": 597755.5263525306,
+          "mean_regret_vnd": 61124.52499606568,
+          "oracle_savings_capture": -0.043894879676116716,
+          "p95_regret_vnd": 315000.0,
+          "rows": 57189.0,
+          "wait_rate": 0.40738603577611077
+        }
+      },
+      "screen_cvar95_regret_vnd": 579358.3751969697,
+      "screen_mean_regret_vnd": 65967.32385467611,
+      "screen_worst_fold_regret_vnd": 94397.14923944262,
+      "selection_score": 191278.7138180143,
+      "threshold": 0.35
+    },
+    {
+      "fold_metrics": {
+        "F02": {
+          "cvar95_regret_vnd": 423009.85871271585,
+          "mean_regret_vnd": 35370.79679396511,
+          "oracle_savings_capture": 0.2162146180337755,
+          "p95_regret_vnd": 213750.0,
+          "rows": 12726.0,
+          "wait_rate": 0.05414112839855414
+        },
+        "F03": {
+          "cvar95_regret_vnd": 725962.1759456013,
+          "mean_regret_vnd": 97225.03988937347,
+          "oracle_savings_capture": 0.05395057135836545,
+          "p95_regret_vnd": 510000.0,
+          "rows": 47005.0,
+          "wait_rate": 0.028996915221784915
+        },
+        "F04": {
+          "cvar95_regret_vnd": 625641.6184971099,
+          "mean_regret_vnd": 71860.19672354717,
+          "oracle_savings_capture": 0.18458002996366252,
+          "p95_regret_vnd": 382000.0,
+          "rows": 58661.0,
+          "wait_rate": 0.31584868993027737
+        },
+        "F05": {
+          "cvar95_regret_vnd": 535981.3178646197,
+          "mean_regret_vnd": 52211.009857305435,
+          "oracle_savings_capture": 0.4999469800213313,
+          "p95_regret_vnd": 305000.0,
+          "rows": 57115.0,
+          "wait_rate": 0.26959642825877617
+        },
+        "F06": {
+          "cvar95_regret_vnd": 565504.9004854369,
+          "mean_regret_vnd": 55117.02650859431,
+          "oracle_savings_capture": 0.0587021860865542,
+          "p95_regret_vnd": 295000.0,
+          "rows": 57189.0,
+          "wait_rate": 0.3006522233296613
+        }
+      },
+      "screen_cvar95_regret_vnd": 591537.8843851424,
+      "screen_mean_regret_vnd": 68152.01113562858,
+      "screen_worst_fold_regret_vnd": 97225.03988937347,
+      "selection_score": 196182.09200159443,
+      "threshold": 0.4
+    },
+    {
+      "fold_metrics": {
+        "F02": {
+          "cvar95_regret_vnd": 441974.0425531915,
+          "mean_regret_vnd": 37285.22709413798,
+          "oracle_savings_capture": 0.17379254615314643,
+          "p95_regret_vnd": 220000.0,
+          "rows": 12726.0,
+          "wait_rate": 0.03771805752003772
+        },
+        "F03": {
+          "cvar95_regret_vnd": 730245.6438589036,
+          "mean_regret_vnd": 99078.14062333794,
+          "oracle_savings_capture": 0.03591895221398389,
+          "p95_regret_vnd": 514000.0,
+          "rows": 47005.0,
+          "wait_rate": 0.01595574938836294
+        },
+        "F04": {
+          "cvar95_regret_vnd": 645044.8674371176,
+          "mean_regret_vnd": 75420.90997425887,
+          "oracle_savings_capture": 0.14417551084756153,
+          "p95_regret_vnd": 402000.0,
+          "rows": 58661.0,
+          "wait_rate": 0.19143894580726548
+        },
+        "F05": {
+          "cvar95_regret_vnd": 663741.6073790463,
+          "mean_regret_vnd": 79338.53101637049,
+          "oracle_savings_capture": 0.2401320690054386,
+          "p95_regret_vnd": 432000.0,
+          "rows": 57115.0,
+          "wait_rate": 0.08496892234964545
+        },
+        "F06": {
+          "cvar95_regret_vnd": 549701.9424686192,
+          "mean_regret_vnd": 51648.628302645615,
+          "oracle_savings_capture": 0.11793607179937926,
+          "p95_regret_vnd": 290000.0,
+          "rows": 57189.0,
+          "wait_rate": 0.20720767979856267
+        }
+      },
+      "screen_cvar95_regret_vnd": 605754.851283071,
+      "screen_mean_regret_vnd": 70594.75923057826,
+      "screen_worst_fold_regret_vnd": 99078.14062333794,
+      "selection_score": 201653.54354952625,
+      "threshold": 0.45
+    },
+    {
+      "fold_metrics": {
+        "F02": {
+          "cvar95_regret_vnd": 463553.8654147105,
+          "mean_regret_vnd": 38686.578657865786,
+          "oracle_savings_capture": 0.14273984250489957,
+          "p95_regret_vnd": 230200.0,
+          "rows": 12726.0,
+          "wait_rate": 0.026481219550526482
+        },
+        "F03": {
+          "cvar95_regret_vnd": 736273.4209410767,
+          "mean_regret_vnd": 100633.74109137326,
+          "oracle_savings_capture": 0.020782163011798915,
+          "p95_regret_vnd": 519000.0,
+          "rows": 47005.0,
+          "wait_rate": 0.008424635677055632
+        },
+        "F04": {
+          "cvar95_regret_vnd": 662237.3685995253,
+          "mean_regret_vnd": 78627.89587630624,
+          "oracle_savings_capture": 0.10778484581480752,
+          "p95_regret_vnd": 419000.0,
+          "rows": 58661.0,
+          "wait_rate": 0.1063909582175551
+        },
+        "F05": {
+          "cvar95_regret_vnd": 722101.9553072626,
+          "mean_regret_vnd": 93023.02720826403,
+          "oracle_savings_capture": 0.10906826337622266,
+          "p95_regret_vnd": 473000.0,
+          "rows": 57115.0,
+          "wait_rate": 0.033651405059966735
+        },
+        "F06": {
+          "cvar95_regret_vnd": 549142.9427480916,
+          "mean_regret_vnd": 51017.62531256011,
+          "oracle_savings_capture": 0.12871244659252457,
+          "p95_regret_vnd": 292000.0,
+          "rows": 57189.0,
+          "wait_rate": 0.13147633286121457
+        }
+      },
+      "screen_cvar95_regret_vnd": 620688.2183184376,
+      "screen_mean_regret_vnd": 72649.4052085151,
+      "screen_worst_fold_regret_vnd": 100633.74109137326,
+      "selection_score": 206850.42298133997,
+      "threshold": 0.5
+    },
+    {
+      "fold_metrics": {
+        "F02": {
+          "cvar95_regret_vnd": 473705.2037617555,
+          "mean_regret_vnd": 39313.23275184661,
+          "oracle_savings_capture": 0.12885374541547057,
+          "p95_regret_vnd": 231000.0,
+          "rows": 12726.0,
+          "wait_rate": 0.021923620933521924
+        },
+        "F03": {
+          "cvar95_regret_vnd": 741133.0216744582,
+          "mean_regret_vnd": 101758.87671524307,
+          "oracle_savings_capture": 0.009834017191364897,
+          "p95_regret_vnd": 522000.0,
+          "rows": 47005.0,
+          "wait_rate": 0.004552707158812892
+        },
+        "F04": {
+          "cvar95_regret_vnd": 687878.7364130435,
+          "mean_regret_vnd": 83138.86568589011,
+          "oracle_savings_capture": 0.05659747040145313,
+          "p95_regret_vnd": 439000.0,
+          "rows": 58661.0,
+          "wait_rate": 0.04493615860622901
+        },
+        "F05": {
+          "cvar95_regret_vnd": 749736.436821841,
+          "mean_regret_vnd": 99945.9409612186,
+          "oracle_savings_capture": 0.04276378202874287,
+          "p95_regret_vnd": 495000.0,
+          "rows": 57115.0,
+          "wait_rate": 0.010697715136128863
+        },
+        "F06": {
+          "cvar95_regret_vnd": 562417.2366678285,
+          "mean_regret_vnd": 52140.43691968735,
+          "oracle_savings_capture": 0.10953688183195609,
+          "p95_regret_vnd": 301000.0,
+          "rows": 57189.0,
+          "wait_rate": 0.08284810015912152
+        }
+      },
+      "screen_cvar95_regret_vnd": 634238.9872830857,
+      "screen_mean_regret_vnd": 74736.99171765993,
+      "screen_worst_fold_regret_vnd": 101758.87671524307,
+      "selection_score": 211760.67684580138,
+      "threshold": 0.55
+    },
+    {
+      "fold_metrics": {
+        "F02": {
+          "cvar95_regret_vnd": 484735.3894080997,
+          "mean_regret_vnd": 40216.47336162188,
+          "oracle_savings_capture": 0.10883873725877291,
+          "p95_regret_vnd": 237200.0,
+          "rows": 12726.0,
+          "wait_rate": 0.015715857300015717
+        },
+        "F03": {
+          "cvar95_regret_vnd": 740608.347386172,
+          "mean_regret_vnd": 102426.67801297734,
+          "oracle_savings_capture": 0.0033359685725470323,
+          "p95_regret_vnd": 522000.0,
+          "rows": 47005.0,
+          "wait_rate": 0.0016593979363897459
+        },
+        "F04": {
+          "cvar95_regret_vnd": 701195.9114139694,
+          "mean_regret_vnd": 86195.39387327185,
+          "oracle_savings_capture": 0.021914095785066312,
+          "p95_regret_vnd": 460000.0,
+          "rows": 58661.0,
+          "wait_rate": 0.01452413017166431
+        },
+        "F05": {
+          "cvar95_regret_vnd": 764831.7626527051,
+          "mean_regret_vnd": 103029.53054364002,
+          "oracle_savings_capture": 0.013230580367276756,
+          "p95_regret_vnd": 504000.0,
+          "rows": 57115.0,
+          "wait_rate": 0.0029064168782281363
+        },
+        "F06": {
+          "cvar95_regret_vnd": 576864.3979805014,
+          "mean_regret_vnd": 54048.331112626554,
+          "oracle_savings_capture": 0.07695354512543406,
+          "p95_regret_vnd": 317000.0,
+          "rows": 57189.0,
+          "wait_rate": 0.04829600097920929
+        }
+      },
+      "screen_cvar95_regret_vnd": 642179.8827360803,
+      "screen_mean_regret_vnd": 76279.5150826237,
+      "screen_worst_fold_regret_vnd": 102426.67801297734,
+      "selection_score": 214958.1594311375,
+      "threshold": 0.6
+    },
+    {
+      "fold_metrics": {
+        "F02": {
+          "cvar95_regret_vnd": 493133.62637362635,
+          "mean_regret_vnd": 40655.65299387082,
+          "oracle_savings_capture": 0.09910690741566475,
+          "p95_regret_vnd": 238750.0,
+          "rows": 12726.0,
+          "wait_rate": 0.011786892975011787
+        },
+        "F03": {
+          "cvar95_regret_vnd": 742159.9319438537,
+          "mean_regret_vnd": 102621.18923518775,
+          "oracle_savings_capture": 0.0014432747680916957,
+          "p95_regret_vnd": 522799.99999999563,
+          "rows": 47005.0,
+          "wait_rate": 0.0005318583129454314
+        },
+        "F04": {
+          "cvar95_regret_vnd": 706458.6312563841,
+          "mean_regret_vnd": 87936.85753737576,
+          "oracle_savings_capture": 0.002153166737433043,
+          "p95_regret_vnd": 467000.0,
+          "rows": 58661.0,
+          "wait_rate": 0.0009887318661461618
+        },
+        "F05": {
+          "cvar95_regret_vnd": 770786.5640307908,
+          "mean_regret_vnd": 103872.32140418453,
+          "oracle_savings_capture": 0.005158717436881011,
+          "p95_regret_vnd": 508000.0,
+          "rows": 57115.0,
+          "wait_rate": 0.000945460912194695
+        },
+        "F06": {
+          "cvar95_regret_vnd": 587579.5581881533,
+          "mean_regret_vnd": 55016.57054678347,
+          "oracle_savings_capture": 0.060417789834379176,
+          "p95_regret_vnd": 327000.0,
+          "rows": 57189.0,
+          "wait_rate": 0.024969836856738183
+        }
+      },
+      "screen_cvar95_regret_vnd": 647250.7298579548,
+      "screen_mean_regret_vnd": 77071.2332554781,
+      "screen_worst_fold_regret_vnd": 102621.18923518775,
+      "selection_score": 216783.49815058784,
+      "threshold": 0.65
+    },
+    {
+      "fold_metrics": {
+        "F02": {
+          "cvar95_regret_vnd": 500723.3855799373,
+          "mean_regret_vnd": 41398.14867201006,
+          "oracle_savings_capture": 0.08265386390385088,
+          "p95_regret_vnd": 241600.0,
+          "rows": 12726.0,
+          "wait_rate": 0.008958038661008957
+        },
+        "F03": {
+          "cvar95_regret_vnd": 741304.0712468193,
+          "mean_regret_vnd": 102740.0702052973,
+          "oracle_savings_capture": 0.0002865020480549152,
+          "p95_regret_vnd": 523000.0,
+          "rows": 47005.0,
+          "wait_rate": 0.0001489203276247208
+        },
+        "F04": {
+          "cvar95_regret_vnd": 706794.1376959782,
+          "mean_regret_vnd": 88049.76048822897,
+          "oracle_savings_capture": 0.0008720218895290621,
+          "p95_regret_vnd": 468000.0,
+          "rows": 58661.0,
+          "wait_rate": 0.0001534239102640596
+        },
+        "F05": {
+          "cvar95_regret_vnd": 774651.337184874,
+          "mean_regret_vnd": 104319.12938807669,
+          "oracle_savings_capture": 0.0008793962303675906,
+          "p95_regret_vnd": 509299.99999999563,
+          "rows": 57115.0,
+          "wait_rate": 8.754267705506434e-05
+        },
+        "F06": {
+          "cvar95_regret_vnd": 598641.5371209481,
+          "mean_regret_vnd": 56074.3659619857,
+          "oracle_savings_capture": 0.04235258249337248,
+          "p95_regret_vnd": 333000.0,
+          "rows": 57189.0,
+          "wait_rate": 0.011733025581842662
+        }
+      },
+      "screen_cvar95_regret_vnd": 649607.198174245,
+      "screen_mean_regret_vnd": 77395.99312184546,
+      "screen_worst_fold_regret_vnd": 102740.0702052973,
+      "selection_score": 217591.43977722418,
+      "threshold": 0.7
+    },
+    {
+      "fold_metrics": {
+        "F02": {
+          "cvar95_regret_vnd": 511132.4764890282,
+          "mean_regret_vnd": 42276.13075593274,
+          "oracle_savings_capture": 0.06319856220354403,
+          "p95_regret_vnd": 252400.0,
+          "rows": 12726.0,
+          "wait_rate": 0.006129184347006129
+        },
+        "F03": {
+          "cvar95_regret_vnd": 741304.0712468193,
+          "mean_regret_vnd": 102765.53558132114,
+          "oracle_savings_capture": 3.871089811147144e-05,
+          "p95_regret_vnd": 523000.0,
+          "rows": 47005.0,
+          "wait_rate": 6.382299755345176e-05
+        },
+        "F04": {
+          "cvar95_regret_vnd": 707481.7717206132,
+          "mean_regret_vnd": 88090.41782444896,
+          "oracle_savings_capture": 0.0004106704683829454,
+          "p95_regret_vnd": 468000.0,
+          "rows": 58661.0,
+          "wait_rate": 5.11413034213532e-05
+        },
+        "F05": {
+          "cvar95_regret_vnd": 774600.3630640084,
+          "mean_regret_vnd": 104362.97459511511,
+          "oracle_savings_capture": 0.00045946701905608123,
+          "p95_regret_vnd": 510000.0,
+          "rows": 57115.0,
+          "wait_rate": 1.7508535411012867e-05
+        },
+        "F06": {
+          "cvar95_regret_vnd": 609245.8335078534,
+          "mean_regret_vnd": 56921.973351518645,
+          "oracle_savings_capture": 0.027877001473053054,
+          "p95_regret_vnd": 338000.0,
+          "rows": 57189.0,
+          "wait_rate": 0.004633758240221022
+        }
+      },
+      "screen_cvar95_regret_vnd": 653306.106485487,
+      "screen_mean_regret_vnd": 77710.69472056761,
+      "screen_worst_fold_regret_vnd": 102765.53558132114,
+      "selection_score": 218648.46957579712,
+      "threshold": 0.75
+    },
+    {
+      "fold_metrics": {
+        "F02": {
+          "cvar95_regret_vnd": 517417.29393468116,
+          "mean_regret_vnd": 43011.91576300487,
+          "oracle_savings_capture": 0.04689422119103248,
+          "p95_regret_vnd": 253200.0,
+          "rows": 12726.0,
+          "wait_rate": 0.004086122898004086
+        },
+        "F03": {
+          "cvar95_regret_vnd": 741304.0712468193,
+          "mean_regret_vnd": 102769.51388150197,
+          "oracle_savings_capture": 0.0,
+          "p95_regret_vnd": 523000.0,
+          "rows": 47005.0,
+          "wait_rate": 0.0
+        },
+        "F04": {
+          "cvar95_regret_vnd": 708042.5749318801,
+          "mean_regret_vnd": 88126.60882017014,
+          "oracle_savings_capture": 0.0,
+          "p95_regret_vnd": 468000.0,
+          "rows": 58661.0,
+          "wait_rate": 0.0
+        },
+        "F05": {
+          "cvar95_regret_vnd": 775287.5657342657,
+          "mean_regret_vnd": 104410.9479821413,
+          "oracle_savings_capture": 0.0,
+          "p95_regret_vnd": 510000.0,
+          "rows": 57115.0,
+          "wait_rate": 0.0
+        },
+        "F06": {
+          "cvar95_regret_vnd": 619460.3048184358,
+          "mean_regret_vnd": 57810.0049310182,
+          "oracle_savings_capture": 0.012711049363160254,
+          "p95_regret_vnd": 342000.0,
+          "rows": 57189.0,
+          "wait_rate": 0.001556243333508192
+        }
+      },
+      "screen_cvar95_regret_vnd": 655587.9800377935,
+      "screen_mean_regret_vnd": 77969.34615489232,
+      "screen_worst_fold_regret_vnd": 102769.51388150197,
+      "selection_score": 219363.89355060123,
+      "threshold": 0.8
+    }
+  ]
+}

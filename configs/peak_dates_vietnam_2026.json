@@ -1,0 +1,28 @@
+{
+  "config_version": "vn_peak_air_travel_2026_v1",
+  "as_of": "2026-07-20",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "semantic": "flight_date falls inside a documented Vietnamese holiday travel period",
+  "periods": [
+    {
+      "name": "Tet Nguyen Dan 2026 travel period",
+      "start": "2026-02-14",
+      "end": "2026-02-22",
+      "source": "https://xaydungchinhsach.chinhphu.vn/de-xuat-phuong-an-nghi-tet-am-lich-nghi-le-quoc-khanh-nam-2026-119251002130522291.htm",
+      "note": "Uses the published nine-day Tet period rather than the incorrect 27/01-02/02 dates in the legacy code."
+    },
+    {
+      "name": "Gio To Hung Vuong 2026",
+      "start": "2026-04-25",
+      "end": "2026-04-27",
+      "source": "https://baochinhphu.vn/chinh-thuc-bo-noi-vu-ra-thong-bao-lich-nghi-gio-to-hung-vuong-le-30-4-1-5-102260410213402453.htm"
+    },
+    {
+      "name": "Reunification and Labour Day 2026",
+      "start": "2026-04-30",
+      "end": "2026-05-03",
+      "source": "https://baochinhphu.vn/chinh-thuc-bo-noi-vu-ra-thong-bao-lich-nghi-gio-to-hung-vuong-le-30-4-1-5-102260410213402453.htm"
+    }
+  ],
+  "usage_guard": "Keep as a binary domain feature. Do not add school-break or generic summer flags without a separately versioned source."
+}

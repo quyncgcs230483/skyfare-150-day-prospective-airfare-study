@@ -1,0 +1,85 @@
+{
+  "analysis_sha256": "aa99cbca5deca1f9f6b555f6c2751af8d07bcc6329dedc8d62f65cabc7e8c38b",
+  "automatic_promotion": false,
+  "buy_wait": {
+    "fallback": "BUY",
+    "nominal_friction_vnd": 50000,
+    "threshold": 0.3
+  },
+  "contract_id": "SKYFARE_V24_FINAL_REFINEMENT_FREEZE_R1",
+  "contract_sha256": "505da128fc13d06301c4911e1fba5d26c488efb3b1b91fea99833a8565d93038",
+  "next_action": "RUN_TEST_1_WITHOUT_TUNING",
+  "observation_cutoff": "2026-07-28",
+  "policy_sha256": "bf0941cdf9f73ac9b4aed43511b0ff858058ed45f8ad023c004983328c81a481",
+  "status": "FROZEN",
+  "tasks": {
+    "CLASSIFICATION": {
+      "finalists": [
+        "C24_FT_WIDE_D015",
+        "C24_GRU_EXACT_MTL_U64"
+      ],
+      "frozen_recipe": "V24_MEAN",
+      "late_gate": {
+        "late_labels_used_only_as_stability_gate": true,
+        "pass_mean": true,
+        "pass_worst_fold": true,
+        "status": "PASS",
+        "tolerance": 0.01
+      }
+    },
+    "DISTRIBUTION": {
+      "finalists": [
+        "D24_CAT_Q7_D7",
+        "D24_XGB_Q7_D7"
+      ],
+      "frozen_recipe": "V24_BLEND_50",
+      "late_gate": {
+        "late_labels_used_only_as_stability_gate": true,
+        "pass_mean": true,
+        "pass_worst_fold": true,
+        "status": "PASS",
+        "tolerance": 0.03
+      }
+    },
+    "POINT": {
+      "finalists": [
+        "R24_GRU_EXACT_HUBER_U64",
+        "R24_LSTM_EXACT_HUBER_U64"
+      ],
+      "frozen_recipe": "V24_BLEND_50",
+      "late_gate": {
+        "late_labels_used_only_as_stability_gate": true,
+        "pass_mean": true,
+        "pass_worst_fold": true,
+        "status": "PASS",
+        "tolerance": 0.02
+      }
+    },
+    "RANKING": {
+      "finalists": [
+        "K24_LGBM_XENDCG_R84_L63",
+        "K24_LGBM_LAMBDA_R84_L63"
+      ],
+      "frozen_recipe": "V24_BLEND_75",
+      "late_gate": {
+        "late_labels_used_only_as_stability_gate": true,
+        "pass_mean": true,
+        "pass_worst_fold": true,
+        "status": "PASS",
+        "tolerance": 0.01
+      }
+    }
+  },
+  "test_1_failure_action": "RETAIN_INCUMBENT; DO_NOT_TUNE_ON_TEST_1; PRESERVE_TEST_2",
+  "test_access": false,
+  "test_blocks": {
+    "TEST_1": [
+      "2026-07-29",
+      "2026-08-08"
+    ],
+    "TEST_2": [
+      "2026-08-09",
+      "2026-08-19"
+    ]
+  }
+}

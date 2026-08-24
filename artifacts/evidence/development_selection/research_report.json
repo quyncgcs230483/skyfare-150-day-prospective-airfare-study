@@ -1,0 +1,77 @@
+{
+  "late_folds": [
+    "F05",
+    "F06"
+  ],
+  "outputs": {
+    "CLASSIFICATION": "analysis/classification_final_oof_v24.parquet",
+    "DISTRIBUTION": "analysis/distribution_final_oof_v24.parquet",
+    "POINT": "analysis/point_final_oof_v24.parquet",
+    "RANKING": "analysis/ranking_final_oof_v24.parquet"
+  },
+  "screen_folds": [
+    "F02",
+    "F03",
+    "F04"
+  ],
+  "status": "PASS",
+  "tasks": {
+    "CLASSIFICATION": {
+      "finalists": [
+        "C24_FT_WIDE_D015",
+        "C24_GRU_EXACT_MTL_U64"
+      ],
+      "frozen_recipe": "V24_MEAN",
+      "late_gate": {
+        "late_labels_used_only_as_stability_gate": true,
+        "pass_mean": true,
+        "pass_worst_fold": true,
+        "status": "PASS",
+        "tolerance": 0.01
+      }
+    },
+    "DISTRIBUTION": {
+      "finalists": [
+        "D24_CAT_Q7_D7",
+        "D24_XGB_Q7_D7"
+      ],
+      "frozen_recipe": "V24_BLEND_50",
+      "late_gate": {
+        "late_labels_used_only_as_stability_gate": true,
+        "pass_mean": true,
+        "pass_worst_fold": true,
+        "status": "PASS",
+        "tolerance": 0.03
+      }
+    },
+    "POINT": {
+      "finalists": [
+        "R24_GRU_EXACT_HUBER_U64",
+        "R24_LSTM_EXACT_HUBER_U64"
+      ],
+      "frozen_recipe": "V24_BLEND_50",
+      "late_gate": {
+        "late_labels_used_only_as_stability_gate": true,
+        "pass_mean": true,
+        "pass_worst_fold": true,
+        "status": "PASS",
+        "tolerance": 0.02
+      }
+    },
+    "RANKING": {
+      "finalists": [
+        "K24_LGBM_XENDCG_R84_L63",
+        "K24_LGBM_LAMBDA_R84_L63"
+      ],
+      "frozen_recipe": "V24_BLEND_75",
+      "late_gate": {
+        "late_labels_used_only_as_stability_gate": true,
+        "pass_mean": true,
+        "pass_worst_fold": true,
+        "status": "PASS",
+        "tolerance": 0.01
+      }
+    }
+  },
+  "test_access": false
+}

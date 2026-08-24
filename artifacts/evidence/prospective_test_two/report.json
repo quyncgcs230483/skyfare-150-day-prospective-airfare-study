@@ -1,0 +1,147 @@
+{
+  "automatic_promotion": false,
+  "buy_wait": {
+    "buy_all": {
+      "cvar95_regret_vnd": 439127.8094562648,
+      "mean_regret_vnd": 34010.17942390737,
+      "p95_regret_vnd": 223000.0,
+      "rows": 42146,
+      "wait_rate": 0.0
+    },
+    "friction_vnd": 50000,
+    "frozen": {
+      "cvar95_regret_vnd": 418172.3181818182,
+      "mean_regret_vnd": 33060.67057371992,
+      "p95_regret_vnd": 221000.0,
+      "rows": 42146,
+      "wait_rate": 0.012907511982157263
+    },
+    "paired_day_bootstrap_vs_buy_all": {
+      "ci95_high": 769.8855965405642,
+      "ci95_low": -2896.7251335625165,
+      "day_blocks": 10,
+      "draws": 4000,
+      "mean_model_minus_baseline": -971.8808263950414
+    },
+    "threshold": 0.3,
+    "wait_all": {
+      "cvar95_regret_vnd": 997486.9924206537,
+      "mean_regret_vnd": 155590.90096331798,
+      "p95_regret_vnd": 560000.0,
+      "rows": 42146,
+      "wait_rate": 1.0
+    }
+  },
+  "classification": {
+    "baseline_constant_dev_rate": {
+      "auc": 0.5,
+      "brier": 0.1443061331462992,
+      "ece15": 0.12085304237919828,
+      "log_loss": 0.46945259308509074,
+      "proper_score": 0.6137587262313899
+    },
+    "model": {
+      "auc": 0.6551827317359795,
+      "brier": 0.12677662126633463,
+      "ece15": 0.04597947404753501,
+      "log_loss": 0.4184213687069876,
+      "proper_score": 0.5451979899733223
+    },
+    "paired_day_bootstrap": {
+      "ci95_high": -0.047899930472642425,
+      "ci95_low": -0.09243881963670243,
+      "day_blocks": 10,
+      "draws": 4000,
+      "mean_model_minus_baseline": -0.06978026128515911
+    }
+  },
+  "distribution": {
+    "baseline_empirical_dev_residual": {
+      "coverage50": 0.48058474189127454,
+      "coverage80": 0.7443241577868199,
+      "coverage90": 0.862473041741477,
+      "crossing_rate": 0.0,
+      "lower_tail90": 0.0675364135689016,
+      "pinball_mean": 0.04607763970791023,
+      "upper_tail90": 0.06999054468962147,
+      "width50": 0.13722186899000047,
+      "width80": 0.3866683415200756,
+      "width90": 0.5914138262560611,
+      "wis": 0.09215527941582045
+    },
+    "model": {
+      "coverage50": 0.48117968276902484,
+      "coverage80": 0.7789688399715279,
+      "coverage90": 0.8849639317092864,
+      "crossing_rate": 0.0,
+      "lower_tail90": 0.05642376788806612,
+      "pinball_mean": 0.03051940995676711,
+      "upper_tail90": 0.058612300402647484,
+      "width50": 0.14435358929833111,
+      "width80": 0.2959521608382185,
+      "width90": 0.4098089615806475,
+      "wis": 0.06103881991353422
+    },
+    "paired_day_bootstrap": {
+      "ci95_high": -0.028938348728656936,
+      "ci95_low": -0.0334162740465325,
+      "day_blocks": 11,
+      "draws": 4000,
+      "mean_model_minus_baseline": -0.03107226903288355
+    }
+  },
+  "evaluation_complete": true,
+  "gates": {
+    "classification_proper_score_beats_constant_prior": true,
+    "distribution_quantiles_coherent": true,
+    "distribution_wis_beats_empirical_residual": true,
+    "point_mape_beats_prior_anchor": true,
+    "policy_cvar_not_materially_worse_than_buy_all": true,
+    "policy_mean_regret_beats_buy_all": true,
+    "ranking_ndcg5_beats_prior_anchor": true
+  },
+  "next_action": "FINAL_FREEZE_AND_REPORT",
+  "point": {
+    "baseline_prior_anchor": {
+      "bias": -15266.775893208112,
+      "mae": 219488.67011059527,
+      "mape": 0.13355197761320314,
+      "median_ape": 0.07601352400368708,
+      "rmse": 384115.7926928779
+    },
+    "model": {
+      "bias": -30930.878293957812,
+      "mae": 115145.47553159622,
+      "mape": 0.06871404089813853,
+      "median_ape": 0.02931567709056667,
+      "rmse": 233965.14825293873
+    },
+    "paired_day_bootstrap": {
+      "ci95_high": -0.061428840348815815,
+      "ci95_low": -0.06857498679018774,
+      "day_blocks": 11,
+      "draws": 4000,
+      "mean_model_minus_baseline": -0.06479466105376362
+    }
+  },
+  "ranking": {
+    "baseline_prior_anchor": {
+      "ndcg5": 0.6735979412962736,
+      "pairwise_concordance": 0.7170163770415429,
+      "queries": 4836.0
+    },
+    "model": {
+      "ndcg5": 0.8234957072335912,
+      "pairwise_concordance": 0.8670246135115657,
+      "queries": 4836.0
+    }
+  },
+  "status": "PASS",
+  "test_2_access": true,
+  "two_block_confirmation": {
+    "decision": "CONFIRMED",
+    "recipe_changed_between_blocks": false,
+    "test_1": "PASS",
+    "test_2": "PASS"
+  }
+}

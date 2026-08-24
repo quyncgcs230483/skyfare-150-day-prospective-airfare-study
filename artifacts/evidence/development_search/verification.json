@@ -1,0 +1,155 @@
+{
+  "actual_active_wall_hours": 2.01370628853639,
+  "automatic_promotion": false,
+  "completion_basis": "CONFIGURED_JOB_AND_ARTIFACT_COVERAGE",
+  "components": {
+    "V20": {
+      "active_wall_hours": 0.017246883975134956,
+      "artifact_rows": 34089326,
+      "code_sha256": "d01188a1f67985b52281c65d798bd61dfca8b02a88a807610eebdd04b827763e",
+      "coverage": {
+        "extension": 400,
+        "smoke": 60,
+        "stage1": 192,
+        "stage2": 48
+      },
+      "production_jobs": 640,
+      "status": "PASS"
+    },
+    "V21": {
+      "active_wall_hours": 0.027663575145933362,
+      "artifact_rows": 11650060,
+      "code_sha256": "e9a1687ab04609fde3e1c1a3b77d52641f3f63e55b48c75c816813434fb3a721",
+      "coverage": {
+        "core": 50,
+        "extension": 200,
+        "smoke": 10
+      },
+      "production_jobs": 250,
+      "status": "PASS"
+    },
+    "V22": {
+      "active_wall_hours": 1.9958669383658303,
+      "artifact_rows": 25184160,
+      "code_sha256": "7a194d7c027db573bb520208ebfb371f92ea176ee318b575d880cce73ae2da48",
+      "coverage": {
+        "core": 120,
+        "extension": 360,
+        "smoke": 20
+      },
+      "production_jobs": 480,
+      "status": "PASS"
+    }
+  },
+  "contract": {
+    "automatic_promotion": false,
+    "classification_components": [
+      "V20_SEQUENCE_PRIOR_SELECTED",
+      "V21_TABULAR_SELECTED",
+      "V17_SYSTEM_BLEND",
+      "V19_CLASS_ENSEMBLE"
+    ],
+    "completion_basis": "CONFIGURED_JOB_AND_ARTIFACT_COVERAGE",
+    "component_coverage": {
+      "V20": {
+        "extension": 400,
+        "production": 640,
+        "smoke": 60,
+        "stage1": 192,
+        "stage2": 48
+      },
+      "V21": {
+        "core": 50,
+        "extension": 200,
+        "production": 250,
+        "smoke": 10
+      },
+      "V22": {
+        "core": 120,
+        "extension": 360,
+        "production": 480,
+        "smoke": 20
+      }
+    },
+    "component_order": [
+      "V20",
+      "V21",
+      "V22"
+    ],
+    "contract_id": "SKYFARE_V23_UNIFIED_RESEARCH_CLOSURE_R1",
+    "contract_sha256": "ea47c0e2feff4d85f9cf987eeedc1efbe6fc5a8f2bbfd6976420ccd2f457d703",
+    "extra_trees_present": false,
+    "global_hard_wall_hours": null,
+    "minimum_runtime_hours": null,
+    "observation_cutoff": "2026-07-28",
+    "production_jobs": 1370,
+    "prospective_access": false,
+    "regression_components": [
+      "V20_SEQUENCE_PRIOR_SELECTED",
+      "V22_DISTRIBUTION_MEDIAN",
+      "V17_SYSTEM_BLEND",
+      "V19_REG_ENSEMBLE"
+    ],
+    "report_folds": [
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06"
+    ],
+    "schedule": {
+      "phase_a": "V20 on GPU0+GPU1",
+      "phase_b": "V21 on GPU0 concurrent with V22 on GPU1",
+      "phase_c": "prior-fold-only synthesis, verification, archive"
+    },
+    "smoke_jobs": 90,
+    "status": "PASS",
+    "test_blocks_opened": false
+  },
+  "extra_trees_present": false,
+  "final": {
+    "classification_rows": 232696,
+    "classification_sha256": "009de98c479e348e22859e47f4a13cce718682812edbd3d152c46118ebb2b7b6",
+    "distribution_sha256": "5427f428036a765af4a6617535088db67ac380261ab5911cfa017f4827a285db",
+    "ranking_sha256": "472f705660f3e76e86daa40cd61d8a14b98a4d685c88e2250e9cc72f60be69bf",
+    "regression_rows": 286810,
+    "regression_sha256": "3d11be6599b0d29ab855825e9c95e7b4fa77c4715d8d50e2c39ecd3c2c36951b"
+  },
+  "minimum_runtime_hours": null,
+  "preflight": {
+    "classification_row_identity_sha256": "305f306daa6538528937ad113ac6f3668c34e248cc1f7f0807a2757ea34ca6db",
+    "completion_basis": "CONFIGURED_JOB_AND_ARTIFACT_COVERAGE",
+    "contract_sha256": "ea47c0e2feff4d85f9cf987eeedc1efbe6fc5a8f2bbfd6976420ccd2f457d703",
+    "minimum_runtime_hours": null,
+    "prospective_rows_used": false,
+    "regression_business_identity_sha256": "7cf84a5d7dde5270b586f2800d32ca87d85b4b9828206dcd22458c2652e80b70",
+    "regression_target_semantics": {
+      "selected_v16": {
+        "max_abs_difference": 0.0,
+        "rows": 286810
+      },
+      "training": {
+        "max_abs_difference": 0.0,
+        "rows": 916696
+      }
+    },
+    "rows": {
+      "classification_oof_v19.parquet": 232696,
+      "classification_system_predictions_v17.parquet": 232696,
+      "classification_training_frame.parquet": 636436,
+      "histgbm_transition_beta_oof.parquet": 232696,
+      "regression_ablation_selected_predictions_v17.parquet": 286810,
+      "regression_oof_v19.parquet": 286810,
+      "regression_system_predictions_v17.parquet": 286810,
+      "regression_training_frame.parquet": 916696,
+      "selected_regression_v16.parquet": 286810,
+      "standard_128_day_offers.parquet": 923855
+    },
+    "status": "PASS",
+    "test_blocks_opened": false
+  },
+  "production_jobs": 1370,
+  "prospective_rows_used": false,
+  "status": "PASS",
+  "test_blocks_opened": false
+}

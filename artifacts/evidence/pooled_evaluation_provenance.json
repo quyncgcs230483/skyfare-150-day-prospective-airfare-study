@@ -1,0 +1,13 @@
+{
+  "baseline_lock_sha256": "4a088a483366010232500bce700b7e0fb65e15bb6f037a9e63d240fb3a84bc27",
+  "contract_sha256": "328e7dde326412b35dfe7c0766e3e210ef2be048bf1f966de9ecfd7a5929abbf",
+  "input_archive_sha256": {
+    "TEST_1": "5fe2348ef3098fca189ee8ead182738ea9c95b8f2c990f2e5704113021e6ac7e",
+    "TEST_2": "3207a539c4689ca9df007da01c5374e50b796fe740c4abee35a4cabd907dd293"
+  },
+  "prediction_commit_sha256": {
+    "TEST_1": "07c5537857976290299c3735aeeecdd72d5ac9b3b56edca814887bce69ac94f8",
+    "TEST_2": "f75cc47864f105a9c41ccf5a96f83db9ded13650f5bda451d0ee1cecdbad2840"
+  },
+  "status": "PASS"
+}

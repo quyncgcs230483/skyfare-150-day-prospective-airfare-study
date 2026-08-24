@@ -1,0 +1,7 @@
+{
+  "integrity": "PASS",
+  "next_action": "RUN_TEST_2_WITH_SAME_DEPLOYABLE_LOCK",
+  "scientific_decision": "PASS",
+  "status": "COMPLETE",
+  "test_2_access": false
+}
