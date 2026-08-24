@@ -2,7 +2,7 @@
   "files": {
     ".github/workflows/quality.yml": {
       "bytes": 663,
-      "sha256": "06d9b89ca87b0ff883f0b53de67b81d8f0194dfc9e08e195373442cbc611be9e"
+      "sha256": "57bce187177e1e5735c92cf15f849abf646a649a31678a4b321dc920675b9f74"
     },
     ".gitignore": {
       "bytes": 266,
