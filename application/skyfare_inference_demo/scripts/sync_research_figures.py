@@ -12,6 +12,21 @@ ROOT = Path(__file__).resolve().parents[3]
 REPORTS = ROOT / "reports" / "figures"
 ASSETS = ROOT / "application" / "skyfare_inference_demo" / "assets"
 MAPPINGS = {
+    "development_128_day_collection_coverage.png": (
+        "data_analysis/collection_coverage.png"
+    ),
+    "development_128_day_source_agreement.png": (
+        "data_analysis/source_agreement.png"
+    ),
+    "development_128_day_route_airline_coverage.png": (
+        "data_analysis/route_airline_coverage.png"
+    ),
+    "development_128_day_airline_density.png": (
+        "data_analysis/airline_density.png"
+    ),
+    "development_128_day_booking_window_fares.png": (
+        "data_analysis/booking_window_fares.png"
+    ),
     "airline_composition_temporal_drift.png": (
         "data_analysis/airline_composition_temporal_drift.png"
     ),

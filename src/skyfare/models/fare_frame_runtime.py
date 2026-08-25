@@ -290,7 +290,7 @@ def build_standard_offers() -> pd.DataFrame:
         index=False,
     ).astype("uint64")
     if offers["offer_id"].duplicated().any():
-        raise RuntimeError("Standard 115-day offer_id is not unique")
+        raise RuntimeError("Standard offer_id is not unique")
     offers = _attach_cross_era_market_history(offers)
     offers = attach_peer_anchor(offers)
     offers = _attach_cross_era_schedule_history(offers)

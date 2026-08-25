@@ -2,19 +2,25 @@
   "offers": 923855,
   "collection": {
     "start": "2026-03-21",
+    "registered_development_start": "2026-03-23",
     "end": "2026-07-28",
     "observed_days": 128,
     "calendar_days": 130,
+    "role": "development_history_eda",
     "missing_days": [
       "2026-05-08",
       "2026-05-09"
     ]
   },
   "source_agreement": {
+    "overlap_start": "2026-05-16",
+    "overlap_end": "2026-06-03",
+    "overlap_days": 19,
     "matches": 150538,
     "median_ratio": 1.024936061381074,
     "within_5pct": 0.9361622978915622,
-    "within_10pct": 0.9846351087433073
+    "within_10pct": 0.9846351087433073,
+    "claim_guard": "Early-period cross-source comparability only; source and time effects remain non-identifiable and later June/July display semantics are not verified."
   },
   "coverage": {
     "routes": 20,

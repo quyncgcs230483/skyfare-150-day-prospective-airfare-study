@@ -25,8 +25,8 @@
       "sha256": "d693568e8274852f1812fc124e5457ca141704915d8cf3a3b3a74b38c9dcf3ee"
     },
     "README.rst": {
-      "bytes": 7110,
-      "sha256": "0467c76dcdad273f53d838c67105c66d69d1eeff50d910e1daab52267273529c"
+      "bytes": 9135,
+      "sha256": "b2b5fdd017a5b8ce81f781b401aa97fb8141ea101e3839c56854b3e85b479070"
     },
     "SECURITY.rst": {
       "bytes": 455,
@@ -73,8 +73,8 @@
       "sha256": "e190423a8502eb15fcc4b6f7a3b394c4069e2bb4f395b95dc7467d77302bd82d"
     },
     "application/skyfare_inference_demo/assets/data_analysis/data_analysis_summary.json": {
-      "bytes": 2067,
-      "sha256": "b655472c2f674def0610511959cff01a467b6624bc40be4319c9cf892db39bf2"
+      "bytes": 2421,
+      "sha256": "602942c477127d1d8d7ce5cd88cc14fe54018d027b14ca21b2f211dff49f9890"
     },
     "application/skyfare_inference_demo/assets/data_analysis/route_airline_coverage.png": {
       "bytes": 153457,
@@ -261,8 +261,8 @@
       "sha256": "9f93ca3d9937683d7cc62f6c1b0f955aa7eac354698430b43370007797d1dbbd"
     },
     "application/skyfare_inference_demo/requirements.txt": {
-      "bytes": 180,
-      "sha256": "b9f97023d96e2cff463c84a9174b64a17965cf4ab6eb4cc0194e5158f3ceef45"
+      "bytes": 68,
+      "sha256": "403e3ef8f4be70949d90a10db11eca622971e817a3cd58e8ba03256835e7dee6"
     },
     "application/skyfare_inference_demo/run_local.sh": {
       "bytes": 697,
@@ -273,8 +273,8 @@
       "sha256": "b9705d360ced91b41ae0e6c8d683d9703124ddd77cf6bb02dd4f72eb7e77ecdf"
     },
     "application/skyfare_inference_demo/scripts/sync_research_figures.py": {
-      "bytes": 1479,
-      "sha256": "ea3822ca09618f445ea44c5b9b160042d9e7dc531a5c99d3aaae1dda184e8f7b"
+      "bytes": 2013,
+      "sha256": "48cdd6d4a8dc79b10d3c2b87839dc6b557fedbc6ed072d1506e131efa90746fb"
     },
     "application/skyfare_inference_demo/skyfare_inference_demo/__init__.py": {
       "bytes": 49,
@@ -285,8 +285,8 @@
       "sha256": "b2181c12f8ffc0706ca4a55aec8db55c6384c7e8f43797baf3625b48be251006"
     },
     "application/skyfare_inference_demo/skyfare_inference_demo/skyfare_inference_demo.py": {
-      "bytes": 226687,
-      "sha256": "8bceecb9167630b2bcb53df13ca58693dd39f8a02a50dbabd01b61e62b89d93f"
+      "bytes": 226778,
+      "sha256": "733213e86031e97d04b98382a83d02d8e3818543ec0fc9bfd5e4c66e75190e45"
     },
     "artifacts/data_preparation/source_standardisation_manifest.json": {
       "bytes": 845,
@@ -295,6 +295,10 @@
     "artifacts/evidence/daily_stratified_deltas.csv": {
       "bytes": 5783,
       "sha256": "4d47684bdcca80102080a8942f2bfd09e632c6b690ba283a46dd4148055930f6"
+    },
+    "artifacts/evidence/development_eda_128_day_summary.json": {
+      "bytes": 1413,
+      "sha256": "90b55a6aed074b39ae7dbb93160a0f80d58d407aaa912ea5eed108e7a3f3734f"
     },
     "artifacts/evidence/development_search/orchestration.json": {
       "bytes": 334,
@@ -1689,8 +1693,8 @@
       "sha256": "7fc098be431fd03d5a1fba02ca856db36ed8b0e99e3ae94e145c635e7a2e455e"
     },
     "pyproject.toml": {
-      "bytes": 1137,
-      "sha256": "d71121950e4fb52e15bdbede9c91779f6fc051d42e57f2964246c3466bdb92b1"
+      "bytes": 1114,
+      "sha256": "4c82de0bc2a9684519e18cca29e3d5fac32ca5a501ec9cf1308fbe7cddc5a9c1"
     },
     "reports/figures/AIRFARE_MODELLING_PIPELINES_HORIZONTAL.drawio": {
       "bytes": 77363,
@@ -1711,6 +1715,26 @@
     "reports/figures/classification_prospective_diagnostics.png": {
       "bytes": 171329,
       "sha256": "d023dfd4b47243007e468d9574fc35f29a23fa33054d1cdcf1be81498a392c4d"
+    },
+    "reports/figures/development_128_day_airline_density.png": {
+      "bytes": 66068,
+      "sha256": "5225190d1d9385b32f2ea5b1c0e866d24496982ca6ee7846d6ec3b1550488b02"
+    },
+    "reports/figures/development_128_day_booking_window_fares.png": {
+      "bytes": 81671,
+      "sha256": "892f64e684eeb7db7d8d173984de79e68ffa4567bb415f04e45ef62729ad989f"
+    },
+    "reports/figures/development_128_day_collection_coverage.png": {
+      "bytes": 65131,
+      "sha256": "e190423a8502eb15fcc4b6f7a3b394c4069e2bb4f395b95dc7467d77302bd82d"
+    },
+    "reports/figures/development_128_day_route_airline_coverage.png": {
+      "bytes": 153457,
+      "sha256": "d7a4919f9635fe44cd81be4f56ea081fc94d544a7f3deae17966ca83e9db7e49"
+    },
+    "reports/figures/development_128_day_source_agreement.png": {
+      "bytes": 190526,
+      "sha256": "88abe800690171fd14433f8997a9e5f38f7883e2b13c83c81c78c6f2b7092ba6"
     },
     "reports/figures/distribution_ranking_prospective_diagnostics.png": {
       "bytes": 167425,
@@ -1813,16 +1837,16 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     "src/skyfare/acquisition/fli_collector.py": {
-      "bytes": 11099,
-      "sha256": "168bef787b8a75209d478e7f1711e6e7dab7597a1f2f8fdcf40aa1411748219e"
+      "bytes": 11280,
+      "sha256": "653000f5bae1aeb611041434798cedc338e896d40d20b8126122a097ff7f916f"
     },
     "src/skyfare/acquisition/trip_collector.py": {
-      "bytes": 26685,
-      "sha256": "323c2ff152c9a9a051ce3aeb4e3229ec1f6012f40da6f8fd356defae6fe2d9a1"
+      "bytes": 26794,
+      "sha256": "192f8887763c8aa827bee748009eb3b9de13db202a85d343abe1ec97d2f99a0f"
     },
     "src/skyfare/acquisition/trip_resume.py": {
-      "bytes": 32318,
-      "sha256": "4abf7936d51df2d8487f2a611bfe6f83182a0f8123249241b1ba426f29103791"
+      "bytes": 32589,
+      "sha256": "1829e4ded8d2f1ee7ac3b4e2e55120683646235c85f64ed6f8b09ef4e9c71537"
     },
     "src/skyfare/calibration/__init__.py": {
       "bytes": 0,
@@ -2097,8 +2121,8 @@
       "sha256": "7055ae3100edbc0f13fbdb8e34a760d99cd2077dbc5401601de2dc58a4034343"
     },
     "src/skyfare/models/fare_frame_runtime.py": {
-      "bytes": 31923,
-      "sha256": "1d7704ea49007a6302d4e9490927ae1713913ad6c2047658e37169ae97510d32"
+      "bytes": 31915,
+      "sha256": "e912ef55bd0ae4d40936b6ddb1be6f001dcda0d8f3c7dc3589d1ca7a5e146362"
     },
     "src/skyfare/models/freeze_finalists.py": {
       "bytes": 1914,
@@ -2297,8 +2321,8 @@
       "sha256": "0574b1124f5664defba3883bdff8adb38d51189c03061725cee36523a9cf021e"
     },
     "tests/test_metrics_known_answers.py": {
-      "bytes": 1918,
-      "sha256": "fd6ceed54cd66982e6afc838cf6dc3cceed1844623f6cc71c6329c9694cdae1a"
+      "bytes": 3114,
+      "sha256": "154dcad478d2234f3d76d5be555e7f0fb1e6b9841ff83972969099964a1b7fc9"
     },
     "tests/test_paths.py": {
       "bytes": 1071,
@@ -2333,8 +2357,8 @@
       "sha256": "476c6b601099e5c650d567d2db5f7faeed4f415dd93735ee305bd6740dc3425c"
     },
     "tools/verify_repository.py": {
-      "bytes": 11627,
-      "sha256": "852b3e1df61153e199d29fc59f219e3089e203d19abeb8838c9d021c33f055af"
+      "bytes": 13489,
+      "sha256": "02506820d390976ad1bcd9daa51cca22299b0b4de010ca55984be44f066f7c59"
     }
   },
   "status": "PASS"

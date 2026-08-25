@@ -1,0 +1,40 @@
+{
+  "contract": "SKYFARE_128_OBSERVED_DAY_DEVELOPMENT_EDA_R1",
+  "status": "PASS",
+  "scope": {
+    "raw_context_start": "2026-03-21",
+    "registered_development_start": "2026-03-23",
+    "development_end": "2026-07-28",
+    "calendar_span_days": 130,
+    "observed_history_days": 128,
+    "uncollected_dates": [
+      "2026-05-08",
+      "2026-05-09"
+    ],
+    "prospective_labels_used": false
+  },
+  "observations": 923855,
+  "coverage": {
+    "routes": 20,
+    "airlines": 5,
+    "supported_route_airline_pairs": 72,
+    "canonical_booking_windows": 11
+  },
+  "source_agreement": {
+    "overlap_start": "2026-05-16",
+    "overlap_end": "2026-06-03",
+    "overlap_days": 19,
+    "matched_schedule_minute_slots": 150538,
+    "median_trip_to_fli_minimum_fare_ratio": 1.024936061381074,
+    "within_5pct_fraction": 0.9361622978915622,
+    "within_10pct_fraction": 0.9846351087433073,
+    "claim_guard": "Early-period cross-source comparability only; source and time effects remain non-identifiable and later June/July display semantics are not verified."
+  },
+  "figures": [
+    "reports/figures/development_128_day_collection_coverage.png",
+    "reports/figures/development_128_day_source_agreement.png",
+    "reports/figures/development_128_day_route_airline_coverage.png",
+    "reports/figures/development_128_day_airline_density.png",
+    "reports/figures/development_128_day_booking_window_fares.png"
+  ]
+}

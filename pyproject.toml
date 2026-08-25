@@ -27,7 +27,7 @@ collection-trip = ["camoufox[geoip]"]
 figures = ["matplotlib==3.10.9"]
 serving = ["psycopg2-binary==2.9.10"]
 application = ["reflex==0.9.4", "psycopg2-binary==2.9.10"]
-quality = ["pytest>=8.3,<9", "ruff>=0.12,<1", "jsonschema>=4.23,<5"]
+quality = ["pytest>=8.3,<9", "ruff>=0.12,<1"]
 
 [project.scripts]
 skyfare = "skyfare.__main__:main"

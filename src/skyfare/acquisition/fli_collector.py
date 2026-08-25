@@ -35,7 +35,9 @@ LAYOUT = DataLayout.resolve()
 OUTPUT_DIR = LAYOUT.raw_fli
 LOG_DIR = LAYOUT.collection_logs
 
-USD_TO_VND = 26_309
+# Reporting-only conversion retained for historical CSV compatibility.
+# All analytical and serving contracts use price_vnd as the canonical value.
+DISPLAY_VND_PER_USD_FIXED = 26_309
 
 AIRLINE_NAMES = {
     "VN": "Vietnam Airlines",
@@ -176,7 +178,7 @@ def run():
                                 "airline_name"        : AIRLINE_NAMES.get(code, leg.airline.value),
                                 "flight_no"           : leg.flight_number,
                                 "departure_time"      : str(leg.departure_datetime),
-                                "price_usd"           : round(r.price/USD_TO_VND,2),
+                                "price_usd"           : round(r.price / DISPLAY_VND_PER_USD_FIXED, 2),
                                 "price_vnd"           : round(r.price),
                                 "data_source"         : "fli_library",
                             })

@@ -150,10 +150,45 @@ SHA-256 records and compact verification reports remain in
 ``artifacts/evidence`` and ``artifacts/release_manifests`` so repository history
 stays reviewable.
 
+Development EDA and source compatibility
+----------------------------------------
+
+Five report figures preserve EDA for the 128 observed development-history days.
+The underlying raw span is 21 March--28 July 2026: 21--22 March provide
+pre-study context, the registered development window starts on 23 March, and 8--9
+May remain explicit uncollected dates. These figures are separate from the
+150-day prospective-study evaluation and from the target-free 20--24 August
+serving demonstration.
+
+During the 19-day Fli--Trip.com overlap, 150,538 matched route, airline, flight
+date, departure-minute, booking-window and session slots had a median
+Trip.com-to-Fli minimum-fare ratio of 1.0249. Of these matches, 93.62% were within
++/-5% and 98.46% were within +/-10%. This supports early-period listed-price
+comparability. It does not identify source and time effects separately, bound
+tail differences, or verify later June/July display semantics.
+
+Collection responsibility
+-------------------------
+
+Collection code is retained for reproducibility of the completed academic
+study. Each run uses a finite route-by-booking-window task grid, bounded
+inter-query delays, bounded navigation retries and a two-minute cool-down after
+repeated empty or access-verification responses. Access-verification markers
+trigger backoff and eventual termination for the affected query; the collector
+does not solve CAPTCHA challenges. Published raw evidence contains structured
+fare observations and checksums rather than page HTML, browser profiles,
+credentials or session cookies. Reuse remains subject to applicable website
+terms, robots directives, institutional ethics requirements and local law.
+Historical ``price_usd`` values use a fixed 26,309 VND/USD display conversion;
+``price_vnd`` is the canonical value used by every analytical and serving path.
+
 Limitations
 -----------
 
 The data originate from two collection mechanisms whose coverage changes over
 time. Source identity is therefore an explicit covariate and audit dimension.
+The overlap analysis reduces concern about large early-period listed-price
+incompatibility but cannot prove that later temporal movement is source
+independent or causal market drift.
 Prospective Test 1 and Test 2 are separate temporal blocks, not cross-validation
 folds. No post-test candidate search is represented as confirmatory evidence.

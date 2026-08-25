@@ -35,7 +35,9 @@ LAYOUT = DataLayout.resolve()
 OUTPUT_DIR = LAYOUT.raw_trip_com
 LOG_DIR = LAYOUT.collection_logs
 
-USD_TO_VND = 26_309
+# Reporting-only conversion retained for historical CSV compatibility.
+# All analytical and serving contracts use price_vnd as the canonical value.
+DISPLAY_VND_PER_USD_FIXED = 26_309
 
 ROUTES = [
     ("SGN", "HAN"), ("HAN", "SGN"),
@@ -113,16 +115,25 @@ SESSION_DATE_OVERRIDE = ARGS.date
 TEST_MODE  = ARGS.test or (os.environ.get("TEST_MODE") == "1")
 TEST3_MODE = ARGS.test3 or (os.environ.get("TEST3_MODE") == "1")
 
-# Rate-limit and access-verification handling.
-BLOCK_MARKERS    = ["whale" + "guard", "verify", "captcha", "robot check",
-                    "are you a human", "unusual traffic", "access denied",
-                    "security check", "blocked"]
+# Rate-limit and access-verification handling. Markers trigger bounded backoff;
+# they are not interpreted as permission to circumvent an access control.
+ACCESS_VERIFICATION_MARKERS = [
+    "whaleguard",
+    "verify",
+    "captcha",
+    "robot check",
+    "are you a human",
+    "unusual traffic",
+    "access denied",
+    "security check",
+    "blocked",
+]
 # Stale-price / soft-error interstitial; Trip shows a reload button.
 STALE_MARKERS    = ["t\u1ea3i l\u1ea1i", "\u0111\u00e3 c\u00f3 l\u1ed7i x\u1ea3y ra", "vui l\u00f2ng th\u1eed", "th\u1eed l\u1ea1i",
                     "gi\u00e1 \u0111\u00e3 c\u0169", "reload", "try again", "something went wrong"]
 RELOAD_LABELS    = ["T\u1ea3i l\u1ea1i", "T\u1ea3i l\u1ea1i trang", "Th\u1eed l\u1ea1i", "Reload", "Try again", "Retry"]
 MAX_STALE_RETRY  = 3            # click-reload attempts when a stale-price interstitial appears
-MAX_BLOCK_RETRY  = 2            # extra reload attempts when a block is detected
+MAX_ACCESS_RETRIES = 2
 SELECTOR_BUDGET  = 25           # seconds to wait for flights OR block (faster than full's 30)
 
 # \u2500\u2500 3-tab parallel tuning (balanced cadence \u2014 3 tabs run at once) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
@@ -418,7 +429,7 @@ async def human_scroll(page):
         await asyncio.sleep(random.uniform(0.3, 0.7))
 
 
-async def looks_blocked(page):
+async def looks_access_restricted(page):
     """Detect an access-verification interstitial, not a genuine no-results page."""
     try:
         title = (await page.title() or "").lower()
@@ -428,7 +439,7 @@ async def looks_blocked(page):
     except Exception:
         return False
     blob = title + " " + body
-    return any(m in blob for m in BLOCK_MARKERS)
+    return any(marker in blob for marker in ACCESS_VERIFICATION_MARKERS)
 
 
 async def looks_stale(page):
@@ -497,11 +508,10 @@ async def scrape_one(page, origin, dest, flight_date, days_until, session_id, ta
     rows = []
 
     try:
-        # Techniques 2-4: domcontentloaded (don't race the JS challenge with networkidle),
-        # human dwell + mouse + up/down scroll BEFORE reading flights, then poll for
-        # .J_FlightItem OR an access-verification page, with bounded backoff and retry.
+        # Wait for client rendering and poll for either flight cards or an
+        # access-verification interstitial. Retries and backoff remain bounded.
         loaded = False
-        for attempt in range(MAX_BLOCK_RETRY + 1):
+        for attempt in range(MAX_ACCESS_RETRIES + 1):
             # goto resilient: a slow parallel load can time out \u2014 retry the goto ONCE
             # (capped) before giving up on this query, so one slow load doesn't skip a route.
             goto_ok = False
@@ -533,10 +543,11 @@ async def scrape_one(page, origin, dest, flight_date, days_until, session_id, ta
                 break
             except Exception:
                 # Access-verification page: apply bounded backoff and outer retry.
-                if await looks_blocked(page):
+                if await looks_access_restricted(page):
                     backoff = random.uniform(30, 90)
                     log(f"{tag}  ACCESS VERIFICATION {origin}->{dest} {flight_date} "
-                        f"(attempt {attempt+1}/{MAX_BLOCK_RETRY+1}) \u2014 backoff {backoff:.0f}s then reload")
+                        f"(attempt {attempt+1}/{MAX_ACCESS_RETRIES+1}) \u2014 "
+                        f"backoff {backoff:.0f}s then reload")
                     await asyncio.sleep(backoff)
                     await human_mouse(page, n=3)
                     continue
@@ -567,7 +578,10 @@ async def scrape_one(page, origin, dest, flight_date, days_until, session_id, ta
                 return rows
 
         if not loaded:
-            log(f"{tag}  GIVE UP {origin}->{dest} {flight_date} \u2014 still blocked after {MAX_BLOCK_RETRY+1} tries")
+            log(
+                f"{tag}  GIVE UP {origin}->{dest} {flight_date} \u2014 access "
+                f"verification remained after {MAX_ACCESS_RETRIES + 1} tries"
+            )
             return rows
 
         # Round-based: scroll group \u2192 extract \u2192 click "show more" \u2192 repeat
@@ -631,7 +645,7 @@ async def scrape_one(page, origin, dest, flight_date, days_until, session_id, ta
                 "airline_name"        : item["airline_name"],
                 "flight_no"           : item["flight_no"],
                 "departure_time"      : f"{flight_date} {item['dep_time']}:00",
-                "price_usd"           : round(item["price_vnd"] / USD_TO_VND, 2) if item["price_vnd"] else None,
+                "price_usd"           : round(item["price_vnd"] / DISPLAY_VND_PER_USD_FIXED, 2) if item["price_vnd"] else None,
                 "price_vnd"           : item["price_vnd"] or None,
                 "data_source"         : "trip_com",
                 "seats_left"          : None,

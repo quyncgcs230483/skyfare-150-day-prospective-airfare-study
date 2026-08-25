@@ -35,6 +35,7 @@ REQUIRED_DIRECTORIES = (
     "tools",
 )
 REQUIRED_EVIDENCE = (
+    "artifacts/evidence/development_eda_128_day_summary.json",
     "artifacts/evidence/development_search/verification.json",
     "artifacts/evidence/development_selection/verification.json",
     "artifacts/evidence/prospective_test_one/verification.json",
@@ -108,6 +109,48 @@ def _verify_evidence() -> None:
         payload = json.loads(path.read_text(encoding="utf-8"))
         if payload.get("status") not in {"PASS", "FINAL_LOCK"}:
             raise RuntimeError(f"Evidence is not PASS: {relative}")
+    development_eda = json.loads(
+        (ROOT / "artifacts/evidence/development_eda_128_day_summary.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    scope = development_eda["scope"]
+    expected_scope = {
+        "raw_context_start": "2026-03-21",
+        "registered_development_start": "2026-03-23",
+        "development_end": "2026-07-28",
+        "calendar_span_days": 130,
+        "observed_history_days": 128,
+        "uncollected_dates": ["2026-05-08", "2026-05-09"],
+        "prospective_labels_used": False,
+    }
+    if scope != expected_scope or development_eda["observations"] != 923855:
+        raise RuntimeError("128-day development EDA scope changed")
+    if development_eda["coverage"] != {
+        "routes": 20,
+        "airlines": 5,
+        "supported_route_airline_pairs": 72,
+        "canonical_booking_windows": 11,
+    }:
+        raise RuntimeError("128-day development EDA coverage changed")
+    agreement = development_eda["source_agreement"]
+    if agreement != {
+        "overlap_start": "2026-05-16",
+        "overlap_end": "2026-06-03",
+        "overlap_days": 19,
+        "matched_schedule_minute_slots": 150538,
+        "median_trip_to_fli_minimum_fare_ratio": 1.024936061381074,
+        "within_5pct_fraction": 0.9361622978915622,
+        "within_10pct_fraction": 0.9846351087433073,
+        "claim_guard": (
+            "Early-period cross-source comparability only; source and time effects remain "
+            "non-identifiable and later June/July display semantics are not verified."
+        ),
+    }:
+        raise RuntimeError("Cross-source agreement evidence changed")
+    for relative in development_eda["figures"]:
+        if not (ROOT / relative).is_file():
+            raise RuntimeError(f"Development EDA figure missing: {relative}")
 
 
 def _verify_models() -> None:

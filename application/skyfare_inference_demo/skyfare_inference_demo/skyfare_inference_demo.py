@@ -1205,7 +1205,7 @@ def data_analysis_page() -> rx.Component:
                     "Google Flights observations were collected through the "
                     "fli library. Trip.com observations were collected through "
                     "Playwright browser automation, with Camoufox providing "
-                    "anti-blocking and browser-environment support. Both streams "
+                    "browser-environment compatibility and access-state reporting. Both streams "
                     "follow the same standard fare contract.",
                     size="2",
                     color=MUTED,
@@ -1274,18 +1274,18 @@ def data_analysis_page() -> rx.Component:
         ),
         figure_panel(
             "01",
-            "Collection continuity",
-            "Daily standard-fare volume reveals the historical-to-Trip "
-            "transition and makes collection gaps visible.",
+            "Development collection continuity",
+            "Daily standard-fare volume across the development-history period "
+            "reveals the Fli-to-Trip transition and collection gaps.",
             "/data_analysis/collection_coverage.png?v=20260730c",
-            "Daily standard-fare observations across the 150-day study window",
+            "Daily standard-fare observations across 128 observed development-history days",
             "Two uncollected calendar dates remain explicit; they are not "
             "filled or represented as observed sessions.",
-            [("150", "calendar days"), ("2", "uncollected dates")],
+            [("128", "observed history days"), ("2", "uncollected dates")],
         ),
         figure_panel(
             "02",
-            "Source compatibility",
+            "Development source compatibility",
             "Exact route, airline, flight date, departure minute, booking "
             "window, and session matches compare fli and Trip listings.",
             "/data_analysis/source_agreement.png?v=20260730c",
@@ -1330,9 +1330,9 @@ def data_analysis_page() -> rx.Component:
         ),
         figure_panel(
             "06",
-            "Temporal fare movement",
+            "Study-wide temporal fare movement",
             "Observed median fare traces reveal temporal movement and source-"
-            "composition change across development and prospective periods.",
+            "composition change across development and both prospective tests.",
             "/data_analysis/airline_composition_temporal_drift.png?v=20260825a",
             "Observed airline composition and temporal fare drift",
             "The figure reports observed drift directly. Source transition "
