@@ -24,14 +24,12 @@ from skyfare.models.regression_contract import (
     HISTORY_SUPPORT_BINS,
     HISTORY_SUPPORT_LABELS,
     NUMERIC_FEATURES,
-    OUTPUT_PREFIX,
     SERVING_ELIGIBLE_CANDIDATE_SOURCES,
     SUPPORT_BINS,
     SUPPORT_LABELS,
     fold_spec,
     market_group_lookup,
 )
-
 
 LAYOUT = DataLayout.resolve()
 ROOT = LAYOUT.root
@@ -50,7 +48,7 @@ RECURRENT_SEQUENCE_SOURCE = STANDARD_OFFERS_CACHE
 # Reuse audited immutable loaders and feature construction. New task never reuses
 # legacy target filtering, carry baseline, gate, or selection logic.
 os.environ.setdefault("SKYFARE_NEXT_SESSION_OUTPUT_ROOT", str(OUTPUT_ROOT))
-from skyfare.models import fare_frame_runtime as legacy
+from skyfare.models import fare_frame_runtime as legacy  # noqa: E402
 
 
 def write_json(path: Path, payload: Any) -> None:

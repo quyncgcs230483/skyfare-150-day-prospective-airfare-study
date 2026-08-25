@@ -1,9 +1,9 @@
 SkyFare 150-Day Prospective Airfare Study
 =========================================
 
-This repository contains the reproducible source, frozen contracts, evaluation
-code, and compact evidence for a longitudinal airfare study covering 150
-consecutive collection days. Model development used the first 128 days. Two
+This repository contains reproducible source, frozen contracts, raw
+observations, evaluation code, and compact evidence for a 150-calendar-day
+longitudinal airfare study. Model development used the first 128 days. Two
 non-overlapping, prospectively sealed 11-day blocks were then evaluated in
 chronological order. A final production refit used all observations available
 through 19 August 2026 without reopening candidate selection.
@@ -34,6 +34,8 @@ contracts. ``src/skyfare/features`` contains strictly prior feature logic.
 ``src/skyfare/models`` contains candidate and finalist implementations.
 ``src/skyfare/evaluation`` contains prospective and pooled metrics.
 ``src/skyfare/production`` contains immutable final-refit and inference logic.
+``src/skyfare/serving`` contains PostgreSQL ingestion and snapshot operations.
+``application/skyfare_inference_demo`` contains the Reflex research interface.
 ``experiments`` records every material research branch under scientific names.
 ``artifacts/evidence`` contains compact machine-readable verification evidence.
 
@@ -41,17 +43,22 @@ Data layout
 -----------
 
 Collectors write one CSV per collection date to ``data/raw/fli`` and
-``data/raw/trip_com``. Standardised source tables belong in
+``data/raw/trip_com``. The separately acquired 9G Google Flights supplement is
+preserved in ``data/raw/google_flights_manual_9g``; acquisition issue evidence
+is retained in ``data/raw/collection_issues``. Standardised source tables belong in
 ``data/interim/standardised``. Leakage-controlled training and evaluation
 frames belong in ``data/processed``. Generated outputs belong under
 ``artifacts``. All locations can be overridden through documented environment
-variables and are resolved from repository root, never from ``/workspace``.
+variables and are resolved from repository root, never from a host-specific path.
 
 Collection-source terminology is canonical: ``FLI_LIBRARY_ERA`` denotes Google Flights
 collected through the Fli Python library; ``TRIP_COM_BROWSER_ERA`` denotes Trip.com
-collected through Playwright and Camoufox. ``SERPAPI_ERA`` and
-``TRIP_DAILY_ERA`` are accepted only when migrating immutable historical
-artifacts and are normalised before analysis.
+collected through Playwright and Camoufox. The confirmatory study ends on
+19 August 2026. Observations from 20--24 August are excluded from model fitting
+and prospective evaluation; they support only the post-freeze serving snapshot.
+Raw collection evidence spans 21 March--24 August 2026. The first two dates are
+pre-study acquisition records; 23 March--19 August define the frozen 150-day
+study, and 20--24 August provide label-free inference inputs only.
 
 Reproduction
 ------------
@@ -84,6 +91,36 @@ Prospective and production stages are restartable. Existing artefacts are
 accepted only when their code and content hashes satisfy the relevant frozen
 contract. Test 2 consumes Test 1 history at its permitted temporal boundary;
 the pooled stage consumes both immutable result archives without retraining.
+
+Post-freeze inference and application
+-------------------------------------
+
+Build a verified prediction snapshot for booking date 24 August while retaining
+the production training cutoff of 19 August. This command verifies and downloads
+the frozen model archive when absent, standardises all raw observations through
+24 August, creates target-free features, scores all frozen models, and publishes
+an atomic application snapshot::
+
+    python -m pip install -e ".[gpu]"
+    scripts/build_serving_snapshot.sh
+
+The snapshot gate rejects post-cutoff labels, a changed model cutoff, invalid
+DUD values, or an incomplete model manifest. Canonical models support DUD
+``1, 2, 3, 5, 7, 10, 14, 21, 30, 45, 60``; the application interpolates only
+between adjacent canonical endpoints so requests remain within DUD 1--60.
+
+Create the Reflex environment and start the research interface::
+
+    scripts/setup_application.sh
+    application/skyfare_inference_demo/run_local.sh
+
+The booking-date selector defaults to the latest verified raw observation,
+24 August 2026. PostgreSQL storage is optional for persisted collection audit
+and can be initialised after standardisation::
+
+    python -m pip install -e ".[serving]"
+    python -m skyfare.serving.manage_live_store init-schema
+    python -m skyfare.serving.manage_live_store bootstrap-standard --through-date 2026-08-24
 
 Release artefacts
 -----------------

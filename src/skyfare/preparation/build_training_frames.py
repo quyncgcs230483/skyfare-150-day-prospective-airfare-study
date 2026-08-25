@@ -5,12 +5,35 @@ from __future__ import annotations
 
 import json
 import shutil
-from pathlib import Path
 
 import pandas as pd
 
-
+from skyfare.core.integrity import sha256, write_json_atomic
+from skyfare.core.paths import DataLayout
 from skyfare.core.sources import normalize_source_columns
+from skyfare.models import classification_runtime as exact_runtime
+from skyfare.models import regression_runtime as fare_runtime
+from skyfare.models.classification_contract import (
+    CATEGORICAL_FEATURES as EXACT_CATEGORICAL,
+)
+from skyfare.models.classification_contract import (
+    FORBIDDEN_PREDICTORS as EXACT_FORBIDDEN,
+)
+from skyfare.models.classification_contract import (
+    NUMERIC_FEATURES as EXACT_NUMERIC,
+)
+from skyfare.models.classification_contract import (
+    TARGET_NAME,
+)
+from skyfare.models.regression_contract import (
+    CATEGORICAL_FEATURES as FARE_CATEGORICAL,
+)
+from skyfare.models.regression_contract import (
+    FORBIDDEN_PREDICTORS as FARE_FORBIDDEN,
+)
+from skyfare.models.regression_contract import (
+    NUMERIC_FEATURES as FARE_NUMERIC,
+)
 from skyfare.preparation.data_contract import (
     CANONICAL_DUDS,
     CONTRACT_VERSION,
@@ -19,24 +42,6 @@ from skyfare.preparation.data_contract import (
     OBSERVED_DAYS,
     require_vast,
 )
-from skyfare.core.integrity import sha256, write_json_atomic
-from skyfare.core.paths import DataLayout
-
-
-from skyfare.models import classification_runtime as exact_runtime
-from skyfare.models import regression_runtime as fare_runtime
-from skyfare.models.classification_contract import (
-    CATEGORICAL_FEATURES as EXACT_CATEGORICAL,
-    FORBIDDEN_PREDICTORS as EXACT_FORBIDDEN,
-    NUMERIC_FEATURES as EXACT_NUMERIC,
-    TARGET_NAME,
-)
-from skyfare.models.regression_contract import (
-    CATEGORICAL_FEATURES as FARE_CATEGORICAL,
-    FORBIDDEN_PREDICTORS as FARE_FORBIDDEN,
-    NUMERIC_FEATURES as FARE_NUMERIC,
-)
-
 
 LAYOUT = DataLayout.resolve()
 SOURCE = LAYOUT.standardised / "standard_offers.parquet"

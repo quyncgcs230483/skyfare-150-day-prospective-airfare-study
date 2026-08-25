@@ -11,7 +11,6 @@ from pathlib import Path
 from skyfare.core.paths import DataLayout
 from skyfare.production.runtime import INPUT_ROOT, OUTPUT_ROOT, ROOT, sha256, write_json_atomic
 
-
 ARCHIVE_NAME = "skyfare_final_production_models.tar.gz"
 RELEASE_ROOT = DataLayout.resolve().artifacts / "release_packages"
 

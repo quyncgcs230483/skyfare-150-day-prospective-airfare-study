@@ -7,7 +7,6 @@ import hashlib
 import json
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "artifacts" / "repository_manifest.json"
 EXCLUDED_PARTS = {".git", "__pycache__", ".pytest_cache", ".ruff_cache"}
@@ -22,7 +21,6 @@ EXCLUDED_RUNTIME_PREFIXES = (
     ("artifacts", "release_assets"),
     ("data", "interim"),
     ("data", "processed"),
-    ("data", "raw"),
 )
 
 

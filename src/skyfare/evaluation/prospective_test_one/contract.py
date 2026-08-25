@@ -8,7 +8,6 @@ from dataclasses import asdict, dataclass
 
 from skyfare.models.selection_contract import LATE_SEEDS, QUANTILES, candidate_map
 
-
 CONTRACT_ID = "SKYFARE_128_DAY_TEST_1_EVALUATION_R2"
 V24_CONTRACT_ID = "SKYFARE_V24_FINAL_REFINEMENT_FREEZE_R1"
 OBSERVATION_CUTOFF = "2026-07-28"

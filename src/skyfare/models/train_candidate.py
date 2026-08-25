@@ -16,9 +16,14 @@ import numpy as np
 import pandas as pd
 
 from skyfare.calibration.methods import calibrate_probability, calibrate_quantiles
-from skyfare.models.selection_contract import QUANTILES, candidate_map
-from skyfare.evaluation.metrics import classification_metrics, distribution_metrics, point_metrics, ranking_metrics
+from skyfare.evaluation.metrics import (
+    classification_metrics,
+    distribution_metrics,
+    point_metrics,
+    ranking_metrics,
+)
 from skyfare.models.candidate_models import fit_predict
+from skyfare.models.selection_contract import QUANTILES, candidate_map
 from skyfare.models.temporal_runtime import (
     apply_window,
     artifact_complete,

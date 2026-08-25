@@ -16,6 +16,7 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 
+from skyfare.core.paths import DataLayout
 from skyfare.features.audit_common import (
     BOOKING_WINDOWS,
     CUTOFF,
@@ -25,12 +26,10 @@ from skyfare.features.audit_common import (
     load_new_build_raw,
     sha256,
 )
-from skyfare.core.paths import DataLayout
 from skyfare.preparation.temporal_sessions import (
     collection_session_labels,
     operational_session_dates,
 )
-
 
 TABLE_DIR = ROOT / "artifacts/feature_research/tables"
 FIG_DIR = ROOT / "artifacts/feature_research/figures"

@@ -14,7 +14,6 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-
 from skyfare.core.paths import DataLayout
 from skyfare.core.sources import CollectionSource
 from skyfare.preparation.temporal_sessions import (
@@ -347,4 +346,4 @@ def completed_batch_offers(data: pd.DataFrame) -> pd.DataFrame:
 
 
 def next_window_map() -> dict[int, int]:
-    return dict(zip(BOOKING_WINDOWS[:-1], BOOKING_WINDOWS[1:]))
+    return dict(zip(BOOKING_WINDOWS[:-1], BOOKING_WINDOWS[1:], strict=True))

@@ -4,7 +4,6 @@ from __future__ import annotations
 
 from typing import Any
 
-
 CONTRACT_VERSION = "ANCHOR_EVENT_PILOT115_STANDARD_CLOSING_V2"
 SEED = 20260725
 CUTOFF = "2026-07-15"

@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import os
 
-
 CONTRACT_VERSION = "TEMPORAL_FARE_DROP_CLASSIFICATION_R2"
 BUNDLE_NAME = "temporal_fare_drop_classification"
 OUTPUT_NAME = "classification"

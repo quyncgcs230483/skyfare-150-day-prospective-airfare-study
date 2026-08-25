@@ -11,11 +11,9 @@ import subprocess
 import sys
 import threading
 import time
-from pathlib import Path
 
 from skyfare.production.contract import RUNTIME, registry
-from skyfare.production.runtime import MODULE_DIR, OUTPUT_ROOT, artifact_complete, write_json_atomic
-
+from skyfare.production.runtime import OUTPUT_ROOT, artifact_complete, write_json_atomic
 
 LOG_ROOT = OUTPUT_ROOT / "logs"
 STATE_PATH = OUTPUT_ROOT / "runtime/scheduler_state.json"

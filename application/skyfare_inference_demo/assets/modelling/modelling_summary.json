@@ -1,0 +1,92 @@
+{
+  "regression": {
+    "folds": [
+      [
+        "Fold 1",
+        "08-14 Apr",
+        59726,
+        27608
+      ],
+      [
+        "Fold 2",
+        "01-07 May",
+        151252,
+        28285
+      ],
+      [
+        "Fold 3",
+        "15-21 May",
+        196880,
+        54398
+      ],
+      [
+        "Fold 4",
+        "06-12 Jun",
+        398954,
+        70602
+      ],
+      [
+        "Fold 5",
+        "13-19 Jun",
+        469556,
+        64020
+      ],
+      [
+        "Fold 6",
+        "20-26 Jun",
+        533576,
+        68528
+      ]
+    ],
+    "configurations_per_fold": 21,
+    "registered_runs": 126,
+    "recipe": "SIMPLEX_LOG_MSE",
+    "fallback": "CATBOOST"
+  },
+  "classification": {
+    "folds": [
+      [
+        "Fold 1",
+        "08-14 Apr",
+        14231,
+        13972
+      ],
+      [
+        "Fold 2",
+        "01-07 May",
+        53521,
+        12726
+      ],
+      [
+        "Fold 3",
+        "08-14 May",
+        64013,
+        11523
+      ],
+      [
+        "Fold 4",
+        "06-12 Jun",
+        192957,
+        58661
+      ],
+      [
+        "Fold 5",
+        "13-19 Jun",
+        253008,
+        50723
+      ],
+      [
+        "Fold 6",
+        "20-26 Jun",
+        307181,
+        57115
+      ]
+    ],
+    "configurations_per_policy_fold": 21,
+    "policies": 2,
+    "registered_runs": 252,
+    "recipe": "HIERARCHY_ALL_SHRINKAGE_SIMPLEX",
+    "fallback": "CATBOOST",
+    "threshold": 0.3
+  }
+}

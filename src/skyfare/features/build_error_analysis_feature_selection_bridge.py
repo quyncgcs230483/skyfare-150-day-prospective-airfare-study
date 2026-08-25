@@ -11,7 +11,6 @@ import csv
 import json
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[3]
 INPUT = ROOT / "artifacts/feature_research/error_analysis/tables"
 OUTPUT = ROOT / "artifacts/feature_research/tables"

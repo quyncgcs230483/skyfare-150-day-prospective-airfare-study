@@ -10,10 +10,14 @@ import subprocess
 import sys
 import time
 from dataclasses import dataclass
-from pathlib import Path
 
 from skyfare.evaluation.prospective_test_one.contract import RUNTIME, registry
-from skyfare.evaluation.prospective_test_one.runtime import OUTPUT_ROOT, artifact_complete, job_root, write_json_atomic
+from skyfare.evaluation.prospective_test_one.runtime import (
+    OUTPUT_ROOT,
+    artifact_complete,
+    job_root,
+    write_json_atomic,
+)
 
 
 @dataclass

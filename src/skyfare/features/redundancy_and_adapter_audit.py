@@ -7,13 +7,12 @@ from datetime import datetime
 from itertools import combinations
 from zoneinfo import ZoneInfo
 
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 
 from skyfare.features.audit_common import CUTOFF, ROOT
 from skyfare.features.candidate_feature_contract import NUMERIC_CANDIDATES, build_candidate_frame
-
 
 TABLE_DIR = ROOT / "artifacts/feature_research/tables"
 FIG_DIR = ROOT / "artifacts/feature_research/figures"

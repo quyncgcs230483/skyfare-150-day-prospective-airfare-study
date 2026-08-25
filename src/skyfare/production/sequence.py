@@ -14,7 +14,11 @@ from skyfare.production.runtime import INPUT_ROOT, OUTPUT_ROOT, write_json_atomi
 os.environ.setdefault("SKYFARE_SEQUENCE_INPUT_ROOT", str(INPUT_ROOT))
 os.environ.setdefault("SKYFARE_SEQUENCE_OUTPUT_ROOT", str(OUTPUT_ROOT))
 
-from skyfare.models.sequence_runtime import EXACT_LENGTH, load_or_build_sequence_source, make_sequences
+from skyfare.models.sequence_runtime import (
+    EXACT_LENGTH,
+    load_or_build_sequence_source,
+    make_sequences,
+)
 
 
 def raw_sequence_arrays(frame: pd.DataFrame, task: str, encoder):

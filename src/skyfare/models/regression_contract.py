@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import os
 
-
 CONTRACT_VERSION = "TEMPORAL_POINT_FARE_REGRESSION_R1"
 BUNDLE_PREFIX = "temporal_point_fare_regression"
 OUTPUT_PREFIX = "point_regression"

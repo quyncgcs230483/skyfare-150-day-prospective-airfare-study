@@ -13,8 +13,8 @@ from typing import Any
 import numpy as np
 import pandas as pd
 
-from skyfare.evaluation.prospective_test_one.contract import OBSERVATION_CUTOFF, TEST_1, TEST_2
 from skyfare.core.paths import DataLayout
+from skyfare.evaluation.prospective_test_one.contract import OBSERVATION_CUTOFF, TEST_1, TEST_2
 from skyfare.models.temporal_runtime import (
     CLASS_CATEGORICAL,
     CLASS_NUMERIC,
@@ -23,7 +23,6 @@ from skyfare.models.temporal_runtime import (
     inner_split,
     regression_row_keys,
 )
-
 
 MODULE_DIR = Path(__file__).resolve().parent
 LAYOUT = DataLayout.resolve()

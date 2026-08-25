@@ -10,12 +10,13 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+from skyfare.evaluation.metrics import rearrange
+from skyfare.models import candidate_models as original_models
+from skyfare.models import sequence_runtime
 from skyfare.production.calibration import apply_probability, apply_quantiles
 from skyfare.production.contract import BUY_WAIT_THRESHOLD, QUANTILES
-from skyfare.production.runtime import OUTPUT_ROOT, ROOT, load_encoder, write_parquet_atomic
-from skyfare.models import candidate_models as original_models
-from skyfare.evaluation.metrics import rearrange
 from skyfare.production.models import _build_sequence_class, _build_sequence_point
+from skyfare.production.runtime import OUTPUT_ROOT, ROOT, load_encoder, write_parquet_atomic
 from skyfare.production.sequence import load_normalizer, sequence_inputs
 
 
@@ -29,15 +30,31 @@ def _args():
         type=Path,
         default=OUTPUT_ROOT / "deployment/DEPLOYMENT_MANIFEST_R1.json",
     )
+    parser.add_argument(
+        "--artifact-root",
+        type=Path,
+        default=ROOT,
+        help="Root used to resolve model and calibration paths in deployment manifest.",
+    )
+    parser.add_argument(
+        "--sequence-source",
+        type=Path,
+        required=True,
+        help="Target-free standard-offer history used by recurrent models.",
+    )
     return parser.parse_args()
 
 
-def _model_path(entry: dict[str, object]) -> Path:
-    return ROOT / str(entry["model_root"])
+def _model_path(entry: dict[str, object], artifact_root: Path = ROOT) -> Path:
+    return artifact_root / str(entry["model_root"])
 
 
-def _predict_member(entry: dict[str, object], frame: pd.DataFrame) -> np.ndarray:
-    root = _model_path(entry)
+def _predict_member(
+    entry: dict[str, object],
+    frame: pd.DataFrame,
+    artifact_root: Path = ROOT,
+) -> np.ndarray:
+    root = _model_path(entry, artifact_root)
     family = str(entry["family"])
     encoder = load_encoder(root / "encoder.json")
     if family == "FT_CLASS":
@@ -87,6 +104,9 @@ def _members(manifest: dict[str, object], task: str) -> list[dict[str, object]]:
 
 def main() -> None:
     args = _args()
+    artifact_root = args.artifact_root.resolve()
+    sequence_runtime.OFFERS_FRAME = args.sequence_source.resolve()
+    sequence_runtime.OUTPUT_ROOT = args.output_root.resolve() / "sequence_runtime"
     manifest = json.loads(args.manifest.read_text(encoding="utf-8"))
     if manifest.get("status") != "PASS":
         raise RuntimeError("deployment manifest is not PASS")
@@ -95,9 +115,18 @@ def main() -> None:
     for frame in (classification, regression):
         if "row_key" not in frame:
             raise RuntimeError("prepared inference frame requires row_key")
-    class_raw = np.mean([_predict_member(entry, classification) for entry in _members(manifest, "CLASSIFICATION")], axis=0)
+    class_raw = np.mean(
+        [
+            _predict_member(entry, classification, artifact_root)
+            for entry in _members(manifest, "CLASSIFICATION")
+        ],
+        axis=0,
+    )
     class_state = json.loads(
-        (ROOT / manifest["ensembles"]["CLASSIFICATION"]["calibration"]["path"]).read_text(encoding="utf-8")
+        (
+            artifact_root
+            / manifest["ensembles"]["CLASSIFICATION"]["calibration"]["path"]
+        ).read_text(encoding="utf-8")
     )
     probability = apply_probability(class_raw, class_state)
     class_output = pd.DataFrame(
@@ -108,7 +137,13 @@ def main() -> None:
             "guarded_pilot_action": np.where(probability >= BUY_WAIT_THRESHOLD, "WAIT", "BUY"),
         }
     )
-    point_raw = np.mean([_predict_member(entry, regression) for entry in _members(manifest, "POINT")], axis=0)
+    point_raw = np.mean(
+        [
+            _predict_member(entry, regression, artifact_root)
+            for entry in _members(manifest, "POINT")
+        ],
+        axis=0,
+    )
     prior_anchor = regression["prior_anchor_vnd"].to_numpy(dtype=float)
     point_output = pd.DataFrame(
         {
@@ -117,10 +152,17 @@ def main() -> None:
         }
     )
     distribution_raw = np.mean(
-        [_predict_member(entry, regression) for entry in _members(manifest, "DISTRIBUTION")], axis=0
+        [
+            _predict_member(entry, regression, artifact_root)
+            for entry in _members(manifest, "DISTRIBUTION")
+        ],
+        axis=0,
     )
     distribution_state = json.loads(
-        (ROOT / manifest["ensembles"]["DISTRIBUTION"]["calibration"]["path"]).read_text(encoding="utf-8")
+        (
+            artifact_root
+            / manifest["ensembles"]["DISTRIBUTION"]["calibration"]["path"]
+        ).read_text(encoding="utf-8")
     )
     calibrated = apply_quantiles(regression, distribution_raw, distribution_state)
     distribution_payload: dict[str, object] = {"row_key": regression["row_key"].to_numpy()}
@@ -129,7 +171,13 @@ def main() -> None:
             calibrated[:, index]
         )
     distribution_output = pd.DataFrame(distribution_payload)
-    ranking = np.mean([_predict_member(entry, regression) for entry in _members(manifest, "RANKING")], axis=0)
+    ranking = np.mean(
+        [
+            _predict_member(entry, regression, artifact_root)
+            for entry in _members(manifest, "RANKING")
+        ],
+        axis=0,
+    )
     ranking_output = pd.DataFrame({"row_key": regression["row_key"].to_numpy(), "ranking_score": ranking})
     args.output_root.mkdir(parents=True, exist_ok=True)
     write_parquet_atomic(args.output_root / "classification_predictions.parquet", class_output)

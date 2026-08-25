@@ -7,13 +7,11 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 
 import matplotlib.pyplot as plt
-import numpy as np
 import pandas as pd
 import seaborn as sns
 
 from skyfare.features.audit_common import CUTOFF, ROOT
 from skyfare.features.candidate_feature_contract import build_candidate_frame
-
 
 TABLE_DIR = ROOT / "artifacts/feature_research/tables"
 FIG_DIR = ROOT / "artifacts/feature_research/figures"

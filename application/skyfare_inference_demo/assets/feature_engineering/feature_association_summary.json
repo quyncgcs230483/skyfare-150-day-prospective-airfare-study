@@ -1,0 +1,20 @@
+{
+  "regression": {
+    "rows": 533576,
+    "features": 37,
+    "categorical_features": 5,
+    "numeric_features": 32,
+    "cutoff_exclusive": "2026-06-20T00:00:00",
+    "matrix_csv": "regression_feature_association.csv",
+    "figure_png": "regression_feature_association.png"
+  },
+  "classification": {
+    "rows": 324206,
+    "features": 30,
+    "categorical_features": 6,
+    "numeric_features": 24,
+    "cutoff_exclusive": "2026-06-20T00:00:00",
+    "matrix_csv": "classification_feature_association.csv",
+    "figure_png": "classification_feature_association.png"
+  }
+}

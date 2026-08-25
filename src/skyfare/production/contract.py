@@ -6,8 +6,7 @@ import hashlib
 import json
 from dataclasses import asdict, dataclass
 
-from skyfare.models.selection_contract import LATE_SEEDS, QUANTILES, candidate_map
-
+from skyfare.models.selection_contract import LATE_SEEDS, candidate_map
 
 CONTRACT_ID = "SKYFARE_128_DAY_FINAL_PRODUCTION_REFIT_R1"
 TRAINING_CUTOFF_INCLUSIVE = "2026-08-19"

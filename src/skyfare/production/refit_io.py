@@ -10,8 +10,6 @@ from typing import Any
 import pandas as pd
 
 from skyfare.core.paths import DataLayout
-from skyfare.production.refit_contract import OUTPUT_NAME
-
 
 LAYOUT = DataLayout.resolve()
 ROOT = LAYOUT.root

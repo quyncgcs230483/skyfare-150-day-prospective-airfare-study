@@ -4,15 +4,33 @@
 from __future__ import annotations
 
 import json
-from pathlib import Path
 
 import numpy as np
 import pandas as pd
 
-from skyfare.models.selection_contract import LATE_FOLDS, LATE_SEEDS, QUANTILES, REPORT_FOLDS, SCREEN_FOLDS, SCREEN_SEEDS
-from skyfare.evaluation.metrics import classification_metrics, distribution_metrics, point_metrics, ranking_metrics, rearrange
-from skyfare.models.temporal_runtime import CONTROL_ROOT, OUTPUT_ROOT, job_root, sha256, write_json_atomic, write_parquet_atomic
-
+from skyfare.evaluation.metrics import (
+    classification_metrics,
+    distribution_metrics,
+    point_metrics,
+    ranking_metrics,
+    rearrange,
+)
+from skyfare.models.selection_contract import (
+    LATE_FOLDS,
+    LATE_SEEDS,
+    QUANTILES,
+    REPORT_FOLDS,
+    SCREEN_FOLDS,
+    SCREEN_SEEDS,
+)
+from skyfare.models.temporal_runtime import (
+    CONTROL_ROOT,
+    OUTPUT_ROOT,
+    job_root,
+    sha256,
+    write_json_atomic,
+    write_parquet_atomic,
+)
 
 CONTROL_FILES = {
     "CLASSIFICATION": "v23_classification_final_oof.parquet",
@@ -161,8 +179,8 @@ def _distribution(candidates: list[str]) -> tuple[pd.DataFrame, dict[str, object
     raw_columns = [f"q{int(level * 100):02d}_relative_log" for level in QUANTILES]
     left_names = [f"V24_A_{column}" for column in raw_columns]
     right_names = [f"V24_B_{column}" for column in raw_columns]
-    frame = left.rename(columns=dict(zip(raw_columns, left_names)))
-    right_small = right[["row_key", "fold", *raw_columns]].rename(columns=dict(zip(raw_columns, right_names)))
+    frame = left.rename(columns=dict(zip(raw_columns, left_names, strict=True)))
+    right_small = right[["row_key", "fold", *raw_columns]].rename(columns=dict(zip(raw_columns, right_names, strict=True)))
     frame = frame.merge(right_small, on=["row_key", "fold"], validate="one_to_one")
     control_columns = [f"v16_interval_control_q{int(level * 100):02d}" for level in QUANTILES]
     v22_columns = [f"v22_selected_q{int(level * 100):02d}" for level in QUANTILES]
@@ -177,7 +195,9 @@ def _distribution(candidates: list[str]) -> tuple[pd.DataFrame, dict[str, object
         frame[incumbent] = frame[control_columns[index]]
         frame[v22] = frame[v22_columns[index]]
         frame[mean] = (frame[left_names[index]] + frame[right_names[index]]) / 2.0
-        incumbent_names.append(incumbent); v22_names.append(v22); mean_names.append(mean)
+        incumbent_names.append(incumbent)
+        v22_names.append(v22)
+        mean_names.append(mean)
     recipe_columns: dict[str, list[str]] = {
         "INCUMBENT": incumbent_names,
         "V22_SELECTED": v22_names,

@@ -7,7 +7,6 @@ __pycache__/
 .venv-*/
 .env
 .DS_Store
-data/raw/
 data/interim/
 data/processed/
 artifacts/cache/
@@ -21,3 +20,6 @@ artifacts/release_assets/
 *.joblib
 *.keras
 *.npz
+
+# Raw daily observations are research evidence and are versioned with Git LFS.
+data/raw/**/*.log

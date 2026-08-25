@@ -6,8 +6,8 @@ import argparse
 import json
 from pathlib import Path
 
-from skyfare.core.paths import DataLayout
 from skyfare import workflow
+from skyfare.core.paths import DataLayout
 
 
 def main() -> None:

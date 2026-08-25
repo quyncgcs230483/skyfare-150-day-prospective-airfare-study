@@ -17,7 +17,6 @@ from sklearn.metrics import average_precision_score
 from skyfare.features.audit_common import BOOKING_WINDOWS, CUTOFF, ROOT, next_window_map
 from skyfare.features.candidate_feature_contract import build_candidate_frame
 
-
 TABLE_DIR = ROOT / "artifacts/feature_research/tables"
 REPORT = ROOT / "artifacts/feature_research/reports/EA05_CAUSAL_BASELINES.txt"
 

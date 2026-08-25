@@ -12,6 +12,7 @@ Before proposing a change, run::
     python -m pytest
     python tools/verify_repository.py
 
-Generated data, model binaries, Parquet files, and result archives do not
-belong in Git history. Publish immutable large artefacts as release assets and
-record their SHA-256 digest in ``configs/release_assets.json``.
+Raw daily CSV evidence is tracked with Git LFS. Generated aggregates, model
+binaries, Parquet files, and result archives do not belong in ordinary Git
+history. Publish immutable large artefacts as release assets and record their
+SHA-256 digest in ``configs/release_assets.json``.

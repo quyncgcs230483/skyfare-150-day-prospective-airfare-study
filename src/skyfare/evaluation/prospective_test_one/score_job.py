@@ -16,7 +16,6 @@ import pandas as pd
 
 from skyfare.calibration.methods import calibrate_probability, calibrate_quantiles
 from skyfare.evaluation.prospective_test_one.contract import QUANTILES, registry
-from skyfare.models.candidate_models import fit_predict
 from skyfare.evaluation.prospective_test_one.runtime import (
     artifact_complete,
     current_code_sha256,
@@ -27,6 +26,7 @@ from skyfare.evaluation.prospective_test_one.runtime import (
     write_json_atomic,
     write_parquet_atomic,
 )
+from skyfare.models.candidate_models import fit_predict
 
 
 def parse_args() -> argparse.Namespace:

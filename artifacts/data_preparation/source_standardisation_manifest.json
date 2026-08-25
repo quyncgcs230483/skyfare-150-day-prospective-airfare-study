@@ -1,0 +1,24 @@
+{
+  "cutoff_inclusive": "2026-08-24",
+  "outputs": {
+    "data/interim/standardised/fli_standard_offers.csv": "05d9afc319dfefea3b63330ee95436b7ce36d6b4dabbd85cb3c924706b384356",
+    "data/interim/standardised/standard_offers.parquet": "1cc7a58c34354d7b91f6b35424643cbfd6145e6c6c19922a5b6ca2fb6589bb52",
+    "data/interim/standardised/trip_com_standard_offers.csv": "a347cad7bce7ac76f27474b30c2de67e482b6752a9e61781cd97881f09c3ef26"
+  },
+  "raw_files": {
+    "fli_library": 72,
+    "google_flights_manual_9g": 53,
+    "trip_com": 102
+  },
+  "rows": {
+    "combined": 994405,
+    "fli_library": 3448,
+    "google_flights_manual_9g": 27678,
+    "trip_com_standard": 963279
+  },
+  "source_taxonomy": {
+    "FLI_LIBRARY_ERA": "Fli Python library for Google Flights",
+    "TRIP_COM_BROWSER_ERA": "Trip.com browser collector"
+  },
+  "status": "PASS"
+}

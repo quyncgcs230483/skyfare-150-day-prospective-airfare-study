@@ -13,7 +13,7 @@ from pathlib import Path
 import pandas as pd
 
 from skyfare.production.contract import PRODUCTION_ORIGIN, RUNTIME, manifest
-from skyfare.production.runtime import INPUT_ROOT, ROOT, load_frame, sha256, validate_inputs
+from skyfare.production.runtime import INPUT_ROOT, ROOT, load_frame, validate_inputs
 from skyfare.production.sequence import load_or_build_sequence_source
 
 

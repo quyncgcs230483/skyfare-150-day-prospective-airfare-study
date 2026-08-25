@@ -5,7 +5,6 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[3]
 NOTEBOOK = ROOT / "artifacts/feature_research/notebooks/eda_03_error_analysis.ipynb"
 

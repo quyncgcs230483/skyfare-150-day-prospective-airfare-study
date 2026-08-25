@@ -13,7 +13,6 @@ from zoneinfo import ZoneInfo
 
 from skyfare.features.audit_common import ROOT
 
-
 HERE = Path(__file__).resolve().parent
 TABLE_DIR = ROOT / "artifacts/feature_research/tables"
 LOG_DIR = TABLE_DIR / "execution_logs"

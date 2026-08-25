@@ -11,25 +11,26 @@ from skyfare.core.sources import (
 )
 
 
-def test_legacy_fli_alias_is_normalized() -> None:
-    assert normalize_collection_era("SERPAPI_ERA") == CollectionSource.FLI.value
+def test_fli_source_is_canonical() -> None:
+    assert normalize_collection_era(CollectionSource.FLI.value) == CollectionSource.FLI.value
 
 
-def test_legacy_trip_alias_is_normalized() -> None:
-    assert normalize_collection_era("TRIP_DAILY_ERA") == CollectionSource.TRIP_COM.value
+def test_trip_source_is_canonical() -> None:
+    assert normalize_collection_era(CollectionSource.TRIP_COM.value) == CollectionSource.TRIP_COM.value
 
 
 def test_transition_normalization_preserves_direction() -> None:
-    assert normalize_transition("SERPAPI_ERA->TRIP_DAILY_ERA") == "FLI_LIBRARY_ERA->TRIP_COM_BROWSER_ERA"
+    transition = f"{CollectionSource.FLI.value}->{CollectionSource.TRIP_COM.value}"
+    assert normalize_transition(transition) == transition
 
 
 def test_source_frame_values_change_without_row_or_index_change() -> None:
     source = pd.DataFrame(
         {
-            "collection_era": ["SERPAPI_ERA", "TRIP_DAILY_ERA"],
+            "collection_era": [CollectionSource.FLI.value, CollectionSource.TRIP_COM.value],
             "source_target_era_transition": [
-                "SERPAPI_ERA->SERPAPI_ERA",
-                "SERPAPI_ERA->TRIP_DAILY_ERA",
+                f"{CollectionSource.FLI.value}->{CollectionSource.FLI.value}",
+                f"{CollectionSource.FLI.value}->{CollectionSource.TRIP_COM.value}",
             ],
             "value": [1, 2],
         },

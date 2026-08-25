@@ -7,21 +7,22 @@ import ast
 import hashlib
 import json
 import stat
-import zipfile
 from datetime import date
 from pathlib import Path
-
 
 ROOT = Path(__file__).resolve().parents[1]
 REQUIRED_DIRECTORIES = (
     ".github/workflows",
     "artifacts/evidence",
     "artifacts/release_manifests",
+    "application/skyfare_inference_demo",
     "configs",
     "data/schema",
+    "data/raw/fli",
+    "data/raw/google_flights_manual_9g",
+    "data/raw/trip_com",
     "experiments",
     "reports/figures",
-    "reports/manuscript",
     "scripts",
     "src/skyfare/acquisition",
     "src/skyfare/preparation",
@@ -29,6 +30,7 @@ REQUIRED_DIRECTORIES = (
     "src/skyfare/models",
     "src/skyfare/evaluation",
     "src/skyfare/production",
+    "src/skyfare/serving",
     "tests",
     "tools",
 )
@@ -41,14 +43,12 @@ REQUIRED_EVIDENCE = (
     "artifacts/evidence/production_refit/verification.json",
     "artifacts/evidence/final_deployment_decision.json",
 )
-ALLOWED_LEGACY_SOURCE_FILES = {
-    "README.rst",
-    "configs/data_sources.json",
-    "src/skyfare/core/sources.py",
-    "tests/test_sources.py",
-    "tools/verify_repository.py",
-}
-FORBIDDEN_CODE_FRAGMENTS = ("/workspace", "/Users/", "\\Users\\")
+FORBIDDEN_SOURCE_LABELS = ("SERP" + "API_ERA", "TRIP_DAILY" + "_ERA")
+FORBIDDEN_CODE_FRAGMENTS = (
+    "/work" + "space",
+    "/Use" + "rs/",
+    "\\Use" + "rs\\",
+)
 EXCLUDED_PARTS = {".git", ".pytest_cache", ".ruff_cache", "__pycache__"}
 EXCLUDED_NAMES = {".DS_Store", ".env"}
 EXCLUDED_SUFFIXES = (".joblib", ".keras", ".npz", ".parquet", ".pyc", ".tar.gz")
@@ -61,7 +61,6 @@ EXCLUDED_RUNTIME_PREFIXES = (
     ("artifacts", "release_assets"),
     ("data", "interim"),
     ("data", "processed"),
-    ("data", "raw"),
 )
 
 
@@ -142,6 +141,13 @@ def _verify_files() -> None:
     ]
     if markdown:
         raise RuntimeError(f"Markdown files are prohibited: {markdown}")
+    documents = [
+        path.relative_to(ROOT).as_posix()
+        for path in ROOT.rglob("*.docx")
+        if path.is_file() and not _ignored(path)
+    ]
+    if documents:
+        raise RuntimeError(f"DOCX files are prohibited: {documents}")
     for path in _json_files():
         json.loads(path.read_text(encoding="utf-8"))
     for path in ROOT.rglob("*.py"):
@@ -172,8 +178,16 @@ def _verify_internal_imports() -> None:
         modules: set[str] = set()
         for node in ast.walk(tree):
             if isinstance(node, ast.Import):
-                modules.update(alias.name for alias in node.names if alias.name.startswith("skyfare"))
-            elif isinstance(node, ast.ImportFrom) and node.module and node.module.startswith("skyfare"):
+                modules.update(
+                    alias.name
+                    for alias in node.names
+                    if alias.name == "skyfare" or alias.name.startswith("skyfare.")
+                )
+            elif (
+                isinstance(node, ast.ImportFrom)
+                and node.module
+                and (node.module == "skyfare" or node.module.startswith("skyfare."))
+            ):
                 modules.add(node.module)
         for module in modules:
             candidate = source_root.joinpath(*module.split("."))
@@ -220,23 +234,48 @@ def _verify_sources() -> None:
         if path.suffix.lower() not in {".py", ".json", ".rst", ".txt", ".sh"}:
             continue
         text = path.read_text(encoding="utf-8")
-        if relative not in ALLOWED_LEGACY_SOURCE_FILES and (
-            "SERPAPI_ERA" in text or "TRIP_DAILY_ERA" in text
-        ):
-            raise RuntimeError(f"Legacy source taxonomy escaped migration boundary: {relative}")
+        if any(label in text for label in FORBIDDEN_SOURCE_LABELS):
+            raise RuntimeError(f"Legacy source taxonomy remains in publishable source: {relative}")
     figure_source = (ROOT / "src/skyfare/reporting/results_figures.py").read_text(encoding="utf-8")
     if "Fli library" not in figure_source or "CollectionSource.FLI" not in figure_source:
         raise RuntimeError("Result figures do not use canonical Fli source taxonomy")
 
 
-def _verify_manuscript() -> None:
-    documents = list((ROOT / "reports/manuscript").glob("*.docx"))
-    if len(documents) != 1:
-        raise RuntimeError("Exactly one final DOCX manuscript is required")
-    with zipfile.ZipFile(documents[0]) as archive:
-        required = {"[Content_Types].xml", "word/document.xml", "word/styles.xml"}
-        if not required.issubset(archive.namelist()) or archive.testzip() is not None:
-            raise RuntimeError("DOCX package integrity failure")
+def _verify_raw_collection() -> None:
+    path = ROOT / "data/manifests/raw_collection_manifest.json"
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    if payload.get("status") != "PASS":
+        raise RuntimeError("Raw collection manifest is not PASS")
+    if payload.get("calendar_days") != 157 or payload.get("observed_dates") != 155:
+        raise RuntimeError("Raw collection calendar changed")
+    if payload.get("missing_dates") != ["2026-05-08", "2026-05-09"]:
+        raise RuntimeError("Raw collection missing-date evidence changed")
+    if payload.get("pre_study_collection_dates") != ["2026-03-21", "2026-03-22"]:
+        raise RuntimeError("Pre-study collection boundary changed")
+    if payload.get("post_freeze_serving_dates") != [
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-22",
+        "2026-08-23",
+        "2026-08-24",
+    ]:
+        raise RuntimeError("Post-freeze serving window changed")
+    expected = {
+        item.relative_to(ROOT).as_posix()
+        for directory in (
+            ROOT / "data/raw/fli",
+            ROOT / "data/raw/google_flights_manual_9g",
+            ROOT / "data/raw/trip_com",
+            ROOT / "data/raw/collection_issues",
+        )
+        for item in directory.rglob("*.csv")
+    }
+    if set(payload.get("files", {})) != expected:
+        raise RuntimeError("Raw CSV inventory does not match manifest")
+    for relative, metadata in payload["files"].items():
+        item = ROOT / relative
+        if item.stat().st_size != metadata["bytes"] or _digest(item) != metadata["sha256"]:
+            raise RuntimeError(f"Raw CSV integrity failure: {relative}")
 
 
 def main() -> None:
@@ -247,7 +286,7 @@ def main() -> None:
     _verify_dates()
     _verify_models()
     _verify_evidence()
-    _verify_manuscript()
+    _verify_raw_collection()
     experiments = json.loads((ROOT / "experiments/registry.json").read_text(encoding="utf-8"))
     if experiments.get("status") != "COMPLETE_RESEARCH_LINEAGE" or len(experiments.get("experiments", [])) < 35:
         raise RuntimeError("Research-lineage registry is incomplete")

@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import os
 
-
 CONTRACT_VERSION = "PILOT128_DEPLOYMENT_REFIT_V1"
 OUTPUT_NAME = "15_PILOT128_DEPLOYMENT_REFIT_V1"
 BUNDLE_NAME = "pilot128_deployment_refit_v1"

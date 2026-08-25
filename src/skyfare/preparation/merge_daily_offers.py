@@ -21,9 +21,8 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-
-from skyfare.preparation.temporal_sessions import collection_session_labels  # noqa: E402
 from skyfare.core.paths import DataLayout
+from skyfare.preparation.temporal_sessions import collection_session_labels  # noqa: E402
 
 LAYOUT = DataLayout.resolve()
 DEFAULT_TRIP_DIR = LAYOUT.raw_trip_com

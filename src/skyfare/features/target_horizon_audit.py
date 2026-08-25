@@ -15,8 +15,15 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 
-from skyfare.features.audit_common import BOOKING_WINDOWS, CUTOFF, ROOT, completed_batch_offers, input_manifest, load_new_build_raw, next_window_map
-
+from skyfare.features.audit_common import (
+    BOOKING_WINDOWS,
+    CUTOFF,
+    ROOT,
+    completed_batch_offers,
+    input_manifest,
+    load_new_build_raw,
+    next_window_map,
+)
 
 TABLE_DIR = ROOT / "artifacts/feature_research/tables"
 FIG_DIR = ROOT / "artifacts/feature_research/figures"

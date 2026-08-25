@@ -9,14 +9,21 @@ Notes:
     - On HTTP 429 rate limit: script auto-waits and retries
 """
 
-from fli.search import SearchFlights
-from fli.models import (
-    FlightSearchFilters, FlightSegment,
-    Airport, SeatType, TripType, PassengerInfo
-)
+import csv
+import os
+import random
+import time
 from datetime import datetime, timedelta
-import time, csv, os, random
-from pathlib import Path
+
+from fli.models import (
+    Airport,
+    FlightSearchFilters,
+    FlightSegment,
+    PassengerInfo,
+    SeatType,
+    TripType,
+)
+from fli.search import SearchFlights
 
 from skyfare.core.paths import DataLayout
 

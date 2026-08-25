@@ -16,7 +16,6 @@ import pandas as pd
 
 from skyfare.features.audit_common import CUTOFF, ROOT
 
-
 TABLE_DIR = ROOT / "artifacts/feature_research/tables"
 REPORT = ROOT / "artifacts/feature_research/reports/PREFIT_TRAINING_CONTRACT.txt"
 
@@ -896,7 +895,7 @@ one of them is invalid even when its metric is attractive.
         {"path": str(path.relative_to(ROOT)), "bytes": path.stat().st_size, "sha256": digest(path)}
         for path in required
     ]
-    outputs = [registry_path := TABLE_DIR / "prefit_candidate_registry.csv", contract_path, REPORT]
+    outputs = [_registry_path := TABLE_DIR / "prefit_candidate_registry.csv", contract_path, REPORT]
     manifest = {
         "status": "PREFIT_CONTRACT_COMPLETE_NO_MODEL_FIT",
         "supersedes": "historical_prefit_training_manifest.json",

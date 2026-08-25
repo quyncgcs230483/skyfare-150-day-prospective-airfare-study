@@ -16,12 +16,10 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 import matplotlib.pyplot as plt
-import numpy as np
 import pandas as pd
 import seaborn as sns
 
 from skyfare.features.audit_common import BOOKING_WINDOWS, CUTOFF, ROOT
-
 
 TABLE_DIR = ROOT / "artifacts/feature_research/tables"
 FIG_ROOT = ROOT / "artifacts/feature_research/figures/branch_eda"
@@ -66,7 +64,7 @@ def main() -> None:
     horizons = pd.read_csv(required[0])
     exact = pd.read_csv(required[1])
     regression = pd.read_csv(required[2])
-    willdrop = pd.read_csv(required[3])
+    pd.read_csv(required[3])
     sequence = pd.read_csv(required[4])
     sns.set_theme(style="whitegrid", palette="colorblind")
 
@@ -134,7 +132,7 @@ def main() -> None:
     exact["transition"] = exact["current_dud"].astype(int).astype(str) + "->" + exact["target_dud"].astype(int).astype(str)
     fig, ax = plt.subplots(figsize=(12.5, 6.2))
     bars = ax.bar(exact["transition"], exact["wait_prevalence_pct"], color="#009E73")
-    labels = [f"{rate:.0f}%\nn={int(rows):,}" for rate, rows in zip(exact["wait_prevalence_pct"], exact["observed_target_rows"])]
+    labels = [f"{rate:.0f}%\nn={int(rows):,}" for rate, rows in zip(exact["wait_prevalence_pct"], exact["observed_target_rows"], strict=True)]
     ax.bar_label(bars, labels=labels, padding=3, fontsize=8)
     ax.set_ylim(0, max(exact["wait_prevalence_pct"]) * 1.28)
     ax.set_title("WD01. DUD-specific prevalence makes one global class threshold fragile", fontweight="bold")

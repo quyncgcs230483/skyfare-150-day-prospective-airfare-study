@@ -14,6 +14,9 @@ def test_default_layout_is_repository_relative(monkeypatch) -> None:
         monkeypatch.delenv(key, raising=False)
     layout = DataLayout.resolve()
     assert layout.raw_fli == layout.root / "data/raw/fli"
+    assert layout.raw_google_flights_manual == (
+        layout.root / "data/raw/google_flights_manual_9g"
+    )
     assert layout.raw_trip_com == layout.root / "data/raw/trip_com"
     assert layout.standardised == layout.root / "data/interim/standardised"
     assert layout.processed == layout.root / "data/processed"

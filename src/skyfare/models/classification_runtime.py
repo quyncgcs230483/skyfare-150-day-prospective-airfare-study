@@ -20,7 +20,12 @@ from skyfare.models.classification_contract import (
     TARGET_NAME,
     fold_spec,
 )
-
+from skyfare.models.classification_event_runtime import (
+    enrich_offers,
+    event_frame,
+    hierarchy_probability,
+)
+from skyfare.models.fare_frame_runtime import build_standard_offers
 
 LAYOUT = DataLayout.resolve()
 ROOT = LAYOUT.root
@@ -33,9 +38,6 @@ OUTPUT_ROOT = Path(
 PREFLIGHT_ROOT = OUTPUT_ROOT / "preflight"
 OFFERS_CACHE = PREFLIGHT_ROOT / "standard_offers.parquet"
 FRAME_CACHE = PREFLIGHT_ROOT / "classification_full_era.parquet"
-
-from skyfare.models.classification_event_runtime import event_frame, hierarchy_probability
-from skyfare.models.fare_frame_runtime import build_standard_offers
 
 
 def write_json(path: Path, payload: Any) -> None:
@@ -59,6 +61,17 @@ def stable_row_key(frame: pd.DataFrame) -> pd.Series:
     return pd.util.hash_pandas_object(tokens, index=False).astype("uint64")
 
 
+def stable_inference_row_key(frame: pd.DataFrame) -> pd.Series:
+    """Target-free identity for one observed offer and its next DUD horizon."""
+
+    tokens = (
+        frame[["offer_id", "current_dud", "target_dud"]]
+        .astype("string")
+        .agg("|".join, axis=1)
+    )
+    return pd.util.hash_pandas_object(tokens, index=False).astype("uint64")
+
+
 def _band(values: pd.Series, bins: list[float], labels: list[str]) -> pd.Series:
     return pd.cut(
         pd.to_numeric(values, errors="coerce").fillna(0),
@@ -79,6 +92,141 @@ def _market_group(route: pd.Series) -> pd.Series:
         ["TRUNK", "TOURISM"],
         default="REGIONAL_ALTERNATIVE",
     )
+
+
+def _decorate_features(
+    frame: pd.DataFrame,
+    *,
+    data_cutoff: str,
+    target_observed: bool,
+) -> pd.DataFrame:
+    """Attach routing metadata shared by training and target-free inference."""
+
+    result = frame.copy()
+    result["source_session_key"] = result["session_key"].astype("string")
+    result["candidate_source"] = (
+        "OBSERVED_SOURCE_EXACT_PAIR"
+        if target_observed
+        else "CURRENT_OBSERVATION_TARGET_FREE"
+    )
+    result["route_airline"] = (
+        result["route"].astype(str) + "|" + result["airline"].astype(str)
+    )
+    history = pd.to_numeric(
+        result.get("prior_relative_count", 0), errors="coerce"
+    ).fillna(0)
+    result["history_support_count"] = history.astype(int)
+    result["is_first_observation"] = history.eq(0).astype("int8")
+    result["regime"] = np.where(history.ge(3), "WARM", "COLD")
+    result["history_support_band"] = _band(
+        history,
+        [-1, 0, 2, float("inf")],
+        ["FIRST_0", "COLD_1_2", "WARM_3_PLUS"],
+    )
+    result["market_group"] = _market_group(result["route"])
+    result["coverage_band"] = "AUDIT_DERIVED_AFTER_SPLIT"
+    result["support_tier"] = "AUDIT_DERIVED_AFTER_SPLIT"
+    result["route_support_quartile"] = "AUDIT_DERIVED_AFTER_SPLIT"
+    result["train_route_airline_support"] = -1
+    result["route_airline_support_band"] = "AUDIT_DERIVED_AFTER_SPLIT"
+    support = pd.to_numeric(
+        result.get("peer_anchor_support", 0), errors="coerce"
+    ).fillna(0)
+    result["anchor_support_band"] = _band(
+        support,
+        [-1, 0, 9, 49, float("inf")],
+        ["NONE_0", "LOW_1_9", "MEDIUM_10_49", "HIGH_50_PLUS"],
+    )
+    age_hours = (
+        result["feature_time"]
+        - pd.to_datetime(result.get("historical_anchor_time"), errors="coerce")
+    ).dt.total_seconds().div(3600)
+    result["anchor_age_band"] = _band(
+        age_hours.fillna(float("inf")),
+        [-1, 12, 24, 48, float("inf")],
+        ["FRESH_LE_12H", "AGE_12_24H", "AGE_24_48H", "STALE_GT_48H"],
+    )
+    result["anchor_fallback_level"] = np.where(
+        result.get("anchor_is_fallback", False), "FALLBACK", "OBSERVED_PEER"
+    )
+    result["anchor_collection_era"] = result.get(
+        "temporal_market_collection_era", result["collection_era"]
+    ).astype("string")
+    result["dud_support_mode"] = "ON_GRID"
+    result["target_batch_exists"] = target_observed
+    result["target_observation_state"] = (
+        "OBSERVED" if target_observed else "UNOBSERVED_FUTURE"
+    )
+    result["data_cutoff"] = data_cutoff
+    result["baseline_version"] = BASELINE_VERSION
+    result["feature_contract_version"] = "EXACT_DROP5_FULL_ERA_LEGAL_FEATURES_V2"
+    result["model_version"] = "PENDING_SELECTION"
+    result["prediction_path"] = "PENDING"
+    result["hierarchy_level"] = "FIXED_ROUTE_AIRLINE_TRANSITION_SHRINKAGE"
+    return result
+
+
+def build_inference_frame(
+    offers: pd.DataFrame,
+    observation_date: str | pd.Timestamp,
+) -> pd.DataFrame:
+    """Build current-offer features without reading next-window labels."""
+
+    cutoff = pd.Timestamp(observation_date).normalize()
+    source = offers.copy()
+    for column in (
+        "feature_time",
+        "session_date",
+        "flight_date",
+        "departure_time",
+        "historical_anchor_time",
+        "temporal_market_time",
+    ):
+        if column in source:
+            source[column] = pd.to_datetime(source[column], errors="coerce")
+    source = enrich_offers(source)
+    current = source[
+        source["session_date"].dt.normalize().eq(cutoff)
+        & source["days_until_departure"].isin(NEXT_DUD)
+    ].copy()
+    if current.empty:
+        raise RuntimeError(f"No classification inference rows for {cutoff.date()}")
+    current["current_dud"] = current["days_until_departure"].astype(int)
+    current["target_dud"] = current["current_dud"].map(NEXT_DUD).astype(int)
+    current["horizon_gap_days"] = current["current_dud"] - current["target_dud"]
+    current["transition"] = (
+        current["current_dud"].astype(str)
+        + "->"
+        + current["target_dud"].astype(str)
+    )
+    current["target_session_date"] = (
+        current["session_date"]
+        + pd.to_timedelta(current["horizon_gap_days"], unit="D")
+    )
+    current["target_session_key"] = (
+        pd.to_numeric(current["session_key"], errors="raise").astype("int64")
+        + 2 * current["horizon_gap_days"].astype("int64")
+    ).astype("string")
+    current["target_offer_id"] = pd.NA
+    current["target_collection_era"] = current["collection_era"].astype("string")
+    current["source_target_era_transition"] = (
+        current["collection_era"].astype(str)
+        + "->"
+        + current["target_collection_era"].astype(str)
+    )
+    current["bridge_label_stability"] = "TARGET_UNOBSERVED"
+    current["is_exact_next"] = True
+    current = _decorate_features(
+        current,
+        data_cutoff=cutoff.strftime("%Y-%m-%d"),
+        target_observed=False,
+    )
+    current["row_key"] = stable_inference_row_key(current)
+    if current["row_key"].duplicated().any():
+        raise RuntimeError("Classification inference row keys are not unique")
+    return current.sort_values(
+        ["feature_time", "row_key"], kind="stable"
+    ).reset_index(drop=True)
 
 
 def build_exact_frame(offers: pd.DataFrame | None = None) -> pd.DataFrame:
@@ -168,51 +316,11 @@ def build_exact_frame(offers: pd.DataFrame | None = None) -> pd.DataFrame:
 
     frame = event_frame(source, pairs)
     frame[TARGET_NAME] = frame[TARGET_NAME].astype("int8")
-    frame["source_session_key"] = frame["session_key"].astype("string")
-    frame["candidate_source"] = "OBSERVED_SOURCE_EXACT_PAIR"
-    frame["route_airline"] = frame["route"].astype(str) + "|" + frame["airline"].astype(str)
-    history = pd.to_numeric(frame.get("prior_relative_count", 0), errors="coerce").fillna(0)
-    frame["history_support_count"] = history.astype(int)
-    frame["is_first_observation"] = history.eq(0).astype("int8")
-    frame["regime"] = np.where(history.ge(3), "WARM", "COLD")
-    frame["history_support_band"] = _band(
-        history, [-1, 0, 2, float("inf")], ["FIRST_0", "COLD_1_2", "WARM_3_PLUS"]
+    frame = _decorate_features(
+        frame,
+        data_cutoff=CUTOFF,
+        target_observed=True,
     )
-    frame["market_group"] = _market_group(frame["route"])
-    frame["coverage_band"] = "AUDIT_DERIVED_AFTER_SPLIT"
-    frame["support_tier"] = "AUDIT_DERIVED_AFTER_SPLIT"
-    frame["route_support_quartile"] = "AUDIT_DERIVED_AFTER_SPLIT"
-    frame["train_route_airline_support"] = -1
-    frame["route_airline_support_band"] = "AUDIT_DERIVED_AFTER_SPLIT"
-    support = pd.to_numeric(frame.get("peer_anchor_support", 0), errors="coerce").fillna(0)
-    frame["anchor_support_band"] = _band(
-        support,
-        [-1, 0, 9, 49, float("inf")],
-        ["NONE_0", "LOW_1_9", "MEDIUM_10_49", "HIGH_50_PLUS"],
-    )
-    age_hours = (
-        frame["feature_time"] - pd.to_datetime(frame.get("historical_anchor_time"), errors="coerce")
-    ).dt.total_seconds().div(3600)
-    frame["anchor_age_band"] = _band(
-        age_hours.fillna(float("inf")),
-        [-1, 12, 24, 48, float("inf")],
-        ["FRESH_LE_12H", "AGE_12_24H", "AGE_24_48H", "STALE_GT_48H"],
-    )
-    frame["anchor_fallback_level"] = np.where(
-        frame.get("anchor_is_fallback", False), "FALLBACK", "OBSERVED_PEER"
-    )
-    frame["anchor_collection_era"] = frame.get(
-        "temporal_market_collection_era", frame["collection_era"]
-    ).astype("string")
-    frame["dud_support_mode"] = "ON_GRID"
-    frame["target_batch_exists"] = True
-    frame["target_observation_state"] = "OBSERVED"
-    frame["data_cutoff"] = CUTOFF
-    frame["baseline_version"] = BASELINE_VERSION
-    frame["feature_contract_version"] = "EXACT_DROP5_FULL_ERA_LEGAL_FEATURES_V2"
-    frame["model_version"] = "PENDING_SELECTION"
-    frame["prediction_path"] = "PENDING"
-    frame["hierarchy_level"] = "FIXED_ROUTE_AIRLINE_TRANSITION_SHRINKAGE"
     frame["row_key"] = stable_row_key(frame)
     if frame["row_key"].duplicated().any():
         raise RuntimeError("Exact-next row keys are not unique")

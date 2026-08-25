@@ -6,8 +6,8 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 
-from skyfare.evaluation.prospective_test_one.contract import FINALISTS, QUANTILES, registry
 from skyfare.evaluation.metrics import rearrange
+from skyfare.evaluation.prospective_test_one.contract import FINALISTS, QUANTILES, registry
 from skyfare.evaluation.prospective_test_one.runtime import (
     OUTPUT_ROOT,
     artifact_complete,

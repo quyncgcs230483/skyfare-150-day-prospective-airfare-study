@@ -1,0 +1,7 @@
+evidence,value,status
+Final temporal row scope,"129,362 regression rows; 63,109 classification rows",PASS
+Bootstrap design,"5,000 paired cluster replicates; POINTWISE_PERCENTILE_95; seed 20260731",PASS
+Cluster key,schedule_slot_id,PASS
+LOBO derivation,Deterministic evaluation-only replay; no model fitting; nine interior windows,PASS
+Independent reproduction,PASS,PASS
+Frozen methodology,"No retraining, reselection, recalibration, or threshold search",PASS

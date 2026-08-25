@@ -19,7 +19,6 @@ import pandas as pd
 from skyfare.features.audit_common import CUTOFF, ROOT, next_window_map
 from skyfare.features.candidate_feature_contract import build_candidate_frame
 
-
 TABLE_DIR = ROOT / "artifacts/feature_research/tables"
 REPORT = ROOT / "artifacts/feature_research/reports/PREFIT_VALIDATION.txt"
 ALLOWED_SYNTHETIC_FEATURES = {"target_dud"}
@@ -417,7 +416,7 @@ def main() -> None:
         )
     transition_frame = pd.DataFrame(transition_rows)
     transition_frame["transition_key"] = list(
-        zip(transition_frame["current_dud"], transition_frame["target_dud"])
+        zip(transition_frame["current_dud"], transition_frame["target_dud"], strict=True)
     )
     transition_frame["common_in_selection"] = transition_frame["transition_key"].isin(selection_common)
     transition_frame["common_in_confirmation"] = transition_frame["transition_key"].isin(confirmation_common)
@@ -428,7 +427,7 @@ def main() -> None:
     transition_frame.to_csv(transitions_path, index=False)
     multi_transition_frame = pd.DataFrame(multi_transition_rows)
     multi_transition_frame["transition_key"] = list(
-        zip(multi_transition_frame["current_dud"], multi_transition_frame["target_dud"])
+        zip(multi_transition_frame["current_dud"], multi_transition_frame["target_dud"], strict=True)
     )
     multi_transition_frame["common_in_selection"] = multi_transition_frame[
         "transition_key"

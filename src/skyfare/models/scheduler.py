@@ -15,8 +15,11 @@ import time
 from pathlib import Path
 
 from skyfare.models.selection_contract import RUNTIME
-from skyfare.models.temporal_runtime import OUTPUT_ROOT, artifact_complete, job_root, write_json_atomic
-
+from skyfare.models.temporal_runtime import (
+    OUTPUT_ROOT,
+    artifact_complete,
+    write_json_atomic,
+)
 
 MODULE_DIR = Path(__file__).resolve().parent
 RUN_JOB_MODULE = "skyfare.models.train_candidate"
@@ -99,7 +102,9 @@ def run_one(job: dict[str, object], slot: int, gpu_slots: int, python: str, dead
             os.killpg(process.pid, signal.SIGKILL)
             stdout, _ = process.communicate()
         output = stdout.splitlines()
-        raise TimeoutError(f"job timeout {identifier} after {timeout / 60.0:.1f}m")
+        raise TimeoutError(
+            f"job timeout {identifier} after {timeout / 60.0:.1f}m"
+        ) from None
     finally:
         with PRINT_LOCK:
             for line in output[-40:]:
@@ -133,7 +138,7 @@ def execute_lane(
             for index, job in enumerate(jobs)
         }
         for future in concurrent.futures.as_completed(pending):
-            job = pending[future]
+            pending[future]
             try:
                 identifier, elapsed = future.result()
             except Exception:

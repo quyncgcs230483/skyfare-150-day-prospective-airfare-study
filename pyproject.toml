@@ -25,7 +25,9 @@ gpu = ["tensorflow[and-cuda]==2.19.1"]
 collection-fli = ["fli"]
 collection-trip = ["camoufox[geoip]"]
 figures = ["matplotlib==3.10.9"]
-quality = ["pytest>=8.3,<9", "ruff>=0.12,<1"]
+serving = ["psycopg2-binary==2.9.10"]
+application = ["reflex==0.9.4", "psycopg2-binary==2.9.10"]
+quality = ["pytest>=8.3,<9", "ruff>=0.12,<1", "jsonschema>=4.23,<5"]
 
 [project.scripts]
 skyfare = "skyfare.__main__:main"
@@ -42,4 +44,5 @@ line-length = 100
 target-version = "py310"
 
 [tool.ruff.lint]
-select = ["E9", "F63", "F7", "F82"]
+select = ["E4", "E7", "E9", "F", "I", "B904", "B905"]
+ignore = ["E501"]

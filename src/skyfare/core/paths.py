@@ -21,6 +21,7 @@ def _resolved(env_name: str, default: Path) -> Path:
 class DataLayout:
     root: Path
     raw_fli: Path
+    raw_google_flights_manual: Path
     raw_trip_com: Path
     collection_logs: Path
     standardised: Path
@@ -36,6 +37,10 @@ class DataLayout:
         return cls(
             root=root,
             raw_fli=_resolved("SKYFARE_FLI_OUTPUT_DIR", data / "raw" / "fli"),
+            raw_google_flights_manual=_resolved(
+                "SKYFARE_GOOGLE_FLIGHTS_MANUAL_DIR",
+                data / "raw" / "google_flights_manual_9g",
+            ),
             raw_trip_com=_resolved("SKYFARE_TRIP_OUTPUT_DIR", data / "raw" / "trip_com"),
             collection_logs=_resolved(
                 "SKYFARE_COLLECTION_LOG_DIR", artifacts / "logs" / "collection"
@@ -51,6 +56,7 @@ class DataLayout:
     def create_runtime_directories(self) -> None:
         for path in (
             self.raw_fli,
+            self.raw_google_flights_manual,
             self.raw_trip_com,
             self.collection_logs,
             self.standardised,

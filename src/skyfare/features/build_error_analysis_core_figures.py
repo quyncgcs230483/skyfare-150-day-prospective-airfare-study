@@ -13,13 +13,12 @@ from pathlib import Path
 
 import matplotlib.image as mpimg
 import matplotlib.pyplot as plt
-from matplotlib.patches import Rectangle
 import numpy as np
 import pandas as pd
 import seaborn as sns
-from PIL import Image, ImageDraw, ImageFont
 from matplotlib import font_manager
-
+from matplotlib.patches import Rectangle
+from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[3]
 TABLES = ROOT / "artifacts/feature_research/error_analysis/tables"
@@ -139,7 +138,7 @@ def main() -> None:
         headline["r2_drop"],
         color=headline["claim_scope"].map(scope_colors),
     )
-    for bar, value in zip(bars, headline["r2_drop"]):
+    for bar, value in zip(bars, headline["r2_drop"], strict=True):
         ax.text(value + 0.008, bar.get_y() + bar.get_height() / 2, f"{value:.3f}", va="center")
     ax.set_title("F0. Cold-start damage is almost 9x measured temporal-drift damage", fontweight="bold")
     ax.set_xlabel("R2 loss relative to offline evaluation")
@@ -185,7 +184,7 @@ def main() -> None:
     fig, ax = plt.subplots(figsize=(10.5, 5.2))
     bars = ax.bar(np.arange(len(selected)), selected["r2"], color=["#0072B2", "#D55E00", "#E69F00", "#56B4E9", "#009E73"])
     ax.set_xticks(np.arange(len(selected)), [labels[x] for x in order])
-    for bar, value in zip(bars, selected["r2"]):
+    for bar, value in zip(bars, selected["r2"], strict=True):
         ax.text(bar.get_x() + bar.get_width() / 2, value + 0.015, f"{value:.2f}", ha="center")
     ax.set_title("F4. Database proxies recover only part of lost cold-start signal", fontweight="bold")
     ax.set_ylabel("R2 on 90days test rows")

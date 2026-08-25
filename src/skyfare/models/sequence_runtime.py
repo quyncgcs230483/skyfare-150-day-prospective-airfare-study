@@ -13,9 +13,8 @@ import joblib
 import numpy as np
 import pandas as pd
 
-from skyfare.models.deep_temporal_contract import OBSERVATION_CUTOFF, fold_map
 from skyfare.core.paths import DataLayout
-
+from skyfare.models.deep_temporal_contract import OBSERVATION_CUTOFF, fold_map
 
 CODE_ROOT = Path(__file__).resolve().parent
 LAYOUT = DataLayout.resolve()

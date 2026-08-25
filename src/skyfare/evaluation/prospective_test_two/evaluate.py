@@ -8,8 +8,17 @@ import json
 import numpy as np
 import pandas as pd
 
-from skyfare.evaluation.prospective_test_two.contract import BUY_WAIT_THRESHOLD, NOMINAL_FRICTION_VND, QUANTILES
-from skyfare.evaluation.metrics import classification_metrics, distribution_metrics, point_metrics, ranking_metrics
+from skyfare.evaluation.metrics import (
+    classification_metrics,
+    distribution_metrics,
+    point_metrics,
+    ranking_metrics,
+)
+from skyfare.evaluation.prospective_test_two.contract import (
+    BUY_WAIT_THRESHOLD,
+    NOMINAL_FRICTION_VND,
+    QUANTILES,
+)
 from skyfare.evaluation.prospective_test_two.runtime import (
     CLASS_LABELS,
     OUTPUT_ROOT,

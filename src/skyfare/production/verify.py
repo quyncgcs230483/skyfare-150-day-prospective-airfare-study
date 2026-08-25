@@ -6,7 +6,14 @@ from __future__ import annotations
 import json
 
 from skyfare.production.contract import CONTRACT_ID, TASKS, registry
-from skyfare.production.runtime import OUTPUT_ROOT, ROOT, artifact_complete, sha256, validate_inputs, write_json_atomic
+from skyfare.production.runtime import (
+    OUTPUT_ROOT,
+    ROOT,
+    artifact_complete,
+    sha256,
+    validate_inputs,
+    write_json_atomic,
+)
 
 
 def main() -> None:

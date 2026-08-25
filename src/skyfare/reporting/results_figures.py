@@ -10,13 +10,12 @@ import tempfile
 from pathlib import Path
 
 import matplotlib as mpl
+
 mpl.use("Agg")
 import matplotlib.dates as mdates
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-
-from skyfare.core.sources import CollectionSource, normalize_source_columns
 from matplotlib.colors import LinearSegmentedColormap
 from matplotlib.lines import Line2D
 from matplotlib.patches import Patch
@@ -28,6 +27,7 @@ from sklearn.metrics import (
     roc_curve,
 )
 
+from skyfare.core.sources import CollectionSource, normalize_source_columns
 
 COLORS = {
     "ink": "#1F2933",
@@ -396,7 +396,7 @@ def _build_eda_figure_legacy(source: pd.DataFrame, output: Path) -> dict[str, ob
             axis.axvline(boundary, color=color, linewidth=0.65, alpha=0.42)
 
     shared_ymin, shared_ymax = -0.22, 0.27
-    for index, (axis, airline) in enumerate(zip(drift_axes, airline_order)):
+    for index, (axis, airline) in enumerate(zip(drift_axes, airline_order, strict=True)):
         axis.plot(
             smoothed_drift.index,
             smoothed_drift[airline],
@@ -614,7 +614,7 @@ def build_eda_figure_v2(source: pd.DataFrame, output: Path) -> dict[str, object]
             edgecolor="white",
             linewidth=0.25,
         )
-        for index, (start, value, total) in enumerate(zip(left, values, airline_source["Total"])):
+        for index, (start, value, total) in enumerate(zip(left, values, airline_source["Total"], strict=True)):
             if value >= 35_000 and value / total >= 0.14:
                 coverage_ax.text(
                     start + value / 2,
@@ -940,7 +940,7 @@ def _build_evaluation_figure_legacy(blocks: list[dict[str, object]], output: Pat
     for index, value in enumerate(pooled_values):
         ax1.text(value + 1.5, index + offsets["Pooled"], f"{value:.1f}%", fontsize=7.4, va="center")
     label_y = y[0] + np.array([offsets["Test 1"], offsets["Test 2"], offsets["Pooled"]])
-    for name, y_position in zip(["T1", "T2", "Pooled"], label_y):
+    for name, y_position in zip(["T1", "T2", "Pooled"], label_y, strict=True):
         ax1.text(
             54.6,
             y_position,
@@ -958,7 +958,7 @@ def _build_evaluation_figure_legacy(blocks: list[dict[str, object]], output: Pat
     ax1.set_xlabel("Improvement over task baseline (%)")
     clean_axis(ax1, grid_axis="x")
 
-    for block, color in zip(blocks, [COLORS["blue"], COLORS["orange"]]):
+    for block, color in zip(blocks, [COLORS["blue"], COLORS["orange"]], strict=True):
         rel = block["reliability"]
         ax2.plot(rel["predicted"], rel["observed"], marker="o", markersize=3.3, linewidth=1.45, color=color)
         endpoint = rel.iloc[-1]
@@ -1113,9 +1113,9 @@ def _build_evaluation_figure_legacy(blocks: list[dict[str, object]], output: Pat
             "uncertainty": "descriptive point estimates; raw-metric bootstrap evidence is reported separately",
         },
         "classification_calibration": calibration_summary,
-        "pooled_coverage": {str(level): float(value) for level, value in zip([50, 80, 90], pooled_coverage)},
+        "pooled_coverage": {str(level): float(value) for level, value in zip([50, 80, 90], pooled_coverage, strict=True)},
         "pooled_coverage_error_percentage_points": {
-            str(level): float(error) for level, error in zip([50, 80, 90], pooled_errors)
+            str(level): float(error) for level, error in zip([50, 80, 90], pooled_errors, strict=True)
         },
         "policy_regret_reduction_vnd": policy,
         "policy_assumptions": {
@@ -1211,7 +1211,7 @@ def build_classification_report_figure(
     ]
     titles = ["Precision–recall", "ROC curve", "Probability calibration"]
     labels = ["A", "B", "C"]
-    for axis, title, label, metrics in zip(axes, titles, labels, metric_lines):
+    for axis, title, label, metrics in zip(axes, titles, labels, metric_lines, strict=True):
         axis.set_title(title, loc="left", fontsize=8.6, pad=25)
         stacked_metrics = title == "Probability calibration"
         axis.text(
@@ -1297,7 +1297,7 @@ def build_regression_report_figure(
     display_limit = float(np.quantile(all_prices, 0.999))
     summary: dict[str, dict[str, object]] = {}
 
-    for axis, block, label in zip(axes[:2], blocks, ["A", "B"]):
+    for axis, block, label in zip(axes[:2], blocks, ["A", "B"], strict=True):
         frame = block["regression"]
         observed = frame["target_session_price_vnd"].to_numpy(dtype=float)
         predicted = frame["predicted_price_vnd"].to_numpy(dtype=float)
@@ -1659,7 +1659,7 @@ def build_distribution_ranking_figure(
         fontweight="bold",
     )
 
-    for axis, label in zip(axes, ["A", "B", "C"]):
+    for axis, label in zip(axes, ["A", "B", "C"], strict=True):
         axis.text(
             -0.075,
             1.205,
@@ -1698,17 +1698,17 @@ def build_distribution_ranking_figure(
                 "finalist_wis": float(finalist),
                 "coverage_percent": {
                     str(level): float(value)
-                    for level, value in zip([50, 80, 90], coverage[label])
+                    for level, value in zip([50, 80, 90], coverage[label], strict=True)
                 },
             }
-            for label, baseline, finalist in zip(labels, wis_baseline, wis_finalist)
+            for label, baseline, finalist in zip(labels, wis_baseline, wis_finalist, strict=True)
         },
         "ranking": {
             label: {
                 "baseline_ndcg5": float(baseline),
                 "finalist_ndcg5": float(finalist),
             }
-            for label, baseline, finalist in zip(labels, ndcg_baseline, ndcg_finalist)
+            for label, baseline, finalist in zip(labels, ndcg_baseline, ndcg_finalist, strict=True)
         },
         "pooled_wis_reduction_percent": float(pooled_wis_gain),
         "pooled_ndcg5_gain_percent": float(pooled_ndcg_gain),
@@ -1799,7 +1799,7 @@ def build_evaluation_figure_v2(
     policy_ax = fig.add_subplot(bottom[0, 2])
     series_colors = {"Test 1": COLORS["blue"], "Test 2": COLORS["orange"], "Pooled": COLORS["ink"]}
 
-    for axis, spec in zip(mini_axes, task_specs):
+    for axis, spec in zip(mini_axes, task_specs, strict=True):
         task = raw_metrics[spec["key"]]
         all_values = [
             task[block][field]
@@ -1809,7 +1809,7 @@ def build_evaluation_figure_v2(
         span = max(all_values) - min(all_values)
         pad = max(span * 0.24, max(all_values) * 0.018)
         axis.set_xlim(min(all_values) - pad, max(all_values) + pad)
-        for y, block_name in zip([1, 0], ["Test 1", "Test 2"]):
+        for y, block_name in zip([1, 0], ["Test 1", "Test 2"], strict=True):
             baseline = task[block_name]["baseline"]
             finalist = task[block_name]["finalist"]
             color = series_colors[block_name]
@@ -1887,7 +1887,7 @@ def build_evaluation_figure_v2(
         clean_axis(axis, grid_axis="x")
         axis.spines["left"].set_visible(False)
 
-    for block, color in zip(blocks, [COLORS["blue"], COLORS["orange"]]):
+    for block, color in zip(blocks, [COLORS["blue"], COLORS["orange"]], strict=True):
         reliability = block["reliability"]
         calibration_ax.plot(
             reliability["predicted"],
@@ -2087,10 +2087,10 @@ def build_evaluation_figure_v2(
         },
         "classification_calibration": calibration_summary,
         "pooled_coverage": {
-            str(level): float(value) for level, value in zip([50, 80, 90], pooled_coverage)
+            str(level): float(value) for level, value in zip([50, 80, 90], pooled_coverage, strict=True)
         },
         "pooled_coverage_error_percentage_points": {
-            str(level): float(error) for level, error in zip([50, 80, 90], pooled_errors)
+            str(level): float(error) for level, error in zip([50, 80, 90], pooled_errors, strict=True)
         },
         "policy_regret_reduction_vnd": policy,
         "policy_assumptions": {

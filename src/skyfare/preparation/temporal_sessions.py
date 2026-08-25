@@ -15,7 +15,6 @@ from datetime import date, datetime, timedelta
 
 import pandas as pd
 
-
 LOCAL_TIMEZONE = "Asia/Ho_Chi_Minh"
 
 

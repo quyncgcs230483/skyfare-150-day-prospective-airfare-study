@@ -1,0 +1,2496 @@
+{
+  "calendar": [
+    {
+      "date": "2026-03-21",
+      "phase": "pre_study_collection",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-03-22",
+      "phase": "pre_study_collection",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-03-23",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-03-24",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-03-25",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-03-26",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-03-27",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-03-28",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-03-29",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-03-30",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-03-31",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-04-01",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-04-02",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-04-03",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-04-04",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-04-05",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-04-06",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-04-07",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-04-08",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-04-09",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-04-10",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-04-11",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-04-12",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-04-13",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-04-14",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-04-15",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-04-16",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-04-17",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-04-18",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-04-19",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-04-20",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-04-21",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-04-22",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-04-23",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-04-24",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-04-25",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-04-26",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-04-27",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-04-28",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-04-29",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-04-30",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-05-01",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-05-02",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-05-03",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-05-04",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-05-05",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-05-06",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-05-07",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-05-08",
+      "phase": "study",
+      "sources": [],
+      "status": "NO_COLLECTION_FILE"
+    },
+    {
+      "date": "2026-05-09",
+      "phase": "study",
+      "sources": [],
+      "status": "NO_COLLECTION_FILE"
+    },
+    {
+      "date": "2026-05-10",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-05-11",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-05-12",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-05-13",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-05-14",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "google_flights_manual_9g"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-05-15",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-05-16",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-05-17",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-05-18",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-05-19",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-05-20",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-05-21",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-05-22",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-05-23",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-05-24",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-05-25",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-05-26",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-05-27",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-05-28",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-05-29",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-05-30",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-05-31",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-06-01",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-06-02",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-06-03",
+      "phase": "study",
+      "sources": [
+        "fli_library",
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-06-04",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-06-05",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-06-06",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-06-07",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-06-08",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-06-09",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-06-10",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-06-11",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-06-12",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-06-13",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-06-14",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-06-15",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-06-16",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-06-17",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-06-18",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-06-19",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-06-20",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-06-21",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-06-22",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-06-23",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-06-24",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-06-25",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-06-26",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-06-27",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-06-28",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-06-29",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-06-30",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-07-01",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-07-02",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-07-03",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-07-04",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-07-05",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-07-06",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-07-07",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-07-08",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-07-09",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-07-10",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-07-11",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-07-12",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-07-13",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-07-14",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-07-15",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-07-16",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-07-17",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-07-18",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-07-19",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-07-20",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-07-21",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-07-22",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-07-23",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-07-24",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-07-25",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-07-26",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-07-27",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-07-28",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-07-29",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-07-30",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-07-31",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-08-01",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-08-02",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-08-03",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-08-04",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-08-05",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-08-06",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-08-07",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-08-08",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-08-09",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-08-10",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-08-11",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-08-12",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-08-13",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-08-14",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-08-15",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-08-16",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-08-17",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-08-18",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-08-19",
+      "phase": "study",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-08-20",
+      "phase": "post_freeze_serving",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-08-21",
+      "phase": "post_freeze_serving",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-08-22",
+      "phase": "post_freeze_serving",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-08-23",
+      "phase": "post_freeze_serving",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    },
+    {
+      "date": "2026-08-24",
+      "phase": "post_freeze_serving",
+      "sources": [
+        "trip_com"
+      ],
+      "status": "OBSERVED"
+    }
+  ],
+  "calendar_days": 157,
+  "files": {
+    "data/raw/collection_issues/4AIRLINES/error_internet_2026-03-26.csv": {
+      "bytes": 2765,
+      "sha256": "2f80d873613e8a4eebc6e9d37b4d1f55b059ad6374ee51cb6b542f74e6f532f2"
+    },
+    "data/raw/collection_issues/4AIRLINES/error_internet_2026-03-31.csv": {
+      "bytes": 533,
+      "sha256": "efb6e45e31808a68642b627226d4d444e90cacf4521f7fa5913fbd5125df966d"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-03-22.csv": {
+      "bytes": 15323,
+      "sha256": "ff82691001a1707a1de2254656dcc7dc3fe230a212c6c46a8d5251213f6fb693"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-03-23.csv": {
+      "bytes": 14935,
+      "sha256": "02ca6f699a9625643fc2ecb0db692fb6ec96fc31bbd57fec21cf388b1d73632f"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-03-24.csv": {
+      "bytes": 11712,
+      "sha256": "9f1ba78251abc31ffb08f207dabd026c3cb1ea2a7936d6995a4b60ff8c4b5920"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-03-25.csv": {
+      "bytes": 11591,
+      "sha256": "db50ae22a35beeb7db88b43aa85606e24a5b84683456a76e1e0adf63dbbfa794"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-03-26.csv": {
+      "bytes": 7818,
+      "sha256": "291f0540db0300b26146d8fd3f4dfb0a102a819e3527fefa649b0bb4deab3aad"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-03-27.csv": {
+      "bytes": 5400,
+      "sha256": "9d1a5c72e46d2b9fdfe0a44c0becef3e7d5b52befe29091a9ca34752692012a8"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-03-28.csv": {
+      "bytes": 1897,
+      "sha256": "dd5458ff75e50998e58b25b67f6f243753d3840dbd4c7dbe90a8a228fca6a5a2"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-03-30.csv": {
+      "bytes": 5023,
+      "sha256": "9aa642de85a71409319f3bbbb6d0c028cdccd9c93ebbfd3d5050f22b3e9ed6e9"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-04-03.csv": {
+      "bytes": 5152,
+      "sha256": "a71f44d0a62aae8ae1a7de4fe1e7fc3edb1f594655c7510463ec438652e99eae"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-04-08.csv": {
+      "bytes": 4206,
+      "sha256": "67470df3a22db1fc08f40744f9870f25ec4d29172f324ac9f5644be54c218d52"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-04-09.csv": {
+      "bytes": 1496,
+      "sha256": "d3ef727a031a03a7f30abaaeb17371510fc8491e5f9ae84403d9a630c3069b59"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-04-10.csv": {
+      "bytes": 1223,
+      "sha256": "733bc6d06a2b74df23817280ce1704971ab6be645985cab212587a86b2736ca0"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-04-11.csv": {
+      "bytes": 2696,
+      "sha256": "d9cad718cae03dcb7ac7fc276f20f6e7917cde950cab774e3ce750f050edfb37"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-04-13.csv": {
+      "bytes": 1230,
+      "sha256": "7f18838d6a6da5366cb0fea0c0231a0ec7934eedf186115ebf1771ccd256ab89"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-04-14.csv": {
+      "bytes": 2433,
+      "sha256": "10d4e4d8ee1073546d7c594f2a7964c95356d2bd6017f506778dec5ddd822613"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-04-15.csv": {
+      "bytes": 6352,
+      "sha256": "0202431540970a05d654c6aa3bed25582ee5e9904211ea44788ed08ee975b994"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-04-16.csv": {
+      "bytes": 6634,
+      "sha256": "d8aa811b9febb8dbf740c0909793d5c0ad1e91b91e8425f042998eedaa3f49eb"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-04-17.csv": {
+      "bytes": 3115,
+      "sha256": "ec33a4efe76433c60e74303ca222826f46b0825fa62a41a579c3474eda3dd1b8"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-04-18.csv": {
+      "bytes": 3891,
+      "sha256": "a17c243e7e4c8ee6dfcfca4d16cf0363bdcf3ebeb9b9b5d81e917ce43f25765e"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-04-19.csv": {
+      "bytes": 11612,
+      "sha256": "ba4eee611421bcff40cac68bd2f70c4f17bde292d50466cbfd28a779a7ea4b93"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-04-20.csv": {
+      "bytes": 10387,
+      "sha256": "409a2a0778d65373ed2badb4517460e4fe679989dc49e14f0ca7672bea584edc"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-04-21.csv": {
+      "bytes": 17796,
+      "sha256": "ae57732c687251a76b322928406e512e59bf4bab36960240b78a8b9bd155ae42"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-04-22.csv": {
+      "bytes": 25230,
+      "sha256": "3517037b33f3ef5deab5026607dc36192110a80561469751f46ad09d6ff90fe3"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-04-23.csv": {
+      "bytes": 18523,
+      "sha256": "7ac57d95e75c866cbeeac2e45953ef5f9dfde3324c937ed1ea99168d057e61a3"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-04-24.csv": {
+      "bytes": 5363,
+      "sha256": "59385d30b0acbc137a67b2fdd3285d275348a4fa02224f4811a18ff91bacb38d"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-04-25.csv": {
+      "bytes": 3875,
+      "sha256": "24384d23ecb93731177335be8d105761781a0028478f9d460aa16397a41acb9b"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-04-26.csv": {
+      "bytes": 7118,
+      "sha256": "8d45bd37aabfa32f5db1c729b5e3c00cbdca3185ff584ea51a8edb82ff2233bd"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-04-27.csv": {
+      "bytes": 9320,
+      "sha256": "d926f17f32a58addcde606d555d63c1e6b37b7dffc135c41c192a0a3f65f877b"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-04-28.csv": {
+      "bytes": 13626,
+      "sha256": "cf1cb269ea7f8d46410e6d892c7498844c97ba1292f64dcb31770f1be52d6456"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-04-30.csv": {
+      "bytes": 5415,
+      "sha256": "3d98d6056bad12caa20fbcb46d6d0483a3cf748aacaada57fba9150bb7061ca4"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-05-01.csv": {
+      "bytes": 10836,
+      "sha256": "ba48cd2571d6b87b00d49f54551644dade3fb92031b4d5e78a7a5832168da3df"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-05-02.csv": {
+      "bytes": 682,
+      "sha256": "7d0c8b81f42a30bbd1d9575bcea3bf5ebe4d3f4a7ce7b0322d4c94a6c56f96cb"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-05-03.csv": {
+      "bytes": 4360,
+      "sha256": "22e7214038f88a29697fedffe52ec52fbe3df2c5c459203d62a94101cbff65a6"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-05-04.csv": {
+      "bytes": 12890,
+      "sha256": "e2ef571a3a1f5f07a2fd3f23781f648ededbad8a37cee23a9a88490324057b3f"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-05-05.csv": {
+      "bytes": 11931,
+      "sha256": "b0f53765d35e8213102dc54ed06a77ff815f05b04498df497bd861b768922947"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-05-06.csv": {
+      "bytes": 10839,
+      "sha256": "47d9bbfe5c1995b2cb57ea1d1de76f879ca196f1de2b1ee134294f3d69ad21bc"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-05-07.csv": {
+      "bytes": 3822,
+      "sha256": "e5fef0e77686cec76ec0c48921254fa9191e35caf20fe5516eca4c83b79b78e4"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-05-12.csv": {
+      "bytes": 35824,
+      "sha256": "439658f6dd1b1d5d589104060040527960bb4405c219aeddb0b1926d74d9c73f"
+    },
+    "data/raw/collection_issues/4AIRLINES/missing_2026-05-13.csv": {
+      "bytes": 30202,
+      "sha256": "ebafae6bfd89039867ccc16da908c16f4970f1ef08f1bb50f03428935ab59473"
+    },
+    "data/raw/collection_issues/9G_RAW/missing_2026-03-23.csv": {
+      "bytes": 2007,
+      "sha256": "e21e5f9ff8ae1e65065b32cfb4245f3380724fd392411e6ef493db5cbf23ab5f"
+    },
+    "data/raw/collection_issues/DAY_SCRAPE/2026-03-23.csv": {
+      "bytes": 557902,
+      "sha256": "820040c68cc2c3444ea268a67d1887ac4b22d03824ad28f414668b11bd721e5c"
+    },
+    "data/raw/collection_issues/DAY_SCRAPE/2026-04-26.csv": {
+      "bytes": 584646,
+      "sha256": "0ad99612ba06b203bddd3a6b8dd15aea3bb5017f4e02857822be45f27fdc960b"
+    },
+    "data/raw/collection_issues/DAY_SCRAPE/2026-04-27.csv": {
+      "bytes": 587542,
+      "sha256": "b1088073e0f0c182f1c3bf0f2fe665cb604340c904595bfa2acde5dbaeded524"
+    },
+    "data/raw/collection_issues/DAY_SCRAPE/2026-04-28.csv": {
+      "bytes": 570233,
+      "sha256": "439a181268cc42419c0abc4a7e71caac02bbf5a8a777ec9b49e85c922be229f5"
+    },
+    "data/raw/collection_issues/DAY_SCRAPE/2026-04-29.csv": {
+      "bytes": 563135,
+      "sha256": "b0996c24daca7b01d561d513379557d3a3a8b3e52ee8dac09ceef27f74a2d2e9"
+    },
+    "data/raw/collection_issues/DAY_SCRAPE/2026-04-30.csv": {
+      "bytes": 573841,
+      "sha256": "8620fa116032e2df9bc95210dc9c38139d330a45adea6796b01518993a198474"
+    },
+    "data/raw/collection_issues/DAY_SCRAPE/2026-05-01.csv": {
+      "bytes": 586008,
+      "sha256": "d21409d923b502e9dd10ed67ae7820ae118456dfeeb847fce4aaa255725724cb"
+    },
+    "data/raw/collection_issues/DAY_SCRAPE/2026-05-02.csv": {
+      "bytes": 584430,
+      "sha256": "e522b9763e2057d75f47332024b5cdc4b67a0f77d4ecfaeeb5d9ef4fe88779d1"
+    },
+    "data/raw/collection_issues/DAY_SCRAPE/2026-05-03.csv": {
+      "bytes": 588878,
+      "sha256": "d3991171564861f1c5793afe89dc66ef926e0d9875e0047df631a0019ecc2291"
+    },
+    "data/raw/collection_issues/DAY_SCRAPE/2026-05-04.csv": {
+      "bytes": 579924,
+      "sha256": "7b820782c1359ab92224cf5e9c8440aaf92c57c85de565ccac3300d61ac3f49d"
+    },
+    "data/raw/collection_issues/DAY_SCRAPE/2026-05-05.csv": {
+      "bytes": 579351,
+      "sha256": "a6cded3bfc0b442ecd3bd832af17dcee5b4bb52b5bfa7c17c7a902c0aa412f7d"
+    },
+    "data/raw/collection_issues/DAY_SCRAPE/2026-05-06.csv": {
+      "bytes": 572507,
+      "sha256": "5cbd69d537b10699e7c907f79233013b836801b27606d37a099e26b5e6203519"
+    },
+    "data/raw/collection_issues/DAY_SCRAPE/2026-05-07.csv": {
+      "bytes": 573983,
+      "sha256": "c79738b4e7da9656a16af920f677df40436184acf615e4e787c5bda32b472022"
+    },
+    "data/raw/collection_issues/DAY_SCRAPE/2026-05-10.csv": {
+      "bytes": 646863,
+      "sha256": "50f9e59af345f2eaa8a8e60529e1bb3ae55b7a906f0f8e9775dae8ea26aaa6dc"
+    },
+    "data/raw/collection_issues/DAY_SCRAPE/2026-05-11.csv": {
+      "bytes": 645758,
+      "sha256": "a3463f4675cd0522ea64cac83249cb12be56da262f16518dab51915355ef787b"
+    },
+    "data/raw/collection_issues/DAY_SCRAPE/2026-05-12.csv": {
+      "bytes": 676052,
+      "sha256": "759a7d9eefe727852009772b5b2f8df8a2505bfb48ae5ff1e8db4139c0d7fdea"
+    },
+    "data/raw/collection_issues/DAY_SCRAPE/2026-05-13.csv": {
+      "bytes": 670893,
+      "sha256": "b752e42cfd3ef18f7e93c488ae1d1e697a79c7868903091df5b54d884c9ac1f6"
+    },
+    "data/raw/collection_issues/DAY_SCRAPE/2026-05-14.csv": {
+      "bytes": 688078,
+      "sha256": "f896a078bea1c2a8e25fa0c5107f593a251ff4d2d80f832c4350d157a51dad6d"
+    },
+    "data/raw/fli/2026-03-21.csv": {
+      "bytes": 400000,
+      "sha256": "6966890663da53586ec3d5e9b939ddf51a5ae9c60eba14bfd523d860af055a4a"
+    },
+    "data/raw/fli/2026-03-22.csv": {
+      "bytes": 454659,
+      "sha256": "c3e8f285fca54d7b54e10b8df9f54fcad1709b379ae9009e29aff44216af7017"
+    },
+    "data/raw/fli/2026-03-23.csv": {
+      "bytes": 450157,
+      "sha256": "5d7c6def1f330ad6a03b9c9dc719e6844e731b9477bb298315fc1fa534e1e8ab"
+    },
+    "data/raw/fli/2026-03-24.csv": {
+      "bytes": 439224,
+      "sha256": "439fd911d7ee477b4f7fa884c905ddb3d9ea2b2386dad2b172e688ee40e6cbf1"
+    },
+    "data/raw/fli/2026-03-25.csv": {
+      "bytes": 439019,
+      "sha256": "79f6b5d8b32c40d2d11adf16a86894b4d1cda3d8b27b5e877358fca554ce394f"
+    },
+    "data/raw/fli/2026-03-26.csv": {
+      "bytes": 433405,
+      "sha256": "a4c8c495ac0276fdce7a20f65a37c30e4d9a3ab5430ffc5fabc3c0935ece79b8"
+    },
+    "data/raw/fli/2026-03-27.csv": {
+      "bytes": 441765,
+      "sha256": "fbffd5411c914ce8d8f4119fca32c7b5c2198c16382252edf82aaad9ba192446"
+    },
+    "data/raw/fli/2026-03-28.csv": {
+      "bytes": 425522,
+      "sha256": "85af6b9d1d5e522061209a4069f699a8c73f7fb9df9f0d23d04b0641edc6b4ad"
+    },
+    "data/raw/fli/2026-03-29.csv": {
+      "bytes": 441337,
+      "sha256": "a539432f3845a93b3d287a8152ff77b834cad8907bdc01131997d734c20d6124"
+    },
+    "data/raw/fli/2026-03-30.csv": {
+      "bytes": 435067,
+      "sha256": "01eb7173cc05cdb03b65564fa9c0c624b6a4f8ee7ef11d08f4c014a450d3365c"
+    },
+    "data/raw/fli/2026-03-31.csv": {
+      "bytes": 429412,
+      "sha256": "7b3c8866ec5553b810339ce2781644bac52f2242eaa7168a198e6fa8fe35bbca"
+    },
+    "data/raw/fli/2026-04-01.csv": {
+      "bytes": 433597,
+      "sha256": "7b151a039ea319623ac5e01eae2c0303a2330550f33d8c47e11b2c7d25789226"
+    },
+    "data/raw/fli/2026-04-02.csv": {
+      "bytes": 427917,
+      "sha256": "a7bec8b804e4d272522da5500df95cc14a8f422312a8b3a2d240081d19ba8220"
+    },
+    "data/raw/fli/2026-04-03.csv": {
+      "bytes": 436971,
+      "sha256": "b0656ab1b2e57ca34acae7e9e745ae3437ed98c1c5aabd8a9047df4b41db3203"
+    },
+    "data/raw/fli/2026-04-04.csv": {
+      "bytes": 444192,
+      "sha256": "5dd6bc0cb410d6809ee15b77b04ffd070bbc5ee3edc733e15318b2872d940ed9"
+    },
+    "data/raw/fli/2026-04-05.csv": {
+      "bytes": 454621,
+      "sha256": "c9f73017b667cc0fb1c7035147ace9b52b027f73517ba2cac443f0ff0dc9617b"
+    },
+    "data/raw/fli/2026-04-06.csv": {
+      "bytes": 455550,
+      "sha256": "9adaa9658bc8f607af15b1ed5af21e60b9716f4c83422defde59450ec5fe8e9a"
+    },
+    "data/raw/fli/2026-04-07.csv": {
+      "bytes": 456388,
+      "sha256": "d9293e248370a97d9137160cea09477812df291ecc8514b0c0a35d98d28b2251"
+    },
+    "data/raw/fli/2026-04-08.csv": {
+      "bytes": 455739,
+      "sha256": "a052e64adb261752630429e1e99e5421456b77c1102126d24b25a2434ffa144e"
+    },
+    "data/raw/fli/2026-04-09.csv": {
+      "bytes": 460561,
+      "sha256": "20f00ecd6fa339636103a0675fa6d79d18b7437ef04055bba2bbe7e08e90e3ae"
+    },
+    "data/raw/fli/2026-04-10.csv": {
+      "bytes": 474664,
+      "sha256": "98435da8ca230668f5b7dc9a346312447658baee3ef0f477832ebb04362de95c"
+    },
+    "data/raw/fli/2026-04-11.csv": {
+      "bytes": 468147,
+      "sha256": "167718de023456d1ce290a2ade7dfcac28002fdea8988ab595b09ef75f101b2e"
+    },
+    "data/raw/fli/2026-04-12.csv": {
+      "bytes": 472927,
+      "sha256": "6f9a6f13522f18699fa96f6182d178f71c7ee406ce7c37408d08089d54709a09"
+    },
+    "data/raw/fli/2026-04-13.csv": {
+      "bytes": 473793,
+      "sha256": "e82e05fc5c62e3b7ad2970576c9c4b465bf7c15115acf46213e6085398d72b2c"
+    },
+    "data/raw/fli/2026-04-14.csv": {
+      "bytes": 478628,
+      "sha256": "f8a9c612e2a9082bb600f245cbeac0ec81ee523005601541721937df13d856e1"
+    },
+    "data/raw/fli/2026-04-15.csv": {
+      "bytes": 484555,
+      "sha256": "8b04a7c86898c94db9aedf0f5ea3fe6841e3d75fb8243966d6624775ebeb1f0b"
+    },
+    "data/raw/fli/2026-04-16.csv": {
+      "bytes": 474498,
+      "sha256": "5197dbafb0b1ac4794346124ce10af4bb3a7e4a4b8f5202df03ae2444e1009d7"
+    },
+    "data/raw/fli/2026-04-17.csv": {
+      "bytes": 499255,
+      "sha256": "38381fbe5420f5381f86b185aaa38f1c9a5f7035b5cb423179141e1b4ad02195"
+    },
+    "data/raw/fli/2026-04-18.csv": {
+      "bytes": 486322,
+      "sha256": "80013d0dfce106462e602e8fc477eaffa71d42f186e7ed6a6f4b80bdd074cd9f"
+    },
+    "data/raw/fli/2026-04-19.csv": {
+      "bytes": 489967,
+      "sha256": "bd0ba299f406ca62af54c52a5193558c77d56a3289b645d7c2df1bd90a5f2023"
+    },
+    "data/raw/fli/2026-04-20.csv": {
+      "bytes": 484883,
+      "sha256": "8361603b9be87a782e6447314bf78cc195aa2c7c474640554ac19d5e3169ea64"
+    },
+    "data/raw/fli/2026-04-21.csv": {
+      "bytes": 439067,
+      "sha256": "0efac2304ceef50ed7cfddc104992938bd6bbd4f55f23865142950e432bef54d"
+    },
+    "data/raw/fli/2026-04-22.csv": {
+      "bytes": 475695,
+      "sha256": "085d2c104f663e9b97c69a91d2dac2a2408b655e721c3946f516ce5a69aa5e31"
+    },
+    "data/raw/fli/2026-04-23.csv": {
+      "bytes": 464875,
+      "sha256": "9106484c82d9491a17ab979530daac9526f3c1d6c17a6c863fc990a8814f88b9"
+    },
+    "data/raw/fli/2026-04-24.csv": {
+      "bytes": 485599,
+      "sha256": "688ee63ca04365d0f086957845b12dcba5409d05b929f5ffa048a3c01a20327a"
+    },
+    "data/raw/fli/2026-04-25.csv": {
+      "bytes": 480594,
+      "sha256": "414a3cc09838cb5b766c878b00f560280b841209dbd774cdcb93a8b7a3ead4cb"
+    },
+    "data/raw/fli/2026-04-26.csv": {
+      "bytes": 482135,
+      "sha256": "07fc7d35a3174d2d5eb3af46b0926d235c36f48ec868908a176eaebdf413ca11"
+    },
+    "data/raw/fli/2026-04-27.csv": {
+      "bytes": 481625,
+      "sha256": "60b5921cbb0704708502921a93a01243aac1fab2a6ccac442f90d90b6ba349c8"
+    },
+    "data/raw/fli/2026-04-28.csv": {
+      "bytes": 460276,
+      "sha256": "5b2214dc03ab3996ad32532c75eb0acd88a0086473db303630605eb0316f722e"
+    },
+    "data/raw/fli/2026-04-29.csv": {
+      "bytes": 466681,
+      "sha256": "4da83c33be18ddb694e34075b38ce1ab25b83fc1dc3b8a7983040ada8134414a"
+    },
+    "data/raw/fli/2026-04-30.csv": {
+      "bytes": 472054,
+      "sha256": "1c243fabeddc0cb268e5133bdcf029ed71503a0bab508753861b48a0c355bde8"
+    },
+    "data/raw/fli/2026-05-01.csv": {
+      "bytes": 474494,
+      "sha256": "6e69dd6ce2cdd716c984d2b71bcb0e1aa749b02f41b659ee546409763d7c48bf"
+    },
+    "data/raw/fli/2026-05-02.csv": {
+      "bytes": 485796,
+      "sha256": "a6a46037d7e8da4183215df54e3890727c3c6af39bf01a045828b69a466bfa3d"
+    },
+    "data/raw/fli/2026-05-03.csv": {
+      "bytes": 488412,
+      "sha256": "0b89d3c667d2373ecbacab3c1d8cc8e217e646d9801638a792d69be6236d2724"
+    },
+    "data/raw/fli/2026-05-04.csv": {
+      "bytes": 468404,
+      "sha256": "373e359ca3b886ca0f72e543541f1e3370a5a7153e06100d15a41bd4f144a278"
+    },
+    "data/raw/fli/2026-05-05.csv": {
+      "bytes": 469297,
+      "sha256": "fab6895a3448c6955f1c88e428285ab8eed1d189e01c05b4785d7bb6008b892e"
+    },
+    "data/raw/fli/2026-05-06.csv": {
+      "bytes": 470271,
+      "sha256": "82a79dd056a25765726fa8c2b1c8903595fff727309158d02b6930911286226c"
+    },
+    "data/raw/fli/2026-05-07.csv": {
+      "bytes": 475808,
+      "sha256": "a8a59a6d898aed77f0567ac7780d635b3a6246bce5a1b0cddecbd7499778ae9f"
+    },
+    "data/raw/fli/2026-05-10.csv": {
+      "bytes": 576993,
+      "sha256": "91a0346a1428d7e6cf94c355ed81a060475e40da3aaf8b3fffdb829250c2ed9e"
+    },
+    "data/raw/fli/2026-05-11.csv": {
+      "bytes": 578838,
+      "sha256": "17634b9e33770298a9f78d9f842602d65cef5b756d9b5322c4f1bba06097e874"
+    },
+    "data/raw/fli/2026-05-12.csv": {
+      "bytes": 568351,
+      "sha256": "50885020eefd157643eb4e22b7c400cb7ad073bcbc6bbfb8eb6a04d6458be969"
+    },
+    "data/raw/fli/2026-05-13.csv": {
+      "bytes": 563267,
+      "sha256": "6e7fa9f033c8a0dd6953308015dba404171070131b935ef3205ade1040de7bf6"
+    },
+    "data/raw/fli/2026-05-14.csv": {
+      "bytes": 606830,
+      "sha256": "f3e4d6927d232a3ce716c7db05a6217a7c462df15caa229f7603e330fb70ca83"
+    },
+    "data/raw/fli/2026-05-16.csv": {
+      "bytes": 621173,
+      "sha256": "4119dc05a00a02c68423bae5a2ea58052ea1d1e8e48cae642bf764a94b82fdc7"
+    },
+    "data/raw/fli/2026-05-17.csv": {
+      "bytes": 1246099,
+      "sha256": "b58ed6574caa077f3e9d127be9a73e5354a8136b6a1cbe5329f046b359d0bb46"
+    },
+    "data/raw/fli/2026-05-18.csv": {
+      "bytes": 1281495,
+      "sha256": "23f7ad28872125aca58c96106f91b8dd7fe953744aa643b46e7043e57cdea2d3"
+    },
+    "data/raw/fli/2026-05-19.csv": {
+      "bytes": 1286125,
+      "sha256": "3616962e64b9fb80ad033fc7d1068130dc04b3a17fbba0f84c6015968cda4431"
+    },
+    "data/raw/fli/2026-05-20.csv": {
+      "bytes": 1295743,
+      "sha256": "c1451252a421d3ca3deb77c5e0d5e681f34a94f9f1adc50491b66c12dbd66681"
+    },
+    "data/raw/fli/2026-05-21.csv": {
+      "bytes": 1280723,
+      "sha256": "089d2d84f293ded452eb77a3aadee370303b8d465b1ce155decb85b58fffc29b"
+    },
+    "data/raw/fli/2026-05-22.csv": {
+      "bytes": 1319158,
+      "sha256": "0e107352ca80388b9966e9708355dad7bc72efab8ebbeb237ddaed6ba3b7a7b8"
+    },
+    "data/raw/fli/2026-05-23.csv": {
+      "bytes": 1373273,
+      "sha256": "ba9e9a1a189c641570ac9dfd8082891b2ca1dec7f15a0d33d715f8149d24481c"
+    },
+    "data/raw/fli/2026-05-24.csv": {
+      "bytes": 1374908,
+      "sha256": "b56a9763eef58515b08a6269dd61f8979ae03178c1eab237f3333c0a80beea8b"
+    },
+    "data/raw/fli/2026-05-25.csv": {
+      "bytes": 1391487,
+      "sha256": "6d89a67fac9eece69dc1c7a43a81ef302bbf9892f9dde9e81466aacb21145b86"
+    },
+    "data/raw/fli/2026-05-26.csv": {
+      "bytes": 1397053,
+      "sha256": "80109a8057d1c91e8f36b89bc82446e5f11de2188ab194595d2d68d715cbf9a5"
+    },
+    "data/raw/fli/2026-05-27.csv": {
+      "bytes": 1430372,
+      "sha256": "3b491937cfd20e6bbbfc6a92931294ab4fc183430a50b5ef07f2aad20e8c3fe7"
+    },
+    "data/raw/fli/2026-05-28.csv": {
+      "bytes": 1429142,
+      "sha256": "908a3f7f34d4a2ac43c3430a00d38532410b3250e99293e9aa84dc09434454be"
+    },
+    "data/raw/fli/2026-05-29.csv": {
+      "bytes": 1461962,
+      "sha256": "033e1e6ee3dd305a41cca71d97c3437d9646abb9744a328e347c378100760219"
+    },
+    "data/raw/fli/2026-05-30.csv": {
+      "bytes": 1482778,
+      "sha256": "87503be788aea1611558351087bb2336183cfe824127214c5cbe2865c24e7c5a"
+    },
+    "data/raw/fli/2026-05-31.csv": {
+      "bytes": 1491466,
+      "sha256": "f0c4b66adbb963a1cf03b41b03c3a683a760c1f6e5f8d542b88e68f9a7834cb5"
+    },
+    "data/raw/fli/2026-06-01.csv": {
+      "bytes": 1482666,
+      "sha256": "b3bc920ed0df5b888dd2f98161daf37b71e149c3dee36f06b855aad674f9b0d0"
+    },
+    "data/raw/fli/2026-06-02.csv": {
+      "bytes": 1484288,
+      "sha256": "a28e9cb507763d9e1824b2349df0790496d3f610d65de3a77741d0b2a1ef0217"
+    },
+    "data/raw/fli/2026-06-03.csv": {
+      "bytes": 1450373,
+      "sha256": "fdaf40306abb6d8280e787fc36617fc8faf796fa55e63d877bc1c5ab6fc96905"
+    },
+    "data/raw/google_flights_manual_9g/2026-03-21.csv": {
+      "bytes": 101531,
+      "sha256": "270c8643b22ac9a5eb158603431c551d07f4715580b5228662697648718f756d"
+    },
+    "data/raw/google_flights_manual_9g/2026-03-22.csv": {
+      "bytes": 94886,
+      "sha256": "2c3e20b2fee0a2d31f0ccbc789e9524b503f13ada9b04684a681c6402cb2e51c"
+    },
+    "data/raw/google_flights_manual_9g/2026-03-23.csv": {
+      "bytes": 79210,
+      "sha256": "09f643841e19322890e7bbe40ea3e14d9064497fe8b3b93b7443342aa3018012"
+    },
+    "data/raw/google_flights_manual_9g/2026-03-24.csv": {
+      "bytes": 83616,
+      "sha256": "fea18fc231f1136952bd2261dcaf10c142165a0bb14f13bb9ab1f81faa5aa201"
+    },
+    "data/raw/google_flights_manual_9g/2026-03-25.csv": {
+      "bytes": 83347,
+      "sha256": "fd76ecb7873ad9cb5c3f924f5582f7b3393ad7713aabdebdeaf762c82d5ba602"
+    },
+    "data/raw/google_flights_manual_9g/2026-03-26.csv": {
+      "bytes": 80694,
+      "sha256": "d7a317081582a0e3dfeca249f968c4bff9e017b4e9e43082f86bcb3cab8bffdd"
+    },
+    "data/raw/google_flights_manual_9g/2026-03-27.csv": {
+      "bytes": 82804,
+      "sha256": "b559771b6017f723744fe26fe8bd47da50ae33ae2472f5c791edbb04408aadd8"
+    },
+    "data/raw/google_flights_manual_9g/2026-03-28.csv": {
+      "bytes": 82324,
+      "sha256": "b1cbc6f16e1310b9dd7b4a58c9c9a67c71c99010ad4b54ab68150bb4475469e8"
+    },
+    "data/raw/google_flights_manual_9g/2026-03-29.csv": {
+      "bytes": 82457,
+      "sha256": "a961f56a2fef2d98d21c8384168b14b3e4c2c18d96a83887b690b4dd0da7323f"
+    },
+    "data/raw/google_flights_manual_9g/2026-03-30.csv": {
+      "bytes": 84189,
+      "sha256": "cbd8636972852c82230df9ae5910e4067527ad15cf4042680dbb76dc4be3d40c"
+    },
+    "data/raw/google_flights_manual_9g/2026-03-31.csv": {
+      "bytes": 80172,
+      "sha256": "601d6de1cc2ea889688f694aafc1c101bcba56ab28317b90ff59763290296043"
+    },
+    "data/raw/google_flights_manual_9g/2026-04-01.csv": {
+      "bytes": 80760,
+      "sha256": "d7970931ac66e9130253fbe5f851a565eac89994ab561526f61ab3c16e074610"
+    },
+    "data/raw/google_flights_manual_9g/2026-04-02.csv": {
+      "bytes": 78235,
+      "sha256": "5f0758bb6845d65f3ce9b2fcbe0898bec897ec0e411819ec4e3cc6172466af1a"
+    },
+    "data/raw/google_flights_manual_9g/2026-04-03.csv": {
+      "bytes": 78379,
+      "sha256": "06b52df103b90f73cb864ada7bcf5e1770ff973556a05970d535929a1bf57421"
+    },
+    "data/raw/google_flights_manual_9g/2026-04-04.csv": {
+      "bytes": 77414,
+      "sha256": "ec756a525176ba62d869dd062a31b3ccec42c597da2158d8dc6fa3a61fc93b5e"
+    },
+    "data/raw/google_flights_manual_9g/2026-04-05.csv": {
+      "bytes": 79111,
+      "sha256": "cb30b0057cd3851c653a9bdb0bc386b6aaa40f1ba6cff108039c74fb7f6c595d"
+    },
+    "data/raw/google_flights_manual_9g/2026-04-06.csv": {
+      "bytes": 80396,
+      "sha256": "db940e5a3b324703be043d8631dc3c7217955544949212bbc86ac5789901e27c"
+    },
+    "data/raw/google_flights_manual_9g/2026-04-07.csv": {
+      "bytes": 80913,
+      "sha256": "b20b0bfa00c46cba34afe732d88254df53ee322aaefae459cfd01f8e57362540"
+    },
+    "data/raw/google_flights_manual_9g/2026-04-08.csv": {
+      "bytes": 79798,
+      "sha256": "baffe40fd3e95554a30110d6b47853cbc716d3999d99f3848b0a33f1472cdfbe"
+    },
+    "data/raw/google_flights_manual_9g/2026-04-09.csv": {
+      "bytes": 97531,
+      "sha256": "aef894cb6a985c01a2cce6b5d7a1b2f0c382fe7671337394e1597690380b12d5"
+    },
+    "data/raw/google_flights_manual_9g/2026-04-10.csv": {
+      "bytes": 80662,
+      "sha256": "0fa341bbbddfb95ad292c8e7d1631de3833019459167913f4602999d3cc64e00"
+    },
+    "data/raw/google_flights_manual_9g/2026-04-11.csv": {
+      "bytes": 78358,
+      "sha256": "f282f10ec85f73b16c3ad514f543610adf28a7a5253f4c1105e5634d301508e0"
+    },
+    "data/raw/google_flights_manual_9g/2026-04-12.csv": {
+      "bytes": 78140,
+      "sha256": "17f8930933efadbb5970ded4ee23741b17c78da7d13b29eb69f1cca735d560fb"
+    },
+    "data/raw/google_flights_manual_9g/2026-04-13.csv": {
+      "bytes": 82052,
+      "sha256": "e0689020bb50aa80bf556821e2991988df29e3fcc8954395bb4c363e8e7de7f7"
+    },
+    "data/raw/google_flights_manual_9g/2026-04-14.csv": {
+      "bytes": 80400,
+      "sha256": "88398e73fc434fceebea9ee6f5f7398b7fbc9a6190b5b4685fce9ca56dd231b7"
+    },
+    "data/raw/google_flights_manual_9g/2026-04-15.csv": {
+      "bytes": 76960,
+      "sha256": "d808e02df1eddfd678e42821415c3e03e1664f8d7d9a192cf0c9f04d5b690a8e"
+    },
+    "data/raw/google_flights_manual_9g/2026-04-16.csv": {
+      "bytes": 78240,
+      "sha256": "71489c20c3b61b70119490ab286c0f652ba923c9987ba72e3f22a2d83f945836"
+    },
+    "data/raw/google_flights_manual_9g/2026-04-17.csv": {
+      "bytes": 80677,
+      "sha256": "b2aeeec3f9e8bc33031399121cf48a53ff225fbf02e5181b0c4070892693634e"
+    },
+    "data/raw/google_flights_manual_9g/2026-04-18.csv": {
+      "bytes": 120012,
+      "sha256": "afaf45cc4bea3f8a15a97f73c5b20a87c1b436c8e133049ea7cd0916eae1e01d"
+    },
+    "data/raw/google_flights_manual_9g/2026-04-19.csv": {
+      "bytes": 78789,
+      "sha256": "a3ce1f773e97d8d14533eff914a2a8866dda7cda72688a639e26f3acd16e51e5"
+    },
+    "data/raw/google_flights_manual_9g/2026-04-20.csv": {
+      "bytes": 78683,
+      "sha256": "1ecb54823c83833a9c6604259d0bbea10c9dfc63e557ccec18ad9afd77bee923"
+    },
+    "data/raw/google_flights_manual_9g/2026-04-21.csv": {
+      "bytes": 73640,
+      "sha256": "87bf2a235f494c4655c3193c03da9ecf5ef7794cd5d519a3ea5d73bd0a6b3fbf"
+    },
+    "data/raw/google_flights_manual_9g/2026-04-22.csv": {
+      "bytes": 78449,
+      "sha256": "f3b71bdd5c84fd2da305e12828924cfa1884eb2185c82c2858804ce28ae096b0"
+    },
+    "data/raw/google_flights_manual_9g/2026-04-23.csv": {
+      "bytes": 77605,
+      "sha256": "a1b198fdd4fa5b2c816ed93c35c560bf834b928cefb8223bff656fef8342b7c1"
+    },
+    "data/raw/google_flights_manual_9g/2026-04-24.csv": {
+      "bytes": 79767,
+      "sha256": "ed0b0baa3adfc444022db12deedcd888b95055688daaed4eaa17299f845b8af2"
+    },
+    "data/raw/google_flights_manual_9g/2026-04-25.csv": {
+      "bytes": 75304,
+      "sha256": "4ff31c93085cb4e0b5ce8cd5deed3e629140db444ca5625445ccba2d43f6eded"
+    },
+    "data/raw/google_flights_manual_9g/2026-04-26.csv": {
+      "bytes": 76022,
+      "sha256": "43a79338c631ea1731adf9590b7d0cd4b13c7129be783a28f9fd08229a7dcd90"
+    },
+    "data/raw/google_flights_manual_9g/2026-04-27.csv": {
+      "bytes": 77436,
+      "sha256": "fd4abb95653b53b7902b0cfb8cedeccab5e3eeb4570ea578f00ec6cb5f2faae7"
+    },
+    "data/raw/google_flights_manual_9g/2026-04-28.csv": {
+      "bytes": 77665,
+      "sha256": "6283defef33f95c3504b2642f0704b25dc25c14a8d0055604ad27b69f5b88408"
+    },
+    "data/raw/google_flights_manual_9g/2026-04-29.csv": {
+      "bytes": 78042,
+      "sha256": "fb6c671516241c468a789a69051ee572b3c1f071d0e08d1d6809f0e021b76737"
+    },
+    "data/raw/google_flights_manual_9g/2026-04-30.csv": {
+      "bytes": 77441,
+      "sha256": "6e7e9a3946deaa03f9040105e891ab3667fbd6c048036a7e6e7b19f2aa5a8ac0"
+    },
+    "data/raw/google_flights_manual_9g/2026-05-01.csv": {
+      "bytes": 81559,
+      "sha256": "9e13e7eaf59d0d2876bb214599e02f830fc77537e5bf47923c1bb571e2febd7f"
+    },
+    "data/raw/google_flights_manual_9g/2026-05-02.csv": {
+      "bytes": 78811,
+      "sha256": "a232bc4f9c0acf498ec6bfb20d239f3561fd07310c3e8186e5d845396c9429f0"
+    },
+    "data/raw/google_flights_manual_9g/2026-05-03.csv": {
+      "bytes": 76761,
+      "sha256": "eaeae7f1a70b345a337808f8dd0e8f3203d7ce6adbdb50154e202ec0fd566e4c"
+    },
+    "data/raw/google_flights_manual_9g/2026-05-04.csv": {
+      "bytes": 85929,
+      "sha256": "4b3b10855150b54baa47025882b42d7f3f4301c80d4f56f044f20761537d2e27"
+    },
+    "data/raw/google_flights_manual_9g/2026-05-05.csv": {
+      "bytes": 79042,
+      "sha256": "e9711fb421dde912c9b0c24ea38c2849a7fe8081486cef767f543ff3a21c9258"
+    },
+    "data/raw/google_flights_manual_9g/2026-05-06.csv": {
+      "bytes": 80700,
+      "sha256": "289fad0f8939e549c5bc86675d71a66c044d6048fa81c942845b3b93fb25f4d9"
+    },
+    "data/raw/google_flights_manual_9g/2026-05-07.csv": {
+      "bytes": 75377,
+      "sha256": "124dfb6cf524ec824221ce5a149c978037b32e72ac26525fd2b94627f1405607"
+    },
+    "data/raw/google_flights_manual_9g/2026-05-10.csv": {
+      "bytes": 81182,
+      "sha256": "c2a85aaba42c02489de435993dd2f6d604c846da7c53220b4d27436b63600935"
+    },
+    "data/raw/google_flights_manual_9g/2026-05-11.csv": {
+      "bytes": 81879,
+      "sha256": "38081680b2a4434b03a0a2c718425e144519346e8b6b538c7ac14be95416e99f"
+    },
+    "data/raw/google_flights_manual_9g/2026-05-12.csv": {
+      "bytes": 81153,
+      "sha256": "f35c1db8f78d04bf6c90ec3db961c4bdbee6f89291401a39b8ab4f605669b5b7"
+    },
+    "data/raw/google_flights_manual_9g/2026-05-13.csv": {
+      "bytes": 82013,
+      "sha256": "ee24ab2d7a25f1bb0c8a4e771bdba66711d0887f79b5b1261eac72ad4a4e47de"
+    },
+    "data/raw/google_flights_manual_9g/2026-05-14.csv": {
+      "bytes": 82047,
+      "sha256": "dbb5771cf5543536b86ef5401e2d2fbf6f94ade659bb911b7dbae0bb576306c1"
+    },
+    "data/raw/trip_com/2026-05-15.csv": {
+      "bytes": 442915,
+      "sha256": "f2319e63dd18f9e232061c784beaedffbab32bd85f97d786457f18e16a682a4e"
+    },
+    "data/raw/trip_com/2026-05-16.csv": {
+      "bytes": 995983,
+      "sha256": "43eb8038931d939c4acd67797290085f71c7d3e347c1a65fdef5fe00db5976b7"
+    },
+    "data/raw/trip_com/2026-05-17.csv": {
+      "bytes": 1259895,
+      "sha256": "097d348ead3b15de1ec7d672de7787756756a478e67a7c5780920d1988a274cb"
+    },
+    "data/raw/trip_com/2026-05-18.csv": {
+      "bytes": 1315001,
+      "sha256": "261aaf700957593d4b1d133cf5efea631e29850afee9f11a564219bbfe50c9d4"
+    },
+    "data/raw/trip_com/2026-05-19.csv": {
+      "bytes": 1297262,
+      "sha256": "473dc7a9ff3900f1bf833b3a7b156c23c2c01817feae035189004e4c07ff1d85"
+    },
+    "data/raw/trip_com/2026-05-20.csv": {
+      "bytes": 1278772,
+      "sha256": "53aae9267f5781fc5578a7755b7d0d21572882eae57dc3087a5137bf7f6e3c82"
+    },
+    "data/raw/trip_com/2026-05-21.csv": {
+      "bytes": 1339293,
+      "sha256": "6ea529cfd63ad7f3c6a3ed272600aa97bc8cdd77e3e4aacc75bc4a3b28bbd43c"
+    },
+    "data/raw/trip_com/2026-05-22.csv": {
+      "bytes": 1353460,
+      "sha256": "926fe568f9e144277545dd03e812998bde682c2b28426f107d60ea7a343c6bcc"
+    },
+    "data/raw/trip_com/2026-05-23.csv": {
+      "bytes": 1343319,
+      "sha256": "ad68690e2bbc7b202ade508edd6ce0ba5bf461b950b3144a97ceb717cda70512"
+    },
+    "data/raw/trip_com/2026-05-24.csv": {
+      "bytes": 1384697,
+      "sha256": "1a0c8930e6000ee1bf9ba38f4d2f22c84c52acc1d4a7242caa6d194fb940753c"
+    },
+    "data/raw/trip_com/2026-05-25.csv": {
+      "bytes": 1392980,
+      "sha256": "13c43876fc29f367bf1875389bbcea8ebb8239a5fbd35f04fe6d67dcc7ebebeb"
+    },
+    "data/raw/trip_com/2026-05-26.csv": {
+      "bytes": 1370194,
+      "sha256": "3d74803dfde8c81e4f87d77910e06289a1a31c25da8d6a4ba7638121fcb0626c"
+    },
+    "data/raw/trip_com/2026-05-27.csv": {
+      "bytes": 1410155,
+      "sha256": "908c131565bb108b7640d083ef194059a7275a72b68cac06452f2fa0312f547a"
+    },
+    "data/raw/trip_com/2026-05-28.csv": {
+      "bytes": 1382366,
+      "sha256": "3be046ab56878479051042b3fd646cb0b10025fba3cbd1f816e88a7475a3752f"
+    },
+    "data/raw/trip_com/2026-05-29.csv": {
+      "bytes": 1448329,
+      "sha256": "f2e564916d3b4ec97809631ff3b6fa664db5bd2a9bcfdc4d109f97e874c45f05"
+    },
+    "data/raw/trip_com/2026-05-30.csv": {
+      "bytes": 1430353,
+      "sha256": "5aeed59a69bb32456e5b4bea3f6e868fba508261f7898a4faf70ca8366efd2b4"
+    },
+    "data/raw/trip_com/2026-05-31.csv": {
+      "bytes": 1458505,
+      "sha256": "9236082ae3f0824613723713df961481b00653dbc7b60f2b4e9233fda4e59444"
+    },
+    "data/raw/trip_com/2026-06-01.csv": {
+      "bytes": 1533411,
+      "sha256": "b5bd2e7a1a599759ef3eb2a6fd8f4bc78b109ffa377bd394cdb280a36d577d32"
+    },
+    "data/raw/trip_com/2026-06-02.csv": {
+      "bytes": 1485061,
+      "sha256": "2f736007df8c2c7f820b0960986c8b916d610a353f318a05686ed368f8279353"
+    },
+    "data/raw/trip_com/2026-06-03.csv": {
+      "bytes": 1473345,
+      "sha256": "dc7599e6885ea47e21e393ad61ed07a7da2b095c43267c262d157040143826b1"
+    },
+    "data/raw/trip_com/2026-06-04.csv": {
+      "bytes": 1480626,
+      "sha256": "98096e021e92c03452d1607b3c12303060d3890ac8325acb589545294982f929"
+    },
+    "data/raw/trip_com/2026-06-05.csv": {
+      "bytes": 1452142,
+      "sha256": "29d2ee36d8d02f47e0a03a1d4ca87c0be123858030e13156a29347f9a5f43e74"
+    },
+    "data/raw/trip_com/2026-06-06.csv": {
+      "bytes": 1403736,
+      "sha256": "f792b19cdf5bddba16a9cb736a1996764ec7b1e1eb0102a6822cf4a8458d240f"
+    },
+    "data/raw/trip_com/2026-06-07.csv": {
+      "bytes": 1450479,
+      "sha256": "a1674b0cc6a1ade823d89508fdf39febece183f530a472ba2588b7dd24a6e49d"
+    },
+    "data/raw/trip_com/2026-06-08.csv": {
+      "bytes": 1474430,
+      "sha256": "bf3a7eb8585c9445e20a4011901efe5d30d5b26818bc56241f69a03dd4221cd1"
+    },
+    "data/raw/trip_com/2026-06-09.csv": {
+      "bytes": 1461798,
+      "sha256": "a7595e76446bb557fdf1fd044e4ca55aa33125704cc7fa59e077be2fcbe922d1"
+    },
+    "data/raw/trip_com/2026-06-10.csv": {
+      "bytes": 1454918,
+      "sha256": "b308c872ee48c549326776ca13bc7171e70906531b60a9c48d02016a5f5d0b06"
+    },
+    "data/raw/trip_com/2026-06-11.csv": {
+      "bytes": 1510955,
+      "sha256": "739525a75d99f740cf213422896866697335d704340dc827c25385cc15c028df"
+    },
+    "data/raw/trip_com/2026-06-12.csv": {
+      "bytes": 1490363,
+      "sha256": "f8c432b450476ad77eb1c3cc0435cb8daaf9c9e0c00b753ce23158d073e3dee5"
+    },
+    "data/raw/trip_com/2026-06-13.csv": {
+      "bytes": 1456422,
+      "sha256": "d6d0732c8cb8944dcdeb5bf82cbefca658d307f666ce0fe901182b4caa3d0818"
+    },
+    "data/raw/trip_com/2026-06-14.csv": {
+      "bytes": 1407421,
+      "sha256": "8092799c9517154b99af398ef0972bf6ac1fbf666bd91eec33e2ad4dff00ef39"
+    },
+    "data/raw/trip_com/2026-06-15.csv": {
+      "bytes": 1445056,
+      "sha256": "a314fefce36a8400d78fbfc4a5316fcf85df618befc28c6250fc73b37be27efc"
+    },
+    "data/raw/trip_com/2026-06-16.csv": {
+      "bytes": 1476277,
+      "sha256": "c8fd20fcab43db5fcfa5d5b9bcc8083750cc2f69b112207c84345b0744e0dc8b"
+    },
+    "data/raw/trip_com/2026-06-17.csv": {
+      "bytes": 1443004,
+      "sha256": "465489d3d9fce89841d1eac245b2f41d0701be9840a59ca3518a73554c057c84"
+    },
+    "data/raw/trip_com/2026-06-18.csv": {
+      "bytes": 1394264,
+      "sha256": "9a5c556ee5cbaf108929f05d7a01a9e4aa40aa1ac7f3756d263878ca3239535d"
+    },
+    "data/raw/trip_com/2026-06-19.csv": {
+      "bytes": 1364896,
+      "sha256": "d8a32436a4d6b0378c26cca4309b00d0aaec9b922b743b6783e11eea882d5fff"
+    },
+    "data/raw/trip_com/2026-06-20.csv": {
+      "bytes": 1377981,
+      "sha256": "4ba09186bf73be8066a509a8a1889abc09247ace4a9e76210b01a6b783f47b6f"
+    },
+    "data/raw/trip_com/2026-06-21.csv": {
+      "bytes": 1417149,
+      "sha256": "a2c1f1d49b78e1e25096e8fc1e6f7246ac28994ce432d952219440b2891b75dd"
+    },
+    "data/raw/trip_com/2026-06-22.csv": {
+      "bytes": 1418157,
+      "sha256": "2af23e2f249e3ecd953da224e5e76aee7c2fb32542340f281b2b551a799a485a"
+    },
+    "data/raw/trip_com/2026-06-23.csv": {
+      "bytes": 1392547,
+      "sha256": "fb3602c4b5ccbce43253f8e8909a1a33ce488cb6a6164b3f49dfd9ce2b0ae943"
+    },
+    "data/raw/trip_com/2026-06-24.csv": {
+      "bytes": 1396098,
+      "sha256": "b9c0f9c83403956f29776a7c53844ab7e73c68d52a1e70900603a44d918db57c"
+    },
+    "data/raw/trip_com/2026-06-25.csv": {
+      "bytes": 1481641,
+      "sha256": "c2a666cf62fc205fb8b0980fcd3fd196bff64b0847e88f76b3ea0561ee149c96"
+    },
+    "data/raw/trip_com/2026-06-26.csv": {
+      "bytes": 1469581,
+      "sha256": "1082a59bf8badb81d77ca23ff19170eb16d5277621fc00a7e39a8e071d7aef7f"
+    },
+    "data/raw/trip_com/2026-06-27.csv": {
+      "bytes": 1395535,
+      "sha256": "5692e25405c2728498e3ed77de4bbe2b477108c1e22b4093d141f587ab452235"
+    },
+    "data/raw/trip_com/2026-06-28.csv": {
+      "bytes": 1449695,
+      "sha256": "13b7bf706fbef7788b00e0fda021c461ab2a8011fe7195c1ec1b95c66e4f9628"
+    },
+    "data/raw/trip_com/2026-06-29.csv": {
+      "bytes": 1489806,
+      "sha256": "5c4f6f3a7292fd3b049370c967b2ad060a750c9cda67f3b58336da0d6e402701"
+    },
+    "data/raw/trip_com/2026-06-30.csv": {
+      "bytes": 1439424,
+      "sha256": "67d68a880c86ec9f2b4b19ed1d34acf525710091eca492883ba539a7882adf65"
+    },
+    "data/raw/trip_com/2026-07-01.csv": {
+      "bytes": 1411483,
+      "sha256": "460abeff3594554813d7ae17990288a879ce3dbcc8f7d145cb7ad1aa61669675"
+    },
+    "data/raw/trip_com/2026-07-02.csv": {
+      "bytes": 1445426,
+      "sha256": "6d102dcb6dcaf1769bbaf81ec579f6b1ad19e5654ea21a197bb1d8b428dc7fc4"
+    },
+    "data/raw/trip_com/2026-07-03.csv": {
+      "bytes": 1489458,
+      "sha256": "5ba9cb127a7696206a87929f177509106049d7a28d59ee482eed68c97688aeb9"
+    },
+    "data/raw/trip_com/2026-07-04.csv": {
+      "bytes": 1482105,
+      "sha256": "f13ac86bff1f4aea01424912c1a8e801f210120d65eca1e9317f0fa2b0b86fcc"
+    },
+    "data/raw/trip_com/2026-07-05.csv": {
+      "bytes": 1411685,
+      "sha256": "9f0ec2ac42b0f59818198323f705640deba982eae40e7a108a4841adb31ee8cc"
+    },
+    "data/raw/trip_com/2026-07-06.csv": {
+      "bytes": 1443026,
+      "sha256": "c5af260c342dcc1cc63c0cbe02ba5f3a5a6c56bb2bc1a0c0d18807e4ffb0bc91"
+    },
+    "data/raw/trip_com/2026-07-07.csv": {
+      "bytes": 1461631,
+      "sha256": "92671b286378cd66b32e0162a2e9fd79f3918a45459c52ce0670e9986ea66523"
+    },
+    "data/raw/trip_com/2026-07-08.csv": {
+      "bytes": 1450110,
+      "sha256": "75493f83ca3ffcaec5dc15492dba9454a4ab3a038dd60c71688d61a13d470009"
+    },
+    "data/raw/trip_com/2026-07-09.csv": {
+      "bytes": 1394382,
+      "sha256": "6483625a4eaab07fb8d17df193faa1d026b925fd639481c64fb5722eb528208e"
+    },
+    "data/raw/trip_com/2026-07-10.csv": {
+      "bytes": 1460883,
+      "sha256": "78684700458cc360fc490362e1d63a65cca932baa53bac5127a17945aed942f4"
+    },
+    "data/raw/trip_com/2026-07-11.csv": {
+      "bytes": 1400507,
+      "sha256": "4c94f6506308ef5328ab26dbcfeb57cec773d6c848b83f8fd201422ba83ba3d5"
+    },
+    "data/raw/trip_com/2026-07-12.csv": {
+      "bytes": 1439124,
+      "sha256": "b884f23a34f30ea1122b012e37aa96638d4a5c852f3b54f358933ca779b3feb2"
+    },
+    "data/raw/trip_com/2026-07-13.csv": {
+      "bytes": 1467736,
+      "sha256": "a85987339c89599719ab8d247c7ee7a6d3e2168b109754c6c04b254c56cd1083"
+    },
+    "data/raw/trip_com/2026-07-14.csv": {
+      "bytes": 1490222,
+      "sha256": "1feccfdce1a4a62f8834df5643d2e04568e33a42c7d28a10c8a3bcfdb4079c7d"
+    },
+    "data/raw/trip_com/2026-07-15.csv": {
+      "bytes": 1423766,
+      "sha256": "41cf57ac8f8d7a3991699ef2f006b7b4c7a0937102c6c1569b0b81f946b6c49c"
+    },
+    "data/raw/trip_com/2026-07-16.csv": {
+      "bytes": 1484366,
+      "sha256": "902bbb88f73257a5dd3896c3e5e63dea125f58889844574f61ed78f8c32736e7"
+    },
+    "data/raw/trip_com/2026-07-17.csv": {
+      "bytes": 1525333,
+      "sha256": "bf8ce1691778c8405729ac9dde4e95701c679ad85f4d181fb58779553b61ffbc"
+    },
+    "data/raw/trip_com/2026-07-18.csv": {
+      "bytes": 1394272,
+      "sha256": "ae3709fc53d90d88540486aaed9d47ed9c2af38c08149554c7ff66558e288357"
+    },
+    "data/raw/trip_com/2026-07-19.csv": {
+      "bytes": 1492270,
+      "sha256": "148e8dfd3fe83a2d035a38df4698cdc752b117e8943285a796c6aab4accff9c7"
+    },
+    "data/raw/trip_com/2026-07-20.csv": {
+      "bytes": 1470898,
+      "sha256": "5c9d6df6ae242de15bde71243cb371f7dffe6fe25c395a6e8a57a999e69fa0a8"
+    },
+    "data/raw/trip_com/2026-07-21.csv": {
+      "bytes": 1462314,
+      "sha256": "af82cbb5083229db2b24a4b3cd5b546d69a39cf0199cccfc8a5b1295b2e1e168"
+    },
+    "data/raw/trip_com/2026-07-22.csv": {
+      "bytes": 1414781,
+      "sha256": "40e508969a783e690c5d49048b95f1893f8012830c6cc4735f06690160113f4d"
+    },
+    "data/raw/trip_com/2026-07-23.csv": {
+      "bytes": 1372087,
+      "sha256": "f669bf1ad74c86d6ea1c3da16cb62cb4e78b8594b5d7fd464a722f33e4e07a20"
+    },
+    "data/raw/trip_com/2026-07-24.csv": {
+      "bytes": 1447137,
+      "sha256": "3eead2c27e5f2e9fa6176320479319e41f874f33d8377853d0b914b96d911ad5"
+    },
+    "data/raw/trip_com/2026-07-25.csv": {
+      "bytes": 1364464,
+      "sha256": "fc82c562dc42caa02f834f4a57a60a7507653c71f7153fbd06011b8821762b17"
+    },
+    "data/raw/trip_com/2026-07-26.csv": {
+      "bytes": 1433739,
+      "sha256": "c7e754938c66b93ff5897c5c254acb37de00a03bf4339bc5fb7a8c623f040ed4"
+    },
+    "data/raw/trip_com/2026-07-27.csv": {
+      "bytes": 1419637,
+      "sha256": "5a4c41cf9dd54d5269d2c14f33f650895174ed5edbe741ed77d949ad85e5aaf8"
+    },
+    "data/raw/trip_com/2026-07-28.csv": {
+      "bytes": 1395832,
+      "sha256": "8f54150b87737930ff11b7c00d23840f01978fcfe12fb53d79a18b13851f3e63"
+    },
+    "data/raw/trip_com/2026-07-29.csv": {
+      "bytes": 1405464,
+      "sha256": "8bdbcbf5a7ee817fedfd59269b14aa41870a84e0f2f9867a0a51a6c1227fe41b"
+    },
+    "data/raw/trip_com/2026-07-30.csv": {
+      "bytes": 1364689,
+      "sha256": "7222730fcf24044f454ad5b5c4539f6812ba017548ed1a1685893da82df3ed07"
+    },
+    "data/raw/trip_com/2026-07-31.csv": {
+      "bytes": 1363042,
+      "sha256": "568d4094a7e1e0389c106c29713f0870ceecabc2c44ab3a50df86afc5c539753"
+    },
+    "data/raw/trip_com/2026-08-01.csv": {
+      "bytes": 1307278,
+      "sha256": "443ab4ad9718ba67ada7b66a4e53fd3fbd2a7d4786b07f19e6b6f4e711d3917c"
+    },
+    "data/raw/trip_com/2026-08-02.csv": {
+      "bytes": 1340140,
+      "sha256": "40d8fbc523106d72e023b1b1d192ea4ee0592e14d78d427ce5cf5c31c00603d4"
+    },
+    "data/raw/trip_com/2026-08-03.csv": {
+      "bytes": 1318627,
+      "sha256": "30502dc9ef8d6d5f6b35ef5fdea1469830be2ce7c437826f3376f50553f6b509"
+    },
+    "data/raw/trip_com/2026-08-04.csv": {
+      "bytes": 1286421,
+      "sha256": "72ec2e99011d376f1f76f661d1e9151ca25249e632c4342e0ad767d2fc057939"
+    },
+    "data/raw/trip_com/2026-08-05.csv": {
+      "bytes": 1299044,
+      "sha256": "6b6ff14c96f046b834563c7da34edb1e85f0409c025f5657e077486f0bb49f2b"
+    },
+    "data/raw/trip_com/2026-08-06.csv": {
+      "bytes": 1270625,
+      "sha256": "fd01e041f5bede64d8098d8a403189b3ddde62fe95c63304c85d76c8ac0553a1"
+    },
+    "data/raw/trip_com/2026-08-07.csv": {
+      "bytes": 643297,
+      "sha256": "e27e165b3d7a7a5bbdd6288d863e874102d8ee51b5f7faa2740fe083011a8bbb"
+    },
+    "data/raw/trip_com/2026-08-08.csv": {
+      "bytes": 1246006,
+      "sha256": "237c92463d622b3effa927faee6982eb49b7dd6039e11a9471853168757c4128"
+    },
+    "data/raw/trip_com/2026-08-09.csv": {
+      "bytes": 1264110,
+      "sha256": "b098584d081810cb27a7f7b1bb4c3ff1574b18359689e67caeff8e3de3dad746"
+    },
+    "data/raw/trip_com/2026-08-10.csv": {
+      "bytes": 1273686,
+      "sha256": "1407c1e18fbb648a3ac43b4b73470c2c80ab0269d9da2d509e0492e2f8c60116"
+    },
+    "data/raw/trip_com/2026-08-11.csv": {
+      "bytes": 1239394,
+      "sha256": "4f88adb15e98334a9ab3d79555b7749b299ddea7eff09724e9ecdc2e3db026fe"
+    },
+    "data/raw/trip_com/2026-08-12.csv": {
+      "bytes": 1257954,
+      "sha256": "de22bb0a4ae52db1764fb0e36452bbe9dc7cd21fdc2ded302dc3ae977f72017b"
+    },
+    "data/raw/trip_com/2026-08-13.csv": {
+      "bytes": 1244937,
+      "sha256": "c1648eb26496e489a93d348584e4ea68047cf182c8a33fdaf707363d94d002ba"
+    },
+    "data/raw/trip_com/2026-08-14.csv": {
+      "bytes": 1231438,
+      "sha256": "94b3453a7b70466153dc35fa9d97291ca86b865267751842de2b12261fc49d0b"
+    },
+    "data/raw/trip_com/2026-08-15.csv": {
+      "bytes": 1217240,
+      "sha256": "3e12823a49ab483fb4a88dcb1ecd272b671e241710f4f01a81d4de0a7ca2be59"
+    },
+    "data/raw/trip_com/2026-08-16.csv": {
+      "bytes": 1212971,
+      "sha256": "c7ba37ea53a0eafc40a1b05e31737b6971441a0898cd704abbea7a879298c17f"
+    },
+    "data/raw/trip_com/2026-08-17.csv": {
+      "bytes": 1197457,
+      "sha256": "0ef38044fadaa8caa9efceef300ea49ceff2eb812d7ef5fb0eafac3cddcb93a1"
+    },
+    "data/raw/trip_com/2026-08-18.csv": {
+      "bytes": 1210610,
+      "sha256": "a720a88c824d23cdf5f6f015b69a3dc898ed01089fd90d5c8559a260d743ee6d"
+    },
+    "data/raw/trip_com/2026-08-19.csv": {
+      "bytes": 1195973,
+      "sha256": "cc1169522dcd61f3ccd93659724be7f8cef31ded700892a1be207b17eb569382"
+    },
+    "data/raw/trip_com/2026-08-20.csv": {
+      "bytes": 1173762,
+      "sha256": "069dc7d6baccf3638c38b9ec261235bbc85e05708aad9cd648b704047079d8f8"
+    },
+    "data/raw/trip_com/2026-08-21.csv": {
+      "bytes": 1199679,
+      "sha256": "02f0855955a82ecddcc92bb31632a1d282e60d6dc41c11fc5d9c8a33b7cf2eec"
+    },
+    "data/raw/trip_com/2026-08-22.csv": {
+      "bytes": 1163691,
+      "sha256": "4a431b05ef515ca02f3011b01bf589cd54cead2bd852a9288851d28e6cc3ba8c"
+    },
+    "data/raw/trip_com/2026-08-23.csv": {
+      "bytes": 1199183,
+      "sha256": "265aad41cb16a5075c43c6a3a97eddb0c7df2a399a8c3ecc074e88641cca0b9b"
+    },
+    "data/raw/trip_com/2026-08-24.csv": {
+      "bytes": 1175071,
+      "sha256": "01e363b715f8d48b4e9b2bb05ede3b9ccb1681d9fa4166ce076fa8cb1dec8d77"
+    }
+  },
+  "missing_dates": [
+    "2026-05-08",
+    "2026-05-09"
+  ],
+  "observed_dates": 155,
+  "post_freeze_serving_dates": [
+    "2026-08-20",
+    "2026-08-21",
+    "2026-08-22",
+    "2026-08-23",
+    "2026-08-24"
+  ],
+  "pre_study_collection_dates": [
+    "2026-03-21",
+    "2026-03-22"
+  ],
+  "status": "PASS"
+}

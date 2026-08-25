@@ -6,15 +6,19 @@ EA05 and the later feature builder inspect the same information set.
 
 from __future__ import annotations
 
-import json
 import gc
+import json
 from collections.abc import Callable
 
 import numpy as np
 import pandas as pd
 
-from skyfare.features.audit_common import BOOKING_WINDOWS, ROOT, completed_batch_offers, load_new_build_raw
-
+from skyfare.features.audit_common import (
+    BOOKING_WINDOWS,
+    ROOT,
+    completed_batch_offers,
+    load_new_build_raw,
+)
 
 PEAK_CONFIG = ROOT / "configs/peak_dates_vietnam_2026.json"
 

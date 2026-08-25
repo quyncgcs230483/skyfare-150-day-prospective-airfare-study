@@ -4,10 +4,15 @@ from __future__ import annotations
 
 import numpy as np
 import pandas as pd
-from sklearn.metrics import log_loss, mean_absolute_error, mean_squared_error, roc_auc_score
+from sklearn.metrics import (
+    log_loss,
+    mean_absolute_error,
+    mean_squared_error,
+    r2_score,
+    roc_auc_score,
+)
 
 from skyfare.models.selection_contract import QUANTILES
-
 
 EPSILON = 1e-7
 
@@ -57,6 +62,7 @@ def point_metrics(target_price: np.ndarray, prediction_price: np.ndarray) -> dic
         "mape": float(np.mean(absolute / target)),
         "median_ape": float(np.median(absolute / target)),
         "bias": float(np.mean(prediction - target)),
+        "r2": float(r2_score(target, prediction)),
     }
 
 

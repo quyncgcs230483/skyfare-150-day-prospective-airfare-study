@@ -8,8 +8,8 @@ from scipy.optimize import minimize
 from scipy.special import expit
 from sklearn.isotonic import IsotonicRegression
 
-from skyfare.models.selection_contract import QUANTILES
 from skyfare.evaluation.metrics import classification_metrics, distribution_metrics, rearrange
+from skyfare.models.selection_contract import QUANTILES
 
 
 def sigmoid(values: np.ndarray) -> np.ndarray:

@@ -6,8 +6,18 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from skyfare.models.selection_contract import late_registry, manifest, screen_registry, smoke_registry
-from skyfare.models.temporal_runtime import OUTPUT_ROOT, artifact_complete, sha256, write_json_atomic
+from skyfare.models.selection_contract import (
+    late_registry,
+    manifest,
+    screen_registry,
+    smoke_registry,
+)
+from skyfare.models.temporal_runtime import (
+    OUTPUT_ROOT,
+    artifact_complete,
+    sha256,
+    write_json_atomic,
+)
 
 
 def _pass_json(path: Path, expected: str = "PASS") -> dict[str, object]:

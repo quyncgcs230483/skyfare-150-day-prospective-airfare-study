@@ -16,6 +16,11 @@
     "candidate_search": false,
     "hyperparameter_tuning": false
   },
+  "serving_snapshot": {
+    "latest_observation_date": "2026-08-24",
+    "purpose": "post-freeze inference demonstration",
+    "model_training_cutoff_unchanged": true
+  },
   "booking_windows_days": [60, 45, 30, 21, 14, 10, 7, 5, 3, 2, 1],
   "tasks": ["classification", "point_regression", "probabilistic_forecasting", "learning_to_rank"]
 }

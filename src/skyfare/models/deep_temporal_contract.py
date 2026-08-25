@@ -12,7 +12,6 @@ from dataclasses import asdict, dataclass
 from datetime import date
 from pathlib import Path
 
-
 CONTRACT_ID = "SKYFARE_V19_DEEP_TEMPORAL_RESEARCH_R1"
 STATUS = "128_DAY_DEVELOPMENT_ONLY_NO_PROSPECTIVE_ACCESS"
 OBSERVATION_CUTOFF = "2026-07-28"

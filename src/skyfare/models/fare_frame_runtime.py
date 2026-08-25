@@ -27,14 +27,12 @@ from skyfare.models.fare_frame_contract import (
     HISTORY_SUPPORT_BINS,
     HISTORY_SUPPORT_LABELS,
     NUMERIC_FEATURES,
-    OUTPUT_NAME,
     SESSION_GAP_BINS,
     SESSION_GAP_LABELS,
     SUPPORT_BINS,
     SUPPORT_LABELS,
     market_group_lookup,
 )
-
 
 LAYOUT = DataLayout.resolve()
 ROOT = LAYOUT.root
@@ -280,8 +278,8 @@ def build_standard_offers() -> pd.DataFrame:
         return normalize_times(pd.read_parquet(STANDARD_OFFERS_CACHE))
 
     from skyfare.features.audit_common import load_standard_only_raw
-    from skyfare.features.peer_anchor import attach_peer_anchor
     from skyfare.features.candidate_feature_contract import build_candidate_frame
+    from skyfare.features.peer_anchor import attach_peer_anchor
 
     # Import proves immutable standard loader exists; wrapper fixes session-key
     # construction for both pandas nanosecond and microsecond datetime storage.

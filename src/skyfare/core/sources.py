@@ -1,9 +1,8 @@
-"""Canonical collection-source taxonomy and legacy artifact migration."""
+"""Canonical collection-source taxonomy."""
 
 from __future__ import annotations
 
 from enum import Enum
-from typing import Mapping
 
 import pandas as pd
 
@@ -13,15 +12,11 @@ class CollectionSource(str, Enum):
     TRIP_COM = "TRIP_COM_BROWSER_ERA"
 
 
-LEGACY_ALIASES: Mapping[str, str] = {
-    "SERPAPI_ERA": CollectionSource.FLI.value,
-    "TRIP_DAILY_ERA": CollectionSource.TRIP_COM.value,
-}
 CANONICAL_ERAS = frozenset(source.value for source in CollectionSource)
 
 
 def normalize_collection_era(value: str) -> str:
-    normalized = LEGACY_ALIASES.get(str(value), str(value))
+    normalized = str(value)
     if normalized not in CANONICAL_ERAS:
         raise ValueError(f"Unknown collection era: {value!r}")
     return normalized

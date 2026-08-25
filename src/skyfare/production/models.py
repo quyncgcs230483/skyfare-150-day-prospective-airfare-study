@@ -11,6 +11,8 @@ from typing import Any, Callable
 import numpy as np
 import pandas as pd
 
+from skyfare.evaluation.metrics import rearrange
+from skyfare.models import candidate_models as models
 from skyfare.production.contract import QUANTILES
 from skyfare.production.runtime import (
     FeatureEncoder,
@@ -20,11 +22,6 @@ from skyfare.production.runtime import (
     write_parquet_atomic,
 )
 from skyfare.production.sequence import save_normalizer, sequence_inputs
-
-
-from skyfare.models import candidate_models as models
-from skyfare.evaluation.metrics import rearrange
-
 
 Heartbeat = Callable[[str, int, dict[str, float]], None]
 
@@ -293,6 +290,7 @@ def _cat_quantile_model(job, iterations: int, *, early_stopping: bool):
 
 def _train_cat_quantile(job, full, fit, head, artifact_dir: Path, heartbeat: Heartbeat):
     from catboost import CatBoostRegressor
+
     from skyfare.models.temporal_runtime import REG_CATEGORICAL
 
     stage_encoder = FeatureEncoder.fit(fit, "REGRESSION")

@@ -6,7 +6,6 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics import log_loss, mean_absolute_error, mean_squared_error, roc_auc_score
 
-
 EPSILON = 1e-7
 QUANTILES = np.asarray([0.05, 0.10, 0.25, 0.50, 0.75, 0.90, 0.95], dtype=float)
 

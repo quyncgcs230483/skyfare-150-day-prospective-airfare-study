@@ -4,7 +4,6 @@
 from __future__ import annotations
 
 import json
-from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -15,7 +14,8 @@ from skyfare.production.calibration import (
     fit_probability,
     fit_quantiles,
 )
-from skyfare.production.contract import FINALISTS, TASKS, manifest as contract_manifest, registry
+from skyfare.production.contract import FINALISTS, TASKS, registry
+from skyfare.production.contract import manifest as contract_manifest
 from skyfare.production.runtime import (
     OUTPUT_ROOT,
     ROOT,

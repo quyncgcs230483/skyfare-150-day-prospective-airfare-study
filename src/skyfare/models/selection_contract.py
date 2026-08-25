@@ -6,7 +6,6 @@ import hashlib
 import json
 from dataclasses import asdict, dataclass
 
-
 CONTRACT_ID = "SKYFARE_V24_FINAL_REFINEMENT_FREEZE_R1"
 OBSERVATION_CUTOFF = "2026-07-28"
 TEST_BLOCKS = {

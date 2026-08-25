@@ -14,9 +14,8 @@ from typing import Any
 import numpy as np
 import pandas as pd
 
-from skyfare.production.contract import INPUT_ROWS, INPUT_SHA256, PRODUCTION_ORIGIN
 from skyfare.core.paths import DataLayout
-
+from skyfare.production.contract import INPUT_ROWS, INPUT_SHA256, PRODUCTION_ORIGIN
 
 MODULE_DIR = Path(__file__).resolve().parent
 LAYOUT = DataLayout.resolve()
@@ -28,7 +27,12 @@ OUTPUT_ROOT = Path(
     os.environ.get("SKYFARE_PRODUCTION_OUTPUT_ROOT", LAYOUT.artifacts / "production_refit")
 ).resolve()
 
-from skyfare.models.temporal_runtime import FeatureEncoder, inner_split, ranking_frame, regression_row_keys  # noqa: E402
+from skyfare.models.temporal_runtime import (  # noqa: E402
+    FeatureEncoder,
+    inner_split,
+    ranking_frame,
+    regression_row_keys,
+)
 
 
 def sha256(path: Path) -> str:

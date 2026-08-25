@@ -18,9 +18,8 @@ from skyfare.core.paths import DataLayout
 from skyfare.features.peer_anchor_contract import (
     BOOKING_WINDOWS,
     CATEGORICAL_FEATURES,
-    EVENT_TARGETS,
     EVENT_STATIC_FEATURES,
-    MATERIAL_DROP_FRACTION,
+    EVENT_TARGETS,
     MILESTONES,
     PEER_ANCHOR_MIN_SUPPORT,
     PRIMARY_EVENT_TARGET,
@@ -28,7 +27,6 @@ from skyfare.features.peer_anchor_contract import (
     WARM_FEATURES,
     milestone_contract,
 )
-
 
 LAYOUT = DataLayout.resolve()
 ROOT = LAYOUT.root
@@ -237,7 +235,7 @@ def attach_event_truth(
     if not pd.to_datetime(frame["label_time"]).gt(pd.to_datetime(frame["feature_time"])).all():
         raise RuntimeError(f"{source} event contains non-future label time")
     frame["event_source"] = source
-    next_dud = {current: target for current, target in zip(BOOKING_WINDOWS[:-1], BOOKING_WINDOWS[1:])}
+    next_dud = {current: target for current, target in zip(BOOKING_WINDOWS[:-1], BOOKING_WINDOWS[1:], strict=True)}
     expected_target = frame["current_dud"].map(next_dud)
     expected_gap = frame["current_dud"] - expected_target
     frame["is_auxiliary_target"] = int(source == "AUX_NEAREST_LOWER")
@@ -298,7 +296,7 @@ def build_event_registry(
     dud1_events: pd.DataFrame,
     cutoff: str,
 ) -> pd.DataFrame:
-    next_dud = {current: target for current, target in zip(BOOKING_WINDOWS[:-1], BOOKING_WINDOWS[1:])}
+    next_dud = {current: target for current, target in zip(BOOKING_WINDOWS[:-1], BOOKING_WINDOWS[1:], strict=True)}
     registry = offers[[
         "offer_id", "session_key", "session_date", "session_label", "feature_time",
         "flight_date", "days_until_departure", "route", "airline", "schedule_slot_id",

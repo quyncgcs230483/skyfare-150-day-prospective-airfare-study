@@ -3,14 +3,11 @@
 
 from __future__ import annotations
 
-import json
-
 import numpy as np
 import pandas as pd
 
 from skyfare.models.selection_contract import LATE_FOLDS, SCREEN_FOLDS
 from skyfare.models.temporal_runtime import OUTPUT_ROOT, write_json_atomic, write_parquet_atomic
-
 
 THRESHOLDS = tuple(round(value, 2) for value in np.arange(0.20, 0.81, 0.05))
 FRICTIONS_VND = (0, 25_000, 50_000, 100_000)

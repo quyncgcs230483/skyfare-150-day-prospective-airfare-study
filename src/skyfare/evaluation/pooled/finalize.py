@@ -28,7 +28,6 @@ from skyfare.evaluation.pooled.metrics import (
     ranking_query_metrics,
 )
 
-
 MODULE = Path(__file__).resolve().parent
 LAYOUT = DataLayout.resolve()
 ROOT = LAYOUT.root

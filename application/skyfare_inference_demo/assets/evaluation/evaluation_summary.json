@@ -1,0 +1,29 @@
+{
+  "bootstrap_replicates": 5000,
+  "cluster_key": "schedule_slot_id",
+  "date_wording": {
+    "development": "8 April-26 June 2026",
+    "final_temporal_evaluation": "16-28 July 2026",
+    "locked_validation": "27 June-10 July 2026"
+  },
+  "figures": [
+    "01_regression_candidate_landscape.png",
+    "02_classification_candidate_landscape.png",
+    "03_six_fold_stability.png",
+    "04_regression_ensemble_weights.png",
+    "05_classification_ensemble_weights.png",
+    "06_grouped_feature_dependence.png",
+    "07_final_fare_profile.png",
+    "08_lobo_interpolation.png",
+    "09_probability_calibration.png",
+    "10_outcome_action_matrix.png"
+  ],
+  "manifest": "evaluation_derivation_manifest.json",
+  "script_version": "SKYFARE_EVALUATION_ASSETS_V1",
+  "status": "PASS",
+  "tables": [
+    "01_locked_validation_summary.csv",
+    "02_final_temporal_metrics.csv",
+    "03_integrity_bootstrap_reproduction.csv"
+  ]
+}

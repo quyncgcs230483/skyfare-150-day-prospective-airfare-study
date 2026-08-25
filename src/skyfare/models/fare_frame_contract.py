@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import os
 
-
 CONTRACT_VERSION = "STRICTLY_PRIOR_FARE_FRAME_R2"
 BUNDLE_NAME = "strictly_prior_fare_frame"
 OUTPUT_NAME = "fare_frame"

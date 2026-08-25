@@ -4,7 +4,9 @@
   "properties": {
     "airline": {"type": "string"},
     "airline_name": {"type": "string"},
-    "data_source": {"enum": ["fli_library", "trip_com"]},
+    "data_source": {
+      "enum": ["fli_library", "google_flights_manual_9g", "trip_com"]
+    },
     "days_until_departure": {"minimum": 0, "type": "integer"},
     "departure_time": {"format": "date-time", "type": "string"},
     "dest": {"type": "string"},

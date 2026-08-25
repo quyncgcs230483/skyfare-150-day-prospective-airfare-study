@@ -14,9 +14,8 @@ from typing import Any
 import numpy as np
 import pandas as pd
 
-from skyfare.models.selection_contract import OBSERVATION_CUTOFF
 from skyfare.core.paths import DataLayout
-
+from skyfare.models.selection_contract import OBSERVATION_CUTOFF
 
 MODULE_DIR = Path(__file__).resolve().parent
 LAYOUT = DataLayout.resolve()
@@ -253,7 +252,7 @@ def sample_weights(target: np.ndarray, balanced: bool) -> np.ndarray:
     classes, counts = np.unique(target, return_counts=True)
     if not np.array_equal(classes, np.array([0, 1])):
         raise RuntimeError("binary split lacks both classes")
-    mapping = {int(label): len(target) / (2.0 * count) for label, count in zip(classes, counts)}
+    mapping = {int(label): len(target) / (2.0 * count) for label, count in zip(classes, counts, strict=True)}
     result = np.asarray([mapping[int(value)] for value in target], dtype=np.float32)
     return result / result.mean()
 

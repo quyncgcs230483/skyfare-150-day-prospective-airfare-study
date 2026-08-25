@@ -11,7 +11,6 @@ import numpy as np
 from skyfare.models.selection_contract import CANDIDATES, SCREEN_FOLDS, SCREEN_SEEDS, TASKS
 from skyfare.models.temporal_runtime import OUTPUT_ROOT, job_root, write_json_atomic
 
-
 PRIMARY = {
     "CLASSIFICATION": ("proper_score", False),
     "POINT": ("mape", False),

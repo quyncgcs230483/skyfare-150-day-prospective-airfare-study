@@ -16,7 +16,6 @@ import pandas as pd
 
 from skyfare.features.audit_common import CUTOFF, ROOT
 
-
 TABLE_DIR = ROOT / "artifacts/feature_research/tables"
 REPORT = ROOT / "artifacts/feature_research/reports/EA03_FEATURE_LEGALITY_MATRIX.txt"
 

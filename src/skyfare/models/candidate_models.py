@@ -11,17 +11,15 @@ import numpy as np
 import pandas as pd
 from scipy.stats import norm
 
-from skyfare.models.selection_contract import QUANTILES
 from skyfare.evaluation.metrics import rearrange
+from skyfare.models.selection_contract import QUANTILES
 from skyfare.models.temporal_runtime import (
     CLASS_CATEGORICAL,
     REG_CATEGORICAL,
     FeatureEncoder,
-    ROOT,
     ranking_frame,
     sample_weights,
 )
-
 
 SUPPORTED_FAMILIES = {
     "LGBM_CLASS", "CAT_CLASS", "FT_CLASS", "SEQ_CLASS",
@@ -278,7 +276,7 @@ def _sequence_arrays(frames: tuple[pd.DataFrame, ...], task: str, encoder: Featu
         sequences[0], masks[0], (sequences[1], masks[1]), (sequences[2], masks[2])
     )
     contexts = []
-    for frame, history_length in zip(frames, lengths):
+    for frame, history_length in zip(frames, lengths, strict=True):
         context = encoder.tree_matrix(frame, standardized=True)
         support = np.column_stack([np.log1p(history_length), history_length > 0]).astype(np.float32)
         contexts.append(np.column_stack([context, support]).astype(np.float32))

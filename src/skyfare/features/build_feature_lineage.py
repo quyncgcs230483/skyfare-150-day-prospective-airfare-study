@@ -11,7 +11,6 @@ import pandas as pd
 
 from skyfare.features.audit_common import CUTOFF, ROOT
 
-
 TABLE_DIR = ROOT / "artifacts/feature_research/tables"
 FIG_DIR = ROOT / "artifacts/feature_research/figures"
 REPORT = ROOT / "artifacts/feature_research/reports/FS01_FEATURE_RESEARCH_AND_LINEAGE.txt"

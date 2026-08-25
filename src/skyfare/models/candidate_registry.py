@@ -7,9 +7,13 @@ import argparse
 import json
 from pathlib import Path
 
-from skyfare.models.selection_contract import late_registry, manifest, screen_registry, smoke_registry
+from skyfare.models.selection_contract import (
+    late_registry,
+    manifest,
+    screen_registry,
+    smoke_registry,
+)
 from skyfare.models.temporal_runtime import OUTPUT_ROOT, write_json_atomic
-
 
 REGISTRY_ROOT = OUTPUT_ROOT / "registry"
 

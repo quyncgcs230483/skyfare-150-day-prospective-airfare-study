@@ -8,7 +8,12 @@ import json
 import pandas as pd
 
 from skyfare.evaluation.prospective_test_two.contract import registry
-from skyfare.evaluation.prospective_test_two.runtime import OUTPUT_ROOT, artifact_complete, sha256, write_json_atomic
+from skyfare.evaluation.prospective_test_two.runtime import (
+    OUTPUT_ROOT,
+    artifact_complete,
+    sha256,
+    write_json_atomic,
+)
 
 
 def main() -> None:

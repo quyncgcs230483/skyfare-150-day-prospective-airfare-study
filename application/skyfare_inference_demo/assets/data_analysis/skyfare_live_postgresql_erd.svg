@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1120" viewBox="0 0 2000 1120" role="img" aria-labelledby="title desc">
+<title id="title">SkyFare Live PostgreSQL Data Model</title>
+<desc id="desc">Entity relationship diagram for validated batches, standard offers, serving snapshots, inference audit records, and supported route-airline pairs.</desc>
+<defs>
+<marker id="one" markerWidth="12" markerHeight="14" refX="6" refY="7" orient="auto-start-reverse" markerUnits="strokeWidth"><path d="M4 1V13M8 1V13" fill="none" stroke="#202020" stroke-width="1.2"/></marker>
+<marker id="many" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="strokeWidth"><path d="M1 1L12 7L1 13M1 7H12" fill="none" stroke="#202020" stroke-width="1.2"/></marker>
+<marker id="open" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M1 1L10 6L1 11" fill="none" stroke="#202020" stroke-width="1.2"/></marker>
+</defs>
+<rect width="2000" height="1120" fill="#ffffff"/>
+<path d="M 520 200 H 605 V 212 H 690" fill="none" stroke="#202020" stroke-width="3" marker-start="url(#one)" marker-end="url(#many)"/>
+<text x="605" y="198" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#202020" paint-order="stroke" stroke="#ffffff" stroke-width="10" stroke-linejoin="round">1 : many</text>
+<path d="M 195 580 V 640 H 279.5 V 700" fill="none" stroke="#202020" stroke-width="3" marker-start="url(#one)" marker-end="url(#many)"/>
+<text x="237.25" y="632" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#202020" paint-order="stroke" stroke="#ffffff" stroke-width="10" stroke-linejoin="round">1 : many</text>
+<path d="M 650 778 H 750 V 770 H 850" fill="none" stroke="#202020" stroke-width="3" marker-start="url(#one)" marker-end="url(#many)"/>
+<text x="750" y="766" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#202020" paint-order="stroke" stroke="#ffffff" stroke-width="10" stroke-linejoin="round">1 : many</text>
+<path d="M 1210 311 H 1285 V 420 H 1360" fill="none" stroke="#202020" stroke-width="3" stroke-dasharray="16 12" marker-end="url(#open)"/>
+<text x="1285" y="357.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#202020" paint-order="stroke" stroke="#ffffff" stroke-width="10" stroke-linejoin="round">validated</text>
+<text x="20" y="47" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#151A1E">SkyFare Live PostgreSQL Data Model</text>
+<rect x="20" y="80" width="500" height="500" fill="#ffffff" stroke="#202020" stroke-width="1.5"/>
+<text x="32" y="108" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#202020">collection_batches</text>
+<line x1="30" y1="122" x2="510" y2="122" stroke="#202020" stroke-width="1"/>
+<text x="32" y="145" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#202020">batch_id</text>
+<text x="508" y="145" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TEXT · PK</text>
+<text x="32" y="166.9" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">collection_era</text>
+<text x="508" y="166.9" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TEXT</text>
+<text x="32" y="188.8" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">session_date</text>
+<text x="508" y="188.8" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">DATE</text>
+<text x="32" y="210.7" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">session_label</text>
+<text x="508" y="210.7" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TEXT</text>
+<text x="32" y="232.6" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">source_file</text>
+<text x="508" y="232.6" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TEXT</text>
+<text x="32" y="254.5" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">source_sha256</text>
+<text x="508" y="254.5" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">CHAR(64)</text>
+<text x="32" y="276.4" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">status</text>
+<text x="508" y="276.4" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TEXT</text>
+<text x="32" y="298.3" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">started_at</text>
+<text x="508" y="298.3" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TIMESTAMP</text>
+<text x="32" y="320.2" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">completed_at</text>
+<text x="508" y="320.2" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TIMESTAMP</text>
+<text x="32" y="342.1" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">promoted_at</text>
+<text x="508" y="342.1" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TIMESTAMPTZ</text>
+<text x="32" y="364" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">standard_rows</text>
+<text x="508" y="364" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">INTEGER</text>
+<text x="32" y="385.9" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">route_count</text>
+<text x="508" y="385.9" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">INTEGER</text>
+<text x="32" y="407.8" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">airline_count</text>
+<text x="508" y="407.8" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">INTEGER</text>
+<text x="32" y="429.7" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">dud_count</text>
+<text x="508" y="429.7" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">INTEGER</text>
+<text x="32" y="451.6" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">route_airline_count</text>
+<text x="508" y="451.6" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">INTEGER</text>
+<text x="32" y="473.5" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">validation_report</text>
+<text x="508" y="473.5" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">JSONB</text>
+<text x="32" y="495.4" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">failure_reason</text>
+<text x="508" y="495.4" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TEXT</text>
+<text x="32" y="517.3" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">created_at</text>
+<text x="508" y="517.3" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TIMESTAMPTZ</text>
+<text x="32" y="539.2" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">updated_at</text>
+<text x="508" y="539.2" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TIMESTAMPTZ</text>
+<rect x="690" y="80" width="520" height="550" fill="#ffffff" stroke="#202020" stroke-width="1.5"/>
+<text x="702" y="108" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#202020">standard_offers</text>
+<line x1="700" y1="122" x2="1200" y2="122" stroke="#202020" stroke-width="1"/>
+<text x="702" y="145" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#202020">row_key</text>
+<text x="1198" y="145" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">CHAR(16) · PK</text>
+<text x="702" y="168.1" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#202020">batch_id</text>
+<text x="1198" y="168.1" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TEXT · FK</text>
+<text x="702" y="191.2" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">scraped_at</text>
+<text x="1198" y="191.2" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TIMESTAMP</text>
+<text x="702" y="214.3" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">session_id</text>
+<text x="1198" y="214.3" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TIMESTAMP</text>
+<text x="702" y="237.4" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">session_date</text>
+<text x="1198" y="237.4" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">DATE</text>
+<text x="702" y="260.5" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">session_label</text>
+<text x="1198" y="260.5" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TEXT</text>
+<text x="702" y="283.6" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">origin</text>
+<text x="1198" y="283.6" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TEXT</text>
+<text x="702" y="306.7" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">dest</text>
+<text x="1198" y="306.7" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TEXT</text>
+<text x="702" y="329.8" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">route</text>
+<text x="1198" y="329.8" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TEXT</text>
+<text x="702" y="352.9" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">days_until_departure</text>
+<text x="1198" y="352.9" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">SMALLINT</text>
+<text x="702" y="376" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">flight_date</text>
+<text x="1198" y="376" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">DATE</text>
+<text x="702" y="399.1" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">airline</text>
+<text x="1198" y="399.1" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TEXT</text>
+<text x="702" y="422.2" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">airline_name</text>
+<text x="1198" y="422.2" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TEXT</text>
+<text x="702" y="445.3" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">flight_no</text>
+<text x="1198" y="445.3" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TEXT</text>
+<text x="702" y="468.4" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">departure_time</text>
+<text x="1198" y="468.4" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TIMESTAMP</text>
+<text x="702" y="491.5" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">departure_hhmm</text>
+<text x="1198" y="491.5" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">SMALLINT</text>
+<text x="702" y="514.6" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">schedule_slot_key</text>
+<text x="1198" y="514.6" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TEXT</text>
+<text x="702" y="537.7" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">price_vnd</text>
+<text x="1198" y="537.7" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">BIGINT</text>
+<text x="702" y="560.8" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">data_source</text>
+<text x="1198" y="560.8" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TEXT</text>
+<text x="702" y="583.9" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">collection_era</text>
+<text x="1198" y="583.9" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TEXT</text>
+<text x="702" y="607" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">source_file</text>
+<text x="1198" y="607" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TEXT</text>
+<rect x="1360" y="240" width="430" height="250" fill="#ffffff" stroke="#202020" stroke-width="1.5"/>
+<text x="1372" y="268" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#202020">route_airline_registry</text>
+<line x1="1370" y1="282" x2="1780" y2="282" stroke="#202020" stroke-width="1"/>
+<text x="1372" y="305" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#202020">route</text>
+<text x="1778" y="305" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TEXT · PK</text>
+<text x="1372" y="328.1" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#202020">airline</text>
+<text x="1778" y="328.1" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TEXT · PK</text>
+<text x="1372" y="351.2" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">first_seen</text>
+<text x="1778" y="351.2" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">DATE</text>
+<text x="1372" y="374.3" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">last_seen</text>
+<text x="1778" y="374.3" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">DATE</text>
+<text x="1372" y="397.4" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">active</text>
+<text x="1778" y="397.4" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">BOOLEAN</text>
+<rect x="80" y="700" width="570" height="390" fill="#ffffff" stroke="#202020" stroke-width="1.5"/>
+<text x="92" y="728" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#202020">serving_snapshots</text>
+<line x1="90" y1="742" x2="640" y2="742" stroke="#202020" stroke-width="1"/>
+<text x="92" y="765" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#202020">snapshot_id</text>
+<text x="638" y="765" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TEXT · PK</text>
+<text x="92" y="786.867" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">status</text>
+<text x="638" y="786.867" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TEXT</text>
+<text x="92" y="808.733" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">data_cutoff</text>
+<text x="638" y="808.733" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">DATE</text>
+<text x="92" y="830.6" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#202020">latest_batch_id</text>
+<text x="638" y="830.6" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TEXT · FK</text>
+<text x="92" y="852.467" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">model_version</text>
+<text x="638" y="852.467" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TEXT</text>
+<text x="92" y="874.333" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">snapshot_path</text>
+<text x="638" y="874.333" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TEXT</text>
+<text x="92" y="896.2" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">offers_rows</text>
+<text x="638" y="896.2" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">BIGINT</text>
+<text x="92" y="918.067" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">fare_rows</text>
+<text x="638" y="918.067" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">BIGINT</text>
+<text x="92" y="939.933" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">source_manifest_sha256</text>
+<text x="638" y="939.933" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">CHAR(64)</text>
+<text x="92" y="961.8" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">offers_sha256</text>
+<text x="638" y="961.8" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">CHAR(64)</text>
+<text x="92" y="983.667" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">fare_sha256</text>
+<text x="638" y="983.667" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">CHAR(64)</text>
+<text x="92" y="1005.53" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">ledger_sha256</text>
+<text x="638" y="1005.53" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">CHAR(64)</text>
+<text x="92" y="1027.4" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">validation_report</text>
+<text x="638" y="1027.4" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">JSONB</text>
+<text x="92" y="1049.27" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">created_at</text>
+<text x="638" y="1049.27" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TIMESTAMPTZ</text>
+<text x="92" y="1071.13" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">promoted_at</text>
+<text x="638" y="1071.13" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TIMESTAMPTZ</text>
+<rect x="850" y="700" width="600" height="350" fill="#ffffff" stroke="#202020" stroke-width="1.5"/>
+<text x="862" y="728" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#202020">inference_audit</text>
+<line x1="860" y1="742" x2="1440" y2="742" stroke="#202020" stroke-width="1"/>
+<text x="862" y="765" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#202020">inference_id</text>
+<text x="1438" y="765" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">BIGSERIAL · PK</text>
+<text x="862" y="787.154" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">requested_at</text>
+<text x="1438" y="787.154" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TIMESTAMPTZ</text>
+<text x="862" y="809.308" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#202020">snapshot_id</text>
+<text x="1438" y="809.308" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TEXT · FK</text>
+<text x="862" y="831.462" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">model_version</text>
+<text x="1438" y="831.462" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TEXT</text>
+<text x="862" y="853.615" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">booking_date</text>
+<text x="1438" y="853.615" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">DATE</text>
+<text x="862" y="875.769" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">session_label</text>
+<text x="1438" y="875.769" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TEXT</text>
+<text x="862" y="897.923" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">route</text>
+<text x="1438" y="897.923" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TEXT</text>
+<text x="862" y="920.077" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">flight_date</text>
+<text x="1438" y="920.077" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">DATE</text>
+<text x="862" y="942.231" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">airline_filter</text>
+<text x="1438" y="942.231" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">TEXT</text>
+<text x="862" y="964.385" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">result_count</text>
+<text x="1438" y="964.385" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">INTEGER</text>
+<text x="862" y="986.538" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">latency_ms</text>
+<text x="1438" y="986.538" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">NUMERIC(12,3)</text>
+<text x="862" y="1008.69" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">request_payload</text>
+<text x="1438" y="1008.69" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">JSONB</text>
+<text x="862" y="1030.85" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#202020">response_summary</text>
+<text x="1438" y="1030.85" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#202020">JSONB</text>
+</svg>

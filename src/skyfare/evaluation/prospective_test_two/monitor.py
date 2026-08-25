@@ -7,7 +7,12 @@ import json
 import time
 
 from skyfare.evaluation.prospective_test_two.contract import RUNTIME, registry
-from skyfare.evaluation.prospective_test_two.runtime import OUTPUT_ROOT, current_code_sha256, job_root, preflight_sha256
+from skyfare.evaluation.prospective_test_two.runtime import (
+    OUTPUT_ROOT,
+    current_code_sha256,
+    job_root,
+    preflight_sha256,
+)
 
 
 def _done(

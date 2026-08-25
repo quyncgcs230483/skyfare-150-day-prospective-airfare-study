@@ -3,16 +3,13 @@
     "FLI_LIBRARY_ERA": {
       "provider": "Google Flights",
       "collector": "Fli Python library",
-      "raw_directory": "data/raw/fli"
+      "raw_directory": "data/raw/fli",
+      "supplement_directory": "data/raw/google_flights_manual_9g"
     },
     "TRIP_COM_BROWSER_ERA": {
       "provider": "Trip.com",
       "collector": "Playwright with Camoufox",
       "raw_directory": "data/raw/trip_com"
     }
-  },
-  "legacy_aliases": {
-    "SERPAPI_ERA": "FLI_LIBRARY_ERA",
-    "TRIP_DAILY_ERA": "TRIP_COM_BROWSER_ERA"
   }
 }

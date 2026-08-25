@@ -19,7 +19,6 @@ from skyfare.preparation.temporal_sessions import (
     operational_session_dates,
 )
 
-
 REQUIRED_COLUMNS = (
     "scraped_at",
     "session_id",
@@ -59,7 +58,10 @@ def _daily_files(root: Path, cutoff: pd.Timestamp) -> list[Path]:
 
 
 def _read_source(
-    paths: list[Path], source: CollectionSource, project_root: Path
+    paths: list[Path],
+    source: CollectionSource,
+    project_root: Path,
+    source_label: str | None = None,
 ) -> pd.DataFrame:
     frames: list[pd.DataFrame] = []
     for path in paths:
@@ -70,7 +72,7 @@ def _read_source(
             raise ValueError(f"{path}: missing columns {missing}")
         frame = frame.copy()
         frame["collection_era"] = source.value
-        frame["data_source"] = (
+        frame["data_source"] = source_label or (
             "fli_library" if source is CollectionSource.FLI else "trip_com"
         )
         try:
@@ -90,6 +92,19 @@ def _normalise(frame: pd.DataFrame) -> pd.DataFrame:
     result["days_until_departure"] = pd.to_numeric(
         result["days_until_departure"], errors="coerce"
     ).astype("Int64")
+    for column in (
+        "origin",
+        "dest",
+        "route",
+        "airline",
+        "airline_name",
+        "flight_no",
+        "data_source",
+        "collection_era",
+        "source_file",
+    ):
+        if column in result:
+            result[column] = result[column].astype("string")
     result = result.dropna(
         subset=[
             "scraped_at",
@@ -159,8 +174,22 @@ def build(cutoff: pd.Timestamp) -> dict[str, object]:
     layout = DataLayout.resolve()
     layout.create_runtime_directories()
     fli_paths = _daily_files(layout.raw_fli, cutoff)
+    manual_paths = _daily_files(layout.raw_google_flights_manual, cutoff)
     trip_paths = _daily_files(layout.raw_trip_com, cutoff)
-    fli = _normalise(_read_source(fli_paths, CollectionSource.FLI, layout.root))
+    fli_library = _normalise(
+        _read_source(fli_paths, CollectionSource.FLI, layout.root)
+    )
+    google_flights_manual = _normalise(
+        _read_source(
+            manual_paths,
+            CollectionSource.FLI,
+            layout.root,
+            source_label="google_flights_manual_9g",
+        )
+    )
+    fli = pd.concat(
+        [fli_library, google_flights_manual], ignore_index=True, sort=False
+    )
     trip = _normalise(_read_source(trip_paths, CollectionSource.TRIP_COM, layout.root))
     trip["price_tier"] = assign_price_tier(trip)
     trip_standard = trip[trip["price_tier"].eq("standard")].copy()
@@ -183,9 +212,14 @@ def build(cutoff: pd.Timestamp) -> dict[str, object]:
             CollectionSource.FLI.value: "Fli Python library for Google Flights",
             CollectionSource.TRIP_COM.value: "Trip.com browser collector",
         },
-        "raw_files": {"fli_library": len(fli_paths), "trip_com": len(trip_paths)},
+        "raw_files": {
+            "fli_library": len(fli_paths),
+            "google_flights_manual_9g": len(manual_paths),
+            "trip_com": len(trip_paths),
+        },
         "rows": {
-            "fli_library": len(fli),
+            "fli_library": len(fli_library),
+            "google_flights_manual_9g": len(google_flights_manual),
             "trip_com_standard": len(trip_standard),
             "combined": len(combined),
         },

@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import os
 
-
 CONTRACT_VERSION = "DEVELOPMENT_FRAME_CONTRACT_R1"
 OUTPUT_NAME = "development"
 BUNDLE_NAME = "development_frames"

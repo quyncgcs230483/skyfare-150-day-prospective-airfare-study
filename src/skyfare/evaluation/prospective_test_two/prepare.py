@@ -20,7 +20,6 @@ from skyfare.models import regression_runtime as reg_runtime
 from skyfare.preparation import merge_daily_offers as merge
 from skyfare.preparation import temporal_sessions
 
-
 TEST_START = pd.Timestamp("2026-08-09")
 TEST_END = pd.Timestamp("2026-08-19")
 TEST_END_EXCLUSIVE = TEST_END + pd.Timedelta(days=1)

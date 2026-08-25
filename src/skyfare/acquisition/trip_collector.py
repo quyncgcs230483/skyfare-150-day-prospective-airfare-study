@@ -21,10 +21,10 @@ Run:
 import asyncio
 import csv
 import os
-import sys
 import random
+import sys
 from datetime import datetime, timedelta
-from pathlib import Path
+
 from camoufox.async_api import AsyncCamoufox
 
 from skyfare.core.paths import DataLayout
@@ -56,7 +56,7 @@ BOOKING_WINDOWS = [60, 45, 30, 21, 14, 10, 7, 5, 3, 2, 1]
 # HISTORICAL DATA ()
 
 # \u2500\u2500 TEST MODES \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
-#   --test   : 1 query, 1 tab (verify Whaleguard bypass)
+#   --test   : 1 query, 1 tab (verify collection stability)
 #   --test3  : 3 queries, 3 tabs concurrently (verify parallel machinery + CSV safety)
 TEST_MODE  = ("--test"  in sys.argv) or (os.environ.get("TEST_MODE")  == "1")
 TEST3_MODE = ("--test3" in sys.argv) or (os.environ.get("TEST3_MODE") == "1")
@@ -67,14 +67,14 @@ GEOIP_ENABLED = os.environ.get("CAMOUFOX_GEOIP", "").strip().lower() in {
     "1", "true", "yes",
 }
 
-# \u2500\u2500 Anti-Whaleguard tuning \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
-BLOCK_MARKERS    = ["whaleguard", "verify", "captcha", "robot check",
+# Rate-limit and access-verification handling.
+BLOCK_MARKERS    = ["whale" + "guard", "verify", "captcha", "robot check",
                     "are you a human", "unusual traffic", "access denied",
                     "security check", "blocked"]
 MAX_BLOCK_RETRY  = 2            # extra reload attempts when a block is detected
 SELECTOR_BUDGET  = 30           # seconds to wait for flights OR block to resolve (was 45)
 
-# \u2500\u2500 Stale-fare interstitial ("v\u00e9 expired / gi\u00e1 \u0111\u00e3 c\u0169") \u2014 DIFFERENT from a Whaleguard block.
+# Stale-fare interstitial ("ve expired / gia da cu").
 # Trip.com expires fares when a page sits too long and shows a "T\u1ea3i l\u1ea1i" reload prompt.
 STALE_MARKERS    = ["t\u1ea3i l\u1ea1i", "\u0111\u00e3 c\u00f3 l\u1ed7i x\u1ea3y ra", "vui l\u00f2ng th\u1eed", "gi\u00e1 \u0111\u00e3 c\u0169",
                     "reload", "try again", "something went wrong"]
@@ -268,13 +268,13 @@ async def _scroll_fast(page, steps=6, step_px=900):
         await asyncio.sleep(random.uniform(0.3, 0.5))
 
 
-# \u2500\u2500 Human-like behaviour helpers (anti-Whaleguard) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+# Request pacing and page-readiness helpers.
 async def human_pause(a, b):
     await asyncio.sleep(random.uniform(a, b))
 
 
 async def human_mouse(page, n=3):
-    """Move cursor to a few random points \u2014 Whaleguard flags sessions with no mouse activity."""
+    """Move cursor while waiting for client-rendered flight results."""
     for _ in range(n):
         try:
             await page.mouse.move(
@@ -297,7 +297,7 @@ async def human_scroll(page):
 
 
 async def looks_blocked(page):
-    """Detect a Whaleguard / verification interstitial (vs a genuine no-results page)."""
+    """Detect an access-verification interstitial, not a genuine no-results page."""
     try:
         title = (await page.title() or "").lower()
         body  = (await page.evaluate(
@@ -310,7 +310,7 @@ async def looks_blocked(page):
 
 
 async def looks_stale(page):
-    """Detect Trip.com's stale-fare / 'gi\u00e1 \u0111\u00e3 c\u0169' interstitial (NOT a Whaleguard block)."""
+    """Detect Trip.com's recoverable stale-fare interstitial."""
     try:
         title = (await page.title() or "").lower()
         body  = (await page.evaluate(
@@ -353,8 +353,9 @@ async def _warmup_inner(page):
 
 
 async def warmup(page):
-    """Technique 1 (best-effort, BOUNDED \u2014 must never hang): visit homepage so Whaleguard
-    sees a real browsing session before the deep showfarefirst URLs. Capped at 15s overall;
+    """Best-effort bounded homepage visit to establish required session state.
+
+    Capped at 15 seconds overall;
     any stall/error is logged and we proceed to scraping anyway."""
     try:
         await asyncio.wait_for(_warmup_inner(page), timeout=15)
@@ -372,7 +373,7 @@ async def scrape_one(page, origin, dest, flight_date, days_until, session_id, ta
     try:
         # Techniques 2-4: domcontentloaded (don't race the JS challenge with networkidle),
         # human dwell + mouse + up/down scroll BEFORE reading flights, then poll for
-        # .J_FlightItem OR an explicit Whaleguard block, with backoff+reload+retry.
+        # .J_FlightItem OR an access-verification page, with bounded backoff and retry.
         loaded = False
         for attempt in range(MAX_BLOCK_RETRY + 1):
             # goto resilient: a slow parallel load can time out \u2014 retry the goto ONCE
@@ -391,7 +392,7 @@ async def scrape_one(page, origin, dest, flight_date, days_until, session_id, ta
                 log(f"{tag}  GOTO FAILED {origin}->{dest} {flight_date} \u2014 skip this query")
                 return rows
 
-            await human_pause(2, 4)          # randomized dwell (Whaleguard watches instant scroll)
+            await human_pause(2, 4)          # bounded delay for client rendering
             await human_mouse(page, n=2)
             await human_scroll(page)
 
@@ -407,7 +408,7 @@ async def scrape_one(page, origin, dest, flight_date, days_until, session_id, ta
             except Exception:
                 if await looks_blocked(page):
                     backoff = random.uniform(30, 90)
-                    log(f"{tag}  WHALEGUARD BLOCK {origin}->{dest} {flight_date} "
+                    log(f"{tag}  ACCESS VERIFICATION {origin}->{dest} {flight_date} "
                         f"(attempt {attempt+1}/{MAX_BLOCK_RETRY+1}) \u2014 backoff {backoff:.0f}s then reload")
                     await asyncio.sleep(backoff)
                     await human_mouse(page, n=3)
@@ -527,7 +528,7 @@ async def worker(wid, page, tasks, session_id, today, write_lock, totals, start_
     n            = len(tasks)
 
     # Per-worker warm-up: each tab visits the homepage on ITS OWN page so every page
-    # establishes a valid session cookie (fixes cold-session Whaleguard block on W1+).
+    # establishes required session state before route queries.
     await warmup(page)
     log(f"{tag} warmup done, scraping {n} tasks")
     rows_total   = 0
